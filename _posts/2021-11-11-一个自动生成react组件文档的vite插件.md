@@ -1,5 +1,5 @@
 ---
-title: 一个自动生成react组件文档的vite插件.md
+title: 一个自动生成react组件文档的vite插件
 layout: post
 date: "2021-11-11"
 image: 
