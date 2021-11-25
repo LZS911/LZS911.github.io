@@ -7,7 +7,7 @@ layout: page
 
 一个无知而又无趣的死宅. 热爱 `coding`、 各种游戏.
 
-20 年 `dota` 玩家 🐶, `LGD` 🏆 粉 🎆🎆🎆
+20 年 `dota` 玩家 🐶, `LGD` Ti 🏆 粉 🎆 🎆 🎆.
 
 只看 `Leo Messi` 的集锦 ⚽️ 观众.
 
