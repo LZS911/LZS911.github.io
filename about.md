@@ -26,6 +26,7 @@ layout: page
  <li>Vue - ReactJS</li>
  <li>Git</li>
  <li>MySQL</li>
+ <li>C#</li>
 </ul>
 
 <h2>Projects</h2>
