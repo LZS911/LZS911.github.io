@@ -15,8 +15,6 @@ layout: page
 
 ![example](https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/james.jpg)
 
-![example](https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/profile.jpg)
-
 <h2>Skills</h2>
 
 <ul class="skill-list">
