@@ -16,9 +16,9 @@ description: blog
 
 ## EventEmit 简介
 
-`node.js` 所有的异步 `I/O` 操作在完成时都会发送一个事件到事件队列, `node.js` 里面的许多对象都会分发事件: 一个 `fs.readStream` 对象会在文件被打开的时候触发一个事件. 所有这些产生事件的对象都是 `events.EventEmitter` 的实例.
+`node.js` 所有的异步 `I/O` 操作在完成时都会发送一个事件到事件队列. 一个 `fs.readStream` 对象会在文件被打开的时候触发一个事件. 所有这些产生事件的对象都是 `events.EventEmitter` 的实例.
 
-`EventEmit` 是 `Node.js` 内置模块 `events` 提供的一个 `class`, 在 `node.js` 环境中可以直接 `require` 后来使用. 在 `web` 环境中我们可以使用第三方 `npm` 包或者原生的 [EventTarget](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget). 当然, 也可以自己实现一个类似 `node.js` 的简易版本.
+`EventEmit` 是 `node.js` 内置模块 `events` 提供的一个 `class`, 在 `node.js` 环境中可以直接 `require` 后使用. 在 `web` 环境中我们可以使用第三方 `npm` 包或者原生的 [EventTarget](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget). 当然, 也可以自己实现一个类似 `node.js` 的简易版本.
 
 我们先来看下 `EventEmit` 的基本使用方法:
 
@@ -50,19 +50,19 @@ event.removeListener("event", fn);
       * `listener` `<Function>`
       * `Returns` `<EventEmit>`
   
-  2. `emitter.emit(eventName, [...args])` 同步调用为名为 `eventName` 的事件注册的每个监听器, 按照它们注册的顺序, 将提供的参数传递给每个侦听器, 如果有存在该监听器, 则返回 `True`, 否则返回 `False`
+  2. `emitter.emit(eventName, [...args])` 同步调用为名为 `eventName` 的事件注册的每个监听器, 按照它们注册的顺序, 将提供的参数传递给每个侦听器, 如果存在该监听器, 则返回 `True`, 否则返回 `False`
       * `eventName` `<string>` | `<symbol>`
       * `...args` `<any>`
       * `Returns` `<boolean>`
   
-  3. `emitter.once(eventName`, listener) 和 `addListener` 类似, 但只触发一次, 随后便解除事件监听.
+  3. `emitter.once(eventName, listener)` 和 `addListener` 类似, 但只触发一次, 随后便解除事件监听.
 
   4. `emitter.removeListener(eventName, listener)` 移除指定事件的某个监听回调.
       * `eventName` `<string>` | `<symbol>`
       * `listener` `<Function>`
       * `Returns` `<EventEmit>`
 
-  5. `emitter.removeAllListeners([eventName])` 删除所有侦听器, 或删除指定 `eventName` 的监听器.
+  5. `emitter.removeAllListeners([eventName])` 删除所有监听器, 或删除指定 `eventName` 的监听器.
       * `eventName` `<string>` | `<symbol>`
       * `Returns`  `<EventEmitter>`
 
@@ -110,7 +110,7 @@ event.removeListener("event", fn);
 
 3. 判断数组中是否已存在 `cb`, 不存在则添加，已存在则不做操作.
 
-4. 指定`on`等于 `addListener` 方法
+4. 指定 `on` 等于 `addListener` 方法
 
 ```javascript
   addListener(eventName, cb) {
