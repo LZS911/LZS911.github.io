@@ -192,7 +192,7 @@ event.removeListener("event", fn);
       this.listeners = Object.create(null);
     } else {
       eventNames.forEach((v) => {
-        this.listeners[v] = [];
+        this.listeners[v] = null;
       });
     }
     return this;
