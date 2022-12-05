@@ -1,0 +1,338 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/><link rel="manifest" href="/favicon/site.webmanifest"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link rel="shortcut icon" href="/favicon/favicon.ico"/><meta name="msapplication-TileColor" content="#000000"/><meta name="msapplication-config" content="/favicon/browserconfig.xml"/><meta name="theme-color" content="#000"/><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><title>国际化项目中自动化语言包的vite插件 | Ai.Haibara codes</title><meta name="next-head-count" content="14"/><link rel="preload" href="/_next/static/css/376bae3e9f18d9d5.css" as="style"/><link rel="stylesheet" href="/_next/static/css/376bae3e9f18d9d5.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-8fa1640cc84ba8fe.js" defer=""></script><script src="/_next/static/chunks/framework-3b5a00d5d7e8d93b.js" defer=""></script><script src="/_next/static/chunks/main-98c07406be76c29a.js" defer=""></script><script src="/_next/static/chunks/pages/_app-58fce1570f46b1f7.js" defer=""></script><script src="/_next/static/chunks/799-575b46febca3af7d.js" defer=""></script><script src="/_next/static/chunks/399-cac0cd8ed02bf02a.js" defer=""></script><script src="/_next/static/chunks/pages/posts/%5Bslug%5D-07343aadb7ae3a4e.js" defer=""></script><script src="/_next/static/0pYERz8WuvF4khh1ylYWh/_buildManifest.js" defer=""></script><script src="/_next/static/0pYERz8WuvF4khh1ylYWh/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><header class="text-white bg-black drop-shadow-2xl"><div class="mx-auto my-0 max-w-[960px] py-6 px-4 flex items-center"><div class="flex items-center"><img alt="Ai.Haibara" src="/assets/blog/authors/haibara_2.jpg" width="100" height="100" decoding="async" data-nimg="1" class=" rounded-full" loading="lazy" style="color:transparent"/></div><div class="ml-6"><a class=" font-bold text-3xl" href="/">Ai.Haibara codes</a><div class="mt-2"><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/">Home</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/projects">Projects</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/talks">Talks</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/blogs">Blogs</a></div></div></div></header><main class="p-6 flex justify-center"><article><div class="flex justify-center font-[Arial]"><h1 class="text-5xl font-bold bg-indigo px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]">国际化项目中自动化语言包的vite插件</h1></div><time dateTime="2021-11-23" class="text-center block my-4 text-sm opacity-60">November	23, 2021</time><section><div class="markdown-body-nico max-w-3xl"><h2>前言</h2>
+<hr>
+<p>在包含国际化的前端项目中, 需要提取出对应语言的文本数据, 在代码中使用函数调用的方式来添加文本<a href="https://react.i18next.com/">(react 国际化插件</a>). 这样在开发过程中每添加一行文本信息就得去对应的语言包文件中添加对应的数据, 若只有中文和英语还好, 只需要添加两种语言数据, 可当对应的语言包很多时, 有没有一种简单的方式来自动添加呢?</p>
+<h2><code>vite</code> 插件介绍</h2>
+<hr>
+<p>官方文档链接: <a href="https://cn.vitejs.dev/guide/api-plugin.html">https://cn.vitejs.dev/guide/api-plugin.html</a></p>
+<p><code>vite</code> 插件通常的惯例为返回一个实际插件对象的工厂函数, 该函数可以接受允许用户自定义插件行为的选项.</p>
+<p>在这里只需要用到 <code>vite</code> 的独有钩子函数 <a href="https://cn.vitejs.dev/guide/api-plugin.html#handlehotupdate">handleHotUpdate</a>. 它可以执行自定义 <code>HMR</code> 更新处理, 在代码文件更新时去添加或者修改语言包文件.</p>
+<h2>准备</h2>
+<hr>
+<ol>
+<li>
+<p>定义用户自定义插件的选项</p>
+<table>
+<thead>
+<tr>
+<th align="center">name</th>
+<th align="center">defaultValue</th>
+<th align="center">type</th>
+<th align="center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">funName</td>
+<td align="center">t</td>
+<td align="center">string</td>
+<td align="center">function call name</td>
+</tr>
+<tr>
+<td align="center">splitCode</td>
+<td align="center">#</td>
+<td align="center">string</td>
+<td align="center">split code</td>
+</tr>
+<tr>
+<td align="center">languageDir</td>
+<td align="center">['locale/zh-CN', 'locale/en-US']</td>
+<td align="center">string[]</td>
+<td align="center">localeage path</td>
+</tr>
+<tr>
+<td align="center">include</td>
+<td align="center">['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts']</td>
+<td align="center">string[]</td>
+<td align="center">include directory</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>代码解析工具 —— <code>babel</code></p>
+<ul>
+<li><a href="https://babeljs.io/docs/en/babel-parser#docsNav">babel-parse(parseSync)</a>: 将字符串格式的 <code>javascript</code> 源码解析为 <code>AST</code> , 同时也支持 <code>JSX、 Flow、 Typescript</code> (使用各种插件).</li>
+<li><a href="https://babeljs.io/docs/en/babel-preset-typescript#docsNav">babel-preset-typescript</a>: 支持 <code>parse</code> 来解析 <code>typescript</code> 类型文件的插件.</li>
+<li><a href="https://babeljs.io/docs/en/babel-traverse#docsNav">babel-traverse</a>: 遍历所有 <code>AST</code> 节点和更新节点.</li>
+<li><a href="https://babeljs.io/docs/en/babel-generator#docsNav">babel-generator</a>: 将 <code>AST</code> 转换为代码, <code>parse</code> 的逆向操作.</li>
+<li><a href="https://babeljs.io/docs/en/babel-types#docsNav">babel-types</a>: 手动构建 <code>AST</code> 和检查 <code>AST</code> 节点类型.</li>
+</ul>
+</li>
+<li>
+<p>其他工具</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/fast-glob">fast-glob</a>: 根据指定的参数获取符合规则的所有文件名称, 用来排除无需执行自定义更新处理的文件(例如 <code>index.d.ts</code> 类型文件).</li>
+<li><a href="https://www.npmjs.com/package/prettier">prettier</a>: 在写入文件前对字符串格式的代码进行格式化.</li>
+<li><a href="https://www.npmjs.com/package/chalk">chalk</a>: 控制台输出文本高亮显示, 用来显示错误信息.</li>
+<li><a href="http://nodejs.cn/api/fs.html">fs</a>: <code>node</code> 中操作文件的 <code>API</code>.</li>
+</ul>
+</li>
+</ol>
+<h2>实现</h2>
+<hr>
+<h3>1. 构建工厂函数</h3>
+<pre><code class="language-typescript">export default function (userOptions: Options = {}): Plugin {
+  return {
+    name: 'vite-plugin-watch-i18',
+    async handleHotUpdate(ctx) {
+      //get options default value
+      const {
+        funName = 't',
+        splitCode = '#',
+        languageDir = ['locale/zh-CN', 'locale/en-US'],
+        include = ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+      } = userOptions;
+      //...
+    },
+  };
+}
+</code></pre>
+<h3>2. 排除无需处理文件</h3>
+<pre><code class="language-typescript">import fg from 'fast-glob';
+const filePath = ctx.file;
+const allFile = await fg(include);
+if (!allFile.some((i) => path.resolve(i) === filePath)) {
+  return;
+}
+</code></pre>
+<h3>3. 处理源代码文件</h3>
+<ul>
+<li>
+<p>将代码解析为 <code>AST</code></p>
+<pre><code class="language-typescript">const isTs = /^.+\.(ts|tsx)$/.test(filePath);
+const ast = isTs
+  ? parseSync(fileCode, {
+      presets: [require('@babel/preset-typescript').default],
+      filename: filePath,
+    })
+  : parseSync(fileCode, {});
+</code></pre>
+<p>通过文件后缀名判断是否为 <code>typescript</code> 类型文件, 然后使用 <code>babel-parse</code> 中的同步方法将其解析为 <code>AST</code>,</p>
+</li>
+<li>
+<p>遍历 <code>AST</code> 中的 <a href="https://babeljs.io/docs/en/babel-types#callexpression">CallExpression</a> 类型节点, 找到所有函数名为 <code>funName</code>的节点, 拿到参数信息. 这里需要注意的是一般会有两种调用方式( <code>t('') || i18n.t('')</code> )</p>
+<pre><code class="language-typescript">const localeInfo: string[] = [];
+const localeFileNameArr: string[] = [];
+let index = 0;
+traverse(ast, {
+  CallExpression(_path) {
+    let isFun = false;
+    const { node } = _path;
+    if (node.callee.type === 'Identifier') {
+      isFun = node.callee.name === funName;
+    } else if (node.callee.type === 'MemberExpression') {
+      isFun = (node.callee.property as any).name === funName;
+    }
+    if (isFun) {
+      const arg = (node.arguments[0] as any).value;
+      if (
+        !arg.includes(splitCode) ||
+        arg.split(splitCode).length !== langLength + 1
+      ) {
+        return;
+      }
+      localeInfo.push(arg.split(splitCode));
+      localeFileNameArr.push(arg.split('.')[0]);
+      const replaceArgs = node.arguments.slice() as any;
+      replaceArgs[0].value = localeInfo[index][0];
+      _path.replaceWith(t.callExpression(node.callee, replaceArgs));
+      _path.skip();
+      index++;
+    }
+  },
+});
+const code = !!ast
+  ? generator(ast, { jsescOption: { minimal: true } })?.code ?? ''
+  : '';
+const formatCode = prettier.format(code, { parser: 'typescript' });
+const formatOriginCode = prettier.format(fileCode, { parser: 'typescript' });
+formatCode !== formatOriginCode &#x26;&#x26; writeFile(filePath, code);
+</code></pre>
+<p>因为 <code>AST</code> 节点往往会是一个很复杂的对象, 所以在判断节点时一般是先拿到所有的节点信息, 然后反过来和代码进行比较, 以此来作为判断条件. 最后获取到参数信息, 收集参数信息, 并将参数中多余的部分移除, 最后将 <code>AST</code> 还原为字符串格式, 并写入文件.</p>
+<p>注意点:</p>
+<ol>
+<li>在写入源文件时需在写入语言包文件后, 不然会造成源文件修改而语言包未添加等异常.</li>
+<li>需要进行额外的校验, 只有当源文件发生改变后才重新写入, 因为 <code>vite HMR</code> 是在保存文件后立刻执行, 不会判断文件是否改变, 若直接重新写入会造成无限循环.</li>
+<li>需要判断通过 <code>splitCode</code> 分割后的数组长度是否与 <code>languageDir.length + 1</code> 相等.</li>
+</ol>
+<p>最后, 这一段代码拿到的信息为两个数组, 分别是 <code>funName</code> 函数中参数的第一段, 也就是要写入的文件名, 以及一个二维数组, 其中每项为 <code>funName</code> 函数参数通过 <code>splitCode</code> 分割后的数组.</p>
+<p>举个栗子:</p>
+<pre><code class="language-typescript">t("Common.index.confirm#确认#confirm");
+t("Common.index.cancel#取消#cancel");
+
+/**
+ * 获取到的信息:
+ * localeInfo: [['Common.index.confirm', '确认', 'confirm'], ['Common.index.cancel', '取消', 'cancel']]
+ * localeFileNameArr: ['Common', 'Common']
+ * /
+</code></pre>
+</li>
+</ul>
+<h3>4 处理语言包文件</h3>
+<p>遍历参数 <code>languageDir</code>, 找到需要添加语言包的目录, 同时将源文件中获取的信息与对应的语言包路径传入处理函数中.(源文件中语言包数据顺序需与语言包路径顺序对应)</p>
+<pre><code class="language-typescript">languageDir.forEach((v, index) => {
+  writeLocale({
+    localeDir: normalizePath(v),
+    localeFileNameArr,
+    isTs,
+    localeInfo: localeInfo.map((info) => ({
+      path: info[0].split('.'),
+      value: info[index + 1],
+    })),
+  });
+});
+</code></pre>
+<p><code>writeLocale</code> 函数作用为修改语言包文件, 在这步中对上步过程中获取的信息进行二次处理, 分别处理对应的语言包文件.</p>
+<p>先抛开 <code>AST</code> 部分将这其转换为算法:</p>
+<p><code>给定一个对象 obj、数组 path, 字符串 value, 其中数组类型为字符串数组, 按数组顺序将键值写入 obj, 值为 value. 例: obj: { a:1, b:{ c:2 } }, path: ['a', 'b', 'd'], value: 'add', 最后需要得到 obj: {a: 1, b: { c: 2, d: 'add' } }</code></p>
+<p>其中需要注意在 <code>path</code> 与 <code>obj</code> 同层有重复键值情况下:</p>
+<ul>
+<li>当重复键为 <code>path</code> 中最后一项时, 若 <code>obj</code> 中重复键值类型为基础类型时, 进行替换操作</li>
+<li>当重复键为 <code>path</code> 中最后一项时, 若 <code>obj</code> 中重复键值类型为对象时, 不进行替换操作</li>
+<li>当重复键值为 <code>path</code> 中不为最后一项时, 若 <code>obj</code> 中重复键值类型为对象时, 继续执行</li>
+<li>当重复键值为 <code>path</code> 中不为最后一项时, 若 <code>obj</code> 中重复键值类型为基础类型时时, 停止执行</li>
+</ul>
+<p>具体实现方式应该有多种, 这里放上递归版本(包含 <code>AST</code> 节点操作)</p>
+<pre><code class="language-typescript">/**
+ * origin: 原始 ast 节点
+ * localeInfo: 数组结构, 插入多项数据
+ **/
+const assemblyLocaleObj = (
+  origin: any,
+  localeInfo: Array&#x3C;{ path: string[]; value: string }>
+) => {
+  const addProp = (objPath: string[], value: string, originAst = []) => {
+    // 当 path 最后一层时
+    if (objPath.length === 1) {
+      const existProp: any = originAst.find(
+        (o: any) => o.key.name === objPath[0]
+      );
+      //存在相同键, 且值类型为 string, 进行值的替换
+      if (existProp?.value?.type === 'StringLiteral') {
+        originAst.forEach((o: any) => {
+          if (o.key.name === objPath[0]) {
+            o.value.value = value;
+          }
+        });
+        return originAst;
+      }
+
+      //值不为 string, 抛出异常, 在外层函数中进行捕获
+      if (existProp?.value?.type === 'ObjectExpression') {
+        throw new Error(
+          'ERROR: There are duplicates in the locale, please check the data!'
+        );
+      }
+
+      //不存在相同键, 进行正常添加
+      const item = t.objectProperty(
+        t.identifier(objPath[0]),
+        t.stringLiteral(value)
+      );
+      return [...originAst, item];
+    }
+    // 存在相同键, 但不为 path 最后一层时
+    if (originAst.some((o: any) => o.key.name === objPath[0])) {
+      const existProp: any = originAst.find(
+        (o: any) => o.key.name === objPath[0]
+      );
+      //判断存在键的值的类型是否为object
+      if (existProp?.value?.type !== 'ObjectExpression') {
+        throw new Error(
+          'ERROR: There are duplicates in the locale, please check the data!'
+        );
+      }
+      //继续往下层查找, 拿到 path 最后一层时的返回值
+      const item = addProp(objPath.slice(1), value, existProp.value.properties);
+      const tmp = originAst.slice();
+      //进行替换操作
+      tmp.forEach((o: any) => {
+        if (o.key.name === objPath[0]) {
+          o.value.properties = item;
+        }
+      });
+      return tmp;
+    }
+    //不存在相同键时
+    const ast = t.objectProperty(
+      t.identifier(objPath[0]),
+      t.objectExpression(addProp(objPath.slice(1), value))
+    );
+    return [...originAst, ast];
+  };
+  let properties = Array.isArray(origin) ? origin.slice() : origin;
+  localeInfo.forEach((info: any) => {
+    //递归入口
+    properties = addProp(info.path, info.value, properties);
+  });
+  return properties;
+};
+</code></pre>
+<p>最后拿到新的 <code>AST</code> 后进行替换然后转换为字符串格式并写入文件即可.</p>
+<h3>5. 新增语言包</h3>
+<p>对要写入的语言包文件进行是否存在判断, 若不存在, 则创建新文件, 并将其导入添加至当前目录下的 <code>index.ts 或 index.js</code> 文件中.</p>
+<p>举个栗子:</p>
+<p><img src="https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/vite-plugin/watch-i18/example/new.gif" alt="example"></p>
+<p>具体实现也是通过对 <code>AST</code> 节点的操作, 直接放代码.</p>
+<pre><code class="language-typescript">const addLocaleImport = ({ localeDir, fileName, isTs }: any) => {
+  try {
+    const root = isTs
+      ? path.resolve(path.join('src', localeDir), 'index.ts')
+      : path.resolve(path.join('src', localeDir), 'index.js');
+
+    if (!existsSync(root)) {
+      throw new Error('The default export language pack file was not found!');
+    }
+
+    const code =
+      readFileSync(root, 'utf-8') || `export default {translation:{}}`;
+    const ast = isTs
+      ? parseSync(code, {
+          presets: [require('@babel/preset-typescript').default],
+          filename: root,
+        })
+      : parseSync(code, {});
+    traverse(ast, {
+      //添加import语句
+      Program(_path) {
+        _path.unshiftContainer(
+          'body',
+          t.importDeclaration(
+            [t.importDefaultSpecifier(t.identifier(fileName))],
+            t.stringLiteral(`./${fileName}`)
+          )
+        );
+      },
+      //添加导出对象
+      ExportDefaultDeclaration(_path) {
+        const properties = (_path.node.declaration as any).properties.slice();
+        properties[0].value.properties.push(
+          t.objectProperty(t.identifier(fileName), t.identifier(fileName))
+        );
+        _path.replaceWith(
+          t.exportDefaultDeclaration(t.objectExpression(properties))
+        );
+        _path.skip();
+      },
+    });
+    //写入文件
+    writeFile(
+      root,
+      !!ast
+        ? generator(ast, { jsescOption: { minimal: true } })?.code ?? ''
+        : ''
+    );
+  } catch (error) {
+    console.trace(red(error));
+  }
+};
+</code></pre>
+<h2>总结</h2>
+<hr>
+<p>以上代码便使用 <code>babel</code> 实现了一个简单的 <code>vite</code> 插件, 它可以在工作中或者在平时编码中自动添加语言包, 提高编码效率.</p>
+<p>之前有看到尤雨溪的一篇<a href="https://mp.weixin.qq.com/s?src=11&#x26;timestamp=1637831843&#x26;ver=3458&#x26;signature=0YFjtA3N5CYF9IPtO30ywCaa4ti5J*zPSuiUyckkYr9gEFbFgEmqFrYZpAm*FgxTlIqPoUWTLxzGd6xikJ0JHjNtaA0511q5C7k3S7NXC*vpMvVIW2QeKbK-p2gCGBmr&#x26;new=1">采访</a>, 里面一段内容使我感触很深, 也是这个插件诞生的初衷. 希望以后能以此为初心, 一直坚持下去 ✊.</p>
+<blockquote>
+<p>如果想要跳出这种单纯做业务的状态，就得去寻找在当前的业务场景下，是否有更有意义、更有价值的这些问题去解决，或者说有没有什么机会可以让团队的效率更高，或者说业务上有什么痛点可以用我的技术去解决。前端在整个产品里面扮演着一个怎样的角色，有没有什么机会在前端这个环节给整个链路去创造一些价值。</p>
+<p>如果能找到这样的东西，如何跟我擅长的技术去结合起来，或者说我觉得这个东西很值得解决，我通过怎样的学习可以让自己能够去解决这个问题。找到更高、更明确的目标，这样在学习的时候会更有指向性。还有另一种选择，如果你发现你所在的岗位完全没有任何可以用前端去创造改变的可能性，那么可以跳个槽，提升一下技术能力，进大厂找找机会。</p>
+</blockquote>
+<p>最后附上项目地址: <a href="https://github.com/LZS911/vite-plugin-watch-i18">https://github.com/LZS911/vite-plugin-watch-i18</a></p></div></section></article></main><footer class="bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4">© 2022,<!-- --> <a rel="noopener" class="hover:underline hover:bg-indigo" href="https://github.com/LZS911" target="_blank">LZS_911</a>, built with<!-- --> <a rel="noopener" class="underline hover:bg-indigo" href="https://nextjs.org/" target="_blank">Next.js</a> <!-- -->and<!-- --> <a rel="noopener" class="underline hover:bg-indigo" href="https://vercel.com/docs" target="_blank">vercel</a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"title":"国际化项目中自动化语言包的vite插件","date":"2021-11-23","slug":"国际化项目中自动化语言包的vite插件","author":"LZS_911","content":"\u003ch2\u003e前言\u003c/h2\u003e\n\u003chr\u003e\n\u003cp\u003e在包含国际化的前端项目中, 需要提取出对应语言的文本数据, 在代码中使用函数调用的方式来添加文本\u003ca href=\"https://react.i18next.com/\"\u003e(react 国际化插件\u003c/a\u003e). 这样在开发过程中每添加一行文本信息就得去对应的语言包文件中添加对应的数据, 若只有中文和英语还好, 只需要添加两种语言数据, 可当对应的语言包很多时, 有没有一种简单的方式来自动添加呢?\u003c/p\u003e\n\u003ch2\u003e\u003ccode\u003evite\u003c/code\u003e 插件介绍\u003c/h2\u003e\n\u003chr\u003e\n\u003cp\u003e官方文档链接: \u003ca href=\"https://cn.vitejs.dev/guide/api-plugin.html\"\u003ehttps://cn.vitejs.dev/guide/api-plugin.html\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003evite\u003c/code\u003e 插件通常的惯例为返回一个实际插件对象的工厂函数, 该函数可以接受允许用户自定义插件行为的选项.\u003c/p\u003e\n\u003cp\u003e在这里只需要用到 \u003ccode\u003evite\u003c/code\u003e 的独有钩子函数 \u003ca href=\"https://cn.vitejs.dev/guide/api-plugin.html#handlehotupdate\"\u003ehandleHotUpdate\u003c/a\u003e. 它可以执行自定义 \u003ccode\u003eHMR\u003c/code\u003e 更新处理, 在代码文件更新时去添加或者修改语言包文件.\u003c/p\u003e\n\u003ch2\u003e准备\u003c/h2\u003e\n\u003chr\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e定义用户自定义插件的选项\u003c/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth align=\"center\"\u003ename\u003c/th\u003e\n\u003cth align=\"center\"\u003edefaultValue\u003c/th\u003e\n\u003cth align=\"center\"\u003etype\u003c/th\u003e\n\u003cth align=\"center\"\u003edescription\u003c/th\u003e\n\u003c/tr\u003e\n\u003c/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd align=\"center\"\u003efunName\u003c/td\u003e\n\u003ctd align=\"center\"\u003et\u003c/td\u003e\n\u003ctd align=\"center\"\u003estring\u003c/td\u003e\n\u003ctd align=\"center\"\u003efunction call name\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"center\"\u003esplitCode\u003c/td\u003e\n\u003ctd align=\"center\"\u003e#\u003c/td\u003e\n\u003ctd align=\"center\"\u003estring\u003c/td\u003e\n\u003ctd align=\"center\"\u003esplit code\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"center\"\u003elanguageDir\u003c/td\u003e\n\u003ctd align=\"center\"\u003e['locale/zh-CN', 'locale/en-US']\u003c/td\u003e\n\u003ctd align=\"center\"\u003estring[]\u003c/td\u003e\n\u003ctd align=\"center\"\u003elocaleage path\u003c/td\u003e\n\u003c/tr\u003e\n\u003ctr\u003e\n\u003ctd align=\"center\"\u003einclude\u003c/td\u003e\n\u003ctd align=\"center\"\u003e['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts']\u003c/td\u003e\n\u003ctd align=\"center\"\u003estring[]\u003c/td\u003e\n\u003ctd align=\"center\"\u003einclude directory\u003c/td\u003e\n\u003c/tr\u003e\n\u003c/tbody\u003e\n\u003c/table\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e代码解析工具 —— \u003ccode\u003ebabel\u003c/code\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://babeljs.io/docs/en/babel-parser#docsNav\"\u003ebabel-parse(parseSync)\u003c/a\u003e: 将字符串格式的 \u003ccode\u003ejavascript\u003c/code\u003e 源码解析为 \u003ccode\u003eAST\u003c/code\u003e , 同时也支持 \u003ccode\u003eJSX、 Flow、 Typescript\u003c/code\u003e (使用各种插件).\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://babeljs.io/docs/en/babel-preset-typescript#docsNav\"\u003ebabel-preset-typescript\u003c/a\u003e: 支持 \u003ccode\u003eparse\u003c/code\u003e 来解析 \u003ccode\u003etypescript\u003c/code\u003e 类型文件的插件.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://babeljs.io/docs/en/babel-traverse#docsNav\"\u003ebabel-traverse\u003c/a\u003e: 遍历所有 \u003ccode\u003eAST\u003c/code\u003e 节点和更新节点.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://babeljs.io/docs/en/babel-generator#docsNav\"\u003ebabel-generator\u003c/a\u003e: 将 \u003ccode\u003eAST\u003c/code\u003e 转换为代码, \u003ccode\u003eparse\u003c/code\u003e 的逆向操作.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://babeljs.io/docs/en/babel-types#docsNav\"\u003ebabel-types\u003c/a\u003e: 手动构建 \u003ccode\u003eAST\u003c/code\u003e 和检查 \u003ccode\u003eAST\u003c/code\u003e 节点类型.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e其他工具\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://www.npmjs.com/package/fast-glob\"\u003efast-glob\u003c/a\u003e: 根据指定的参数获取符合规则的所有文件名称, 用来排除无需执行自定义更新处理的文件(例如 \u003ccode\u003eindex.d.ts\u003c/code\u003e 类型文件).\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.npmjs.com/package/prettier\"\u003eprettier\u003c/a\u003e: 在写入文件前对字符串格式的代码进行格式化.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.npmjs.com/package/chalk\"\u003echalk\u003c/a\u003e: 控制台输出文本高亮显示, 用来显示错误信息.\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"http://nodejs.cn/api/fs.html\"\u003efs\u003c/a\u003e: \u003ccode\u003enode\u003c/code\u003e 中操作文件的 \u003ccode\u003eAPI\u003c/code\u003e.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2\u003e实现\u003c/h2\u003e\n\u003chr\u003e\n\u003ch3\u003e1. 构建工厂函数\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003eexport default function (userOptions: Options = {}): Plugin {\n  return {\n    name: 'vite-plugin-watch-i18',\n    async handleHotUpdate(ctx) {\n      //get options default value\n      const {\n        funName = 't',\n        splitCode = '#',\n        languageDir = ['locale/zh-CN', 'locale/en-US'],\n        include = ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],\n      } = userOptions;\n      //...\n    },\n  };\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e2. 排除无需处理文件\u003c/h3\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003eimport fg from 'fast-glob';\nconst filePath = ctx.file;\nconst allFile = await fg(include);\nif (!allFile.some((i) =\u003e path.resolve(i) === filePath)) {\n  return;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3\u003e3. 处理源代码文件\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e将代码解析为 \u003ccode\u003eAST\u003c/code\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003econst isTs = /^.+\\.(ts|tsx)$/.test(filePath);\nconst ast = isTs\n  ? parseSync(fileCode, {\n      presets: [require('@babel/preset-typescript').default],\n      filename: filePath,\n    })\n  : parseSync(fileCode, {});\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e通过文件后缀名判断是否为 \u003ccode\u003etypescript\u003c/code\u003e 类型文件, 然后使用 \u003ccode\u003ebabel-parse\u003c/code\u003e 中的同步方法将其解析为 \u003ccode\u003eAST\u003c/code\u003e,\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e遍历 \u003ccode\u003eAST\u003c/code\u003e 中的 \u003ca href=\"https://babeljs.io/docs/en/babel-types#callexpression\"\u003eCallExpression\u003c/a\u003e 类型节点, 找到所有函数名为 \u003ccode\u003efunName\u003c/code\u003e的节点, 拿到参数信息. 这里需要注意的是一般会有两种调用方式( \u003ccode\u003et('') || i18n.t('')\u003c/code\u003e )\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003econst localeInfo: string[] = [];\nconst localeFileNameArr: string[] = [];\nlet index = 0;\ntraverse(ast, {\n  CallExpression(_path) {\n    let isFun = false;\n    const { node } = _path;\n    if (node.callee.type === 'Identifier') {\n      isFun = node.callee.name === funName;\n    } else if (node.callee.type === 'MemberExpression') {\n      isFun = (node.callee.property as any).name === funName;\n    }\n    if (isFun) {\n      const arg = (node.arguments[0] as any).value;\n      if (\n        !arg.includes(splitCode) ||\n        arg.split(splitCode).length !== langLength + 1\n      ) {\n        return;\n      }\n      localeInfo.push(arg.split(splitCode));\n      localeFileNameArr.push(arg.split('.')[0]);\n      const replaceArgs = node.arguments.slice() as any;\n      replaceArgs[0].value = localeInfo[index][0];\n      _path.replaceWith(t.callExpression(node.callee, replaceArgs));\n      _path.skip();\n      index++;\n    }\n  },\n});\nconst code = !!ast\n  ? generator(ast, { jsescOption: { minimal: true } })?.code ?? ''\n  : '';\nconst formatCode = prettier.format(code, { parser: 'typescript' });\nconst formatOriginCode = prettier.format(fileCode, { parser: 'typescript' });\nformatCode !== formatOriginCode \u0026#x26;\u0026#x26; writeFile(filePath, code);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e因为 \u003ccode\u003eAST\u003c/code\u003e 节点往往会是一个很复杂的对象, 所以在判断节点时一般是先拿到所有的节点信息, 然后反过来和代码进行比较, 以此来作为判断条件. 最后获取到参数信息, 收集参数信息, 并将参数中多余的部分移除, 最后将 \u003ccode\u003eAST\u003c/code\u003e 还原为字符串格式, 并写入文件.\u003c/p\u003e\n\u003cp\u003e注意点:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e在写入源文件时需在写入语言包文件后, 不然会造成源文件修改而语言包未添加等异常.\u003c/li\u003e\n\u003cli\u003e需要进行额外的校验, 只有当源文件发生改变后才重新写入, 因为 \u003ccode\u003evite HMR\u003c/code\u003e 是在保存文件后立刻执行, 不会判断文件是否改变, 若直接重新写入会造成无限循环.\u003c/li\u003e\n\u003cli\u003e需要判断通过 \u003ccode\u003esplitCode\u003c/code\u003e 分割后的数组长度是否与 \u003ccode\u003elanguageDir.length + 1\u003c/code\u003e 相等.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e最后, 这一段代码拿到的信息为两个数组, 分别是 \u003ccode\u003efunName\u003c/code\u003e 函数中参数的第一段, 也就是要写入的文件名, 以及一个二维数组, 其中每项为 \u003ccode\u003efunName\u003c/code\u003e 函数参数通过 \u003ccode\u003esplitCode\u003c/code\u003e 分割后的数组.\u003c/p\u003e\n\u003cp\u003e举个栗子:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003et(\"Common.index.confirm#确认#confirm\");\nt(\"Common.index.cancel#取消#cancel\");\n\n/**\n * 获取到的信息:\n * localeInfo: [['Common.index.confirm', '确认', 'confirm'], ['Common.index.cancel', '取消', 'cancel']]\n * localeFileNameArr: ['Common', 'Common']\n * /\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003e4 处理语言包文件\u003c/h3\u003e\n\u003cp\u003e遍历参数 \u003ccode\u003elanguageDir\u003c/code\u003e, 找到需要添加语言包的目录, 同时将源文件中获取的信息与对应的语言包路径传入处理函数中.(源文件中语言包数据顺序需与语言包路径顺序对应)\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003elanguageDir.forEach((v, index) =\u003e {\n  writeLocale({\n    localeDir: normalizePath(v),\n    localeFileNameArr,\n    isTs,\n    localeInfo: localeInfo.map((info) =\u003e ({\n      path: info[0].split('.'),\n      value: info[index + 1],\n    })),\n  });\n});\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ccode\u003ewriteLocale\u003c/code\u003e 函数作用为修改语言包文件, 在这步中对上步过程中获取的信息进行二次处理, 分别处理对应的语言包文件.\u003c/p\u003e\n\u003cp\u003e先抛开 \u003ccode\u003eAST\u003c/code\u003e 部分将这其转换为算法:\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003e给定一个对象 obj、数组 path, 字符串 value, 其中数组类型为字符串数组, 按数组顺序将键值写入 obj, 值为 value. 例: obj: { a:1, b:{ c:2 } }, path: ['a', 'b', 'd'], value: 'add', 最后需要得到 obj: {a: 1, b: { c: 2, d: 'add' } }\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003e其中需要注意在 \u003ccode\u003epath\u003c/code\u003e 与 \u003ccode\u003eobj\u003c/code\u003e 同层有重复键值情况下:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e当重复键为 \u003ccode\u003epath\u003c/code\u003e 中最后一项时, 若 \u003ccode\u003eobj\u003c/code\u003e 中重复键值类型为基础类型时, 进行替换操作\u003c/li\u003e\n\u003cli\u003e当重复键为 \u003ccode\u003epath\u003c/code\u003e 中最后一项时, 若 \u003ccode\u003eobj\u003c/code\u003e 中重复键值类型为对象时, 不进行替换操作\u003c/li\u003e\n\u003cli\u003e当重复键值为 \u003ccode\u003epath\u003c/code\u003e 中不为最后一项时, 若 \u003ccode\u003eobj\u003c/code\u003e 中重复键值类型为对象时, 继续执行\u003c/li\u003e\n\u003cli\u003e当重复键值为 \u003ccode\u003epath\u003c/code\u003e 中不为最后一项时, 若 \u003ccode\u003eobj\u003c/code\u003e 中重复键值类型为基础类型时时, 停止执行\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e具体实现方式应该有多种, 这里放上递归版本(包含 \u003ccode\u003eAST\u003c/code\u003e 节点操作)\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003e/**\n * origin: 原始 ast 节点\n * localeInfo: 数组结构, 插入多项数据\n **/\nconst assemblyLocaleObj = (\n  origin: any,\n  localeInfo: Array\u0026#x3C;{ path: string[]; value: string }\u003e\n) =\u003e {\n  const addProp = (objPath: string[], value: string, originAst = []) =\u003e {\n    // 当 path 最后一层时\n    if (objPath.length === 1) {\n      const existProp: any = originAst.find(\n        (o: any) =\u003e o.key.name === objPath[0]\n      );\n      //存在相同键, 且值类型为 string, 进行值的替换\n      if (existProp?.value?.type === 'StringLiteral') {\n        originAst.forEach((o: any) =\u003e {\n          if (o.key.name === objPath[0]) {\n            o.value.value = value;\n          }\n        });\n        return originAst;\n      }\n\n      //值不为 string, 抛出异常, 在外层函数中进行捕获\n      if (existProp?.value?.type === 'ObjectExpression') {\n        throw new Error(\n          'ERROR: There are duplicates in the locale, please check the data!'\n        );\n      }\n\n      //不存在相同键, 进行正常添加\n      const item = t.objectProperty(\n        t.identifier(objPath[0]),\n        t.stringLiteral(value)\n      );\n      return [...originAst, item];\n    }\n    // 存在相同键, 但不为 path 最后一层时\n    if (originAst.some((o: any) =\u003e o.key.name === objPath[0])) {\n      const existProp: any = originAst.find(\n        (o: any) =\u003e o.key.name === objPath[0]\n      );\n      //判断存在键的值的类型是否为object\n      if (existProp?.value?.type !== 'ObjectExpression') {\n        throw new Error(\n          'ERROR: There are duplicates in the locale, please check the data!'\n        );\n      }\n      //继续往下层查找, 拿到 path 最后一层时的返回值\n      const item = addProp(objPath.slice(1), value, existProp.value.properties);\n      const tmp = originAst.slice();\n      //进行替换操作\n      tmp.forEach((o: any) =\u003e {\n        if (o.key.name === objPath[0]) {\n          o.value.properties = item;\n        }\n      });\n      return tmp;\n    }\n    //不存在相同键时\n    const ast = t.objectProperty(\n      t.identifier(objPath[0]),\n      t.objectExpression(addProp(objPath.slice(1), value))\n    );\n    return [...originAst, ast];\n  };\n  let properties = Array.isArray(origin) ? origin.slice() : origin;\n  localeInfo.forEach((info: any) =\u003e {\n    //递归入口\n    properties = addProp(info.path, info.value, properties);\n  });\n  return properties;\n};\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e最后拿到新的 \u003ccode\u003eAST\u003c/code\u003e 后进行替换然后转换为字符串格式并写入文件即可.\u003c/p\u003e\n\u003ch3\u003e5. 新增语言包\u003c/h3\u003e\n\u003cp\u003e对要写入的语言包文件进行是否存在判断, 若不存在, 则创建新文件, 并将其导入添加至当前目录下的 \u003ccode\u003eindex.ts 或 index.js\u003c/code\u003e 文件中.\u003c/p\u003e\n\u003cp\u003e举个栗子:\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/vite-plugin/watch-i18/example/new.gif\" alt=\"example\"\u003e\u003c/p\u003e\n\u003cp\u003e具体实现也是通过对 \u003ccode\u003eAST\u003c/code\u003e 节点的操作, 直接放代码.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003econst addLocaleImport = ({ localeDir, fileName, isTs }: any) =\u003e {\n  try {\n    const root = isTs\n      ? path.resolve(path.join('src', localeDir), 'index.ts')\n      : path.resolve(path.join('src', localeDir), 'index.js');\n\n    if (!existsSync(root)) {\n      throw new Error('The default export language pack file was not found!');\n    }\n\n    const code =\n      readFileSync(root, 'utf-8') || `export default {translation:{}}`;\n    const ast = isTs\n      ? parseSync(code, {\n          presets: [require('@babel/preset-typescript').default],\n          filename: root,\n        })\n      : parseSync(code, {});\n    traverse(ast, {\n      //添加import语句\n      Program(_path) {\n        _path.unshiftContainer(\n          'body',\n          t.importDeclaration(\n            [t.importDefaultSpecifier(t.identifier(fileName))],\n            t.stringLiteral(`./${fileName}`)\n          )\n        );\n      },\n      //添加导出对象\n      ExportDefaultDeclaration(_path) {\n        const properties = (_path.node.declaration as any).properties.slice();\n        properties[0].value.properties.push(\n          t.objectProperty(t.identifier(fileName), t.identifier(fileName))\n        );\n        _path.replaceWith(\n          t.exportDefaultDeclaration(t.objectExpression(properties))\n        );\n        _path.skip();\n      },\n    });\n    //写入文件\n    writeFile(\n      root,\n      !!ast\n        ? generator(ast, { jsescOption: { minimal: true } })?.code ?? ''\n        : ''\n    );\n  } catch (error) {\n    console.trace(red(error));\n  }\n};\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2\u003e总结\u003c/h2\u003e\n\u003chr\u003e\n\u003cp\u003e以上代码便使用 \u003ccode\u003ebabel\u003c/code\u003e 实现了一个简单的 \u003ccode\u003evite\u003c/code\u003e 插件, 它可以在工作中或者在平时编码中自动添加语言包, 提高编码效率.\u003c/p\u003e\n\u003cp\u003e之前有看到尤雨溪的一篇\u003ca href=\"https://mp.weixin.qq.com/s?src=11\u0026#x26;timestamp=1637831843\u0026#x26;ver=3458\u0026#x26;signature=0YFjtA3N5CYF9IPtO30ywCaa4ti5J*zPSuiUyckkYr9gEFbFgEmqFrYZpAm*FgxTlIqPoUWTLxzGd6xikJ0JHjNtaA0511q5C7k3S7NXC*vpMvVIW2QeKbK-p2gCGBmr\u0026#x26;new=1\"\u003e采访\u003c/a\u003e, 里面一段内容使我感触很深, 也是这个插件诞生的初衷. 希望以后能以此为初心, 一直坚持下去 ✊.\u003c/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003e如果想要跳出这种单纯做业务的状态，就得去寻找在当前的业务场景下，是否有更有意义、更有价值的这些问题去解决，或者说有没有什么机会可以让团队的效率更高，或者说业务上有什么痛点可以用我的技术去解决。前端在整个产品里面扮演着一个怎样的角色，有没有什么机会在前端这个环节给整个链路去创造一些价值。\u003c/p\u003e\n\u003cp\u003e如果能找到这样的东西，如何跟我擅长的技术去结合起来，或者说我觉得这个东西很值得解决，我通过怎样的学习可以让自己能够去解决这个问题。找到更高、更明确的目标，这样在学习的时候会更有指向性。还有另一种选择，如果你发现你所在的岗位完全没有任何可以用前端去创造改变的可能性，那么可以跳个槽，提升一下技术能力，进大厂找找机会。\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003cp\u003e最后附上项目地址: \u003ca href=\"https://github.com/LZS911/vite-plugin-watch-i18\"\u003ehttps://github.com/LZS911/vite-plugin-watch-i18\u003c/a\u003e\u003c/p\u003e","ogImage":{"url":"/assets/blog/image/cover.jpg"},"coverImage":"/assets/blog/image/cover.jpg","theme":"nico","tag":["vite plugin","react","i18n"]}},"__N_SSG":true},"page":"/posts/[slug]","query":{"slug":"国际化项目中自动化语言包的vite插件"},"buildId":"0pYERz8WuvF4khh1ylYWh","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
