@@ -10,6 +10,20 @@
 
 - 算法练习
 
-### 个人主页: [https://lzs911.github.io]
+## 个人主页: [https://lzs911.github.io]
 
-### 博客模版: [https://github.com/sergiokopplin/indigo]
+## Feature
+
+- [ ] 个人信息展示页
+
+- [x] 博客主页以及博客内容展示页
+
+- [x] 项目主页以及项目介绍页
+
+- [x] 博客内容美化
+
+- [x] 导航页
+
+- [ ] 更多文章快速跳转链接
+
+- [ ] 文章内容通过 tag 进行分类
