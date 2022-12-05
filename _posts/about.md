@@ -24,7 +24,7 @@ ogImage:
 
 最后哀酱镇楼:
 
-![example](https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/james.jpg)
+![example](/assets/blog/image/profile.jpg)
 
 <h2>Skills</h2>
 
