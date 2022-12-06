@@ -14,14 +14,6 @@ html {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
-body {
-  cursor: url("/assets/mouse/mouse.svg"), auto;
-}
-
-a {
-  cursor: url("/assets/mouse/mouse-cursor.svg"), auto !important;
-}
-
 main,
 footer {
   scroll-behavior: smooth;

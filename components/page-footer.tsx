@@ -10,7 +10,7 @@ const PageFooter = () => {
       >
         LZS_911
       </a>
-      , built with{" "}
+      , build with{" "}
       <a
         rel="noopener noreferrer"
         className="underline hover:bg-indigo"

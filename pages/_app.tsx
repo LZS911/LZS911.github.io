@@ -1,9 +1,10 @@
 import { AppProps } from "next/app";
-
-import "../styles/index.css";
-import "../lib/mouseEffect/index.css";
 import { useEffect } from "react";
-import { initMouseEffect, removeMouseEffect } from "../lib/mouseEffect";
+import generateMouseEffect from "mouse-animation-effect";
+import "mouse-animation-effect/dist/index.css";
+import "../styles/index.css";
+
+const { initMouseEffect, removeMouseEffect } = generateMouseEffect({});
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
