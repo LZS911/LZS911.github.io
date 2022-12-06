@@ -74,7 +74,7 @@ const Component = () => <div />;
 - `transform` 利用我们配置好的 `plugins/presets` 把 `parser` 生成的 `AST` 转变为新的 `AST`.
 - `generator` 把转换后的 `AST` 生成新的代码.
 
-![alt](https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/study/babel/mind.jpg)
+![alt](https://raw.githubusercontent.com/LZS911/LZS911.github.io/backend-main/assets/images/study/babel/mind.jpg)
 
 其中 `transform` 占了很大一块比重, 这个转换过程是 `babel` 中最为复杂的一部分, 平时所添加的 `plugins/presets` 便是在这个过程中起的作用.
 
@@ -155,7 +155,7 @@ module.exports = { visitor };
 
 [@babel/traverse](https://babeljs.io/docs/en/babel-traverse#docsNav): 该工具提供遍历 `AST` 节点功能, 使用该工具时, 我们可以不使用插件形式来操作 `AST` 节点.
 
-举个栗子: [一个并没啥用的 `vite` 插件](https://lzs911.github.io//%E5%9B%BD%E9%99%85%E5%8C%96%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%87%AA%E5%8A%A8%E5%8C%96%E8%AF%AD%E8%A8%80%E5%8C%85%E7%9A%84vite%E6%8F%92%E4%BB%B6/)
+举个栗子: [一个并没啥用的 `vite` 插件](https://lzs911.github.io/posts/%E5%9B%BD%E9%99%85%E5%8C%96%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%87%AA%E5%8A%A8%E5%8C%96%E8%AF%AD%E8%A8%80%E5%8C%85%E7%9A%84vite%E6%8F%92%E4%BB%B6)
 
 ## `plugin`、`preset`
 

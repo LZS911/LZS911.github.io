@@ -25,7 +25,7 @@ theme: arknights
 
 使用方式很简单, `command(Ctrl) + shift + P` 打开 `vscode` 的命令面板, 输入 `>show git commit template`, 出现几个选项
 
-![alt](https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/vscode-plugin/commit-plugin-template.jpg)
+![alt](https://raw.githubusercontent.com/LZS911/LZS911.github.io/backend-main/assets/images/vscode-plugin/commit-plugin-template.jpg)
 
 后续跟着插件指引即可.
 

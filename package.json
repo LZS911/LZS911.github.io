@@ -4,7 +4,7 @@
     "dev": "next --port=4545",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc",
+    "lint": "next lint",
     "export": "next export"
   },
   "dependencies": {
@@ -26,6 +26,8 @@
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.7",
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.6",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.4"
   }

@@ -295,7 +295,7 @@ const assemblyLocaleObj = (
 
 举个栗子:
 
-![example](https://raw.githubusercontent.com/LZS911/LZS911.github.io/main/assets/images/vite-plugin/watch-i18/example/new.gif)
+![example](https://raw.githubusercontent.com/LZS911/LZS911.github.io/backend-main/assets/images/vite-plugin/watch-i18/example/new.gif)
 
 具体实现也是通过对 `AST` 节点的操作, 直接放代码.
 
