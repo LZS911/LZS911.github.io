@@ -2052,10 +2052,10 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.npmmirror.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
-mouse-animation-effect@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mouse-animation-effect/-/mouse-animation-effect-1.0.1.tgz#acb92066539b968e46fc8e5be40f42c912d0c9d6"
-  integrity sha512-busVs5+PcxqJSRwiJp5UyHMI6DnWzWgplf9vV8jx+vDmqoRbLz8AMFptGi2cu2vKchu7rPnHxL66JgQVrmFAwg==
+mouse-animation-effect@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/mouse-animation-effect/-/mouse-animation-effect-1.0.4.tgz#ba92449f1cd7d7632b0fb26cc937fd4332485956"
+  integrity sha512-kE/HZ9zRBb6Vzq5rS8kki1ceVsPVI1Vvl4lbUeVzFyGWnItsNoZRkIwU8yd8kpcmR6QvujYQhmUnAItvTn27hA==
 
 mri@^1.1.0:
   version "1.2.0"

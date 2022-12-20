@@ -91,4 +91,4 @@ type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
 
 就概念来说, `infer` 与 `Template Literal` 并不是很复杂, 最重要的还是在了解基本概念后能灵活的将其应用到实践中.
 
-对实践感兴趣的可以转到: <https://lzs911-blog-next.vercel.app/posts/Typescript%20%E4%BD%93%E6%93%8D%E7%BB%83%E4%B9%A0>
+对实践感兴趣的可以转到: <https://lzs911.github.io/posts/Typescript%20%E4%BD%93%E6%93%8D%E7%BB%83%E4%B9%A0>
