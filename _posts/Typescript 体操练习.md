@@ -11,11 +11,10 @@ category: blog
 author: LZS_911
 description: blog
 excerpt: '学习下平常工作中不太会用到的一些 Typescript 工具类型以及新特性'
-coverImage: '/assets/blog/image/cover.jpg'
-ogImage:
-  url: '/assets/blog/image/cover.jpg'
 theme: fancy
 ---
+
+**注: Typescript 使用最新版本号 v4.94**
 
 ## 1. 将下划线模式的 string 类型转化成驼峰类型
 
@@ -25,9 +24,9 @@ type TransformToCamelCase<T extends string> =
     ? `${Left}${TransformToCamelCase<Capitalize<Rest>>}`
     : T;
 
-type res1 = TransformToCamelCase<'aa_bb_cc_dd'>; //type res1 = "aaBbCcDd"
-
 ```
+
+![alt](/assets/typescript/example-1.png)
 
 注意点:
 
@@ -54,6 +53,8 @@ type CamelCase<T extends Record<string, any>> = T extends any
     }
   : never;
 ```
+
+![alt](/assets/typescript/example-2.png)
 
 注意点:
 
@@ -103,18 +104,10 @@ type UnionTypes = { name: string } | { sex: boolean } | { age: number} | { hobbi
     ```
 
     ```Typescript
-      type Res = SpiltObj<ExampleType>
-
-      /** type Res = {
-       name: string;
-       } | {
-           sex: boolean;
-       } | {
-           age: number;
-       } | {
-           hobbies: string[];
-       } **/
+      type Res1 = SpiltObj<ExampleType>
      ```
+
+    ![alt](/assets/typescript/example-3.png)
 
     第二部分
 
@@ -126,10 +119,10 @@ type UnionTypes = { name: string } | { sex: boolean } | { age: number} | { hobbi
         hobbies: string[];
       }
 
-      type res = ExampleType[keyof ExampleType]
-
-      //type res = string | number | boolean | string[]
+      type Res2 = ExampleType[keyof ExampleType]
     ```
+
+    ![alt](/assets/typescript/example-4.png)
 
 * 拓展, 实现一个工具类, 拿到索性类型键值路径的联合类型
 
@@ -149,12 +142,108 @@ type UnionTypes = { name: string } | { sex: boolean } | { age: number} | { hobbi
       };
     }
 
-    type demo = 'aa' | 'cc' | 'dd' | 'gg' | 'aa.bb' |'dd.ee' | 'dd.ee.ff' | 'gg.hh'
-
     type TemplateKeyPath<T> ={
        [key in keyof T]: key extends string ? T[key] extends Record<string, any> ? key | `${key}.${TemplateKeyPath<T[key]>}` : key : never;
     }[keyof T]
 
-    type res2 = TemplateKeyPath<Template>
-    //type res2 = "aa" | "cc" | "dd" | "gg" | "aa.bb" | "dd.ee" | "dd.ee.ff" | "gg.hh"
+    type Res3 = TemplateKeyPath<Template>
     ```
+
+    ![alt](/assets/typescript/example-5.png)
+
+## 3. 数组长度数值计算
+
+Typescript 本身是没有加减乘除运算符的, 所以需要取巧来处理数值的计算.
+
+利用构造数组, 然后获取它的 `length`.
+
+**注: 因为数组长度不会为负数, 所以这里做的数值计算只包含正整数**
+
+![alt](/assets/typescript/example-6.png)
+
+实现运算方法之前, 先实现一个构造数组的工具类
+
+```Typescript
+type BuildArray<
+  Length extends number,
+  Element = unknown,
+  Array extends unknown[] = []
+> = Array['length'] extends Length
+  ? Array
+  : BuildArray<Length, Element, [Element, ...Array]>;
+
+```
+
+![alt](/assets/typescript/example-7.png)
+
+`BuildArray` 接收三个泛形, 其中第一个参数 `Length` 为需要构造出来的数组长度, `Element` 为数组类的元素类型, 默认值为 `unknown`, `Array` 为返回结果, 用来递归处理. 如果将其转化为 `javascript` 代码, 大致如下:
+
+```javascript
+const buildArray = (length, element, arr = []) => {
+  if (length === arr.length) {
+    return arr;
+  }
+
+  return buildArray(length, element, [element, ...arr]);
+};
+```
+
+### 1. 加法运算
+
+```typescript
+type Add<Num1 extends number, Num2 extends number> = [...BuildArray<Num1>, ...BuildArray<Num2>]['length']
+```
+
+![alt](/assets/typescript/example-8.png)
+
+![alt](/assets/typescript/example-9.png)
+
+### 2. 减法运算
+
+```typescript
+type Subtract<
+  Num1 extends number,
+  Num2 extends number
+> = BuildArray<Num1> extends [...arr1: BuildArray<Num2>, ...arr2: infer Rest]
+  ? Rest['length']
+  : never;
+
+```
+
+![alt](/assets/typescript/example-10.png)
+
+![alt](/assets/typescript/example-11.png)
+
+### 3. 乘法运算
+
+```typescript
+type Multiply<
+  Num1 extends number,
+  Num2 extends number,
+  ResultArray extends unknown[] = []
+> = Num2 extends 0
+  ? ResultArray['length']
+  : Multiply<Num1, Subtract<Num2, 1>, [...BuildArray<Num1>, ...ResultArray]>;
+```
+
+![alt](/assets/typescript/example-12.png)
+
+![alt](/assets/typescript/example-13.png)
+
+### 4. 除法运算
+
+```typescript
+type Divide<
+  Num1 extends number,
+  Num2 extends number,
+  ResultArray extends unknown[] = []
+> = Num1 extends 0
+  ? ResultArray['length']
+  : Divide<Subtract<Num1, Num2>, Num2, [unknown, ...ResultArray]>; 
+  // [unknown, ...ResultArray] => [...BuildArray<Add<ResultArray['length'], 1> & number>]
+
+```
+
+![alt](/assets/typescript/example-14.png)
+
+![alt](/assets/typescript/example-15.png)
