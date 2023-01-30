@@ -151,7 +151,7 @@ type UnionTypes = { name: string } | { sex: boolean } | { age: number} | { hobbi
 
     ![alt](/assets/typescript/example-5.png)
 
-## 3. 数组长度数值计算
+## 3. 使用数组长度进行数值计算
 
 Typescript 本身是没有加减乘除运算符的, 所以需要取巧来处理数值的计算.
 
@@ -247,3 +247,130 @@ type Divide<
 ![alt](/assets/typescript/example-14.png)
 
 ![alt](/assets/typescript/example-15.png)
+
+## 4. 判断两个正整数的大小
+
+### 1. 比较是否相等
+
+```typescript
+type NumberIsEqual<Num1 extends number, Num2 extends number> = Num1 extends Num2 ? true : false;
+```
+
+![alt](/assets/typescript/example-16.png)
+
+![alt](/assets/typescript/example-17.png)
+
+### 2. 判断是否大于
+
+大致思路: 利用构造数组, 递归对构造出来的数组进行 Pop 操作, 通过判断数组的长度是否为 0 来确定大小.
+
+在开始实现钱先实现几个工具类, 减少重复代码和提高可读性.
+
+**注: 后续使用到同名工具类时默认为这几个类型**
+
+```typescript
+type Or<Case1 extends boolean, Case2 extends boolean> = Case1 extends true
+  ? true
+  : Case2 extends true
+  ? true
+  : false;
+
+type ArrayPop<Arr extends unknown[]> = Arr extends [...infer Left, infer Last]
+  ? Left
+  : never;
+
+type NumberIsZero<Num extends number> = Num extends 0 ? true : false;
+```
+
+最终代码
+
+```typescript
+type NumberIsCompare<
+  Num1 extends number,
+  Num2 extends number,
+  Arr1 extends unknown[] = BuildArray<Num1>,
+  Arr2 extends unknown[] = BuildArray<Num2>
+> = NumberIsEqual<Num1, Num2> extends false
+  ? Or<NumberIsZero<Arr1['length']>, NumberIsZero<Arr2['length']>> extends true
+    ? NumberIsZero<Arr1['length']> extends true
+      ? false
+      : true
+    : NumberIsCompare<ArrayPop<Arr1>['length'], ArrayPop<Arr2>['length']>
+  : false;
+
+```
+
+![alt](/assets/typescript/example-18.png)
+![alt](/assets/typescript/example-19.png)
+![alt](/assets/typescript/example-20.png)
+![alt](/assets/typescript/example-21.png)
+![alt](/assets/typescript/example-22.png)
+
+### 3. 判断是否小与
+
+过滤掉相等情况后对大于取反就好了.
+
+```typescript
+type NumberIsLess<Num1 extends number, Num2 extends number> = NumberIsEqual<
+  Num1,
+  Num2
+> extends false
+  ? NumberIsCompare<Num1, Num2> extends true
+    ? false
+    : true
+  : false;
+```
+
+## 5. 实现 IndexOf - 从左往右查找子串的位置
+
+核心原理
+
+![alt](/assets/typescript/example-23.png)
+
+最后实现一个获取字符串长度的工具类型即可获得最终结果
+
+**注意: `['a']['length']的值为数组长度, 而 'aa'['length']` 的值为 number**
+
+所以我们可以将字符串切割为数组, 然后来获取长度.
+
+```typescript
+type Split<
+  S extends string,
+  Element extends string = '',
+  ResultArray extends string[] = []
+> = S extends ''
+  ? []
+  : S extends `${infer Left}${Element}${infer Rest}`
+  ? Rest extends ''
+    ? [...ResultArray, Left]
+    : Split<Rest, Element, [...ResultArray, Left]>
+  : never;
+```
+
+![alt](/assets/typescript/example-24.png)
+![alt](/assets/typescript/example-25.png)
+![alt](/assets/typescript/example-26.png)
+
+```typescript
+type GetStringLength<S extends string> =  Split<S> extends never ? never : Split<S>['length']
+```
+
+最后结果
+
+```typescript
+type IndexOf<
+  S1 extends string,
+  S2 extends string,
+  Len1 extends number = GetStringLength<S1>,
+  Len2 extends number = GetStringLength<S2>
+> = Or<NumberIsCompare<Len1, Len2>, NumberIsEqual<Len1, Len2>> extends false
+  ? -1
+  : S1 extends `${infer Left}${S2}${infer Rest}`
+  ? GetStringLength<Left>
+  : -1;
+```
+
+![alt](/assets/typescript/example-27.png)
+![alt](/assets/typescript/example-28.png)
+![alt](/assets/typescript/example-29.png)
+![alt](/assets/typescript/example-30.png)
