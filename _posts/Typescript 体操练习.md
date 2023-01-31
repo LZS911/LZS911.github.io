@@ -188,7 +188,7 @@ const buildArray = (length, element, arr = []) => {
 };
 ```
 
-### 1. 加法运算
+### 加法运算
 
 ```typescript
 type Add<Num1 extends number, Num2 extends number> = [...BuildArray<Num1>, ...BuildArray<Num2>]['length']
@@ -198,7 +198,7 @@ type Add<Num1 extends number, Num2 extends number> = [...BuildArray<Num1>, ...Bu
 
 ![alt](/assets/typescript/example-9.png)
 
-### 2. 减法运算
+### 减法运算
 
 ```typescript
 type Subtract<
@@ -214,7 +214,7 @@ type Subtract<
 
 ![alt](/assets/typescript/example-11.png)
 
-### 3. 乘法运算
+### 乘法运算
 
 ```typescript
 type Multiply<
@@ -230,7 +230,7 @@ type Multiply<
 
 ![alt](/assets/typescript/example-13.png)
 
-### 4. 除法运算
+### 除法运算
 
 ```typescript
 type Divide<
@@ -250,7 +250,7 @@ type Divide<
 
 ## 4. 判断两个正整数的大小
 
-### 1. 比较是否相等
+### 比较是否相等
 
 ```typescript
 type NumberIsEqual<Num1 extends number, Num2 extends number> = Num1 extends Num2 ? true : false;
@@ -260,7 +260,7 @@ type NumberIsEqual<Num1 extends number, Num2 extends number> = Num1 extends Num2
 
 ![alt](/assets/typescript/example-17.png)
 
-### 2. 判断是否大于
+### 判断是否大于
 
 大致思路: 利用构造数组, 递归对构造出来的数组进行 Pop 操作, 通过判断数组的长度是否为 0 来确定大小.
 
@@ -306,7 +306,7 @@ type NumberIsCompare<
 ![alt](/assets/typescript/example-21.png)
 ![alt](/assets/typescript/example-22.png)
 
-### 3. 判断是否小与
+### 判断是否小与
 
 过滤掉相等情况后对大于取反就好了.
 
