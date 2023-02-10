@@ -374,3 +374,38 @@ type IndexOf<
 ![alt](/assets/typescript/example-28.png)
 ![alt](/assets/typescript/example-29.png)
 ![alt](/assets/typescript/example-30.png)
+
+## 6. 实现字符串的 Replace 与 ReplaceAll
+
+1. `Replace`
+
+    ```typescript
+    type Replace<
+      Str extends string,
+      MatchStr extends string,
+      ReplaceStr extends string
+    > = Str extends `${infer Left}${MatchStr}${infer Rest}`
+      ? `${Left}${ReplaceStr}${Rest}`
+      : Str;
+    ```
+
+    ![alt](/assets/typescript/example-31.png)
+    ![alt](/assets/typescript/example-32.png)
+    ![alt](/assets/typescript/example-33.png)
+
+2. `ReplaceAll`
+
+    ```typescript
+    type ReplaceAll<
+      Str extends string,
+      MatchStr extends string,
+      ReplaceStr extends string
+    > = Str extends `${infer Left}${MatchStr}${infer Rest}`
+      ? Rest extends `${infer Left2}${MatchStr}${infer Rest2}`
+        ? ReplaceAll<`${Left}${ReplaceStr}${Rest}`, MatchStr, ReplaceStr>
+        : `${Left}${ReplaceStr}${Rest}`
+      : Str;
+    ```
+
+    ![alt](/assets/typescript/example-34.png)
+    ![alt](/assets/typescript/example-35.png)
