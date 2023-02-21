@@ -125,3 +125,119 @@ fn get_value(arg: i32) -> String {
 >所有程序都必须管理其运行时使用计算机内存的方式。一些语言中具有垃圾回收机制，在程序运行时有规律地寻找不再使用的内存；在另一些语言中，程序员必须亲自分配和释放内存。Rust 则选择了第三种方式：通过所有权系统管理内存，编译器在编译时会根据一系列的规则进行检查。如果违反了任何这些规则，程序都不能编译。在运行时，所有权系统的任何功能都不会减慢程序。
 
 <https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html>
+
+枚举的定义
+
+```rust
+enum IpAddrKind{
+  V4,
+  V6,
+}
+```
+
+在枚举值表示类型的同时并且赋予其值
+
+```rust
+enum IpAdd{
+  V4(String),
+  V6(String),
+}
+
+let home = IpAddr::V4(String::from("127.0.0.1"));
+
+let loopback = IpAddr::V6(String::from("::1"));
+```
+
+Options 枚举
+
+Option 是标准库定义的另一个枚举. Option 类型应用广泛因为它编码了一个非常普遍的场景, 即一个值要么有值要么没值.
+
+```rust
+enum Option<T> {
+    None,
+    Some(T),
+}
+```
+
+`Option<T>` 枚举是如此有用以至于它甚至被包含在了 prelude 之中, 你不需要将其显式引入作用域. 另外, 它的成员也是如此, 可以不需要 `Option::` 前缀来直接使用 `Some` 和 `None`. 即便如此 `Option<T>` 也仍是常规的枚举, `Some(T)` 和 `None` 仍是 `Option<T>` 的成员.
+
+当一个变量为 `Option<T>`  时, 如果为 `Some`, 则必须在使用它之前处理了为空的情况. 且在使用它时需要将其由 `Option<T>` 转化为 `T` 类型才可以使用.
+
+```rust
+fn some() {
+    let a = Some(4);
+    let b = 4;
+    assert_eq!(a.expect("Option") + b, 8);
+}
+fn none() {
+    let a: Option<u32> = None;
+    assert_eq!(a.is_none(), true);
+}
+```
+
+其中 `assert_eq!` 类似 jest 中的 `expect`
+
+使用 `match` 匹配 `Option<T>`
+
+```rust
+fn match_option(x: Option<i32>) -> Option<i32> {
+    match x {
+        None => None,
+        Some(i) => Some(i + 1),
+    }
+}
+let five = Some(5);
+let six = match_option(five);
+let none = match_option(None);
+```
+
+`match` 的分支必须覆盖了所有的可能性, 也有时说 rust 中的匹配是 穷尽的（exhaustive: 必须穷举到最后的可能性来使代码有效
+
+拓展: 如何使用 javascript 实现类似 `match` 的功能.
+
+通配模式
+
+```rust
+    let val = 10;
+
+    fn add() {}
+    fn remove() {}
+    fn skip() {}
+    match val {
+        1 => add(),
+        2 => remove(),
+        other => skip(),
+    }
+```
+
+这里的 other 代表了 val 的值 除了 1、2 之外的所有情况
+
+占位模式
+
+```rust
+    let val = 10;
+
+    fn add() {}
+    fn remove() {}
+    fn skip() {}
+    match val {
+        1 => add(),
+        2 => remove(),
+        _ => ()
+    }
+```
+
+`if let` 简洁控制流
+
+`if let` 是 `match` 的一个语法糖, 它当值匹配某一模式时执行代码而忽略所有其他值.
+
+```rust
+   let config_max = Some(32);
+    if let Some(max) = config_max {
+        assert_eq!(max, 32)
+    }
+```
+
+`if let` 语法获取通过等号分隔的一个模式和一个表达式. 它的工作方式与 `match` 相同, 这里的表达式对应 `match` 而模式则对应第一个分支.
+
+**使用包、Create和模块管理不断增长的项目**
