@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/><link rel="manifest" href="/favicon/site.webmanifest"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link rel="shortcut icon" href="/favicon/favicon.ico"/><meta name="msapplication-TileColor" content="#000000"/><meta name="msapplication-config" content="/favicon/browserconfig.xml"/><meta name="theme-color" content="#000"/><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><title>rust-like-match | Ai.Haibara codes</title><meta name="next-head-count" content="14"/><link rel="preload" href="/_next/static/css/4d9faa1c82c5289e.css" as="style"/><link rel="stylesheet" href="/_next/static/css/4d9faa1c82c5289e.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-8fa1640cc84ba8fe.js" defer=""></script><script src="/_next/static/chunks/framework-3b5a00d5d7e8d93b.js" defer=""></script><script src="/_next/static/chunks/main-59a90320855f5cf5.js" defer=""></script><script src="/_next/static/chunks/pages/_app-a2603426f792f9a7.js" defer=""></script><script src="/_next/static/chunks/799-575b46febca3af7d.js" defer=""></script><script src="/_next/static/chunks/399-cac0cd8ed02bf02a.js" defer=""></script><script src="/_next/static/chunks/pages/posts/%5Bslug%5D-ca05212d4081d62f.js" defer=""></script><script src="/_next/static/VnknnfSJtfZQLZ3OGiCHi/_buildManifest.js" defer=""></script><script src="/_next/static/VnknnfSJtfZQLZ3OGiCHi/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><header class="text-white bg-black drop-shadow-2xl"><div class="mx-auto my-0 max-w-[960px] py-6 px-4 flex items-center"><div class="flex items-center"><img alt="Ai.Haibara" src="/assets/blog/authors/haibara_2.jpg" width="100" height="100" decoding="async" data-nimg="1" class=" rounded-full" loading="lazy" style="color:transparent"/></div><div class="ml-6"><a class=" font-bold text-3xl" href="/">Ai.Haibara codes</a><div class="mt-2"><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/">Home</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/projects">Projects</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/talks">Talks</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/blogs">Blogs</a></div></div></div></header><main class="p-6 flex justify-center"><article><div class="flex justify-center font-[Arial]"><h1 class="text-5xl font-bold bg-indigo px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]">rust-like-match</h1></div><time dateTime="2023-02-24" class="text-center block my-4 text-sm opacity-60">February	24, 2023</time><section><div class="markdown-body-jzman max-w-3xl"><h2 id="简介"><a aria-hidden="true" tabindex="-1" href="#简介"><span class="icon icon-link"></span></a>简介</h2>
+<p><code>rust-like-match</code> 提供了在 javascript 或 typescript 中使用 <code>Rust-Like</code> 的模式匹配. 并且在 typescript 环境下, <code>rust-like-match</code> 能够利用类型校验来实现 rust 中 <code>match</code> 的穷尽匹配以及提供优秀的类型提示.</p>
+<h2 id="什么是-rust-like-的模式匹配"><a aria-hidden="true" tabindex="-1" href="#什么是-rust-like-的模式匹配"><span class="icon icon-link"></span></a>什么是 <code>Rust-Like</code> 的模式匹配?</h2>
+<p>在说到模式匹配之前, 我们先来看下 rust 中的枚举功能.</p>
+<pre><code class="language-rust">enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+</code></pre>
+<p>这里定义了一个名为 <code>Message</code> 的枚举类型, 包含了四个成员. 成员后的 <code>{}</code> 或者 <code>()</code> 代表着可以将什么类型的数据附加到该枚举成员上.</p>
+<p>初始化枚举成员:</p>
+<pre><code class="language-rust"> let msg1 = Message::Quit;
+ let msg2 = Message::Move { x: 10, y: 20 };
+ let msg3 = Message::Write("hello rust".to_string());
+ let mgs3 = Message::ChangeColor(255, 255, 255);
+</code></pre>
+<p>接下来回到主题, 来看下 rust 中的 <code>match</code> 关键字.</p>
+<pre><code class="language-rust"> match msg1 {
+   Message::Quit => quit(),
+   Message::Move { x, y } => move_item(x, y),
+   Message::Write(msg) => println!("{}", msg),
+   Message::ChangeColor(r, g, b) => change_color(r, g, b),
+ }
+</code></pre>
+<p><code>match</code> 关键字后跟一个表达式, 在这个栗子中是变量 <code>msg1</code> 的值. 接下来是一对大括号, 里面包含了 <code>match</code> 的分支. 一个分支由两部分组成: 一个模式和一些代码. 第一个分支的模式是枚举成员 <code>Message::Quit</code>, 之后的 <code>=></code> 运算符将模式和需要执行的代码分开, 这里的代码是执行函数 <code>quit</code>. 同时, 在匹配上附加了额外数据的枚举成员时, 可以将其作为参数传递给后续需要执行的代码. 这里的代码结构有点类型 javascript 中的箭头函数.</p>
+<p><code>match</code> 也支持通配模式:</p>
+<pre><code class="language-rust"> match msg1 {
+   Message::Quit => quit(),
+   _ => other()
+ }
+</code></pre>
+<p>上述代码中当匹配上 <code>Message::Quit</code> 之外的成员时, 都将执行 <code>other</code> 函数, 其中 <code>_</code> 为 rust 特定的占位符.</p>
+<h2 id="typescript-中的模式匹配"><a aria-hidden="true" tabindex="-1" href="#typescript-中的模式匹配"><span class="icon icon-link"></span></a>Typescript 中的模式匹配</h2>
+<p>接下来我们使用 <code>switch</code> 来模仿下 <code>match</code>:</p>
+<pre><code class="language-typescript">
+type Message =
+  | {
+      key: 'Quit';
+    }
+  | { key: 'Move'; value: { x: number; y: number } }
+  | { key: 'Write'; message: string }
+  | { key: 'ChangeColor'; r: number; g: number; b: number };
+
+
+
+let msg!: Message;
+
+switch (msg.key) {
+  case 'Quit': {
+    quit();
+    break;
+  }
+  case 'Move': {
+    move(msg.value);
+    break;
+  }
+  case 'Write': {
+    console.log(msg.message);
+    break;
+  }
+
+  case 'ChangeColor': {
+    change_color(msg.r, msg.g, msg.b);
+    break;
+  }
+}
+</code></pre>
+<h2 id="match-的优势"><a aria-hidden="true" tabindex="-1" href="#match-的优势"><span class="icon icon-link"></span></a>Match 的优势</h2>
+<p>在我看来, <code>match</code> 主要的优势有以下三点:</p>
+<ol>
+<li><strong>当 <code>match</code> 中没有使用通配模式时, 其中的分支必须覆盖了所有的可能性, 否则编译将不会通过</strong>.</li>
+<li><code>switch</code> 是一个语句, 而不是一个表达式, 无法使用类似 <code>const value = switch(...){...}</code> 的操作, 只能在每一个 <code>case</code> 里面去执行赋值语句, 而 <code>match</code> 为一个表达式, 其返回值为分支中执行的代码的返回值.</li>
+<li>优秀的多模式匹配机制. <code>switch</code> 中的多模式匹配需要移除 <code>case</code> 中的 <code>break</code> 语句, 也就是说对于每一个独立 <code>case</code> 都需要在尾部添加 <code>break</code> 语句, 但也容易因为 <code>break</code> 的丢失导致出现一些“误会”. 而 <code>match</code> 中的多模式采用类似 <code>Message::Quit | Message::Start => doSomething()</code> 的语法, 且每一个独立的分支不需要添加任何额外的语句.</li>
+</ol>
+<h2 id="使用方式"><a aria-hidden="true" tabindex="-1" href="#使用方式"><span class="icon icon-link"></span></a>使用方式</h2>
+<p>在了解了 <code>match</code> 的具体语法以及优势后, 我们回到主题 <code>rust-like-match</code> 中, 我们首先来看下具体的使用方式:</p>
+<ol>
+<li>
+<p>初始化</p>
+<pre><code class="language-typescript">import { defineMatchObject, none } from "rust-like-match";
+
+const Message = defineMatchObject({
+  Quit: none,
+  Move: (x: number, y: number) => ({ x, y }),
+  Write: (msg: string) => msg,
+  ChangeColor: (r: number, g: number, b: number) => ({ r, g, b }),
+});
+//or
+const obj = {
+  Quit: none,
+  Move: (x: number, y: number) => ({ x, y }),
+  Write: (msg: string) => msg,
+  ChangeColor: (r: number, g: number, b: number) => ({ r, g, b }),
+} as const;
+const Message = defineMatchObject(msg);
+</code></pre>
+<p>首先从 <code>rust-like-match</code> 中导出函数 <code>defineMatchObject</code> 以及变量 <code>none</code>. 由于 typescript 中已经存在 <code>enum</code> 的概念. 所以, 这里将初始化过程命名为 <strong>定义一个具有Match功能的对象</strong>, 也就是 <code>defineMatchObject</code>. 该函数接收一个字面量类型的对象, <code>key</code> 值对应 <code>rust</code> 中的枚举成员名, <code>value</code> 值的类型为 <code>None (typeof none)</code> 或者为一个函数. <code>None</code> 的情况对应着未给枚举成员附加额外数据, 相应的, 值为函数即代表着附加额外数据的情况.</p>
+</li>
+<li>
+<p>赋值</p>
+<p>我们来看下得到的 <code>Message</code> 的具体格式:</p>
+<p><img src="/assets/rust-like-match/example-1.png" alt="alt"></p>
+<p><img src="/assets/rust-like-match/example-2.png" alt="alt"></p>
+<p><img src="/assets/rust-like-match/example-3.png" alt="alt"></p>
+<p><img src="/assets/rust-like-match/example-4.png" alt="alt"></p>
+<p>可以看到, 当初始值为 <code>none</code> 时, <code>Message</code> 的成员值(<code>Quit</code>)为一个拥有 <code>match</code> 属性的对象. 当初始值为函数时, <code>Message</code> 的成员值同样也是一个函数, 且该函数的入参类型与初始的函数入参类型一致. 该函数的返回值为一个拥有 <code>match</code> 属性的对象.</p>
+<p>所以我们这样来进行赋值:</p>
+<pre><code class="language-typescript">let msg;
+
+msg = Message.Quit;
+//or
+msg = Message.Move(10, 20);
+//or
+msg = Message.Write("hello rust");
+//or
+msg = Message.ChangeColor(255, 255, 255);
+</code></pre>
+</li>
+<li>
+<p>匹配</p>
+<p><code>match</code> 函数接收一个对象作为参数, 对象的每一个 <code>key:value</code> 对应着一条分支, <code>key</code> 值为一个模式, 必须满足穷尽模式或者使用通配模式, <code>value</code> 为一个函数, 该函数能够接收到 <code>defineMatchObject</code> 时定义的函数的返回值, 并将其作为参数. 函数体为分支匹配上后执行的代码.</p>
+<p>接下来主要介绍在 typescript 环境下其拥有的一些特性:</p>
+<ol>
+<li>
+<p>支持通配模式, 当分支中存在 <code>_</code> 时, 此分支涵盖了其他可能的值, 且无需满足全匹配.</p>
+<pre><code class="language-typescript"> msg.match({
+   Quit:() => quit(),
+   _ :() => other(),
+ })
+</code></pre>
+</li>
+<li>
+<p>穷尽匹配: 当分支中不存在 <code>_</code> 时, 分支必须覆盖所有的情况, 否则 <code>typescript</code> 将编译失败.</p>
+<pre><code class="language-typescript"> msg.match({
+   Quit: () => quit(),
+   Move: ({ x, y }) => move(x, y),
+   Write: (msg) => console.log(msg),
+   ChangeColor: ({ r, g, b }) => changeColor(r, g, b),
+ });
+</code></pre>
+</li>
+<li>
+<p>参数类型自动推导. 每个分支中的函数的入参类型为定义时函数的返回类型.</p>
+</li>
+<li>
+<p>支持泛型.</p>
+</li>
+</ol>
+<pre><code class="language-typescript">  //此时 res 类型将自动推导为 number
+  const res = msg.match({
+    Quit: () => 1,
+    Move: ({ x, y }) => 2,
+    Write: (msg) => 3,
+    ChangeColor: ({ r, g, b }) => 4,
+  });
+
+ //由于未标注泛型, 且存在分支的返回类型不一致, 此时 typescript 将会报错
+ const res = msg.match({
+    Quit: () => 1,
+    Move: ({ x, y }) => '2',
+    Write: (msg) => 3,
+    ChangeColor: ({ r, g, b }) => 4,
+  });
+
+ //res 的类型为 string | number | boolean | Array&#x3C;number>
+ const res = msg.match&#x3C;string | number | boolean | Array&#x3C;number>>({
+    Quit: () => 1,
+    Move: ({ x, y }) => [x, y],
+    Write: (msg) => false,
+    ChangeColor: ({ r, g, b }) => `${r}-${g}-${b}`,
+  });
+</code></pre>
+</li>
+</ol>
+<h2 id="未来将会支持的功能"><a aria-hidden="true" tabindex="-1" href="#未来将会支持的功能"><span class="icon icon-link"></span></a>未来将会支持的功能</h2>
+<ol>
+<li>实现多模式匹配, 预计会以 <code>"Quit | Start": () => other()</code> 的形式来实现.</li>
+<li>兼容 typescript 中的 <code>enum</code> (实现方案考虑中).</li>
+</ol></div></section></article></main><footer class="bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4">© 2022,<!-- --> <a rel="noopener noreferrer" class="hover:underline hover:bg-indigo" href="https://github.com/LZS911" target="_blank">LZS_911</a>, build with<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://nextjs.org/" target="_blank">Next.js</a> <!-- -->and<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://pages.github.com/?(null)" target="_blank">GitHub Pages</a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"title":"rust-like-match","date":"2023-02-24","slug":"rust-like-match-typescript","author":"Ai.Haibara","content":"\u003ch2 id=\"简介\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#简介\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e简介\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003erust-like-match\u003c/code\u003e 提供了在 javascript 或 typescript 中使用 \u003ccode\u003eRust-Like\u003c/code\u003e 的模式匹配. 并且在 typescript 环境下, \u003ccode\u003erust-like-match\u003c/code\u003e 能够利用类型校验来实现 rust 中 \u003ccode\u003ematch\u003c/code\u003e 的穷尽匹配以及提供优秀的类型提示.\u003c/p\u003e\n\u003ch2 id=\"什么是-rust-like-的模式匹配\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#什么是-rust-like-的模式匹配\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e什么是 \u003ccode\u003eRust-Like\u003c/code\u003e 的模式匹配?\u003c/h2\u003e\n\u003cp\u003e在说到模式匹配之前, 我们先来看下 rust 中的枚举功能.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-rust\"\u003eenum Message {\n    Quit,\n    Move { x: i32, y: i32 },\n    Write(String),\n    ChangeColor(i32, i32, i32),\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这里定义了一个名为 \u003ccode\u003eMessage\u003c/code\u003e 的枚举类型, 包含了四个成员. 成员后的 \u003ccode\u003e{}\u003c/code\u003e 或者 \u003ccode\u003e()\u003c/code\u003e 代表着可以将什么类型的数据附加到该枚举成员上.\u003c/p\u003e\n\u003cp\u003e初始化枚举成员:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-rust\"\u003e let msg1 = Message::Quit;\n let msg2 = Message::Move { x: 10, y: 20 };\n let msg3 = Message::Write(\"hello rust\".to_string());\n let mgs3 = Message::ChangeColor(255, 255, 255);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e接下来回到主题, 来看下 rust 中的 \u003ccode\u003ematch\u003c/code\u003e 关键字.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-rust\"\u003e match msg1 {\n   Message::Quit =\u003e quit(),\n   Message::Move { x, y } =\u003e move_item(x, y),\n   Message::Write(msg) =\u003e println!(\"{}\", msg),\n   Message::ChangeColor(r, g, b) =\u003e change_color(r, g, b),\n }\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ccode\u003ematch\u003c/code\u003e 关键字后跟一个表达式, 在这个栗子中是变量 \u003ccode\u003emsg1\u003c/code\u003e 的值. 接下来是一对大括号, 里面包含了 \u003ccode\u003ematch\u003c/code\u003e 的分支. 一个分支由两部分组成: 一个模式和一些代码. 第一个分支的模式是枚举成员 \u003ccode\u003eMessage::Quit\u003c/code\u003e, 之后的 \u003ccode\u003e=\u003e\u003c/code\u003e 运算符将模式和需要执行的代码分开, 这里的代码是执行函数 \u003ccode\u003equit\u003c/code\u003e. 同时, 在匹配上附加了额外数据的枚举成员时, 可以将其作为参数传递给后续需要执行的代码. 这里的代码结构有点类型 javascript 中的箭头函数.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003ematch\u003c/code\u003e 也支持通配模式:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-rust\"\u003e match msg1 {\n   Message::Quit =\u003e quit(),\n   _ =\u003e other()\n }\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e上述代码中当匹配上 \u003ccode\u003eMessage::Quit\u003c/code\u003e 之外的成员时, 都将执行 \u003ccode\u003eother\u003c/code\u003e 函数, 其中 \u003ccode\u003e_\u003c/code\u003e 为 rust 特定的占位符.\u003c/p\u003e\n\u003ch2 id=\"typescript-中的模式匹配\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#typescript-中的模式匹配\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eTypescript 中的模式匹配\u003c/h2\u003e\n\u003cp\u003e接下来我们使用 \u003ccode\u003eswitch\u003c/code\u003e 来模仿下 \u003ccode\u003ematch\u003c/code\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003e\ntype Message =\n  | {\n      key: 'Quit';\n    }\n  | { key: 'Move'; value: { x: number; y: number } }\n  | { key: 'Write'; message: string }\n  | { key: 'ChangeColor'; r: number; g: number; b: number };\n\n\n\nlet msg!: Message;\n\nswitch (msg.key) {\n  case 'Quit': {\n    quit();\n    break;\n  }\n  case 'Move': {\n    move(msg.value);\n    break;\n  }\n  case 'Write': {\n    console.log(msg.message);\n    break;\n  }\n\n  case 'ChangeColor': {\n    change_color(msg.r, msg.g, msg.b);\n    break;\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"match-的优势\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#match-的优势\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eMatch 的优势\u003c/h2\u003e\n\u003cp\u003e在我看来, \u003ccode\u003ematch\u003c/code\u003e 主要的优势有以下三点:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003e当 \u003ccode\u003ematch\u003c/code\u003e 中没有使用通配模式时, 其中的分支必须覆盖了所有的可能性, 否则编译将不会通过\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003eswitch\u003c/code\u003e 是一个语句, 而不是一个表达式, 无法使用类似 \u003ccode\u003econst value = switch(...){...}\u003c/code\u003e 的操作, 只能在每一个 \u003ccode\u003ecase\u003c/code\u003e 里面去执行赋值语句, 而 \u003ccode\u003ematch\u003c/code\u003e 为一个表达式, 其返回值为分支中执行的代码的返回值.\u003c/li\u003e\n\u003cli\u003e优秀的多模式匹配机制. \u003ccode\u003eswitch\u003c/code\u003e 中的多模式匹配需要移除 \u003ccode\u003ecase\u003c/code\u003e 中的 \u003ccode\u003ebreak\u003c/code\u003e 语句, 也就是说对于每一个独立 \u003ccode\u003ecase\u003c/code\u003e 都需要在尾部添加 \u003ccode\u003ebreak\u003c/code\u003e 语句, 但也容易因为 \u003ccode\u003ebreak\u003c/code\u003e 的丢失导致出现一些“误会”. 而 \u003ccode\u003ematch\u003c/code\u003e 中的多模式采用类似 \u003ccode\u003eMessage::Quit | Message::Start =\u003e doSomething()\u003c/code\u003e 的语法, 且每一个独立的分支不需要添加任何额外的语句.\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"使用方式\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#使用方式\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e使用方式\u003c/h2\u003e\n\u003cp\u003e在了解了 \u003ccode\u003ematch\u003c/code\u003e 的具体语法以及优势后, 我们回到主题 \u003ccode\u003erust-like-match\u003c/code\u003e 中, 我们首先来看下具体的使用方式:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e初始化\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003eimport { defineMatchObject, none } from \"rust-like-match\";\n\nconst Message = defineMatchObject({\n  Quit: none,\n  Move: (x: number, y: number) =\u003e ({ x, y }),\n  Write: (msg: string) =\u003e msg,\n  ChangeColor: (r: number, g: number, b: number) =\u003e ({ r, g, b }),\n});\n//or\nconst obj = {\n  Quit: none,\n  Move: (x: number, y: number) =\u003e ({ x, y }),\n  Write: (msg: string) =\u003e msg,\n  ChangeColor: (r: number, g: number, b: number) =\u003e ({ r, g, b }),\n} as const;\nconst Message = defineMatchObject(msg);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e首先从 \u003ccode\u003erust-like-match\u003c/code\u003e 中导出函数 \u003ccode\u003edefineMatchObject\u003c/code\u003e 以及变量 \u003ccode\u003enone\u003c/code\u003e. 由于 typescript 中已经存在 \u003ccode\u003eenum\u003c/code\u003e 的概念. 所以, 这里将初始化过程命名为 \u003cstrong\u003e定义一个具有Match功能的对象\u003c/strong\u003e, 也就是 \u003ccode\u003edefineMatchObject\u003c/code\u003e. 该函数接收一个字面量类型的对象, \u003ccode\u003ekey\u003c/code\u003e 值对应 \u003ccode\u003erust\u003c/code\u003e 中的枚举成员名, \u003ccode\u003evalue\u003c/code\u003e 值的类型为 \u003ccode\u003eNone (typeof none)\u003c/code\u003e 或者为一个函数. \u003ccode\u003eNone\u003c/code\u003e 的情况对应着未给枚举成员附加额外数据, 相应的, 值为函数即代表着附加额外数据的情况.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e赋值\u003c/p\u003e\n\u003cp\u003e我们来看下得到的 \u003ccode\u003eMessage\u003c/code\u003e 的具体格式:\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/rust-like-match/example-1.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/rust-like-match/example-2.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/rust-like-match/example-3.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/rust-like-match/example-4.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e可以看到, 当初始值为 \u003ccode\u003enone\u003c/code\u003e 时, \u003ccode\u003eMessage\u003c/code\u003e 的成员值(\u003ccode\u003eQuit\u003c/code\u003e)为一个拥有 \u003ccode\u003ematch\u003c/code\u003e 属性的对象. 当初始值为函数时, \u003ccode\u003eMessage\u003c/code\u003e 的成员值同样也是一个函数, 且该函数的入参类型与初始的函数入参类型一致. 该函数的返回值为一个拥有 \u003ccode\u003ematch\u003c/code\u003e 属性的对象.\u003c/p\u003e\n\u003cp\u003e所以我们这样来进行赋值:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003elet msg;\n\nmsg = Message.Quit;\n//or\nmsg = Message.Move(10, 20);\n//or\nmsg = Message.Write(\"hello rust\");\n//or\nmsg = Message.ChangeColor(255, 255, 255);\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e匹配\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003ematch\u003c/code\u003e 函数接收一个对象作为参数, 对象的每一个 \u003ccode\u003ekey:value\u003c/code\u003e 对应着一条分支, \u003ccode\u003ekey\u003c/code\u003e 值为一个模式, 必须满足穷尽模式或者使用通配模式, \u003ccode\u003evalue\u003c/code\u003e 为一个函数, 该函数能够接收到 \u003ccode\u003edefineMatchObject\u003c/code\u003e 时定义的函数的返回值, 并将其作为参数. 函数体为分支匹配上后执行的代码.\u003c/p\u003e\n\u003cp\u003e接下来主要介绍在 typescript 环境下其拥有的一些特性:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e支持通配模式, 当分支中存在 \u003ccode\u003e_\u003c/code\u003e 时, 此分支涵盖了其他可能的值, 且无需满足全匹配.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003e msg.match({\n   Quit:() =\u003e quit(),\n   _ :() =\u003e other(),\n })\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e穷尽匹配: 当分支中不存在 \u003ccode\u003e_\u003c/code\u003e 时, 分支必须覆盖所有的情况, 否则 \u003ccode\u003etypescript\u003c/code\u003e 将编译失败.\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003e msg.match({\n   Quit: () =\u003e quit(),\n   Move: ({ x, y }) =\u003e move(x, y),\n   Write: (msg) =\u003e console.log(msg),\n   ChangeColor: ({ r, g, b }) =\u003e changeColor(r, g, b),\n });\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e参数类型自动推导. 每个分支中的函数的入参类型为定义时函数的返回类型.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e支持泛型.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cpre\u003e\u003ccode class=\"language-typescript\"\u003e  //此时 res 类型将自动推导为 number\n  const res = msg.match({\n    Quit: () =\u003e 1,\n    Move: ({ x, y }) =\u003e 2,\n    Write: (msg) =\u003e 3,\n    ChangeColor: ({ r, g, b }) =\u003e 4,\n  });\n\n //由于未标注泛型, 且存在分支的返回类型不一致, 此时 typescript 将会报错\n const res = msg.match({\n    Quit: () =\u003e 1,\n    Move: ({ x, y }) =\u003e '2',\n    Write: (msg) =\u003e 3,\n    ChangeColor: ({ r, g, b }) =\u003e 4,\n  });\n\n //res 的类型为 string | number | boolean | Array\u0026#x3C;number\u003e\n const res = msg.match\u0026#x3C;string | number | boolean | Array\u0026#x3C;number\u003e\u003e({\n    Quit: () =\u003e 1,\n    Move: ({ x, y }) =\u003e [x, y],\n    Write: (msg) =\u003e false,\n    ChangeColor: ({ r, g, b }) =\u003e `${r}-${g}-${b}`,\n  });\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"未来将会支持的功能\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#未来将会支持的功能\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e未来将会支持的功能\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e实现多模式匹配, 预计会以 \u003ccode\u003e\"Quit | Start\": () =\u003e other()\u003c/code\u003e 的形式来实现.\u003c/li\u003e\n\u003cli\u003e兼容 typescript 中的 \u003ccode\u003eenum\u003c/code\u003e (实现方案考虑中).\u003c/li\u003e\n\u003c/ol\u003e","theme":"jzman","tag":[null]}},"__N_SSG":true},"page":"/posts/[slug]","query":{"slug":"rust-like-match-typescript"},"buildId":"VnknnfSJtfZQLZ3OGiCHi","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
