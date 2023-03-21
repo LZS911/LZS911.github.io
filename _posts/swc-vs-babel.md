@@ -142,5 +142,5 @@ const transform = (content) => {
 
 下面是两者在对 10000 条 import 语句下的表现:
 
-![alt](/assate/swc_vs_babel/example-1.png)
-![alt](/assate/swc_vs_babel/example-2.png)
+![alt](/assets/swc_vs_babel/example-1.png)
+![alt](/assets/swc_vs_babel/example-1.png)
