@@ -487,3 +487,26 @@ type CurryingType<T> = T extends (...args: [infer Left, ...infer Rest]) => infer
         : (arg: Left) => CurryingType<(...args: Rest) => R>
     : never
 ```
+
+## 9. UnionToIntersection
+
+``type I = Union2Intersection<'foo' | 42 | true> // expected to be 'foo' & 42 & true``
+
+```typescript
+type UnionToFunction<T> = T extends any ? (arg:T) => void : never;
+
+type test1 = UnionToFunction<"foo" | 42 | true>;// (arg: "foo") => void | (arg: 42) => void | (arg: true) => void;
+
+type UnionToIntersection<U> = UnionToFunction<U> extends (arg:infer T) => void ? T:never;
+
+type test2 = UnionToIntersection<{a:string} | {b:number} | {c:boolean}>;// {a: string} & {b: number} & {c: boolean}
+
+```
+
+解题思路: <https://github.com/type-challenges/type-challenges/issues?q=label%3A55+label%3Aanswer+sort%3Areactions-%2B1-desc>
+
+## 10. GetRequired
+
+```typescript
+type GetRequired<T> = {[P in keyof T as T[P] extends Required<T>[P] ? P : never]:T[P]}
+```
