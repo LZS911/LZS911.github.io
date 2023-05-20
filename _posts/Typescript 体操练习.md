@@ -505,8 +505,92 @@ type test2 = UnionToIntersection<{a:string} | {b:number} | {c:boolean}>;// {a: s
 
 解题思路: <https://github.com/type-challenges/type-challenges/issues?q=label%3A55+label%3Aanswer+sort%3Areactions-%2B1-desc>
 
-## 10. GetRequired
+## 10. GetRequired and GetOptional
 
 ```typescript
 type GetRequired<T> = {[P in keyof T as T[P] extends Required<T>[P] ? P : never]:T[P]}
+```
+
+```typescript
+type GetOptional<T> = {[P in keyof T as T[P] extends Required<T>[P] ? never : P]:T[P]}
+```
+
+## 11. Capitalize Words
+
+Implement CapitalizeWords<T> which converts the first letter of each word of a string to uppercase and leaves the rest as-is.
+
+For example
+
+```typescript
+type capitalized = CapitalizeWords<'hello world, my friends'> // expected to be 'Hello World, My Friends'
+```
+
+```typescript
+type CapitalizeRest<T> = T extends `${infer Left}${infer Rest}` ? `${Left}${CapitalizeRest<Capitalize<Left> extends Lowercase<Left> ? Capitalize<Rest> : Rest>}`
+
+ : T;
+
+type CapitalizeWords<S extends string> = Capitalize<CapitalizeRest<S>>;
+```
+
+## 12 CamelCase
+
+Implement CamelCase<T> which converts snake_case string to camelCase.
+
+For example
+
+```typescript
+type camelCase1 = CamelCase<'hello_world_with_types'> // expected to be 'helloWorldWithTypes'
+type camelCase2 = CamelCase<'HELLO_WORLD_WITH_TYPES'> // expected to be same as previous one
+```
+
+```typescript
+type IsGap<T extends string> = Uppercase<T> extends Lowercase<T> ? true : false;
+
+type CamelCase<S extends string> = S extends Lowercase<S>
+  ? S extends `${infer L}_${infer C}${infer R}`
+    ? C extends '_'
+      ? `${L}_${CamelCase<`_${R}`>}`
+      : `${L}${IsGap<C> extends true ? `_${C}` : Uppercase<C>}${CamelCase<R>}`
+    : S
+  : CamelCase<Lowercase<S>>;
+
+```
+
+## 13 C-printf Parser
+
+```typescript
+import type { Equal, Expect } from '@type-challenges/utils'
+
+type cases = [
+  Expect<Equal<ParsePrintFormat<''>, []>>,
+  Expect<Equal<ParsePrintFormat<'Any string.'>, []>>,
+  Expect<Equal<ParsePrintFormat<'The result is %d.'>, ['dec']>>,
+  Expect<Equal<ParsePrintFormat<'The result is %%d.'>, []>>,
+  Expect<Equal<ParsePrintFormat<'The result is %%%d.'>, ['dec']>>,
+  Expect<Equal<ParsePrintFormat<'The result is %f.'>, ['float']>>,
+  Expect<Equal<ParsePrintFormat<'The result is %h.'>, ['hex']>>,
+  Expect<Equal<ParsePrintFormat<'The result is %q.'>, []>>,
+  Expect<Equal<ParsePrintFormat<'Hello %s: score is %d.'>, ['string', 'dec']>>,
+  Expect<Equal<ParsePrintFormat<'The result is %'>, []>>,
+]
+```
+
+```typescript
+type ControlsMap = {
+  c: 'char'
+  s: 'string'
+  d: 'dec'
+  o: 'oct'
+  h: 'hex'
+  f: 'float'
+  p: 'pointer'
+}
+
+type ParsePrintFormat<S extends string> = S extends `${infer Start}%${infer Letter}${infer Rest}`
+  ? (Letter extends keyof ControlsMap
+      ? [ControlsMap[Letter], ...ParsePrintFormat<Rest>]
+      : ParsePrintFormat<Rest>)
+  : []
+
 ```
