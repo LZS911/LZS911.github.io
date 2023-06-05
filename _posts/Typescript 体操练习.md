@@ -339,12 +339,10 @@ type Split<
   Element extends string = '',
   ResultArray extends string[] = []
 > = S extends ''
-  ? []
+  ? [...ResultArray, S]
   : S extends `${infer Left}${Element}${infer Rest}`
-  ? Rest extends ''
-    ? [...ResultArray, Left]
-    : Split<Rest, Element, [...ResultArray, Left]>
-  : never;
+    ? Split<Rest, Element, [...ResultArray, Left]>
+    : [...ResultArray, S];
 ```
 
 ![alt](/assets/typescript/example-24.png)
@@ -593,4 +591,43 @@ type ParsePrintFormat<S extends string> = S extends `${infer Start}%${infer Lett
       : ParsePrintFormat<Rest>)
   : []
 
+```
+
+## 14. Typed Get
+
+实现以下功能的工具类型:
+
+```typescript
+type Data = {
+  foo: {
+    bar: {
+      value: 'foobar',
+      count: 6,
+    },
+    included: true,
+  },
+  hello: 'world'
+}
+  
+type A = Get<Data, 'hello'> // 'world'
+type B = Get<Data, 'foo.bar.count'> // 6
+type C = Get<Data, 'foo.bar'> // { value: 'foobar', count: 6 }
+```
+
+```typescript
+type Split<S extends string, Element extends string = '.'> = S extends ''
+  ? []
+  : S extends `${infer Left}${Element}${infer Rest}`
+  ? [Left, Rest]
+  : [S];
+
+type Get<T, K extends string> = K extends keyof T
+  ? T[K]
+  : Split<K>['length'] extends 2
+  ? Split<K>[0] extends keyof T
+    ? Split<K>[1] extends string
+      ? Get<T[Split<K>[0]], Split<K>[1]>
+      : never
+    : never
+  : never;
 ```

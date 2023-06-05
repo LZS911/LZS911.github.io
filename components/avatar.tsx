@@ -1,11 +1,11 @@
-import Image, { ImageProps } from "next/image";
-import EmptyBox from "./empty-box";
+import Image, { ImageProps } from 'next/image';
+import EmptyBox from './empty-box';
 
 type Props = {
   name: string;
   picture: string;
   showName?: boolean;
-} & Omit<ImageProps, "src" | "alt">;
+} & Omit<ImageProps, 'src' | 'alt'>;
 
 const Avatar: React.FC<Props> = ({ name, picture, showName, ...props }) => {
   return (
