@@ -14,8 +14,6 @@ excerpt: '学习下平常工作中不太会用到的一些 Typescript 工具类�
 theme: fancy
 ---
 
-**注: Typescript 使用最新版本号 v4.94**
-
 ## 1. 将下划线模式的 string 类型转化成驼峰类型
 
 ```Typescript
