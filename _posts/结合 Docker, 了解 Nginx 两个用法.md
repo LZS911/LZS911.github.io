@@ -1,5 +1,5 @@
 ---
-title: 结合 Docker, 了解 Nginx 核心用法
+title: 结合 Docker, 了解 Nginx 的两个用法
 date: "2023-08-20"
 image: 
 headerImage: false
