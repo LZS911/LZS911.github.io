@@ -1,5 +1,5 @@
 ---
-title: JSDOC学习记录
+title: JSDoc && Typescript
 date: "2023-11-30"
 image: 
 headerImage: false
@@ -46,10 +46,6 @@ TypeScript 是一种为 JavaScript 添加类型支持的语言，它提供了类
 
 ### 实践
 
-![alt](/assets/jsdoc/example-7.png)
-
-由于 vite 包中提供了 UserConfig 的类型， 所以我们可以在 JSDoc 中直接 `import` 该类型， 这样， 在 js 文件中，同样能够获取到类型提示以及类型检查的功能。
-
 ![alt](/assets/jsdoc/example-3.png)
 
 在我们开启了 tsconfig 中的 `allowJs` 以及 `checkJs` 后，即使在 js 文件中，依然会为我们检查出类型错误。
@@ -61,6 +57,10 @@ TypeScript 是一种为 JavaScript 添加类型支持的语言，它提供了类
 此时已经能够正确的推导出类型了，接下来，我们来个稍微复杂点的函数。
 
 ![alt](/assets/jsdoc/example-5.png)
+
+![alt](/assets/jsdoc/example-7.png)
+
+由于 vite 包中提供了 UserConfig 的类型， 所以我们可以在 JSDoc 中直接 `import` 该类型， 这样， 在 js 文件中，同样能够获取到类型提示以及类型检查的功能。
 
 接下来， 在项目中执行 `npx tsc`， 可以看到， typescript 已经为我们生成了 index.d.ts 的文件， 这样， 当其他人来引用这个项目时， 同样也能享受到类型提示以及类型检查。
 
