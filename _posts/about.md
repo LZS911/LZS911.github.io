@@ -73,4 +73,4 @@ ogImage:
 
 #### 最后，哀酱镇楼
 
-!「example」(/assets/blog/image/profile.jpg)
+![example](/assets/blog/image/profile.jpg)
