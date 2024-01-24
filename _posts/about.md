@@ -16,7 +16,7 @@ ogImage:
   url: '/assets/blog/image/cover.jpg'
 ---
 
-> `You die as you lived: insipid and ignorant.` (就像活着的时候那样，你死得无趣而又无知。) —— 《DOTA2 卡尔》
+<!-- > `You die as you lived: insipid and ignorant.` (就像活着的时候那样，你死得无趣而又无知。) —— 《DOTA2 卡尔》
 
 > `你的一生，是不断被困难所克服的一生。` —— 《DC 锐评 PIS》
 
@@ -69,8 +69,8 @@ ogImage:
 
 前端切图仔, 始终以拓宽自己的技术路线为目标而前进!
 
-> 越来越喜欢研究后的那种顿悟时刻，期待自己能够稳定每月更新一篇博客。
+> 越来越喜欢研究后的那种顿悟时刻，期待自己能够稳定每月更新一篇博客。 -->
 
-#### 最后，哀酱镇楼
+<!-- #### 最后，哀酱镇楼 -->
 
 ![example](/assets/blog/image/profile.jpg)
