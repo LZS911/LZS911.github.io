@@ -1,9 +1,9 @@
-import fs from "fs";
-import { join } from "path";
-import matter from "gray-matter";
-import PostType, { Items } from "../interfaces/post";
+import fs from 'fs';
+import { join } from 'path';
+import matter from 'gray-matter';
+import PostType, { Items } from '../interfaces/post';
 
-const postsDirectory = join(process.cwd(), "_posts");
+const postsDirectory = join(process.cwd(), '_posts');
 
 export function getPostSlugs() {
   return fs.readdirSync(postsDirectory);
@@ -13,22 +13,22 @@ export function getPostBySlug(
   slug: string,
   fields: Array<keyof PostType> = []
 ) {
-  const realSlug = slug.replace(/\.md$/, "");
+  const realSlug = slug.replace(/\.md$/, '');
   const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
   const items: Items = {};
 
   fields.forEach((field) => {
-    if (field === "slug") {
+    if (field === 'slug') {
       items[field] = realSlug;
     }
-    if (field === "content") {
+    if (field === 'content') {
       items[field] = content;
     }
 
-    if (typeof data[field] !== "undefined") {
+    if (typeof data[field] !== 'undefined') {
       (items[field] as any) = data[field];
     }
   });
