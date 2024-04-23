@@ -1,5 +1,5 @@
 ---
-title: 解析前端数据加载：BOM字节、Content-Type与Excel文件兼容性
+title: 解析前端数据加载：BOM字节、Response-Type与Excel文件兼容性
 date: "2024-04-10"
 image: 
 headerImage: false
