@@ -77,7 +77,7 @@ theme: fancy
 
 ### 后端处理
 
-在前端不进行任何额外的处理情况下，后端可以使用字符串首部添加字节 `\ufeff` 的方式。 见代码：<https://github.com/LZS911/csv-bom-excel-example/blob/main/server.js#L5。当然，最后代码能不能过> review 就不好说了🤪。
+在前端不进行任何额外的处理情况下，后端可以使用字符串首部添加字节 `\ufeff` 的方式。 见代码：<https://github.com/LZS911/csv-bom-excel-example/blob/main/server.js#L5>。当然，最后代码能不能过 review 就不好说了🤪。
 
 ### 前端处理
 
@@ -100,9 +100,8 @@ theme: fancy
 通过提供一系列的解决方案，包括在服务端正确设置 HTTP 响应的`Content-Type`头部，以及在前端通过`XMLHttpRequest`以适当的`responseType`接收二进制数据，我们展示了如何有效地避免数据在传输和加载过程中出现乱码。
 
 ## 附录
->
 > 通过 [Kimi](https://kimi.moonshot.cn/) 辅助生成文章标题以及具体大纲，并且进行细节优化。
-[^1]:[CSV文件与Excel的差异](https://zhuanlan.zhihu.com/p/148209693)\
+[^1]:[CSV文件与Excel的差异](https://zhuanlan.zhihu.com/p/148209693)
 [^2]:[示例代码由 Kimi 生成](https://github.com/LZS911/csv-bom-excel-example)
 [^3]:[ResponseType](https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/responseType)
 [^4]:[来自 Kimi](https://kimi.moonshot.cn/)
