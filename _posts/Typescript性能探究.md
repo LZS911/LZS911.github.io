@@ -12,10 +12,18 @@ excerpt:
 theme: orange
 ---
 
-基于 https://www.totaltypescript.com/react-apps-ts-performance 这篇博客，并且由于之前项目中出现过由于 TS 性能问题导致 IDE 异常卡顿的原因，让我想深入了解下性能相关的问题。
 
 
-## 优先选择 Interface 而不是 Intersections
+## 为什么 TypeScript 性能很重要
+
+TypeScript 性能问题会严重影响开发体验，尤其是在 IDE 响应能力可能受到影响的大型项目中。理解和实施性能优化​​策略对于保持顺畅的开发工作流程至关重要。
+
+
+## 关键优化策略
+
+>原文地址：https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections
+
+### 优先选择 Interface 而不是 Intersection Types
 
 大多数时候，对象类型的简单类型别名的作用与接口非常相似。
 
@@ -46,7 +54,7 @@ type Bar = { prop: string };
 + }
 ```
 
-## 显示标注类型而不是依赖类型推断
+### 显示标注类型而不是依赖类型推断
 
 添加类型注解，尤其是返回类型，可以为编译器节省大量工作。 部分原因是命名类型往往比匿名类型（编译器可能会推断出匿名类型）更紧凑，这就减少了读写声明文件（例如增量编译）所花费的时间。 类型推断非常方便，因此没有必要普遍使用，但如果你发现代码中有一段运行速度较慢，可以尝试使用。
 
@@ -60,7 +68,7 @@ type Bar = { prop: string };
   }
 ```
 
-## 优先选择基本类型而不是联合类型
+### 优先选择基本类型而不是联合类型
 
 联合类型很棒 - 它们可以让您表达类型的可能值的范围。
 
@@ -112,7 +120,7 @@ declare function printSchedule(schedule: Schedule);
 当尝试对每个内置 DOM 元素类型进行建模时，可能会出现一个更现实的示例。在这种情况下，最好创建一个具有DivElement 、 ImgElement等所有扩展的通用成员的基本HtmlElement类型，而不是创建一个详尽的联合，例如 DivElement | /*...*/ | ImgElement | /*...*/ 。
 
 
-## 命名复杂类型
+### 命名复杂类型
 
 可以在允许类型注释的任何地方编写复杂类型。
 
@@ -142,7 +150,7 @@ interface SomeType<T> {
 }
 ```
 
-## 项目拆分
+### 项目拆分
 
 当使用 TypeScript 构建任何规模不小的代码库时，将代码库组织成几个独立的项目会很有帮助。每个项目都有自己的tsconfig.json ，它依赖于其他项目。这有助于避免在一次编译中加载太多文件，并且还使某些代码库布局策略更容易组合在一起。
 
@@ -183,7 +191,7 @@ interface SomeType<T> {
 ```
 
 
-## 指定文件
+### 指定文件
 
 您应该始终确保您的配置文件不会同时包含太多文件。
 
@@ -208,7 +216,7 @@ include / exclude有助于避免需要指定这些文件，但代价是：必须
 
 **注意：如果没有exclude列表，则默认排除node_modules ；一旦添加，将node_modules显式添加到列表中非常重要。**
 
-## 控制@types范围
+### 控制@types范围
 
 默认情况下，TypeScript 会自动包含它在node_modules文件夹中找到的每个@types包，无论您是否导入它。这是为了让某些事情在使用 Node.js、Jasmine、Mocha、Chai 等时“正常工作”，因为这些工具/包不是导入的 - 它们只是加载到全局环境中。
 
@@ -251,7 +259,7 @@ Duplicate identifier 'require'.
 }
 ```
 
-## 跳过.d.ts检查
+### 跳过.d.ts检查
 
 默认情况下，TypeScript 会重新检查项目中的所有 .d.ts 文件，以查找问题和不一致之处；但这通常是不必要的。 在大多数情况下，.d.ts 文件已知已经正常工作--类型之间相互扩展的方式已经验证过一次，重要的声明无论如何都会被检查。
 
