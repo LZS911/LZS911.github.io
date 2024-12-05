@@ -36,7 +36,9 @@ type Bar = { prop: string };
 但是，一旦您需要组合两个或多个类型，您就可以选择使用接口扩展这些类型，或者在类型别名中将它们相交，此时差异就开始变得重要了。
 
 1. interface 创建了一个单一的平面对象类型，可以检测属性冲突，这通常是需要解决的重要问题！ 另一方面，intersections 只是递归合并属性，在某些情况下永远不会产生属性冲突。
+
 ![image](https://github.com/user-attachments/assets/65b15da2-9a72-4ece-adf2-4346eb86d947)
+
 ![image](https://github.com/user-attachments/assets/f8d16d70-92bf-491f-88c9-70f485249327)
 
 2. interface 的显示效果也更好，而 intersections 的类型别名不能显示为其他交集的一部分。 interface 之间的类型关系也会被缓存，而 intersections 类型则不会被整体缓存。
