@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width"/><link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/><link rel="manifest" href="/favicon/site.webmanifest"/><link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000000"/><link rel="shortcut icon" href="/favicon/favicon.ico"/><meta name="msapplication-TileColor" content="#000000"/><meta name="msapplication-config" content="/favicon/browserconfig.xml"/><meta name="theme-color" content="#000"/><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><meta property="og:image" content="https://og-image.vercel.app/Next.js%20Blog%20Starter%20Example.png?theme=light&amp;md=1&amp;fontSize=100px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><title>Typescript性能探究 | Ai.Haibara codes</title><meta name="next-head-count" content="14"/><link rel="preload" href="/_next/static/css/8681f744d5932be6.css" as="style"/><link rel="stylesheet" href="/_next/static/css/8681f744d5932be6.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script><script src="/_next/static/chunks/webpack-8fa1640cc84ba8fe.js" defer=""></script><script src="/_next/static/chunks/framework-3b5a00d5d7e8d93b.js" defer=""></script><script src="/_next/static/chunks/main-59a90320855f5cf5.js" defer=""></script><script src="/_next/static/chunks/pages/_app-f46e289d7ac5e197.js" defer=""></script><script src="/_next/static/chunks/799-575b46febca3af7d.js" defer=""></script><script src="/_next/static/chunks/399-cac0cd8ed02bf02a.js" defer=""></script><script src="/_next/static/chunks/pages/posts/%5Bslug%5D-e2afa3a98c674f72.js" defer=""></script><script src="/_next/static/ZMDftUcbmgEQQmVtjVhzp/_buildManifest.js" defer=""></script><script src="/_next/static/ZMDftUcbmgEQQmVtjVhzp/_ssgManifest.js" defer=""></script></head><body><div id="__next"><div class="min-h-screen"><header class="text-white bg-black drop-shadow-2xl"><div class="mx-auto my-0 max-w-[960px] py-6 px-4 flex items-center"><div class="flex items-center"><img alt="Ai.Haibara" src="/assets/blog/authors/haibara_2.jpg" width="100" height="100" decoding="async" data-nimg="1" class=" rounded-full" loading="lazy" style="color:transparent"/></div><div class="ml-6"><a class=" font-bold text-3xl" href="/">Ai.Haibara codes</a><div class="mt-2"><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/">Home</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/projects">Projects</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/talks">Talks</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-indigo" href="/blogs">Blogs</a></div></div></div></header><main class="p-6 flex justify-center"><article><div class="flex justify-center font-[Arial] max-w-[864px] text-center"><h1 class="text-5xl font-bold bg-indigo px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]">Typescript性能探究</h1></div><time dateTime="2024-12-05" class="text-center block my-4 text-sm opacity-60">December	5, 2024</time><section><div class="markdown-body-orange max-w-3xl"><p>基于 <a href="https://www.totaltypescript.com/react-apps-ts-performance">https://www.totaltypescript.com/react-apps-ts-performance</a> 这篇博客，并且由于之前项目中出现过由于 TS 性能问题导致 IDE 异常卡顿的原因，让我想深入了解下性能相关的问题。</p>
+<h2 id="优先选择-interface-而不是-intersections"><a aria-hidden="true" tabindex="-1" href="#优先选择-interface-而不是-intersections"><span class="icon icon-link"></span></a>优先选择 Interface 而不是 Intersections</h2>
+<p>大多数时候，对象类型的简单类型别名的作用与接口非常相似。</p>
+<pre><code>interface Foo { prop: string }
+
+type Bar = { prop: string };
+</code></pre>
+<p>但是，一旦您需要组合两个或多个类型，您就可以选择使用接口扩展这些类型，或者在类型别名中将它们相交，此时差异就开始变得重要了。</p>
+<ol>
+<li>
+<p>interface 创建了一个单一的平面对象类型，可以检测属性冲突，这通常是需要解决的重要问题！ 另一方面，intersections 只是递归合并属性，在某些情况下永远不会产生属性冲突。
+<img src="https://github.com/user-attachments/assets/65b15da2-9a72-4ece-adf2-4346eb86d947" alt="image">
+<img src="https://github.com/user-attachments/assets/f8d16d70-92bf-491f-88c9-70f485249327" alt="image"></p>
+</li>
+<li>
+<p>interface 的显示效果也更好，而 intersections 的类型别名不能显示为其他交集的一部分。 interface 之间的类型关系也会被缓存，而 intersections 类型则不会被整体缓存。</p>
+</li>
+<li>
+<p>最后一个值得注意的区别是，在针对目标交叉类型进行检查时，在针对 "有效"/"扁平化 "类型进行检查之前，会先检查每个类型。</p>
+</li>
+</ol>
+<p>因此，建议使用interfaces/ extends来扩展类型，而不是创建交集类型。</p>
+<pre><code>- type Foo = Bar &#x26; Baz &#x26; {
+-     someProp: string;
+- }
++ interface Foo extends Bar, Baz {
++     someProp: string;
++ }
+</code></pre>
+<h2 id="显示标注类型而不是依赖类型推断"><a aria-hidden="true" tabindex="-1" href="#显示标注类型而不是依赖类型推断"><span class="icon icon-link"></span></a>显示标注类型而不是依赖类型推断</h2>
+<p>添加类型注解，尤其是返回类型，可以为编译器节省大量工作。 部分原因是命名类型往往比匿名类型（编译器可能会推断出匿名类型）更紧凑，这就减少了读写声明文件（例如增量编译）所花费的时间。 类型推断非常方便，因此没有必要普遍使用，但如果你发现代码中有一段运行速度较慢，可以尝试使用。</p>
+<pre><code>- import { otherFunc } from "other";
++ import { otherFunc, OtherType } from "other";
+
+- export function func() {
++ export function func(): OtherType {
+      return otherFunc();
+  }
+</code></pre>
+<h2 id="优先选择基本类型而不是联合类型"><a aria-hidden="true" tabindex="-1" href="#优先选择基本类型而不是联合类型"><span class="icon icon-link"></span></a>优先选择基本类型而不是联合类型</h2>
+<p>联合类型很棒 - 它们可以让您表达类型的可能值的范围。</p>
+<pre><code>interface WeekdaySchedule {
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+  wake: Time;
+  startWork: Time;
+  endWork: Time;
+  sleep: Time;
+}
+
+interface WeekendSchedule {
+  day: "Saturday" | "Sunday";
+  wake: Time;
+  familyMeal: Time;
+  sleep: Time;
+}
+
+declare function printSchedule(schedule: WeekdaySchedule | WeekendSchedule);
+</code></pre>
+<p>然而，它们也是有代价的。每次将参数传递给printSchedule时，都必须将其与并集的每个元素进行比较。对于二元联合来说，这是微不足道且廉价的。
+但是，如果您的联合体有十多个元素，则可能会导致编译速度出现实际问题。
+例如，为了从联合中消除冗余成员，必须将元素进行成对比较，这是二次的。当与大型联合相交时，可能会发生这种检查，其中对每个联合成员进行相交可能会产生巨大的类型，然后需要减少这些类型。避免这种情况的一种方法是使用子类型，而不是联合。</p>
+<pre><code>interface Schedule {
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+  wake: Time;
+  sleep: Time;
+}
+
+interface WeekdaySchedule extends Schedule {
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+  startWork: Time;
+  endWork: Time;
+}
+
+interface WeekendSchedule extends Schedule {
+  day: "Saturday" | "Sunday";
+  familyMeal: Time;
+}
+
+declare function printSchedule(schedule: Schedule);
+</code></pre>
+<p>当尝试对每个内置 DOM 元素类型进行建模时，可能会出现一个更现实的示例。在这种情况下，最好创建一个具有DivElement 、 ImgElement等所有扩展的通用成员的基本HtmlElement类型，而不是创建一个详尽的联合，例如 DivElement | /<em>...</em>/ | ImgElement | /<em>...</em>/ 。</p>
+<h2 id="命名复杂类型"><a aria-hidden="true" tabindex="-1" href="#命名复杂类型"><span class="icon icon-link"></span></a>命名复杂类型</h2>
+<p>可以在允许类型注释的任何地方编写复杂类型。</p>
+<pre><code>interface SomeType&#x3C;T> {
+    foo&#x3C;U>(x: U):
+        U extends TypeA&#x3C;T> ? ProcessTypeA&#x3C;U, T> :
+        U extends TypeB&#x3C;T> ? ProcessTypeB&#x3C;U, T> :
+        U extends TypeC&#x3C;T> ? ProcessTypeC&#x3C;U, T> :
+        U;
+}
+</code></pre>
+<p>这很方便，但现在，每次调用foo时，TypeScript 都必须重新运行条件类型。此外，关联SomeType的任何两个实例需要重新关联foo返回类型的结构。</p>
+<p>如果此示例中的返回类型被提取到类型别名，则编译器可以缓存更多信息：</p>
+<pre><code>type FooResult&#x3C;U, T> =
+    U extends TypeA&#x3C;T> ? ProcessTypeA&#x3C;U, T> :
+    U extends TypeB&#x3C;T> ? ProcessTypeB&#x3C;U, T> :
+    U extends TypeC&#x3C;T> ? ProcessTypeC&#x3C;U, T> :
+    U;
+
+interface SomeType&#x3C;T> {
+    foo&#x3C;U>(x: U): FooResult&#x3C;U, T>;
+}
+</code></pre>
+<h2 id="项目拆分"><a aria-hidden="true" tabindex="-1" href="#项目拆分"><span class="icon icon-link"></span></a>项目拆分</h2>
+<p>当使用 TypeScript 构建任何规模不小的代码库时，将代码库组织成几个独立的项目会很有帮助。每个项目都有自己的tsconfig.json ，它依赖于其他项目。这有助于避免在一次编译中加载太多文件，并且还使某些代码库布局策略更容易组合在一起。</p>
+<p>有一些非常基本的方法可以将代码库组织到项目中。例如，一个程序可能包含一个客户端项目、一个服务器项目以及一个在两者之间共享的项目。</p>
+<pre><code>              ------------
+              |          |
+              |  Shared  |
+              ^----------^
+             /            \
+            /              \
+------------                ------------
+|          |                |          |
+|  Client  |                |  Server  |
+-----^------                ------^-----
+</code></pre>
+<p>测试也可以分解到自己的项目中。</p>
+<pre><code>              ------------
+              |          |
+              |  Shared  |
+              ^-----^----^
+             /      |     \
+            /       |      \
+------------  ------------  ------------
+|          |  |  Shared  |  |          |
+|  Client  |  |  Tests   |  |  Server  |
+-----^------  ------------  ------^-----
+     |                            |
+     |                            |
+------------                ------------
+|  Client  |                |  Server  |
+|  Tests   |                |  Tests   |
+------------                ------------
+</code></pre>
+<h2 id="指定文件"><a aria-hidden="true" tabindex="-1" href="#指定文件"><span class="icon icon-link"></span></a>指定文件</h2>
+<p>您应该始终确保您的配置文件不会同时包含太多文件。</p>
+<p>在tsconfig.json中，有两种方法可以指定项目中的文件。</p>
+<ol>
+<li>files列表</li>
+<li>include和exclude列表</li>
+</ol>
+<p>两者之间的主要区别在于files需要源文件的文件路径列表，并且include / exclude使用通配模式来匹配文件。</p>
+<p>虽然指定files将允许 TypeScript 直接快速加载文件，但如果您的项目中有很多文件而只有几个顶级入口点，则可能会很麻烦。此外，很容易忘记将新文件添加到tsconfig.json中，这意味着您最终可能会遇到奇怪的编辑器行为，其中这些新文件被错误地分析。所有这些都可能很麻烦。</p>
+<p>include / exclude有助于避免需要指定这些文件，但代价是：必须通过遍历包含的目录来发现文件。当运行大量文件夹时，这可能会减慢编译速度。此外，有时编译会包含大量不必要的.d.ts文件和测试文件，这会增加编译时间和内存开销。
+最后，虽然exclude有一些合理的默认值，但某些配置（如 mono-repos）意味着“重”文件夹（如node_modules仍然可以被包含在内。</p>
+<p>对于最佳实践，我们建议如下：</p>
+<ol>
+<li>仅指定项目中的输入文件夹（即要包含其源代码以进行编译/分析的文件夹）。</li>
+<li>不要在同一文件夹中混合来自其他项目的源文件。</li>
+<li>如果将测试与其他源文件保存在同一文件夹中，请为它们指定一个不同的名称，以便可以轻松排除它们。</li>
+<li>避免大型构建工件和依赖项文件夹，例如源目录中的node_modules 。</li>
+</ol>
+<p><strong>注意：如果没有exclude列表，则默认排除node_modules ；一旦添加，将node_modules显式添加到列表中非常重要。</strong></p>
+<h2 id="控制types范围"><a aria-hidden="true" tabindex="-1" href="#控制types范围"><span class="icon icon-link"></span></a>控制@types范围</h2>
+<p>默认情况下，TypeScript 会自动包含它在node_modules文件夹中找到的每个@types包，无论您是否导入它。这是为了让某些事情在使用 Node.js、Jasmine、Mocha、Chai 等时“正常工作”，因为这些工具/包不是导入的 - 它们只是加载到全局环境中。</p>
+<p>有时，这种逻辑会在编译和编辑场景中减慢程序构建时间，甚至可能导致多个声明冲突的全局包出现问题，从而导致诸如</p>
+<pre><code>Duplicate identifier 'IteratorResult'.
+Duplicate identifier 'it'.
+Duplicate identifier 'define'.
+Duplicate identifier 'require'.
+</code></pre>
+<p>在不需要全局包的情况下，修复就像在tsconfig.json / jsconfig.json中为"types"选项指定一个空字段一样简单</p>
+<pre><code>// src/tsconfig.json
+{
+   "compilerOptions": {
+       // ...
+
+       // Don't automatically include anything.
+       // Only include `@types` packages that we need to import.
+       "types" : []
+   },
+   "files": ["foo.ts"]
+}
+</code></pre>
+<p>如果您仍然需要一些全局包，请将它们添加到types字段。</p>
+<pre><code>// tests/tsconfig.json
+{
+   "compilerOptions": {
+       // ...
+
+       // Only include `@types/node` and `@types/mocha`.
+       "types" : ["node", "mocha"]
+   },
+   "files": ["foo.test.ts"]
+}
+</code></pre>
+<h2 id="跳过dts检查"><a aria-hidden="true" tabindex="-1" href="#跳过dts检查"><span class="icon icon-link"></span></a>跳过.d.ts检查</h2>
+<p>默认情况下，TypeScript 会重新检查项目中的所有 .d.ts 文件，以查找问题和不一致之处；但这通常是不必要的。 在大多数情况下，.d.ts 文件已知已经正常工作--类型之间相互扩展的方式已经验证过一次，重要的声明无论如何都会被检查。</p>
+<p>TypeScript 提供了使用skipDefaultLibCheck标志跳过对其附带的.d.ts文件（例如lib.d.ts ）的类型检查的选项。</p>
+<p>或者，您还可以启用skipLibCheck标志来跳过检查编译中的所有.d.ts文件。</p>
+<p>这两个选项通常会隐藏.d.ts文件中的错误配置和冲突，因此我们建议仅将它们用于更快的构建。</p></div></section></article></main><footer class="bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4">© 2022,<!-- --> <a rel="noopener noreferrer" class="hover:underline hover:bg-indigo" href="https://github.com/LZS911" target="_blank">LZS_911</a>, build with<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://nextjs.org/" target="_blank">Next.js</a> <!-- -->and<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://pages.github.com/?(null)" target="_blank">GitHub Pages</a></footer></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"title":"Typescript性能探究","date":"2024-12-05","slug":"Typescript性能探究","author":"Ai.Haibara","content":"\u003cp\u003e基于 \u003ca href=\"https://www.totaltypescript.com/react-apps-ts-performance\"\u003ehttps://www.totaltypescript.com/react-apps-ts-performance\u003c/a\u003e 这篇博客，并且由于之前项目中出现过由于 TS 性能问题导致 IDE 异常卡顿的原因，让我想深入了解下性能相关的问题。\u003c/p\u003e\n\u003ch2 id=\"优先选择-interface-而不是-intersections\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#优先选择-interface-而不是-intersections\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e优先选择 Interface 而不是 Intersections\u003c/h2\u003e\n\u003cp\u003e大多数时候，对象类型的简单类型别名的作用与接口非常相似。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface Foo { prop: string }\n\ntype Bar = { prop: string };\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e但是，一旦您需要组合两个或多个类型，您就可以选择使用接口扩展这些类型，或者在类型别名中将它们相交，此时差异就开始变得重要了。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003einterface 创建了一个单一的平面对象类型，可以检测属性冲突，这通常是需要解决的重要问题！ 另一方面，intersections 只是递归合并属性，在某些情况下永远不会产生属性冲突。\n\u003cimg src=\"https://github.com/user-attachments/assets/65b15da2-9a72-4ece-adf2-4346eb86d947\" alt=\"image\"\u003e\n\u003cimg src=\"https://github.com/user-attachments/assets/f8d16d70-92bf-491f-88c9-70f485249327\" alt=\"image\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003einterface 的显示效果也更好，而 intersections 的类型别名不能显示为其他交集的一部分。 interface 之间的类型关系也会被缓存，而 intersections 类型则不会被整体缓存。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e最后一个值得注意的区别是，在针对目标交叉类型进行检查时，在针对 \"有效\"/\"扁平化 \"类型进行检查之前，会先检查每个类型。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e因此，建议使用interfaces/ extends来扩展类型，而不是创建交集类型。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e- type Foo = Bar \u0026#x26; Baz \u0026#x26; {\n-     someProp: string;\n- }\n+ interface Foo extends Bar, Baz {\n+     someProp: string;\n+ }\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"显示标注类型而不是依赖类型推断\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#显示标注类型而不是依赖类型推断\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e显示标注类型而不是依赖类型推断\u003c/h2\u003e\n\u003cp\u003e添加类型注解，尤其是返回类型，可以为编译器节省大量工作。 部分原因是命名类型往往比匿名类型（编译器可能会推断出匿名类型）更紧凑，这就减少了读写声明文件（例如增量编译）所花费的时间。 类型推断非常方便，因此没有必要普遍使用，但如果你发现代码中有一段运行速度较慢，可以尝试使用。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e- import { otherFunc } from \"other\";\n+ import { otherFunc, OtherType } from \"other\";\n\n- export function func() {\n+ export function func(): OtherType {\n      return otherFunc();\n  }\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"优先选择基本类型而不是联合类型\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#优先选择基本类型而不是联合类型\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e优先选择基本类型而不是联合类型\u003c/h2\u003e\n\u003cp\u003e联合类型很棒 - 它们可以让您表达类型的可能值的范围。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface WeekdaySchedule {\n  day: \"Monday\" | \"Tuesday\" | \"Wednesday\" | \"Thursday\" | \"Friday\";\n  wake: Time;\n  startWork: Time;\n  endWork: Time;\n  sleep: Time;\n}\n\ninterface WeekendSchedule {\n  day: \"Saturday\" | \"Sunday\";\n  wake: Time;\n  familyMeal: Time;\n  sleep: Time;\n}\n\ndeclare function printSchedule(schedule: WeekdaySchedule | WeekendSchedule);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e然而，它们也是有代价的。每次将参数传递给printSchedule时，都必须将其与并集的每个元素进行比较。对于二元联合来说，这是微不足道且廉价的。\n但是，如果您的联合体有十多个元素，则可能会导致编译速度出现实际问题。\n例如，为了从联合中消除冗余成员，必须将元素进行成对比较，这是二次的。当与大型联合相交时，可能会发生这种检查，其中对每个联合成员进行相交可能会产生巨大的类型，然后需要减少这些类型。避免这种情况的一种方法是使用子类型，而不是联合。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface Schedule {\n  day: \"Monday\" | \"Tuesday\" | \"Wednesday\" | \"Thursday\" | \"Friday\" | \"Saturday\" | \"Sunday\";\n  wake: Time;\n  sleep: Time;\n}\n\ninterface WeekdaySchedule extends Schedule {\n  day: \"Monday\" | \"Tuesday\" | \"Wednesday\" | \"Thursday\" | \"Friday\";\n  startWork: Time;\n  endWork: Time;\n}\n\ninterface WeekendSchedule extends Schedule {\n  day: \"Saturday\" | \"Sunday\";\n  familyMeal: Time;\n}\n\ndeclare function printSchedule(schedule: Schedule);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e当尝试对每个内置 DOM 元素类型进行建模时，可能会出现一个更现实的示例。在这种情况下，最好创建一个具有DivElement 、 ImgElement等所有扩展的通用成员的基本HtmlElement类型，而不是创建一个详尽的联合，例如 DivElement | /\u003cem\u003e...\u003c/em\u003e/ | ImgElement | /\u003cem\u003e...\u003c/em\u003e/ 。\u003c/p\u003e\n\u003ch2 id=\"命名复杂类型\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#命名复杂类型\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e命名复杂类型\u003c/h2\u003e\n\u003cp\u003e可以在允许类型注释的任何地方编写复杂类型。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface SomeType\u0026#x3C;T\u003e {\n    foo\u0026#x3C;U\u003e(x: U):\n        U extends TypeA\u0026#x3C;T\u003e ? ProcessTypeA\u0026#x3C;U, T\u003e :\n        U extends TypeB\u0026#x3C;T\u003e ? ProcessTypeB\u0026#x3C;U, T\u003e :\n        U extends TypeC\u0026#x3C;T\u003e ? ProcessTypeC\u0026#x3C;U, T\u003e :\n        U;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这很方便，但现在，每次调用foo时，TypeScript 都必须重新运行条件类型。此外，关联SomeType的任何两个实例需要重新关联foo返回类型的结构。\u003c/p\u003e\n\u003cp\u003e如果此示例中的返回类型被提取到类型别名，则编译器可以缓存更多信息：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003etype FooResult\u0026#x3C;U, T\u003e =\n    U extends TypeA\u0026#x3C;T\u003e ? ProcessTypeA\u0026#x3C;U, T\u003e :\n    U extends TypeB\u0026#x3C;T\u003e ? ProcessTypeB\u0026#x3C;U, T\u003e :\n    U extends TypeC\u0026#x3C;T\u003e ? ProcessTypeC\u0026#x3C;U, T\u003e :\n    U;\n\ninterface SomeType\u0026#x3C;T\u003e {\n    foo\u0026#x3C;U\u003e(x: U): FooResult\u0026#x3C;U, T\u003e;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"项目拆分\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#项目拆分\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e项目拆分\u003c/h2\u003e\n\u003cp\u003e当使用 TypeScript 构建任何规模不小的代码库时，将代码库组织成几个独立的项目会很有帮助。每个项目都有自己的tsconfig.json ，它依赖于其他项目。这有助于避免在一次编译中加载太多文件，并且还使某些代码库布局策略更容易组合在一起。\u003c/p\u003e\n\u003cp\u003e有一些非常基本的方法可以将代码库组织到项目中。例如，一个程序可能包含一个客户端项目、一个服务器项目以及一个在两者之间共享的项目。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e              ------------\n              |          |\n              |  Shared  |\n              ^----------^\n             /            \\\n            /              \\\n------------                ------------\n|          |                |          |\n|  Client  |                |  Server  |\n-----^------                ------^-----\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e测试也可以分解到自己的项目中。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e              ------------\n              |          |\n              |  Shared  |\n              ^-----^----^\n             /      |     \\\n            /       |      \\\n------------  ------------  ------------\n|          |  |  Shared  |  |          |\n|  Client  |  |  Tests   |  |  Server  |\n-----^------  ------------  ------^-----\n     |                            |\n     |                            |\n------------                ------------\n|  Client  |                |  Server  |\n|  Tests   |                |  Tests   |\n------------                ------------\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"指定文件\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#指定文件\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e指定文件\u003c/h2\u003e\n\u003cp\u003e您应该始终确保您的配置文件不会同时包含太多文件。\u003c/p\u003e\n\u003cp\u003e在tsconfig.json中，有两种方法可以指定项目中的文件。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003efiles列表\u003c/li\u003e\n\u003cli\u003einclude和exclude列表\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e两者之间的主要区别在于files需要源文件的文件路径列表，并且include / exclude使用通配模式来匹配文件。\u003c/p\u003e\n\u003cp\u003e虽然指定files将允许 TypeScript 直接快速加载文件，但如果您的项目中有很多文件而只有几个顶级入口点，则可能会很麻烦。此外，很容易忘记将新文件添加到tsconfig.json中，这意味着您最终可能会遇到奇怪的编辑器行为，其中这些新文件被错误地分析。所有这些都可能很麻烦。\u003c/p\u003e\n\u003cp\u003einclude / exclude有助于避免需要指定这些文件，但代价是：必须通过遍历包含的目录来发现文件。当运行大量文件夹时，这可能会减慢编译速度。此外，有时编译会包含大量不必要的.d.ts文件和测试文件，这会增加编译时间和内存开销。\n最后，虽然exclude有一些合理的默认值，但某些配置（如 mono-repos）意味着“重”文件夹（如node_modules仍然可以被包含在内。\u003c/p\u003e\n\u003cp\u003e对于最佳实践，我们建议如下：\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e仅指定项目中的输入文件夹（即要包含其源代码以进行编译/分析的文件夹）。\u003c/li\u003e\n\u003cli\u003e不要在同一文件夹中混合来自其他项目的源文件。\u003c/li\u003e\n\u003cli\u003e如果将测试与其他源文件保存在同一文件夹中，请为它们指定一个不同的名称，以便可以轻松排除它们。\u003c/li\u003e\n\u003cli\u003e避免大型构建工件和依赖项文件夹，例如源目录中的node_modules 。\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cstrong\u003e注意：如果没有exclude列表，则默认排除node_modules ；一旦添加，将node_modules显式添加到列表中非常重要。\u003c/strong\u003e\u003c/p\u003e\n\u003ch2 id=\"控制types范围\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#控制types范围\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e控制@types范围\u003c/h2\u003e\n\u003cp\u003e默认情况下，TypeScript 会自动包含它在node_modules文件夹中找到的每个@types包，无论您是否导入它。这是为了让某些事情在使用 Node.js、Jasmine、Mocha、Chai 等时“正常工作”，因为这些工具/包不是导入的 - 它们只是加载到全局环境中。\u003c/p\u003e\n\u003cp\u003e有时，这种逻辑会在编译和编辑场景中减慢程序构建时间，甚至可能导致多个声明冲突的全局包出现问题，从而导致诸如\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eDuplicate identifier 'IteratorResult'.\nDuplicate identifier 'it'.\nDuplicate identifier 'define'.\nDuplicate identifier 'require'.\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e在不需要全局包的情况下，修复就像在tsconfig.json / jsconfig.json中为\"types\"选项指定一个空字段一样简单\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// src/tsconfig.json\n{\n   \"compilerOptions\": {\n       // ...\n\n       // Don't automatically include anything.\n       // Only include `@types` packages that we need to import.\n       \"types\" : []\n   },\n   \"files\": [\"foo.ts\"]\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e如果您仍然需要一些全局包，请将它们添加到types字段。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// tests/tsconfig.json\n{\n   \"compilerOptions\": {\n       // ...\n\n       // Only include `@types/node` and `@types/mocha`.\n       \"types\" : [\"node\", \"mocha\"]\n   },\n   \"files\": [\"foo.test.ts\"]\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"跳过dts检查\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#跳过dts检查\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e跳过.d.ts检查\u003c/h2\u003e\n\u003cp\u003e默认情况下，TypeScript 会重新检查项目中的所有 .d.ts 文件，以查找问题和不一致之处；但这通常是不必要的。 在大多数情况下，.d.ts 文件已知已经正常工作--类型之间相互扩展的方式已经验证过一次，重要的声明无论如何都会被检查。\u003c/p\u003e\n\u003cp\u003eTypeScript 提供了使用skipDefaultLibCheck标志跳过对其附带的.d.ts文件（例如lib.d.ts ）的类型检查的选项。\u003c/p\u003e\n\u003cp\u003e或者，您还可以启用skipLibCheck标志来跳过检查编译中的所有.d.ts文件。\u003c/p\u003e\n\u003cp\u003e这两个选项通常会隐藏.d.ts文件中的错误配置和冲突，因此我们建议仅将它们用于更快的构建。\u003c/p\u003e","theme":"orange","tag":["Typescript"]}},"__N_SSG":true},"page":"/posts/[slug]","query":{"slug":"Typescript性能探究"},"buildId":"ZMDftUcbmgEQQmVtjVhzp","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
