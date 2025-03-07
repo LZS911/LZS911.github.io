@@ -5,8 +5,6 @@ date: '2025-03-05'
 image:
 headerImage: false
 tag:
-  - next.js
-  - react
 star: true
 category: blog
 author: LZS_911
@@ -108,12 +106,23 @@ interface ConfigOptions<T extends BaseConfig, InitOptions extends BaseOptions, R
   defaultConfig: T;
   command: Command;
   cwd: string;
+  handleInteractiveMode(
+    opts: InitOptions,
+    existingConfig: T | null
+  ): Promise<T>;
+  transformToConfig(opts: ResolvedOptions): T;
+  getConfigIdentifier(opts: InitOptions): string;
+  mergeConfig(
+    opts: InitOptions,
+    existingConfig: T
+  ): Promise<T>;
 }
 
 const resolveConfig = async <T extends BaseConfig, InitOptions extends BaseOptions, ResolvedOptions extends InitOptions>(
   options: ConfigOptions<T, InitOptions, ResolvedOptions>,
   opts: unknown
 ): Promise<T> => {
+  const { transformToConfig, getConfigIdentifier, mergeConfig, handleInteractiveMode } = options;
   const validatedOpts = await options.initOptionsSchema.parseAsync(opts).catch((error) => {
     handleSchemaError(error, options.command);
   });
@@ -144,7 +153,7 @@ const handleNonInteractiveMode = async <T extends BaseConfig, InitOptions extend
   }
 };
 
-// 定义其他函数，如 handleInteractiveMode、mergeConfig、transformToConfig、getConfigIdentifier 和 getRawConfigs
+// 定义其他函数，如 getRawConfigs
 ```
 
 ## 抽象类与函数式编程的比较
