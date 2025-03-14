@@ -8,6 +8,7 @@ import type PostType from "../../interfaces/post";
 import Layout from "../../components/layout";
 import EmptyBox from "../../components/empty-box";
 import DateFormatter from "../../components/date-formatter";
+import Comments from "../../components/comments";
 
 type Props = {
   post: PostType;
@@ -30,6 +31,7 @@ export default function Post({ post, morePosts, preview }: Props) {
           <PostTitle>{post.title}</PostTitle>
           <DateFormatter dateString={post.date} />
           <PostBody {...post} />
+          <Comments slug={post.slug} />
         </article>
       </EmptyBox>
     </Layout>
