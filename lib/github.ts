@@ -5,7 +5,7 @@
 // 对于GitHub Pages部署，需要在GitHub仓库的Settings -> Secrets and variables -> Actions中添加这些环境变量
 const GITHUB_CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID;
 const GITHUB_CLIENT_SECRET = process.env.GH_CLIENT_SECRET;
-const GITHUB_TOKEN = process.env.GH_TOKEN; // 用于API认证的GitHub个人访问令牌
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // 用于API认证的GitHub个人访问令牌
 const REPO_OWNER = 'LZS911'; // GitHub 用户名
 const REPO_NAME = 'LZS911.github.io'; // 仓库名
 
