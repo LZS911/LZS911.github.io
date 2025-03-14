@@ -29,7 +29,7 @@ export async function getOrCreateDiscussion(
     const findQuery = `
       query {
         repository(owner: "${REPO_OWNER}", name: "${REPO_NAME}") {
-          discussions(first: 1, categoryId: null, filterBy: {searchIn: TITLE, viewerCreated: true}) {
+          discussions(first: 10, filterBy: {searchIn: TITLE}) {
             nodes {
               id
               number
@@ -101,14 +101,40 @@ export async function getOrCreateDiscussion(
       return null;
     }
 
+    // 获取仓库ID
+    const repoIdQuery = `
+      query {
+        repository(owner: "${REPO_OWNER}", name: "${REPO_NAME}") {
+          id
+        }
+      }
+    `;
+
+    const repoIdResponse = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query: repoIdQuery }),
+    });
+
+    const repoIdData = await repoIdResponse.json();
+    const repositoryId = repoIdData?.data?.repository?.id;
+
+    if (!repositoryId) {
+      console.error('无法获取仓库ID:', repoIdData?.errors);
+      return null;
+    }
+
     // 创建新的discussion
     const createQuery = `
       mutation {
         createDiscussion(input: {
-          repositoryId: "R_kgDOGXE9Yw", // 使用仓库ID而不是owner/name格式
+          repositoryId: "${repositoryId}",
           categoryId: "${category.id}",
           body: "这是文章 ${slug} 的评论区",
-          title: "${title}"
+          title: "Comments for: ${slug}"
         }) {
           discussion {
             id
@@ -138,6 +164,11 @@ export async function getOrCreateDiscussion(
     }
 
     console.error('创建讨论失败:', createData?.errors);
+    console.error('创建讨论请求详情:', {
+      repositoryId,
+      categoryId: category.id,
+      title: `Comments for: ${slug}`,
+    });
     return null;
   } catch (error) {
     console.error('获取或创建讨论异常:', error);
