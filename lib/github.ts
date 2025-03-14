@@ -2,8 +2,10 @@
 
 // GitHub OAuth 应用配置
 // 注意：实际使用时需要在环境变量中配置这些值
+// 对于GitHub Pages部署，需要在GitHub仓库的Settings -> Secrets and variables -> Actions中添加这些环境变量
 const GITHUB_CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID;
-const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET;
+const GITHUB_CLIENT_SECRET = process.env.GH_CLIENT_SECRET;
+const GITHUB_TOKEN = process.env.GH_TOKEN; // 用于API认证的GitHub个人访问令牌
 const REPO_OWNER = 'LZS911'; // GitHub 用户名
 const REPO_NAME = 'LZS911.github.io'; // 仓库名
 
@@ -42,7 +44,7 @@ export async function getOrCreateDiscussion(
     const findResponse = await fetch('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
-        Authorization: `bearer ${process.env.GITHUB_TOKEN || ''}`,
+        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query: findQuery }),
@@ -81,7 +83,7 @@ export async function getOrCreateDiscussion(
     const categoryResponse = await fetch('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
-        Authorization: `bearer ${process.env.GITHUB_TOKEN || ''}`,
+        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query: categoryQuery }),
@@ -103,7 +105,7 @@ export async function getOrCreateDiscussion(
     const createQuery = `
       mutation {
         createDiscussion(input: {
-          repositoryId: "${REPO_OWNER}/${REPO_NAME}",
+          repositoryId: "R_kgDOGXE9Yw", // 使用仓库ID而不是owner/name格式
           categoryId: "${category.id}",
           body: "这是文章 ${slug} 的评论区",
           title: "${title}"
@@ -119,7 +121,7 @@ export async function getOrCreateDiscussion(
     const createResponse = await fetch('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
-        Authorization: `bearer ${process.env.GITHUB_TOKEN || ''}`,
+        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query: createQuery }),
@@ -178,7 +180,7 @@ export async function getComments(discussionId: string) {
     const response = await fetch('https://api.github.com/graphql', {
       method: 'POST',
       headers: {
-        Authorization: `bearer ${process.env.GITHUB_TOKEN || ''}`,
+        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ query }),

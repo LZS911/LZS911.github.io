@@ -35,7 +35,12 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn lint
-      - run: yarn build
+      - name: Build with environment variables
+        run: yarn build
+        env:
+          NEXT_PUBLIC_GITHUB_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_GITHUB_CLIENT_ID }}
+          GH_CLIENT_SECRET: ${{ secrets.GH_CLIENT_SECRET }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: yarn export
 
       - name: Deploy
