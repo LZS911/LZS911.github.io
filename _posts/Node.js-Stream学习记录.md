@@ -22,7 +22,7 @@ theme: fancy
 
 来看一段代码
 
-```
+``` typescript
 // src/test.mjs
 import http from 'node:http';
 import fs from 'node:fs';
@@ -45,7 +45,7 @@ server.listen(8000);
 
 启动服务后使用 curl 访问下
 
-```
+``` shell
 curl -i http://localhost:8000
 ```
 
@@ -63,7 +63,7 @@ curl -i http://localhost:8000
 
 这就需要用到流了：
 
-```
+``` typescript
 //更新 src/test.mjs
 import http from 'node:http';
 import fs from 'node:fs';
@@ -79,13 +79,12 @@ const server = http.createServer(async function (req, res) {
 
 server.listen(8000);
 ```
-![image](https://github.com/user-attachments/assets/7d9096be-3d6b-4640-ac7d-09a3700b32b2)
 
+![image](https://github.com/user-attachments/assets/7d9096be-3d6b-4640-ac7d-09a3700b32b2)
 
 结果一样，但是因为现在是流式返回的，并不知道响应体的 Content-Length。
 
 所以是用 Transfer-Encoding: chunked 的方式返回流式内容。
-
 
 从服务器下载一个文件的时候，如何知道文件下载完了呢？
 
@@ -98,7 +97,8 @@ server.listen(8000);
 另一种是设置 transfer-encoding:chunked，它是不固定长度的，服务器不断返回内容，直到返回一个空的内容代表结束。
 
 比如这样：
-```
+
+``` shell
 5
 Hello
 1
@@ -122,7 +122,7 @@ World
 
 比如
 
-```
+``` shell
 ls | grep pack
 ```
 
@@ -132,7 +132,7 @@ ls 命令的输出流，作为 grep 命令的输入流。
 
 当然，我们也可以把 grep 命令的输出流，作为 node 脚本的输入流。
 
-```
+``` javascript
 //src/read.mjs
 process.stdin.on('readable', function () {
     const buf = process.stdin.read();
@@ -144,7 +144,7 @@ process.stdin 就是输入流，监听 readable 事件，用 read 读取数据�
 
 执行一下
 
-```
+``` shell
 ls | grep pack | node src/read.mjs
 ```
 
@@ -164,7 +164,7 @@ ls | grep pack | node src/read.mjs
 
 在 node 里，流一共有 4 种：可读流 Readable、可写流 Writable、双工流 Duplex、转换流 Transform。
 
-```
+``` javascript
 import stream from 'node:stream';
 
 // 可读流
@@ -183,7 +183,7 @@ const Transform = stream.Transform;
 
 Readable 要实现 _read 方法，通过 push 返回具体的数据。
 
-```
+``` javascript
 //readable.mjs
 import { Readable } from 'node:stream';
 
@@ -210,15 +210,15 @@ readableStream.on('end', () => {
 
 执行一下
 
-```
+``` shell
 node src/readable.mjs
 ```
-![image](https://github.com/user-attachments/assets/184fe685-1a0b-4a88-b846-c4ebe37a705c)
 
+![image](https://github.com/user-attachments/assets/184fe685-1a0b-4a88-b846-c4ebe37a705c)
 
 创建 Readable 流也可以通过继承的方式：
 
-```
+``` javascript
 // src/readable2.mjs
 import { Readable } from 'node:stream';
 
@@ -245,11 +245,12 @@ readableStream.on('end', () => {
 });
 
 ```
+
 ![image](https://github.com/user-attachments/assets/267137eb-e992-4c71-9bd3-3325e05a74a7)
 
 可读流是生成内容的，那么很自然可以和生成器结合：
 
-```
+``` javascript
 // src/readable3.mjs
 
 import { Readable } from 'node:stream';
@@ -296,10 +297,9 @@ readableStream.on('end', () => {
 
 ![image](https://github.com/user-attachments/assets/c2290823-cc7b-45b7-b2d6-cbcd5febfaaf)
 
-
 我们封装个工厂方法：
 
-```
+``` javascript
 function createReadStream(iterator) {
   return new ReadableDong(iterator);
 }
@@ -317,7 +317,7 @@ readableStream.on('end', () => {
 
 是不是就和 fs.createReadStream 很像了？
 
-```
+``` javascript
 // 创建 src/fsReadStream.mjs
 import fs from 'node:fs';
 import path from 'node:path';
@@ -338,7 +338,6 @@ readStream.on('end', () => {
 
 ![image](https://github.com/user-attachments/assets/1e7bb2ed-6be6-479f-a4fe-f3318766f17d)
 
-
 其实文件的 ReadStream 就是基于 stream 的 Readable 封装出来的。
 
 这就是可读流。
@@ -349,7 +348,7 @@ http 服务的 request 就是 Readable 的实例：
 
 所以我们可以这样写：
 
-```
+``` javascript
 // src/test2.mjs
 import http from 'node:http';
 import fs from 'node:fs';
@@ -364,12 +363,13 @@ server.listen(8000);
 ```
 
 启动服务后访问一下
+
 ```
 curl -X POST -d "a=1&b=2" http://localhost:8000
 ```
+
 ![image](https://github.com/user-attachments/assets/df08f683-77d2-4252-84fe-742c42d5c230)
 
 可以看到，从 request 的流中读出的内容写入了文件的 WriteStream
 
 ### Writable
-

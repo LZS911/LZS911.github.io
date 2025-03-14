@@ -26,7 +26,6 @@ theme: condensed-night-purple
 
 父类包含了子类集合的常见方法，但由于父类本身是抽象的，因此不能直接使用这些方法。
 
-
 ### 示例：TypeScript 中的抽象类
 
 在 TypeScript 中，类、方法和字段可以是抽象的。抽象方法或抽象字段是尚未提供实现的方法或字段。这些成员必须存在于抽象类中，而抽象类不能直接实例化。
@@ -159,6 +158,7 @@ const handleNonInteractiveMode = async <T extends BaseConfig, InitOptions extend
 ## 抽象类与函数式编程的比较
 
 ### 抽象类
+
 - **优点**：
   - 结构清晰，组织有序。
   - 强制一致的接口。
@@ -168,6 +168,7 @@ const handleNonInteractiveMode = async <T extends BaseConfig, InitOptions extend
   - 在组合方面灵活性较差。
 
 ### 函数式编程
+
 - **优点**：
   - 提倡不变性和纯函数。
   - 更容易组合和重用函数。
@@ -175,10 +176,10 @@ const handleNonInteractiveMode = async <T extends BaseConfig, InitOptions extend
 - **缺点**：
   - 对于习惯于 OOP 的开发人员来说可能更难理解。
   - 在管理状态和依赖项时可能会导致更多的样板代码。
- 
+
 ## JavaScript 中的抽象类
 
-```
+``` typescript
 class Base {
   constructor(name) {
     if (this.constructor == Base) {

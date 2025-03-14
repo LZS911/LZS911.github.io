@@ -1,6 +1,5 @@
 import { AppProps } from 'next/app';
 import { useEffect } from 'react';
-import hljs from 'highlight.js';
 import generateMouseEffect from 'mouse-animation-effect';
 import 'mouse-animation-effect/dist/index.css';
 import '../styles/index.css';
@@ -17,10 +16,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     };
   }, []);
 
-  useEffect(() => {
-    document.querySelectorAll('pre code').forEach((el) => {
-      hljs.highlightElement(el as HTMLElement);
-    });
-  }, []);
   return <Component {...pageProps} />;
 }
