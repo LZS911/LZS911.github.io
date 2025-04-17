@@ -29,7 +29,7 @@ export default async function Page({ params }: Props) {
       <PostTitle>{post.title}</PostTitle>
       <DateFormatter dateString={post.date || ''} />
       <PostBody {...post} content={content} />
-      <Comments slug={slug} />
+      {process.env.GITHUB_ACTION ? null : <Comments slug={slug} />}
     </article>
   );
 }

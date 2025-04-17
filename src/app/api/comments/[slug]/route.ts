@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
-import { getOrCreateDiscussion, getComments, addComment } from '@/lib/github';
+import {
+  getDiscussionBySlug,
+  getComments,
+  addComment,
+  createDiscussionBySlug
+} from '@/lib/github';
 import { cookies } from 'next/headers';
 
 // GET 方法处理获取评论请求
@@ -17,18 +22,11 @@ export async function GET(
   }
 
   try {
-    // 从路径获取文章标题
-    const url = new URL(request.url);
-    const title = url.searchParams.get('title') || `Comments for: ${slug}`;
-
     // 获取或创建对应的Discussion
-    const discussion = await getOrCreateDiscussion(slug, title);
-
+    const discussion = await getDiscussionBySlug(slug);
+    console.log(discussion);
     if (!discussion) {
-      return NextResponse.json(
-        { error: '无法获取或创建讨论' },
-        { status: 500 }
-      );
+      return NextResponse.json({ comments: [] });
     }
 
     // 获取评论
@@ -58,7 +56,7 @@ export async function POST(
   try {
     // 获取请求体
     const body = await request.json();
-    const { content, title } = body;
+    const { content, replyToId } = body;
 
     // 获取cookie中的token
     const cookieStore = await cookies();
@@ -73,10 +71,11 @@ export async function POST(
     }
 
     // 获取或创建对应的Discussion
-    const discussion = await getOrCreateDiscussion(
-      slug,
-      title || `Comments for: ${slug}`
-    );
+    let discussion = await getDiscussionBySlug(slug);
+
+    if (!discussion) {
+      discussion = await createDiscussionBySlug(slug);
+    }
 
     if (!discussion) {
       return NextResponse.json(
@@ -86,7 +85,7 @@ export async function POST(
     }
 
     // 添加评论
-    const result = await addComment(discussion.id, content, token);
+    const result = await addComment(discussion.id, content, token, replyToId);
     return NextResponse.json(
       { success: true, comment: result },
       { status: 201 }

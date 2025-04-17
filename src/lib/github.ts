@@ -10,6 +10,8 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // 用于API认证的GitHub个人
 const REPO_OWNER = 'LZS911'; // GitHub 用户名
 const REPO_NAME = 'LZS911.github.io'; // 仓库名
 
+const generateDiscussionInfoTitle = (slug: string) => `Comments for: ${slug}`;
+
 // 获取文章对应的 Discussion
 type DiscussionInfo = {
   id: string;
@@ -17,20 +19,19 @@ type DiscussionInfo = {
 };
 
 /**
- * 根据文章 slug 获取或创建对应的 Discussion
+ * 根据文章 slug 获取对应的 Discussion
  * @param slug 文章的 slug
  * @param title 文章标题
  */
-export async function getOrCreateDiscussion(
-  slug: string,
-  title: string
+export async function getDiscussionBySlug(
+  slug: string
 ): Promise<DiscussionInfo | null> {
   try {
-    // 构建GraphQL查询，查找是否已存在对应slug的discussion
+    // 构建GraphQL查询，查找是否已存在对应slug的discussion，只查找open状态的
     const findQuery = `
       query {
         repository(owner: "${REPO_OWNER}", name: "${REPO_NAME}") {
-          discussions(first: 10, filterBy: {searchIn: TITLE}) {
+          discussions(first: 100, states: OPEN) {
             nodes {
               id
               number
@@ -55,10 +56,9 @@ export async function getOrCreateDiscussion(
     const discussions = findData?.data?.repository?.discussions?.nodes || [];
 
     // 查找标题包含slug的discussion
-    const existingDiscussion = discussions.find((d: any) =>
-      d.title.includes(slug)
+    const existingDiscussion = discussions.find(
+      (d: any) => d.title === generateDiscussionInfoTitle(slug)
     );
-
     if (existingDiscussion) {
       return {
         id: existingDiscussion.id,
@@ -66,9 +66,19 @@ export async function getOrCreateDiscussion(
       };
     }
 
-    // 如果不存在，创建新的discussion
-    // 首先获取讨论分类ID
-    const categoryQuery = `
+    return null;
+  } catch (error) {
+    console.error('获取或创建讨论异常:', error);
+    return null;
+  }
+}
+
+export async function createDiscussionBySlug(
+  slug: string
+): Promise<DiscussionInfo | null> {
+  // 如果不存在，创建新的discussion
+  // 首先获取讨论分类ID
+  const categoryQuery = `
       query {
         repository(owner: "${REPO_OWNER}", name: "${REPO_NAME}") {
           discussionCategories(first: 10) {
@@ -81,29 +91,29 @@ export async function getOrCreateDiscussion(
       }
     `;
 
-    const categoryResponse = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ query: categoryQuery })
-    });
+  const categoryResponse = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      Authorization: `bearer ${GITHUB_TOKEN || ''}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ query: categoryQuery })
+  });
 
-    const categoryData = await categoryResponse.json();
-    const categories =
-      categoryData?.data?.repository?.discussionCategories?.nodes || [];
+  const categoryData = await categoryResponse.json();
+  const categories =
+    categoryData?.data?.repository?.discussionCategories?.nodes || [];
 
-    // 使用第一个分类，或者特定名称的分类
-    const category = categories[0];
+  // 使用第一个分类，或者特定名称的分类
+  const category = categories[0];
 
-    if (!category) {
-      console.error('无法获取讨论分类');
-      return null;
-    }
+  if (!category) {
+    console.error('无法获取讨论分类');
+    return null;
+  }
 
-    // 获取仓库ID
-    const repoIdQuery = `
+  // 获取仓库ID
+  const repoIdQuery = `
       query {
         repository(owner: "${REPO_OWNER}", name: "${REPO_NAME}") {
           id
@@ -111,32 +121,31 @@ export async function getOrCreateDiscussion(
       }
     `;
 
-    const repoIdResponse = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ query: repoIdQuery })
-    });
+  const repoIdResponse = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      Authorization: `bearer ${GITHUB_TOKEN || ''}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ query: repoIdQuery })
+  });
 
-    const repoIdData = await repoIdResponse.json();
-    const repositoryId = repoIdData?.data?.repository?.id;
+  const repoIdData = await repoIdResponse.json();
+  const repositoryId = repoIdData?.data?.repository?.id;
 
-    if (!repositoryId) {
-      console.error('无法获取仓库ID:', repoIdData?.errors);
-      return null;
-    }
+  if (!repositoryId) {
+    console.error('无法获取仓库ID:', repoIdData?.errors);
+    return null;
+  }
 
-    // 创建新的discussion
-    const discussionTitle = `${title} (${slug})`;
-    const createQuery = `
+  // 创建新的discussion
+  const createQuery = `
       mutation {
         createDiscussion(input: {
           repositoryId: "${repositoryId}",
           categoryId: "${category.id}",
-          body: "这是文章 ${title} 的评论区",
-          title: "${discussionTitle}"
+          body: "这是文章 ${slug} 的评论区",
+          title: "${generateDiscussionInfoTitle(slug)}"
         }) {
           discussion {
             id
@@ -146,36 +155,33 @@ export async function getOrCreateDiscussion(
       }
     `;
 
-    const createResponse = await fetch('https://api.github.com/graphql', {
-      method: 'POST',
-      headers: {
-        Authorization: `bearer ${GITHUB_TOKEN || ''}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ query: createQuery })
-    });
+  const createResponse = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      Authorization: `bearer ${GITHUB_TOKEN || ''}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ query: createQuery })
+  });
 
-    const createData = await createResponse.json();
-    const newDiscussion = createData?.data?.createDiscussion?.discussion;
+  const createData = await createResponse.json();
+  const newDiscussion = createData?.data?.createDiscussion?.discussion;
 
-    if (newDiscussion) {
-      return {
-        id: newDiscussion.id,
-        number: newDiscussion.number
-      };
-    }
-
-    console.error('创建讨论失败:', createData?.errors);
-    console.error('创建讨论请求详情:', {
-      repositoryId,
-      categoryId: category.id,
-      title: discussionTitle
-    });
-    return null;
-  } catch (error) {
-    console.error('获取或创建讨论异常:', error);
-    return null;
+  if (newDiscussion) {
+    return {
+      id: newDiscussion.id,
+      number: newDiscussion.number
+    };
   }
+
+  console.error('创建讨论失败:', createData?.errors);
+  console.error('创建讨论请求详情:', {
+    repositoryId,
+    categoryId: category.id,
+    title: generateDiscussionInfoTitle(slug)
+  });
+
+  return null;
 }
 
 /**
@@ -194,13 +200,25 @@ export async function getComments(discussionId: string) {
                 author {
                   login
                   avatarUrl
+                  url
                 }
                 body
+                bodyHTML
                 createdAt
-                reactionGroups {
-                  content
-                  users {
-                    totalCount
+                replyToId: replyTo {
+                  id
+                }
+                replies(first: 100) {
+                  nodes {
+                    id
+                    author {
+                      login
+                      avatarUrl
+                      url
+                    }
+                    body
+                    bodyHTML
+                    createdAt
                   }
                 }
               }
@@ -221,15 +239,28 @@ export async function getComments(discussionId: string) {
 
     const data = await response.json();
     const comments = data?.data?.node?.comments?.nodes || [];
-
     return comments.map((comment: any) => ({
       id: comment.id,
       author: {
         login: comment.author?.login || '匿名用户',
-        avatarUrl: comment.author?.avatarUrl
+        avatarUrl: comment.author?.avatarUrl,
+        url: comment.author?.url
       },
       content: comment.body,
+      bodyHTML: comment.bodyHTML,
       createdAt: comment.createdAt,
+      replyToId: comment.replyToId?.id,
+      replies: comment.replies?.nodes?.map((reply: any) => ({
+        id: reply.id,
+        author: {
+          login: reply.author?.login || '匿名用户',
+          avatarUrl: reply.author?.avatarUrl,
+          url: reply.author?.url
+        },
+        content: reply.body,
+        bodyHTML: reply.bodyHTML,
+        createdAt: reply.createdAt
+      })),
       reactions:
         comment.reactionGroups?.map((group: any) => ({
           type: group.content,
@@ -251,7 +282,8 @@ export async function getComments(discussionId: string) {
 export async function addComment(
   discussionId: string,
   content: string,
-  token: string
+  token: string,
+  replyToId?: string
 ) {
   try {
     const mutation = `
@@ -259,15 +291,20 @@ export async function addComment(
         addDiscussionComment(input: {
           discussionId: "${discussionId}",
           body: "${content.replace(/"/g, '\\"')}"
+          ${replyToId ? `, replyToId: "${replyToId}"` : ''}
         }) {
           comment {
             id
             author {
               login
               avatarUrl
+              url
             }
             body
             createdAt
+            replyTo {
+              id
+            }
           }
         }
       }
@@ -296,10 +333,12 @@ export async function addComment(
         id: comment.id,
         author: {
           login: comment.author?.login || '匿名用户',
-          avatarUrl: comment.author?.avatarUrl
+          avatarUrl: comment.author?.avatarUrl,
+          url: comment.author?.url
         },
         content: comment.body,
-        createdAt: comment.createdAt
+        createdAt: comment.createdAt,
+        replyToId: comment.replyTo?.id
       };
     }
 
