@@ -185,7 +185,7 @@ const Comments: React.FC<CommentsProps> = ({ slug }) => {
               <p className="mb-2">登录后参与讨论</p>
               <button
                 onClick={handleLogin}
-                className="bg-black text-white px-4 py-2 rounded-md hover:bg-opacity-90"
+                className="bg-black text-white px-4 py-2 rounded-md hover:bg-opacity-90 cursor-pointer"
               >
                 使用 GitHub 登录
               </button>

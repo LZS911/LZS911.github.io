@@ -129,13 +129,14 @@ export async function getOrCreateDiscussion(
     }
 
     // 创建新的discussion
+    const discussionTitle = `${title} (${slug})`;
     const createQuery = `
       mutation {
         createDiscussion(input: {
           repositoryId: "${repositoryId}",
           categoryId: "${category.id}",
-          body: "这是文章 ${slug} 的评论区",
-          title: "Comments for: ${slug}"
+          body: "这是文章 ${title} 的评论区",
+          title: "${discussionTitle}"
         }) {
           discussion {
             id
@@ -168,7 +169,7 @@ export async function getOrCreateDiscussion(
     console.error('创建讨论请求详情:', {
       repositoryId,
       categoryId: category.id,
-      title: `Comments for: ${slug}`
+      title: discussionTitle
     });
     return null;
   } catch (error) {
