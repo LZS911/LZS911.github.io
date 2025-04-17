@@ -24,7 +24,6 @@ export async function GET(
   try {
     // 获取或创建对应的Discussion
     const discussion = await getDiscussionBySlug(slug);
-    console.log(discussion);
     if (!discussion) {
       return NextResponse.json({ comments: [] });
     }
