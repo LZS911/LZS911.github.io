@@ -1,0 +1,193 @@
+1:"$Sreact.fragment"
+2:I[996,["874","static/chunks/874-0197bf8342d89979.js","766","static/chunks/766-45f65761a5dfbf2c.js","177","static/chunks/app/layout-bb1da1aafb2c343b.js"],"default"]
+3:I[7555,[],""]
+4:I[1901,["874","static/chunks/874-0197bf8342d89979.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+5:I[1295,[],""]
+6:I[9543,["874","static/chunks/874-0197bf8342d89979.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/aa504e0140d1beb9.css","style"]
+:HL["/_next/static/css/36a97ca7ae61047e.css","style"]
+:HL["/_next/static/css/cb28a8db79c7a247.css","style"]
+:HL["/_next/static/css/90e48aee015d076a.css","style"]
+0:{"P":null,"b":"Z9yB1QKJUCFVUxF_8PaeN","p":"","c":["","posts","Next.js%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95"],"i":false,"f":[[["",{"children":["posts",{"children":[["slug","Next.js%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/aa504e0140d1beb9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":["$","div",null,{"className":"min-h-screen","children":[["$","$L2",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://pages.github.com/?(null)","target":"_blank","children":"GitHub Pages"}]]}]]}]}]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","Next.js%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/36a97ca7ae61047e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/cb28a8db79c7a247.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/90e48aee015d076a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","ZthBMy6RozoCcsgbOk4TE",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:"$Sreact.suspense"
+14:I[4911,[],"AsyncMetadata"]
+9:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
+c:null
+17:I[3924,["766","static/chunks/766-45f65761a5dfbf2c.js","858","static/chunks/app/posts/%5Bslug%5D/page-032d0aa1acece2a1.js"],"default"]
+16:T3790,<p><code>Next.js</code> 是一个 <code>React</code> 应用框架, 使用它可以快速上手开发 <code>React</code> 应用. <code>React</code> 作为一个用来构建 <code>UI</code> 的库, 对于开发一个完整的 <code>React</code> 应用是远远不够的.我们还需要构建、打包和运行等开发工具, 比如使用 <code>Babel</code> 转换使用了新特性的 <code>JavaScript</code> 代码、处理 <code>SASS</code> 和 <code>LESS</code> 样式文件等.开发功能时, 除了构建界面, 还需要处理页面路由、获取服务端数据、管理应用状态等.为了让应用对搜索引擎友好, 最好支持服务端渲染.如果自己从零去安装配置各种开发工具, 需要花费许多时间和精力, 因此 <code>React</code> 官方提供了 <code>Create React App</code>（简称 <code>CRA</code> ）工具来降低上手开发 <code>React</code> 应用的门槛. <code>Next.js</code> 可以看作是 <code>CRA</code> 的升级版.</p>
+<h3 id="初始化-nextjs-app"><a aria-hidden="true" tabindex="-1" href="#初始化-nextjs-app"><span class="icon icon-link"></span></a>初始化 Next.js APP</h3>
+<p>进入项目文件夹后执行:</p>
+<p><code>npx create-next-app Next.js-blog --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"</code></p>
+<p>关于 <code>npx</code>: <a href="https://medium.com/itsems-frontend/whats-npx-e83400efe7f8">https://medium.com/itsems-frontend/whats-npx-e83400efe7f8</a></p>
+<p><code>--example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"</code> 指定链接地址作为初始化项目的模板</p>
+<h3 id="项目目录结构"><a aria-hidden="true" tabindex="-1" href="#项目目录结构"><span class="icon icon-link"></span></a>项目目录结构</h3>
+<ol>
+<li><code>pages</code>(必需):<code>pages</code> 目录是 <code>Next.js</code> 中最重要的一个目录, 这个目录的每一个文件都会对应到每一个页面, 可以根据地址栏的路由进行跳转.若 <code>pages</code> 下的 <code>js</code> 文件在一个目录下, 那么 <code>Next.js</code> 默认会将这个目录也当作路由的路径.</li>
+<li><code>components</code>(非必需): <code>components</code> 目录存放的是一些公用的组件, 这些代码不能放在 <code>pages</code> 下, 不然的话就会以页面的形式进行导出.</li>
+<li><code>lib</code>(非必需):<code>lib</code> 目录存放一些工具方法, 比如 <code>util</code> 等等.</li>
+<li><code>static</code>(非必需):<code>static</code> 目录存放一些静态资源文件.</li>
+</ol>
+<h3 id="默认文件"><a aria-hidden="true" tabindex="-1" href="#默认文件"><span class="icon icon-link"></span></a>默认文件</h3>
+<p><code>index.js</code>: <code>Next.js</code> 的 <code>pages</code> 下默认入口文件, 这个文件会对应浏览器地址栏为根路径的那个页面.</p>
+<h3 id="内置组件"><a aria-hidden="true" tabindex="-1" href="#内置组件"><span class="icon icon-link"></span></a>内置组件</h3>
+<ol>
+<li>
+<p><code>Link</code>: 网页中两个页面之间的跳转一般使用 <code>a</code> 标签. 在 <code>Next.js</code> 中, 可以使用 <code>Link</code> 组件 <code>next/link</code> 在应用程序中的页面之间进行链接. <code>Link</code> 允许进行客户端导航并接受一些属性.</p>
+<pre><code class="hljs language-JavaScript"><span class="hljs-comment">//index.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'next/link'</span>;
+
+
+<span class="hljs-comment">// href="/posts/first-post" : 跳转至 pages 目录下的 posts/first-post.js</span>
+<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">h1</span> <span class="hljs-attr">className</span>=<span class="hljs-string">"title"</span>></span>
+  Read <span class="hljs-tag">&#x3C;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/posts/first-post"</span>></span>this page!<span class="hljs-tag">&#x3C;/<span class="hljs-name">Link</span>></span>
+<span class="hljs-tag">&#x3C;/<span class="hljs-name">h1</span>></span></span>
+</code></pre>
+<p>在 pages 目录下新建 posts/first-post.js</p>
+<pre><code class="hljs language-JavaScript"><span class="hljs-comment">//posts/first-post.js</span>
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">Link</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'next/link'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">FirstPost</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h1</span>></span>First Post<span class="hljs-tag">&#x3C;/<span class="hljs-name">h1</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h2</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">Link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/"</span>></span>Back to home<span class="hljs-tag">&#x3C;/<span class="hljs-name">Link</span>></span>
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">h2</span>></span>
+    <span class="hljs-tag">&#x3C;/></span></span>
+  );
+}
+</code></pre>
+</li>
+<li>
+<p><code>Image</code>: 提供对图片资源自动进行优化的功能.</p>
+<p>使用常规 HTML 添加个人资料图片如下所示:</p>
+<pre><code class="hljs language-HTML">  <span class="hljs-tag">&#x3C;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/images/profile.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Your Name"</span> /></span>
+</code></pre>
+<p>这种情况下必须手动处理:</p>
+<ul>
+<li>确保您的图像在不同的屏幕尺寸上响应</li>
+<li>使用第三方工具或库优化您的图像</li>
+<li>仅在图像进入视口时加载图像</li>
+</ul>
+<p>使用图像组件</p>
+<pre><code class="hljs language-JavaScript"><span class="hljs-keyword">import</span> <span class="hljs-title class_">Image</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'next/image'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">YourComponent</span> = (<span class="hljs-params"></span>) => (
+  <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">Image</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">"/images/profile.jpg"</span> // <span class="hljs-attr">Route</span> <span class="hljs-attr">of</span> <span class="hljs-attr">the</span> <span class="hljs-attr">image</span> <span class="hljs-attr">file</span>
+    <span class="hljs-attr">height</span>=<span class="hljs-string">{144}</span> // <span class="hljs-attr">Desired</span> <span class="hljs-attr">size</span> <span class="hljs-attr">with</span> <span class="hljs-attr">correct</span> <span class="hljs-attr">aspect</span> <span class="hljs-attr">ratio</span>
+    <span class="hljs-attr">width</span>=<span class="hljs-string">{144}</span> // <span class="hljs-attr">Desired</span> <span class="hljs-attr">size</span> <span class="hljs-attr">with</span> <span class="hljs-attr">correct</span> <span class="hljs-attr">aspect</span> <span class="hljs-attr">ratio</span>
+    <span class="hljs-attr">alt</span>=<span class="hljs-string">"Your Name"</span>
+  /></span></span>
+);
+</code></pre>
+<p><code>Next.js</code> 不是在构建时优化图像, 而是在用户请求时按需优化图像.与静态站点生成器和纯静态解决方案不同, 构建时间不会增加, 无论是发送 10 个图像还是 1000 万个图像.</p>
+<p>默认情况下, 图像是延迟加载的.这意味着您的页面速度不会因视口之外的图像而受到惩罚.图像在滚动到视口时加载.</p>
+</li>
+<li>
+<p><code>Head</code>: 代替 <code>Html5</code> 中的 <code>&#x3C;head></code> 标签</p>
+<pre><code class="hljs language-Html"> <span class="hljs-tag">&#x3C;<span class="hljs-name">Head</span>></span>
+   <span class="hljs-tag">&#x3C;<span class="hljs-name">title</span>></span>Create Next App<span class="hljs-tag">&#x3C;/<span class="hljs-name">title</span>></span>
+   <span class="hljs-tag">&#x3C;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"icon"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/favicon.ico"</span> /></span>
+ <span class="hljs-tag">&#x3C;/<span class="hljs-name">Head</span>></span>
+</code></pre>
+</li>
+</ol>
+<h3 id="关于-css"><a aria-hidden="true" tabindex="-1" href="#关于-css"><span class="icon icon-link"></span></a>关于 CSS</h3>
+<ol>
+<li>
+<p><code>css</code> 模块. <code>css</code> 模块允许通过自动创建唯一的类名来在组件级别本地限定 <code>css</code>. 这允许您在不同的文件中使用相同的 <code>css</code> 类名, 而不必担心类名冲突</p>
+<p><code>utils.module.cs</code></p>
+<pre><code class="hljs language-css"><span class="hljs-selector-class">.maxW100</span>{
+  <span class="hljs-attribute">max-width</span>:<span class="hljs-number">100rem</span>;
+}
+``
+pages/index<span class="hljs-selector-class">.j</span>
+```jsx
+import utilStyles <span class="hljs-selector-tag">from</span> "../styles/utils<span class="hljs-selector-class">.module</span><span class="hljs-selector-class">.css</span>";
+
+&#x3C;<span class="hljs-selector-tag">div</span> className={utilStyles<span class="hljs-selector-class">.maxW100</span>}>test style&#x3C;/<span class="hljs-selector-tag">div</span>>
+``
+
+</code></pre>
+</li>
+<li>
+<p>通过其他方式来设置 <code>Next.js</code> 应用程序的样式</p>
+<ul>
+<li><code>SASS</code></li>
+<li><code>PostCss</code> 库, 例如 <a href="https://tailwindcss.com/docs/installation">TailwindCss</a></li>
+<li><code>CSS-in-JS</code> 库, 例如 <a href="https://nextjs.org/blog/styling-next-with-styled-jsx">styled-jsx</a>、<a href="https://styled-components.com/">styled-components</a> 和 [Emotion](<a href="https://github.com/emotion-js/emotion">https://github.com/emotion-js/emotion</a></li>
+</ul>
+</li>
+<li>
+<p>添加全局样式时, 需要创建一个名为 <code>pages/_app.js</code> 的文件, 其内容如下</p>
+<pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> <span class="hljs-string">'../styles/global.css'</span>;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">App</span>(<span class="hljs-params">{ Component, pageProps }</span>) {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">Component</span> {<span class="hljs-attr">...pageProps</span>} /></span></span>;
+}
+</code></pre>
+<p>该 <code>App</code> 组件是所有不同页面通用的顶级组件.</p>
+</li>
+</ol>
+<h3 id="预渲染与数据获取"><a aria-hidden="true" tabindex="-1" href="#预渲染与数据获取"><span class="icon icon-link"></span></a>预渲染与数据获取</h3>
+<ol>
+<li>
+<p><code>Next.js</code> 的预渲染功能</p>
+<ul>
+<li>
+<p>什么是预渲染</p>
+<p>默认情况下, <code>Next.js</code> 预渲染每个页面.这意味着 <code>Next.js</code> 会提前为每个页面生成 <code>HTML</code>, 而不是全部由客户端 <code>JavaScript</code> 完成.预渲染可以带来更好的性能和 <a href="https://zh.wikipedia.org/wiki/%E6%90%9C%E5%B0%8B%E5%BC%95%E6%93%8E%E6%9C%80%E4%BD%B3%E5%8C%96">SEO</a>.</p>
+<p>每个生成的 HTML 都与该页面所需的最少 <code>JavaScript</code> 代码相关联.当浏览器加载页面时, 其 <code>JavaScript</code> 代码将运行并使页面完全交互.(这个过程称为水合作用.)</p>
+</li>
+<li>
+<p>两种形式的预渲染</p>
+<ol>
+<li><code>SSR</code>: 服务器端渲染是在每个请求上生成 <code>HTML</code> 的预渲染方法.</li>
+<li><code>SSG</code>: 静态生成是在构建时生成 <code>HTML</code> 的预渲染方法.然后在每个请求上重用预呈现的 HTML</li>
+</ol>
+</li>
+<li>
+<p><code>SSG</code>: 静态生成
+<code>Next.js</code> 提供了 <code>getStaticProps</code> 这样一个方法, 将其定义在需要获取数据的页面组件中, 并将其导出.
+两个注意点:</p>
+<ol>
+<li><code>dev</code> 环境中, <code>getStaticProps</code> 会在每一个请求上运行, <code>product</code> 环境会在构建时运行</li>
+<li>在函数内部可以获取外部的数据并将其以 <code>props</code> 的形式传递至组件中</li>
+</ol>
+<pre><code class="hljs language-jsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">Home</span> = (<span class="hljs-params">props</span>) => { ... }
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">getStaticProps</span> = <span class="hljs-keyword">async</span> (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">const</span> data = [];
+
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">props</span>: data
+  }
+}
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">Home</span>
+</code></pre>
+</li>
+<li>
+<p><code>SSR</code>: 服务端渲染
+如果需要在请求时而不是构建时获取数据, 可以使用服务端渲染. <code>Next.js</code> 同样提供了一个名为 <code>getServerSideProps</code> 的函数.</p>
+<pre><code class="hljs language-JavaScript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">getServerSideProps</span> = (<span class="hljs-params">context</span>) => {
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">props</span>:{}
+  }
+}
+</code></pre>
+<p>因为 <code>getServerSideProps</code> 是在请求时调用的, 所以它的参数 <code>context</code> 包含了请求特定的参数.</p>
+</li>
+</ul>
+</li>
+</ol>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"Next.js 学习记录"}]}],["$","time",null,{"dateTime":"2022-09-28","className":"text-center block my-4 text-sm opacity-60","children":"September\t28, 2022"}],[null,["$","section",null,{"className":"markdown-body-condensed-night-purple max-w-3xl","dangerouslySetInnerHTML":{"__html":"$16"}}]],["$","$L17",null,{"slug":"Next.js%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95"}]]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+15:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}

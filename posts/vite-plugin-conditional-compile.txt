@@ -1,0 +1,194 @@
+1:"$Sreact.fragment"
+2:I[996,["874","static/chunks/874-0197bf8342d89979.js","766","static/chunks/766-45f65761a5dfbf2c.js","177","static/chunks/app/layout-bb1da1aafb2c343b.js"],"default"]
+3:I[7555,[],""]
+4:I[1901,["874","static/chunks/874-0197bf8342d89979.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+5:I[1295,[],""]
+6:I[9543,["874","static/chunks/874-0197bf8342d89979.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/aa504e0140d1beb9.css","style"]
+:HL["/_next/static/css/36a97ca7ae61047e.css","style"]
+:HL["/_next/static/css/cb28a8db79c7a247.css","style"]
+:HL["/_next/static/css/90e48aee015d076a.css","style"]
+0:{"P":null,"b":"Z9yB1QKJUCFVUxF_8PaeN","p":"","c":["","posts","vite-plugin-conditional-compile"],"i":false,"f":[[["",{"children":["posts",{"children":[["slug","vite-plugin-conditional-compile","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/aa504e0140d1beb9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":["$","div",null,{"className":"min-h-screen","children":[["$","$L2",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://pages.github.com/?(null)","target":"_blank","children":"GitHub Pages"}]]}]]}]}]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","vite-plugin-conditional-compile","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/36a97ca7ae61047e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/cb28a8db79c7a247.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/90e48aee015d076a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","0W4vtZJx-EnJC7YjkKLqd",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:"$Sreact.suspense"
+14:I[4911,[],"AsyncMetadata"]
+9:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
+c:null
+17:I[3924,["766","static/chunks/766-45f65761a5dfbf2c.js","858","static/chunks/app/posts/%5Bslug%5D/page-032d0aa1acece2a1.js"],"default"]
+16:T25de,<blockquote>
+<p>项目地址: <a href="https://www.npmjs.com/package/vite-plugin-conditional-compile">https://www.npmjs.com/package/vite-plugin-conditional-compile</a></p>
+</blockquote>
+<h2 id="功能特性"><a aria-hidden="true" tabindex="-1" href="#功能特性"><span class="icon icon-link"></span></a>功能特性</h2>
+<ul>
+<li>支持根据自定义的条件配置选择性地包含或排除代码块</li>
+<li>可以在开发环境和生产环境中使用不同的代码逻辑</li>
+<li>灵活的条件表达式，支持逻辑运算和环境变量</li>
+<li>可以在 Vite 构建过程中动态生成不同的输出文件</li>
+</ul>
+<h2 id="安装"><a aria-hidden="true" tabindex="-1" href="#安装"><span class="icon icon-link"></span></a>安装</h2>
+<pre><code class="hljs language-ssh">yarn add vite-plugin-conditional-compile -D
+</code></pre>
+<h2 id="使用"><a aria-hidden="true" tabindex="-1" href="#使用"><span class="icon icon-link"></span></a>使用</h2>
+<blockquote>
+<p>务必将该插件的加载顺序放在最前位，防止 jsx 之类的代码被其他插件编译，导致本插件无法解析</p>
+</blockquote>
+<pre><code class="hljs language-js"><span class="hljs-comment">// vite.config.ts</span>
+<span class="hljs-keyword">import</span> { defineConfig } <span class="hljs-keyword">from</span> <span class="hljs-string">"vite"</span>;
+<span class="hljs-keyword">import</span> vitePluginConditionalCompile <span class="hljs-keyword">from</span> <span class="hljs-string">"vite-plugin-conditional-compile"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title function_">defineConfig</span>({
+    <span class="hljs-attr">plugins</span>: [<span class="hljs-title function_">vitePluginConditionalCompile</span>({
+      <span class="hljs-comment">// 插件配置项...</span>
+    }),
+    <span class="hljs-comment">// 其他插件...</span>
+  ],
+});
+</code></pre>
+<h2 id="配置项"><a aria-hidden="true" tabindex="-1" href="#配置项"><span class="icon icon-link"></span></a>配置项</h2>
+<p>该插件支持以下配置项：</p>
+<ol>
+<li>
+<p><code>include: string | RegExp | readonly (string | RegExp)[] | null</code>
+需要进行条件编译的文件路径或文件匹配模式。</p>
+<p>默认值: <code>['**/*']</code></p>
+<p>示例：</p>
+<pre><code class="hljs language-js">   {
+     <span class="hljs-attr">include</span>: [<span class="hljs-regexp">/^.+\/packages\/.+\/.+.(ts|tsx)$/</span>],
+   }
+</code></pre>
+</li>
+<li>
+<p><code>exclude: string | RegExp | readonly (string | RegExp)[] | null</code>
+需要排除条件编译的文件路径或文件匹配模式。</p>
+<p>默认值: <code>[/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/]</code></p>
+<p>示例：</p>
+<pre><code class="hljs language-js">   {
+      <span class="hljs-attr">exclude</span>: [<span class="hljs-string">'/\.eslintrc.js/'</span>]
+   }
+</code></pre>
+</li>
+<li>
+<p><code>env: Record&#x3C;string, any></code>
+自定义环境变量选项，用于在条件编译语句中使用自定义的环境变量。示例：</p>
+<pre><code class="hljs language-javascript">{
+  <span class="hljs-string">'MY_VARIABLE'</span>: <span class="hljs-string">'my value'</span>,
+  <span class="hljs-comment">// 更多自定义环境变量...</span>
+}
+</code></pre>
+<p>同时，本插件会调用 vite 提供的 <a href="https://vitejs.dev/guide/api-javascript.html#loadenv">loadEnv</a> 来获取项目的环境变量。</p>
+</li>
+</ol>
+<h2 id="示例"><a aria-hidden="true" tabindex="-1" href="#示例"><span class="icon icon-link"></span></a>示例</h2>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// vite.config.ts</span>
+<span class="hljs-keyword">import</span> { defineConfig } <span class="hljs-keyword">from</span> <span class="hljs-string">"vite"</span>;
+<span class="hljs-keyword">import</span> vitePluginConditionalCompile <span class="hljs-keyword">from</span> <span class="hljs-string">"vite-plugin-conditional-compile"</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title function_">defineConfig</span>({
+    <span class="hljs-attr">plugins</span>: [<span class="hljs-title function_">vitePluginConditionalCompile</span>({
+      <span class="hljs-attr">env</span>:{
+        <span class="hljs-comment">//自定义环境变量, 提供给条件语句使用</span>
+        <span class="hljs-attr">feature</span>: <span class="hljs-string">'code'</span>,
+        <span class="hljs-attr">prod_version</span>: <span class="hljs-string">'vite'</span>
+      }
+    }),
+  ],
+});
+
+
+<span class="hljs-comment">// main.jsx</span>
+<span class="hljs-comment">// #if [DEV]</span>
+<span class="hljs-keyword">import</span> { featureA } <span class="hljs-keyword">from</span> <span class="hljs-string">'./featureA.js'</span>;
+
+<span class="hljs-comment">// 这里的 PROD 取至 项目的环境变量, 若当前为生产环境时将加载此条 import 语句</span>
+<span class="hljs-comment">// #elif [PROD]</span>
+<span class="hljs-keyword">import</span> { featureB } <span class="hljs-keyword">from</span> <span class="hljs-string">'./featureB.js'</span>;
+
+<span class="hljs-comment">//这里的 feature 和 prod_version 取至用户的 env 配置项, 判断 feature 的值是否与 ”code“ 相同、prod_version的值是否不等于 ”vite“. 当满足其中之一时, 该条件成立</span>
+<span class="hljs-comment">// #elif [feature=code || !(prod_version=vite)]</span>
+<span class="hljs-keyword">import</span> { featureC } <span class="hljs-keyword">from</span> <span class="hljs-string">'./featureC.js'</span>;
+
+<span class="hljs-comment">// #else</span>
+<span class="hljs-keyword">import</span> { featureD } <span class="hljs-keyword">from</span> <span class="hljs-string">'./featureD.js'</span>;
+
+<span class="hljs-comment">// #endif</span>
+
+<span class="hljs-comment">// #if [DEV]</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'Development environment'</span>);
+<span class="hljs-comment">// #endif</span>
+
+<span class="hljs-comment">// #if [PROD]</span>
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'Production environment'</span>);
+<span class="hljs-comment">// #endif</span>
+
+<span class="hljs-comment">// #if [!!API_URL]</span>
+<span class="hljs-title function_">fetch</span>(<span class="hljs-keyword">import</span>.<span class="hljs-property">meta</span>.<span class="hljs-property">env</span>.<span class="hljs-property">API_URL</span>)
+  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">response</span> =></span> response.<span class="hljs-title function_">json</span>())
+  .<span class="hljs-title function_">then</span>(<span class="hljs-function"><span class="hljs-params">data</span> =></span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(data));
+<span class="hljs-comment">// #endif</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Com</span> = (<span class="hljs-params"></span>) => {
+<span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>
+      {/* #if [PROD] */}
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">span</span>></span>prod mode<span class="hljs-tag">&#x3C;/<span class="hljs-name">span</span>></span>
+      {/* #elif [DEV] */}
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">span</span>></span>dev mode<span class="hljs-tag">&#x3C;/<span class="hljs-name">span</span>></span>
+      {/*#else */}
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">span</span>></span>unknown mode<span class="hljs-tag">&#x3C;/<span class="hljs-name">span</span>></span>
+      {/* #endif */}
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+  );
+}
+</code></pre>
+<pre><code class="hljs language-vue">&#x3C;script setup lang="ts">
+// #if [DEV]
+import { featureA } from './featureA.js';
+// #endif
+
+&#x3C;/script>
+
+&#x3C;template>
+
+  &#x3C;!-- #if [DEV] -->
+  &#x3C;router-link to="/debug">
+    &#x3C;span class="m-2 text-green-500">demo&#x3C;/span>
+  &#x3C;/router-link>
+
+  &#x3C;!-- #elif [PROD] -->
+ &#x3C;router-link to="/prod">
+    &#x3C;span class="m-2 text-green-500">demo&#x3C;/span>
+  &#x3C;/router-link>
+
+  &#x3C;!-- #else -->
+  &#x3C;router-link to="/helloWorld">
+    &#x3C;span class="text-green-500">helloWorld&#x3C;/span>
+  &#x3C;/router-link>
+  &#x3C;!-- #endif -->
+
+  &#x3C;router-view />
+&#x3C;/template>
+</code></pre>
+<h2 id="支持的条件语句"><a aria-hidden="true" tabindex="-1" href="#支持的条件语句"><span class="icon icon-link"></span></a>支持的条件语句</h2>
+<blockquote>
+<p>注: 条件需要使用 [] 进行包裹</p>
+</blockquote>
+<ol>
+<li>等式: <code>feature=code</code>、<code>prod_version=4.5.0</code> 等式右侧支持字符以及数字类型。</li>
+<li>不等式: <code>prod_version != vite</code>。</li>
+<li>逻辑语句: <code>feature=code || !(prod_version=vite)</code> 支持嵌套逻辑语句。</li>
+<li>变量: <code>DEV</code> 判断 env['DEV'] 的值是否为 true。</li>
+<li>取反符号: <code>!PROD</code> 判断 env['PROD'] 的值是否为 false，可以使用双重取反来模拟 #ifdef。</li>
+</ol>
+<h2 id="vs-code-插件"><a aria-hidden="true" tabindex="-1" href="#vs-code-插件"><span class="icon icon-link"></span></a>VS Code 插件</h2>
+<p>后续将会支持 VS Code插件来高亮条件以及语法校验等功能。</p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"vite-plugin-conditional-compile"}]}],["$","time",null,{"dateTime":"2022-12-01","className":"text-center block my-4 text-sm opacity-60","children":"December\t1, 2022"}],[null,["$","section",null,{"className":"markdown-body-fancy max-w-3xl","dangerouslySetInnerHTML":{"__html":"$16"}}]],["$","$L17",null,{"slug":"vite-plugin-conditional-compile"}]]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+15:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}

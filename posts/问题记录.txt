@@ -1,0 +1,59 @@
+1:"$Sreact.fragment"
+2:I[996,["874","static/chunks/874-0197bf8342d89979.js","766","static/chunks/766-45f65761a5dfbf2c.js","177","static/chunks/app/layout-bb1da1aafb2c343b.js"],"default"]
+3:I[7555,[],""]
+4:I[1901,["874","static/chunks/874-0197bf8342d89979.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+5:I[1295,[],""]
+6:I[9543,["874","static/chunks/874-0197bf8342d89979.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/aa504e0140d1beb9.css","style"]
+:HL["/_next/static/css/36a97ca7ae61047e.css","style"]
+:HL["/_next/static/css/cb28a8db79c7a247.css","style"]
+:HL["/_next/static/css/90e48aee015d076a.css","style"]
+0:{"P":null,"b":"Z9yB1QKJUCFVUxF_8PaeN","p":"","c":["","posts","%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"],"i":false,"f":[[["",{"children":["posts",{"children":[["slug","%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/aa504e0140d1beb9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":["$","div",null,{"className":"min-h-screen","children":[["$","$L2",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://pages.github.com/?(null)","target":"_blank","children":"GitHub Pages"}]]}]]}]}]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/36a97ca7ae61047e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/cb28a8db79c7a247.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/90e48aee015d076a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","uF8OmNJHVuj5sJ0r7H1oG",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:"$Sreact.suspense"
+14:I[4911,[],"AsyncMetadata"]
+9:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
+c:null
+17:I[3924,["766","static/chunks/766-45f65761a5dfbf2c.js","858","static/chunks/app/posts/%5Bslug%5D/page-032d0aa1acece2a1.js"],"default"]
+16:Td2c,<h2 id="记录什么"><a aria-hidden="true" tabindex="-1" href="#记录什么"><span class="icon icon-link"></span></a>记录什么?</h2>
+<p>记录开发一个前后端分离的窗体程序时遇到的一些 <code>bug</code> 和一些不太熟悉知识点.</p>
+<p>项目技术栈: <code>react + electron + koa2</code></p>
+<h3 id="1-使用-koa2-cors-中间件解决跨域后为什么还是提示跨域的问题"><a aria-hidden="true" tabindex="-1" href="#1-使用-koa2-cors-中间件解决跨域后为什么还是提示跨域的问题"><span class="icon icon-link"></span></a>1. 使用 <code>koa2-cors</code> 中间件解决跨域后为什么还是提示跨域的问题</h3>
+<p>跨域应该是一个老生常谈的问题了, 这里不过多解释. 在开发环境上, 跨域问题前后端都能进行解决. 本项目中采用服务端使用<code>koa2-cors</code> 中间件来进行解决.</p>
+<p>按照包的官网进行配置</p>
+<p><img src="../assets/images/treasure-bowl-question/koa-cors-docs.jpg" alt="alt"></p>
+<p>前端调用接口</p>
+<p><img src="../assets/images/treasure-bowl-question/request-error.jpg" alt="alt"></p>
+<p>可以看到并没有解决跨域问题, 但是 <code>Google</code> 明明告诉我这个包就能解决跨域问题啊 😫😫😫</p>
+<p>继续<code>Google</code> 后无果, 于是冷静下来分析报错信息, 发现这次报错信息和以往的跨域报错信息并不相同, 最后多了一段话:</p>
+<p><code>The value of the 'Access-Control-Allow-Origin' header in the response must not be the wildcard '*' when the request's credentials mode is 'include'. The credentials mode of requests initiated by the XMLHttpRequest is controlled by the withCredentials attribute.</code></p>
+<p>也就是说 这里的 <code>origin</code> 在包含凭证信息时并不能设置为 <code>*</code>. 于是回到前端项目中发现 <code>axios</code> 的配置中设置了</p>
+<pre><code class="hljs language-javascript">axios.<span class="hljs-property">defaults</span>.<span class="hljs-property">withCredentials</span> = <span class="hljs-literal">true</span>;
+</code></pre>
+<p>该配置表示如果前端项目在跨域的情况下能够携带 <code>cookies</code> 信息.</p>
+<p>而为什么当包含凭证时不能设置为 <code>*</code> 呢?</p>
+<p>通过 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Headers">MDN</a> 得知:</p>
+<blockquote>
+<p>对于没有凭据的请求（没有 <code>HTTP cookie</code> 或 <code>HTTP</code> 认证信息的请求），值 <code>*</code> 仅作为特殊的通配符值。 在具有凭据的请求中，它被视为没有特殊语义的文字标头名称 <code>*</code> 。 请注意，<code>Authorization</code> 标头不能使用通配符，并且始终需要明确列出。</p>
+</blockquote>
+<p>而要在携带凭据的同时也要支持跨域便得这样配置:</p>
+<pre><code class="hljs language-javascript">   <span class="hljs-title function_">origin</span>(<span class="hljs-params">ctx</span>) {
+        <span class="hljs-keyword">return</span> ctx.<span class="hljs-property">header</span>.<span class="hljs-property">origin</span> ?? <span class="hljs-string">''</span>;
+      },
+</code></pre>
+<p>反思:</p>
+<ol>
+<li>各种无脑 <code>cv</code> 操作...</li>
+<li>还是不太熟悉 <code>http</code> 协议的各种配置...</li>
+</ol>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"问题记录"}]}],["$","time",null,{"dateTime":"2022-01-01","className":"text-center block my-4 text-sm opacity-60","children":"January\t1, 2022"}],[null,["$","section",null,{"className":"markdown-body-arknights max-w-3xl","dangerouslySetInnerHTML":{"__html":"$16"}}]],["$","$L17",null,{"slug":"%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"}]]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+15:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}

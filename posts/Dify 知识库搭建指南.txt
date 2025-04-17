@@ -1,0 +1,99 @@
+1:"$Sreact.fragment"
+2:I[996,["874","static/chunks/874-0197bf8342d89979.js","766","static/chunks/766-45f65761a5dfbf2c.js","177","static/chunks/app/layout-bb1da1aafb2c343b.js"],"default"]
+3:I[7555,[],""]
+4:I[1901,["874","static/chunks/874-0197bf8342d89979.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+5:I[1295,[],""]
+6:I[9543,["874","static/chunks/874-0197bf8342d89979.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/aa504e0140d1beb9.css","style"]
+:HL["/_next/static/css/36a97ca7ae61047e.css","style"]
+:HL["/_next/static/css/cb28a8db79c7a247.css","style"]
+:HL["/_next/static/css/90e48aee015d076a.css","style"]
+0:{"P":null,"b":"Z9yB1QKJUCFVUxF_8PaeN","p":"","c":["","posts","Dify%20%E7%9F%A5%E8%AF%86%E5%BA%93%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97"],"i":false,"f":[[["",{"children":["posts",{"children":[["slug","Dify%20%E7%9F%A5%E8%AF%86%E5%BA%93%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/aa504e0140d1beb9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":["$","div",null,{"className":"min-h-screen","children":[["$","$L2",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://pages.github.com/?(null)","target":"_blank","children":"GitHub Pages"}]]}]]}]}]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","Dify%20%E7%9F%A5%E8%AF%86%E5%BA%93%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/36a97ca7ae61047e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/cb28a8db79c7a247.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/90e48aee015d076a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","a4yZkNN9DTs9rwzMyH8tN",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:"$Sreact.suspense"
+14:I[4911,[],"AsyncMetadata"]
+9:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
+c:null
+17:I[3924,["766","static/chunks/766-45f65761a5dfbf2c.js","858","static/chunks/app/posts/%5Bslug%5D/page-032d0aa1acece2a1.js"],"default"]
+16:T1d80,<h2 id="dify介绍"><a aria-hidden="true" tabindex="-1" href="#dify介绍"><span class="icon icon-link"></span></a>Dify介绍</h2>
+<h3 id="什么是-dify"><a aria-hidden="true" tabindex="-1" href="#什么是-dify"><span class="icon icon-link"></span></a>什么是 Dify？</h3>
+<p><code>Dify 一词源自 Define + Modify，意指定义并且持续的改进你的 AI 应用，它是为你而做的（Do it for you）。</code></p>
+<p>Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后端即服务（Backend as Service）和 LLMOps 的理念，使开发者可以快速搭建生产级的生成式 AI 应用。即使你是非技术人员，也能参与到 AI 应用的定义和数据运营过程中。</p>
+<p>由于 Dify 内置了构建 LLM 应用所需的关键技术栈，包括对数百个模型的支持、直观的 Prompt 编排界面、高质量的 RAG 引擎、稳健的 Agent 框架、灵活的流程编排，并同时提供了一套易用的界面和 API。这为开发者节省了许多重复造轮子的时间，使其可以专注在创新和业务需求上。</p>
+<h3 id="dify-能做什么"><a aria-hidden="true" tabindex="-1" href="#dify-能做什么"><span class="icon icon-link"></span></a>Dify 能做什么？</h3>
+<ul>
+<li>
+<p>创业，快速的将你的 AI 应用创意变成现实，无论成功和失败都需要加速。在真实世界，已经有几十个团队通过 Dify 构建 MVP（最小可用产品）获得投资，或通过 POC（概念验证）赢得了客户的订单。</p>
+</li>
+<li>
+<p>将 LLM 集成至已有业务，通过引入 LLM 增强现有应用的能力，接入 Dify 的 RESTful API 从而实现 Prompt 与业务代码的解耦，在 Dify 的管理界面是跟踪数据、成本和用量，持续改进应用效果。</p>
+</li>
+<li>
+<p>作为企业级 LLM 基础设施，一些银行和大型互联网公司正在将 Dify 部署为企业内的 LLM 网关，加速 GenAI 技术在企业内的推广，并实现中心化的监管。</p>
+</li>
+<li>
+<p>探索 LLM 的能力边界，即使你是一个技术爱好者，通过 Dify 也可以轻松的实践 Prompt 工程和 Agent 技术，在 GPTs 推出以前就已经有超过 60,000 开发者在 Dify 上创建了自己的第一个应用。</p>
+</li>
+</ul>
+<h3 id="dify-云服务"><a aria-hidden="true" tabindex="-1" href="#dify-云服务"><span class="icon icon-link"></span></a>Dify 云服务</h3>
+<p>Dify 为所有人提供了<a href="https://cloud.dify.ai/apps">云服务</a>，用户无需自行部署服务器，只需注册账号即可使用。云服务版本提供了自动备份、安全加密等高级功能，适合对数据安全要求较高的用户。</p>
+<h3 id="dify-社区版"><a aria-hidden="true" tabindex="-1" href="#dify-社区版"><span class="icon icon-link"></span></a>Dify 社区版</h3>
+<p>Dify 社区版即开源版本，你可以通过以下两种方式之一部署 Dify 社区版：</p>
+<ul>
+<li>
+<p><a href="https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/docker-compose">Docker Compose 部署</a></p>
+</li>
+<li>
+<p><a href="https://docs.dify.ai/zh-hans/getting-started/install-self-hosted/local-source-code">本地源码启动</a></p>
+</li>
+</ul>
+<h2 id="搭建具有知识库功能的聊天机器人"><a aria-hidden="true" tabindex="-1" href="#搭建具有知识库功能的聊天机器人"><span class="icon icon-link"></span></a>搭建具有知识库功能的聊天机器人</h2>
+<h3 id="接入大模型"><a aria-hidden="true" tabindex="-1" href="#接入大模型"><span class="icon icon-link"></span></a>接入大模型</h3>
+<p>云服务版本对于普通用户免费提供每月 200 次 gpt4o 的额度，所以在这里主要分享如何在本地搭建的 Dify 上接入免费的 Deepseek 70b</p>
+<p><a href="https://www.cnblogs.com/xiao987334176/p/18699605">https://www.cnblogs.com/xiao987334176/p/18699605</a></p>
+<h3 id="创建本地知识库"><a aria-hidden="true" tabindex="-1" href="#创建本地知识库"><span class="icon icon-link"></span></a>创建本地知识库</h3>
+<h3 id="embedding模型介绍"><a aria-hidden="true" tabindex="-1" href="#embedding模型介绍"><span class="icon icon-link"></span></a>Embedding模型介绍</h3>
+<p>Embedding模型是一种将数据转换为向量表示的技术，核心思想是通过学习数据的内在结构和语义信息，将其映射到一个低维向量空间中，使得相似的数据点在向量空间中的位置相近，从而通过计算向量之间的相似度来衡量数据之间的相似性。Embedding模型可以将单词、句子或图像等数据转换为低维向量，使得计算机能够更好地理解和处理这些数据。在NLP领域，Embedding模型可以将单词、句子或文档转换为向量，用于文本分类、情感分析。机器翻译等任务。在计算机视觉中，Embedding模型可以用于图像识别和检索等任务。</p>
+<h3 id="添加embedding模型"><a aria-hidden="true" tabindex="-1" href="#添加embedding模型"><span class="icon icon-link"></span></a>添加Embedding模型</h3>
+<p>云服务版本依旧有免费的Embedding模型额度，对于本地 Dify，可以在添加大模型时选择 Text Embedding 类型的模型</p>
+<p><img src="https://github.com/user-attachments/assets/903ca8ae-18d1-4630-89e5-0fed9ef6d237" alt="image"></p>
+<h3 id="创建知识库"><a aria-hidden="true" tabindex="-1" href="#创建知识库"><span class="icon icon-link"></span></a>创建知识库</h3>
+<p>知识库数据源可以通过以下三种方式，这里我们选择导入本地文件</p>
+<p><img src="https://github.com/user-attachments/assets/674a1a89-bd23-4812-a984-c273901e0f81" alt="image"></p>
+<p>在对文本进行分段处理完成索引后，我们来进行召回测试</p>
+<p><img src="https://github.com/user-attachments/assets/9d0d5227-0b5e-41a5-bae1-3e0e361eaf20" alt="image"></p>
+<h3 id="外部知识库以及知识库同步功能"><a aria-hidden="true" tabindex="-1" href="#外部知识库以及知识库同步功能"><span class="icon icon-link"></span></a>外部知识库以及知识库同步功能</h3>
+<p>TODO</p>
+<h3 id="构建应用"><a aria-hidden="true" tabindex="-1" href="#构建应用"><span class="icon icon-link"></span></a>构建应用</h3>
+<p>Dify 提供了一系列模板来方便我们快捷构建应用，这里我们选择使用知识库的聊天机器人助手模板</p>
+<p><img src="https://github.com/user-attachments/assets/4e1337f1-085f-47b1-8b4f-730757c4e888" alt="image"></p>
+<p>该模板预设流程如下：</p>
+<p><img src="https://github.com/user-attachments/assets/4afa23a1-5000-495d-8c91-266d5120161c" alt="image"></p>
+<p>流程包含以下几个节点：</p>
+<ol>
+<li>
+<p>知识库内容检索
+<img src="https://github.com/user-attachments/assets/cc65c644-b783-4ac2-87c7-600d1aa09ee2" alt="image">
+我们需要在此步骤绑定相关联的知识库</p>
+</li>
+<li>
+<p>调用语言大模型
+<img src="https://github.com/user-attachments/assets/52180f5c-b50f-4c9d-a4ca-f77fd4a51fbe" alt="image">
+在这里我们需要设置大模型并设置提示语</p>
+</li>
+</ol>
+<h3 id="发布应用"><a aria-hidden="true" tabindex="-1" href="#发布应用"><span class="icon icon-link"></span></a>发布应用</h3>
+<p>在发布应用前，我们可以先使用预览功能，来进行验证</p>
+<p><img src="https://github.com/user-attachments/assets/a15f43b9-8a8b-45a0-b97d-dc644408e729" alt="image"></p>
+<p>发布应用后，便可以通过在线访问或者嵌入其他网站以及 API 调用的形式来访问该 API 应用了。</p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"Dify 知识库搭建指南"}]}],["$","time",null,{"dateTime":"2025-02-20","className":"text-center block my-4 text-sm opacity-60","children":"February\t20, 2025"}],[null,["$","section",null,{"className":"markdown-body-Chinese-red max-w-3xl","dangerouslySetInnerHTML":{"__html":"$16"}}]],["$","$L17",null,{"slug":"Dify%20%E7%9F%A5%E8%AF%86%E5%BA%93%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97"}]]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+15:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}

@@ -1,0 +1,154 @@
+1:"$Sreact.fragment"
+2:I[996,["874","static/chunks/874-0197bf8342d89979.js","766","static/chunks/766-45f65761a5dfbf2c.js","177","static/chunks/app/layout-bb1da1aafb2c343b.js"],"default"]
+3:I[7555,[],""]
+4:I[1901,["874","static/chunks/874-0197bf8342d89979.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+5:I[1295,[],""]
+6:I[9543,["874","static/chunks/874-0197bf8342d89979.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/aa504e0140d1beb9.css","style"]
+:HL["/_next/static/css/36a97ca7ae61047e.css","style"]
+:HL["/_next/static/css/cb28a8db79c7a247.css","style"]
+:HL["/_next/static/css/90e48aee015d076a.css","style"]
+0:{"P":null,"b":"Z9yB1QKJUCFVUxF_8PaeN","p":"","c":["","posts","webpack%E4%B8%8Evite%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9501"],"i":false,"f":[[["",{"children":["posts",{"children":[["slug","webpack%E4%B8%8Evite%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9501","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/aa504e0140d1beb9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":["$","div",null,{"className":"min-h-screen","children":[["$","$L2",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$4","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://pages.github.com/?(null)","target":"_blank","children":"GitHub Pages"}]]}]]}]}]}]]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","webpack%E4%B8%8Evite%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9501","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/36a97ca7ae61047e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/cb28a8db79c7a247.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/90e48aee015d076a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","09W0egAdZxYA0KpzpaVgB",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:"$Sreact.suspense"
+14:I[4911,[],"AsyncMetadata"]
+9:["$","$13",null,{"fallback":null,"children":["$","$L14",null,{"promise":"$@15"}]}]
+c:null
+17:I[3924,["766","static/chunks/766-45f65761a5dfbf2c.js","858","static/chunks/app/posts/%5Bslug%5D/page-032d0aa1acece2a1.js"],"default"]
+16:T379e,<h2 id="webpack-tree-shaking"><a aria-hidden="true" tabindex="-1" href="#webpack-tree-shaking"><span class="icon icon-link"></span></a>Webpack Tree Shaking</h2>
+<h3 id="来自于-webpack-中文官方文档描述"><a aria-hidden="true" tabindex="-1" href="#来自于-webpack-中文官方文档描述"><span class="icon icon-link"></span></a>来自于 <code>Webpack</code> 中文官方文档描述</h3>
+<blockquote>
+<p>tree shaking 是一个术语，通常用于描述移除 JavaScript 上下文中的未引用代码(dead-code)。它依赖于 ES2015 模块语法的 静态结构 特性，例如 import 和 export。这个术语和概念实际上是由 ES2015 模块打包工具 rollup 普及起来的。
+Webpack 2 正式版本内置支持 ES2015 模块（也叫做 harmony modules）和未使用模块检测能力。新的 Webpack 4 正式版本扩展了此检测能力，通过 package.json 的 "sideEffects" 属性作为标记，向 compiler 提供提示，表明项目中的哪些文件是 "pure(纯正 ES2015 模块)"，由此可以安全地删除文件中未使用的部分。</p>
+</blockquote>
+<p>上述描述可能有点抽象, 举个栗子:</p>
+<h3 id="关于-lodash-的-import"><a aria-hidden="true" tabindex="-1" href="#关于-lodash-的-import"><span class="icon icon-link"></span></a>关于 lodash 的 import</h3>
+<p>众所周知, <code>lodash</code> 是一个工具函数库, 在平时开发中能够为我们提供很多便利. 但因为 <code>lodash</code> 在 2012 年便开源, 历史较为久远, 可能有多种缘故, 导致目前 <code>lodash</code> 本身并不是使用的 <code>es module</code>. 所以在使用 <code>Webpack Tree Shaking</code> 时, 会出现一些问题.</p>
+<p>前置作业:</p>
+<p>这里先配置一个 <code>Webpack</code> + <code>react</code> 的最基本环境.</p>
+<p><code>package.json:</code></p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"lodash_test_Webpack"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"version"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"1.0.0"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"main"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"index.js"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"license"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"MIT"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"scripts"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"start"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Webpack serve --mode=development"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"build"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"Webpack --mode=production"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"dependencies"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"lodash"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^4.17.21"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"lodash-es"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^4.17.21"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"react"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^17.0.2"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"react-dom"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^17.0.2"</span>
+  <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"devDependencies"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"@babel/core"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^7.17.7"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"@babel/preset-react"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^7.16.7"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"babel-loader"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^8.2.3"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"Webpack"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^5.70.0"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"Webpack-bundle-analyzer"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^4.5.0"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"Webpack-cli"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^4.9.2"</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"Webpack-dev-server"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^4.7.4"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>入口文件 <code>main.js:</code></p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-title class_">App</span> <span class="hljs-keyword">from</span> <span class="hljs-string">'./app.jsx'</span>;
+
+<span class="hljs-keyword">const</span> mountNode = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">'app'</span>);
+<span class="hljs-title function_">render</span>(<span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">App</span> /></span></span>, mountNode);
+</code></pre>
+<p><code>app.jsx:</code></p>
+<pre><code class="hljs language-jsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">App</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>hello react<span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>;
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">App</span>;
+</code></pre>
+<p><code>Webpack.config.js</code></p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-title class_">BundleAnalyzerPlugin</span> =
+  <span class="hljs-built_in">require</span>(<span class="hljs-string">'Webpack-bundle-analyzer'</span>).<span class="hljs-property">BundleAnalyzerPlugin</span>;
+
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = {
+  <span class="hljs-attr">entry</span>: <span class="hljs-string">'./main.js'</span>,
+  <span class="hljs-attr">output</span>: {
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">'[name].js'</span>,
+    <span class="hljs-attr">path</span>: __dirname + <span class="hljs-string">'/dist'</span>,
+  },
+  <span class="hljs-attr">module</span>: {
+    <span class="hljs-attr">rules</span>: [
+      {
+        <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(js|jsx|ts|tsx)$/</span>,
+        <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+        <span class="hljs-attr">use</span>: [
+          {
+            <span class="hljs-attr">loader</span>: <span class="hljs-string">'babel-loader'</span>,
+          },
+        ],
+      },
+    ],
+  },
+  <span class="hljs-attr">plugins</span>: [<span class="hljs-keyword">new</span> <span class="hljs-title class_">BundleAnalyzerPlugin</span>()],
+};
+</code></pre>
+<p><code>.babelrc:</code></p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"presets"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+    <span class="hljs-punctuation">[</span>
+      <span class="hljs-string">"@babel/preset-react"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-punctuation">{</span>
+        <span class="hljs-attr">"runtime"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"automatic"</span>
+      <span class="hljs-punctuation">}</span>
+    <span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">]</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>可以看到在 <code>Webpack</code> 配置中使用了 <code>BundleAnalyzerPlugin</code> 这样一个插件, 简单说明下该插件作用.</p>
+<p><strong><a href="https://www.npmtrends.com/Webpack-bundle-analyzer">Webpack bundle analyzer</a></strong></p>
+<p>该工具是一个可以分析打包后文件结果的视觉化套件, 有了该工具后就可以清楚的从视觉化的图案了解到每次打包后的文件大小, 用来分析 <code>Webpack Tree Shaking</code> 后的结果.</p>
+<h3 id="分析使用不同的方式-import-lodash-的结果"><a aria-hidden="true" tabindex="-1" href="#分析使用不同的方式-import-lodash-的结果"><span class="icon icon-link"></span></a>分析使用不同的方式 import lodash 的结果</h3>
+<h4 id="第一种方式-不指定-function-的路径"><a aria-hidden="true" tabindex="-1" href="#第一种方式-不指定-function-的路径"><span class="icon icon-link"></span></a>第一种方式: 不指定 <code>function</code> 的路径</h4>
+<p>修改 <code>app.jsx</code>, 在组件中引入 <code>lodash</code></p>
+<pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> { isEqual } <span class="hljs-keyword">from</span> <span class="hljs-string">'lodash'</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">App</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">isEqual</span>({ <span class="hljs-attr">a</span>: <span class="hljs-string">'b'</span> }, { <span class="hljs-attr">c</span>: <span class="hljs-string">'d'</span> }));
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>hello react<span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>;
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">App</span>;
+</code></pre>
+<p>打包后的文件结构:
+<img src="../assets/images/webpack-build-result-size/webpack_build_result_1.png" alt="alt"></p>
+<p>可以看到, 明明在项目中只使用了 <code>isEqual</code> 这一个 <code>function</code>, 结果 <code>lodash</code> 打包后的文件大小却足足有 <code>531kb</code>, 不禁让人怀疑, <code>isEqual</code> 是一个多么伟大的函数...</p>
+<h4 id="第二种方式-指定-function-的路径"><a aria-hidden="true" tabindex="-1" href="#第二种方式-指定-function-的路径"><span class="icon icon-link"></span></a>第二种方式: 指定 <code>function</code> 的路径</h4>
+<pre><code class="hljs language-jsx"><span class="hljs-keyword">import</span> isEqual <span class="hljs-keyword">from</span> <span class="hljs-string">'lodash/isEqual'</span>;
+</code></pre>
+<p>打包后的文件结构:
+<img src="../assets/images/webpack-build-result-size/webpack_build_result_2.png" alt="alt"></p>
+<p>可以看到这个时候打包后的 <code>lodash</code> 仅有 <code>61kb</code> 了.</p>
+<h4 id="为什么两种-import-的方式会导致-bundle-size-不一样"><a aria-hidden="true" tabindex="-1" href="#为什么两种-import-的方式会导致-bundle-size-不一样"><span class="icon icon-link"></span></a>为什么两种 import 的方式会导致 bundle size 不一样</h4>
+<p><code>lodash</code> 是一个使用 <code>UMD</code> 为模块的构建的, 这意味着 <code>lodash</code> 并不满足在 <code>webpack</code> 中的 <code>tree-shaking</code> 必须是 <code>es module</code> 的条件. 所以第一种方式实际上会导入完整的 <code>lodash</code>, 最终导致 <code>bundle size</code> 莫名的巨大. 而第二种方法就是只导入了一个文件, 再从文件中拿出我们需要的 <code>isEqual</code>, 如此一来最后打包处的文件大小便是正常的.</p>
+<p>可是如果都要这样写代码会很麻烦, 毕竟 <code>vscode</code> 自动导入会按照第一种方式导入. 当然 <code>lodash</code> 官方也有考虑到这个问题, 推出了 <code>es module</code> 版本的 <code>lodash-es</code>.</p>
+<h3 id="为什么-webpack-tree-shaking-使用的是-es-module"><a aria-hidden="true" tabindex="-1" href="#为什么-webpack-tree-shaking-使用的是-es-module"><span class="icon icon-link"></span></a>为什么 webpack tree-shaking 使用的是 es module?</h3>
+<p>因为在 <code>CommonJS</code>、<code>AMD</code> 、<code>UMD</code> 中的导入都可能是非确定性的, 因此无法静态分析以有效消除死代码.</p>
+<p>举个栗子:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> flag = <span class="hljs-literal">false</span>;
+<span class="hljs-keyword">if</span> (flag) {
+  <span class="hljs-keyword">const</span> lodash = <span class="hljs-built_in">require</span>(<span class="hljs-string">'lodash'</span>);
+}
+</code></pre>
+<h2 id="vite-tree-shaking"><a aria-hidden="true" tabindex="-1" href="#vite-tree-shaking"><span class="icon icon-link"></span></a>vite tree-shaking</h2>
+<p><code>vite</code> 的构建生产环境使用的是 <code>rollup</code>, 相比于 <code>webpack</code>, <code>rollup</code> 总是能够打出更小、更快的宝. 并且 rollup 也是基于 <code>es module</code>, 相比于 <code>webpack</code> 使用的 <code>CommonJS</code> 更加的高效.</p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"Webpack与Vite学习记录01"}]}],["$","time",null,{"dateTime":"2022-03-10","className":"text-center block my-4 text-sm opacity-60","children":"March\t10, 2022"}],[null,["$","section",null,{"className":"markdown-body-scrolls-light max-w-3xl","dangerouslySetInnerHTML":{"__html":"$16"}}]],["$","$L17",null,{"slug":"webpack%E4%B8%8Evite%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%9501"}]]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+15:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$15:metadata","error":null,"digest":"$undefined"}
