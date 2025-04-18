@@ -5,13 +5,12 @@
 // 注意：实际使用时需要在环境变量中配置这些值
 // 对于GitHub Pages部署，需要在GitHub仓库的Settings -> Secrets and variables -> Actions中添加这些环境变量
 const GITHUB_CLIENT_ID = process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID;
-const GITHUB_CLIENT_SECRET = process.env.GH_CLIENT_SECRET;
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN; // 用于API认证的GitHub个人访问令牌
-const REPO_OWNER = 'LZS911'; // GitHub 用户名
-const REPO_NAME = 'LZS911.github.io'; // 仓库名
+const GITHUB_CLIENT_SECRET = process.env.NEXT_PUBLIC_GH_CLIENT_SECRET;
+const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_TOKEN; // 用于API认证的GitHub个人访问令牌
+const REPO_OWNER = process.env.NEXT_PUBLIC_REPO_OWNER; // GitHub 用户名
+const REPO_NAME = process.env.NEXT_PUBLIC_REPO_NAME; // 仓库名
 
 const generateDiscussionInfoTitle = (slug: string) => `Comments for: ${slug}`;
-
 // 获取文章对应的 Discussion
 type DiscussionInfo = {
   id: string;
@@ -41,7 +40,6 @@ export async function getDiscussionBySlug(
         }
       }
     `;
-
     // 执行查询
     const findResponse = await fetch('https://api.github.com/graphql', {
       method: 'POST',
@@ -188,7 +186,7 @@ export async function createDiscussionBySlug(
  * 获取 Discussion 的评论
  * @param discussionId Discussion 的 ID
  */
-export async function getComments(discussionId: string) {
+export async function getCommentsByDiscussionId(discussionId: string) {
   try {
     const query = `
       query {
@@ -279,7 +277,7 @@ export async function getComments(discussionId: string) {
  * @param content 评论内容
  * @param token 用户的 GitHub 访问令牌
  */
-export async function addComment(
+export async function addCommentByDiscussionId(
   discussionId: string,
   content: string,
   token: string,

@@ -1,9 +1,9 @@
-import PostBody from '@/ui/components/post-body';
-import { getPostBySlug, getAllPosts } from '../../../lib/api';
-import PostTitle from '@/ui/components/post-title';
+import PostBody from '@/ui/article/post-body';
+import { getPostBySlug, getAllPosts } from '../../../../lib/api';
+import PostTitle from '@/ui/article/post-title';
 import markdownToHtml from '@/lib/markdownToHtml';
-import DateFormatter from '@/ui/components/date-formatter';
-import Comments from '@/ui/components/comments';
+import DateFormatter from '@/ui/article/date-formatter';
+import Comments from '@/ui/article/comments';
 
 type Props = {
   params: Promise<{ slug: string }>;

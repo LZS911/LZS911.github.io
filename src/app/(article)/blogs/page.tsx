@@ -1,4 +1,4 @@
-import HeroPost from '@/ui/components/hero-post';
+import HeroPost from '@/ui/article/hero-post';
 import { getAllPosts } from '@/lib/api';
 import { WEB_TITLE } from '@/lib/constants';
 import { Metadata } from 'next';

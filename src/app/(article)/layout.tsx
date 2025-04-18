@@ -1,14 +1,16 @@
 import type { Metadata } from 'next';
 import { geistMono, geistSans } from '@/ui/fonts';
+import Layout from '@/ui/article/layout';
 import { WEB_TITLE } from '@/lib/constants';
 import '@/styles/globals.css';
+import Portal from '@/ui/portal';
 
 export const metadata: Metadata = {
   title: WEB_TITLE,
   description: 'LZS Blog'
 };
 
-export default function ArticleLayout({
+export default async function ArticleLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
@@ -18,7 +20,8 @@ export default function ArticleLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Layout>{children}</Layout>
+        <Portal href="/practice" />
       </body>
     </html>
   );

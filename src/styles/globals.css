@@ -141,6 +141,10 @@ menu {
   list-style: inherit;
 }
 
+button {
+  cursor: pointer;
+}
+
 main,
 footer {
   scroll-behavior: smooth;

@@ -1,4 +1,4 @@
-import PostBody from '@/ui/components/post-body';
+import PostBody from '@/ui/article/post-body';
 import { getPostBySlug } from '@/lib/api';
 import { ABOUT_SLUG } from '@/lib/constants';
 import markdownToHtml from '@/lib/markdownToHtml';

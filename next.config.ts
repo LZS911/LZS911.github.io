@@ -1,8 +1,10 @@
 import type { NextConfig } from 'next';
-console.log(process.env.GITHUB_ACTION);
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    domains: ['avatars.githubusercontent.com']
+  }
 };
 
 if (process.env.NODE_ENV === 'production') {
