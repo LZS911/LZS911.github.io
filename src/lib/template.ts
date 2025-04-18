@@ -11,7 +11,7 @@ export const generateArticleContent = (
   return `---
 title: ${title}
 layout: post
-date: ${format(new Date(), 'yyyy-MM-dd')}
+date: "${format(new Date(), 'yyyy-MM-dd')}"
 image:
 headerImage: false
 star: true
