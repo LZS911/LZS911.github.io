@@ -1,7 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { getGitHubOAuthURL, getUserInfo } from '@/lib/github';
+import { useCallback, useEffect, useState } from 'react';
+import {
+  addCommentByDiscussionId,
+  createDiscussionBySlug,
+  getCommentsByDiscussionId,
+  getDiscussionBySlug,
+  getGitHubOAuthURL,
+  getUserInfo
+} from '@/lib/github';
 import Image from 'next/image';
 import { format } from 'date-fns';
 
@@ -249,16 +256,42 @@ const Comments: React.FC<CommentsProps> = ({ slug }) => {
     avatarUrl: string;
   } | null>(null);
 
+  const getComments = useCallback(async (slug: string) => {
+    const discussion = await getDiscussionBySlug(slug);
+
+    if (!discussion) {
+      return [];
+    }
+    return getCommentsByDiscussionId(discussion.id);
+  }, []);
+
+  const createComments = useCallback(
+    async (
+      slug: string,
+      content: string,
+      token: string,
+      replyToId?: string
+    ) => {
+      let discussion = await getDiscussionBySlug(slug);
+
+      if (!discussion) {
+        discussion = await createDiscussionBySlug(slug);
+      }
+
+      if (!discussion) {
+        throw new Error('无法获取或创建讨论');
+      }
+
+      return addCommentByDiscussionId(discussion.id, content, token, replyToId);
+    },
+    []
+  );
+
   useEffect(() => {
     const fetchComments = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(`/api/comments/${slug}`);
-        if (!response.ok) {
-          throw new Error('获取评论失败');
-        }
-        const data = await response.json();
-        setComments(data.comments || []);
+        setComments(await getComments(slug));
       } catch (err) {
         setError('获取评论失败，请稍后再试');
         console.error('Error fetching comments:', err);
@@ -297,7 +330,7 @@ const Comments: React.FC<CommentsProps> = ({ slug }) => {
       fetchComments();
       checkUserLogin();
     }
-  }, [slug]);
+  }, [getComments, slug]);
 
   const handleSubmitComment = async (content: string, replyToId?: string) => {
     if (!content.trim()) return;
@@ -314,23 +347,13 @@ const Comments: React.FC<CommentsProps> = ({ slug }) => {
       }
 
       const token = tokenCookie.split('=')[1];
-      const response = await fetch(`/api/comments/${slug}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
-        },
-        body: JSON.stringify({ content, replyToId })
-      });
+      const result = await createComments(slug, content, token, replyToId);
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || '提交评论失败');
+      if (!result) {
+        throw new Error(result || '提交评论失败');
       }
 
-      const commentsResponse = await fetch(`/api/comments/${slug}`);
-      const commentsData = await commentsResponse.json();
-      setComments(commentsData.comments || []);
+      setComments(await getComments(slug));
     } catch (err) {
       setError(err instanceof Error ? err.message : '提交评论失败，请稍后再试');
       console.error('Error submitting comment:', err);

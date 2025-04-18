@@ -13,7 +13,7 @@ type PostType = {
   };
   content: string;
   star: boolean;
-  category: 'blog' | 'project' | 'page' | 'talk';
+  category: 'blog' | 'project' | 'talk';
   theme: Theme;
   tag: string[];
 };
