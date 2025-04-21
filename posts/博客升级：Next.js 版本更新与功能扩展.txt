@@ -1,0 +1,547 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-16716eedeadde879.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-16716eedeadde879.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/2626867bd1decdff.css","style"]
+0:{"P":null,"b":"-Iu8KnLDp0bD3kZkGuE9H","p":"","c":["","posts","%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%EF%BC%9ANext.js%20%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%EF%BC%9ANext.js%20%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/2626867bd1decdff.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[null,"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%EF%BC%9ANext.js%20%E7%89%88%E6%9C%AC%E6%9B%B4%E6%96%B0%E4%B8%8E%E5%8A%9F%E8%83%BD%E6%89%A9%E5%B1%95","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","p4MdbU6HFqnY2yOnhH8Gz",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[8565,["874","static/chunks/874-16716eedeadde879.js","766","static/chunks/766-eeb113df4f56c105.js","651","static/chunks/app/(article)/layout-18bcffe355ed9a9b.js"],"default"]
+14:I[7832,["874","static/chunks/874-16716eedeadde879.js","766","static/chunks/766-eeb113df4f56c105.js","651","static/chunks/app/(article)/layout-18bcffe355ed9a9b.js"],"default"]
+15:"$Sreact.suspense"
+16:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_4d318d __variable_ea5f4b antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://pages.github.com/?(null)","target":"_blank","children":"GitHub Pages"}]]}]]}],["$","$L14",null,{"href":"/practice"}]]}]}]
+9:["$","$15",null,{"fallback":null,"children":["$","$L16",null,{"promise":"$@17"}]}]
+c:null
+18:I[5099,["766","static/chunks/766-eeb113df4f56c105.js","62","static/chunks/62-36d7af331e30e687.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-2ec56518ac6621da.js"],"ThemeLoader"]
+19:T751d,<h2 id="引言"><a aria-hidden="true" tabindex="-1" href="#引言"><span class="icon icon-link"></span></a>引言</h2>
+<h3 id="为什么选择升级"><a aria-hidden="true" tabindex="-1" href="#为什么选择升级"><span class="icon icon-link"></span></a>为什么选择升级？</h3>
+<h4 id="博客旧版本的痛点"><a aria-hidden="true" tabindex="-1" href="#博客旧版本的痛点"><span class="icon icon-link"></span></a>博客旧版本的痛点</h4>
+<ol>
+<li>功能单一性：纯静态HTML+CSS构建，依赖手动更新Markdown文件，缺乏动态交互能力</li>
+<li>部署限制：GitHub Pages仅支持静态资源，无法实现服务端逻辑（如API路由、身份验证）</li>
+</ol>
+<h4 id="nextjs-新版本的核心吸引力"><a aria-hidden="true" tabindex="-1" href="#nextjs-新版本的核心吸引力"><span class="icon icon-link"></span></a>Next.js 新版本的核心吸引力</h4>
+<ol>
+<li>App Router：基于文件系统的布局嵌套、流式渲染和简化的数据获取</li>
+<li>混合渲染模式：支持SSG/SSR/ISR自由组合，解决静态博客的动态需求</li>
+</ol>
+<h4 id="个人学习动机"><a aria-hidden="true" tabindex="-1" href="#个人学习动机"><span class="icon icon-link"></span></a>个人学习动机</h4>
+<blockquote>
+<p>这次升级源于我对现代Web开发技术栈的深度探索需求，尤其是以下两个核心目标：</p>
+</blockquote>
+<ol>
+<li>
+<p>掌握Vercel的全栈开发能力</p>
+<ul>
+<li>
+<p>深入平台特性：</p>
+<ol>
+<li>学习Vercel的Serverless Function冷启动优化方案</li>
+<li>实践Edge Network的全球低延迟部署</li>
+<li>探索Vercel Analytics与Speed Insights的实时性能监控集成</li>
+</ol>
+</li>
+<li>
+<p>工作流革新：</p>
+<ol>
+<li>实现GitHub代码提交 → Vercel自动预览部署 → 生产环境灰度发布的完整CI/CD流水线</li>
+<li>尝试Vercel Storage（如Postgres/KV）替代传统自建数据库</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>构建完整的全栈技术闭环</p>
+<ul>
+<li>
+<p>前端深度实践：</p>
+<ol>
+<li>从"静态页面渲染"升级到"按需动态渲染"（如博客编辑页的权限敏感路由）</li>
+<li>体验React Server Components的数据获取模式与传统CSR的差异</li>
+</ol>
+</li>
+<li>
+<p>后端能力强化：</p>
+<ol>
+<li>通过Next.js API路由实现GitHub OAuth登录+Discussions API代理</li>
+<li>开发无状态服务：JWT验证中间件 + 服务端缓存策略（如redis+stale-while-revalidate）</li>
+</ol>
+</li>
+<li>
+<p>架构思维培养：</p>
+<ol>
+<li>在静态导出（GitHub Pages）与全动态（Vercel）之间设计兼容方案</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>通过这个项目，我希望建立起从代码编写到云端部署的完整技术认知，最终形成可复用的全栈开发方法论。</p>
+</blockquote>
+<h2 id="nextjs-升级实战"><a aria-hidden="true" tabindex="-1" href="#nextjs-升级实战"><span class="icon icon-link"></span></a>Next.js 升级实战</h2>
+<h3 id="版本迁移关键步骤"><a aria-hidden="true" tabindex="-1" href="#版本迁移关键步骤"><span class="icon icon-link"></span></a>版本迁移关键步骤</h3>
+<h4 id="从-page-router-到-app-router-的过渡"><a aria-hidden="true" tabindex="-1" href="#从-page-router-到-app-router-的过渡"><span class="icon icon-link"></span></a>从 <code>page router</code> 到 <code>app router</code> 的过渡</h4>
+<ol>
+<li>
+<p>路由结构改造：</p>
+<pre><code class="hljs language-md">/pages/posts/[slug].tsx → /app/posts/[slug]/page.tsx
+</code></pre>
+</li>
+<li>
+<p>数据获取迁移：</p>
+<ul>
+<li>原<code>getStaticProps</code> → 改用<code>fetch + generateStaticParams</code></li>
+<li>原<code>getServerSideProps</code> → 改用服务端组件直接异步加载</li>
+</ul>
+</li>
+</ol>
+<h3 id="静态部署与服务部署的冲突以及解决方案"><a aria-hidden="true" tabindex="-1" href="#静态部署与服务部署的冲突以及解决方案"><span class="icon icon-link"></span></a>静态部署与服务部署的冲突以及解决方案</h3>
+<h4 id="github-pages-部署限制"><a aria-hidden="true" tabindex="-1" href="#github-pages-部署限制"><span class="icon icon-link"></span></a>GitHub Pages 部署限制</h4>
+<p>仅支持纯静态导出 <code>output: 'export'</code>，无法使用API路由以及各种中间件</p>
+<h4 id="vercel-部署优势"><a aria-hidden="true" tabindex="-1" href="#vercel-部署优势"><span class="icon icon-link"></span></a>Vercel 部署优势</h4>
+<p>原生支持Serverless Functions、Edge Network、ISR</p>
+<h4 id="解决方案"><a aria-hidden="true" tabindex="-1" href="#解决方案"><span class="icon icon-link"></span></a>解决方案</h4>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> <span class="hljs-keyword">type</span> { <span class="hljs-title class_">NextConfig</span> } <span class="hljs-keyword">from</span> <span class="hljs-string">'next'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-attr">nextConfig</span>: <span class="hljs-title class_">NextConfig</span> = {
+ <span class="hljs-comment">/**
+ * next configs
+ */</span>
+};
+
+<span class="hljs-keyword">if</span> (process.<span class="hljs-property">env</span>.<span class="hljs-property">NODE_ENV</span> === <span class="hljs-string">'production'</span>) {
+  <span class="hljs-keyword">if</span> (process.<span class="hljs-property">env</span>.<span class="hljs-property">GITHUB_ACTION</span>) {
+    nextConfig.<span class="hljs-property">pageExtensions</span> = [<span class="hljs-string">'jsx'</span>, <span class="hljs-string">'tsx'</span>];
+    nextConfig.<span class="hljs-property">output</span> = <span class="hljs-string">'export'</span>;
+  }
+}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> nextConfig;
+
+</code></pre>
+<h3 id="nextjs-技术点遗留问题"><a aria-hidden="true" tabindex="-1" href="#nextjs-技术点遗留问题"><span class="icon icon-link"></span></a>Next.js 技术点遗留问题</h3>
+<ol>
+<li>ISR</li>
+<li>服务端组件与客户端组件的边界划分</li>
+<li>Next.js API 最佳实践</li>
+</ol>
+<h2 id="新增功能详解"><a aria-hidden="true" tabindex="-1" href="#新增功能详解"><span class="icon icon-link"></span></a>新增功能详解</h2>
+<h3 id="基于-github-discussions-的评论系统"><a aria-hidden="true" tabindex="-1" href="#基于-github-discussions-的评论系统"><span class="icon icon-link"></span></a>基于 github Discussions 的评论系统</h3>
+<ol>
+<li>
+<p>功能概述</p>
+<ul>
+<li>利用 GitHub Discussions API 实现博客评论功能</li>
+<li>用户通过 GitHub OAuth 登录，确保评论可追溯</li>
+<li>支持 读取/发布/回复评论，数据存储在GitHub仓库的Discussions板块</li>
+</ul>
+</li>
+<li>
+<p>技术实现
+(1) GitHub API 接入
+🔹 数据读取（GET）</p>
+</li>
+</ol>
+<p>使用 fetch 调用GitHub GraphQL API 获取指定Discussion的评论</p>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * 根据文章 slug 获取对应的 Discussion
+ * <span class="hljs-doctag">@param</span> slug 文章的 slug
+ * <span class="hljs-doctag">@param</span> title 文章标题
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getDiscussionBySlug</span>(<span class="hljs-params">
+  <span class="hljs-attr">slug</span>: <span class="hljs-built_in">string</span>
+</span>): <span class="hljs-title class_">Promise</span>&#x3C;<span class="hljs-title class_">DiscussionInfo</span> | <span class="hljs-literal">null</span>> {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// 构建GraphQL查询，查找是否已存在对应slug的discussion，只查找open状态的</span>
+    <span class="hljs-keyword">const</span> findQuery = <span class="hljs-string">`
+      query {
+        repository(owner: "<span class="hljs-subst">${REPO_OWNER}</span>", name: "<span class="hljs-subst">${REPO_NAME}</span>") {
+          discussions(first: 100, states: OPEN) {
+            nodes {
+              id
+              number
+              title
+            }
+          }
+        }
+      }
+    `</span>;
+    <span class="hljs-comment">// 执行查询</span>
+    <span class="hljs-keyword">const</span> findResponse = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://api.github.com/graphql'</span>, {
+      <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+      <span class="hljs-attr">headers</span>: {
+        <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">`bearer <span class="hljs-subst">${GITHUB_TOKEN || <span class="hljs-string">''</span>}</span>`</span>,
+        <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+      },
+      <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ <span class="hljs-attr">query</span>: findQuery })
+    });
+
+    <span class="hljs-keyword">const</span> findData = <span class="hljs-keyword">await</span> findResponse.<span class="hljs-title function_">json</span>();
+    <span class="hljs-keyword">const</span> discussions = findData?.<span class="hljs-property">data</span>?.<span class="hljs-property">repository</span>?.<span class="hljs-property">discussions</span>?.<span class="hljs-property">nodes</span> || [];
+
+    <span class="hljs-comment">// 查找标题包含slug的discussion</span>
+    <span class="hljs-keyword">const</span> existingDiscussion = discussions.<span class="hljs-title function_">find</span>(
+      <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">d</span>: <span class="hljs-built_in">any</span></span>) =></span> d.<span class="hljs-property">title</span> === <span class="hljs-title function_">generateDiscussionInfoTitle</span>(slug)
+    );
+    <span class="hljs-keyword">if</span> (existingDiscussion) {
+      <span class="hljs-keyword">return</span> {
+        <span class="hljs-attr">id</span>: existingDiscussion.<span class="hljs-property">id</span>,
+        <span class="hljs-attr">number</span>: existingDiscussion.<span class="hljs-property">number</span>
+      };
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'获取或创建讨论异常:'</span>, error);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+}
+
+<span class="hljs-comment">/**
+ * 获取 Discussion 的评论
+ * <span class="hljs-doctag">@param</span> discussionId Discussion 的 ID
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">getCommentsByDiscussionId</span>(<span class="hljs-params"><span class="hljs-attr">discussionId</span>: <span class="hljs-built_in">string</span></span>) {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> query = <span class="hljs-string">`
+      query {
+        node(id: "<span class="hljs-subst">${discussionId}</span>") {
+          ... on Discussion {
+            comments(first: 100) {
+              nodes {
+                id
+                author {
+                  login
+                  avatarUrl
+                  url
+                }
+                body
+                bodyHTML
+                createdAt
+                replyToId: replyTo {
+                  id
+                }
+                replies(first: 100) {
+                  nodes {
+                    id
+                    author {
+                      login
+                      avatarUrl
+                      url
+                    }
+                    body
+                    bodyHTML
+                    createdAt
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `</span>;
+
+    <span class="hljs-keyword">const</span> response = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://api.github.com/graphql'</span>, {
+      <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+      <span class="hljs-attr">headers</span>: {
+        <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">`bearer <span class="hljs-subst">${GITHUB_TOKEN || <span class="hljs-string">''</span>}</span>`</span>,
+        <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+      },
+      <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ query })
+    });
+
+    <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> response.<span class="hljs-title function_">json</span>();
+    <span class="hljs-keyword">const</span> comments = data?.<span class="hljs-property">data</span>?.<span class="hljs-property">node</span>?.<span class="hljs-property">comments</span>?.<span class="hljs-property">nodes</span> || [];
+    <span class="hljs-keyword">return</span> comments.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">comment</span>: <span class="hljs-built_in">any</span></span>) =></span> ({
+      <span class="hljs-attr">id</span>: comment.<span class="hljs-property">id</span>,
+      <span class="hljs-attr">author</span>: {
+        <span class="hljs-attr">login</span>: comment.<span class="hljs-property">author</span>?.<span class="hljs-property">login</span> || <span class="hljs-string">'匿名用户'</span>,
+        <span class="hljs-attr">avatarUrl</span>: comment.<span class="hljs-property">author</span>?.<span class="hljs-property">avatarUrl</span>,
+        <span class="hljs-attr">url</span>: comment.<span class="hljs-property">author</span>?.<span class="hljs-property">url</span>
+      },
+      <span class="hljs-attr">content</span>: comment.<span class="hljs-property">body</span>,
+      <span class="hljs-attr">bodyHTML</span>: comment.<span class="hljs-property">bodyHTML</span>,
+      <span class="hljs-attr">createdAt</span>: comment.<span class="hljs-property">createdAt</span>,
+      <span class="hljs-attr">replyToId</span>: comment.<span class="hljs-property">replyToId</span>?.<span class="hljs-property">id</span>,
+      <span class="hljs-attr">replies</span>: comment.<span class="hljs-property">replies</span>?.<span class="hljs-property">nodes</span>?.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">reply</span>: <span class="hljs-built_in">any</span></span>) =></span> ({
+        <span class="hljs-attr">id</span>: reply.<span class="hljs-property">id</span>,
+        <span class="hljs-attr">author</span>: {
+          <span class="hljs-attr">login</span>: reply.<span class="hljs-property">author</span>?.<span class="hljs-property">login</span> || <span class="hljs-string">'匿名用户'</span>,
+          <span class="hljs-attr">avatarUrl</span>: reply.<span class="hljs-property">author</span>?.<span class="hljs-property">avatarUrl</span>,
+          <span class="hljs-attr">url</span>: reply.<span class="hljs-property">author</span>?.<span class="hljs-property">url</span>
+        },
+        <span class="hljs-attr">content</span>: reply.<span class="hljs-property">body</span>,
+        <span class="hljs-attr">bodyHTML</span>: reply.<span class="hljs-property">bodyHTML</span>,
+        <span class="hljs-attr">createdAt</span>: reply.<span class="hljs-property">createdAt</span>
+      })),
+      <span class="hljs-attr">reactions</span>:
+        comment.<span class="hljs-property">reactionGroups</span>?.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">group</span>: <span class="hljs-built_in">any</span></span>) =></span> ({
+          <span class="hljs-attr">type</span>: group.<span class="hljs-property">content</span>,
+          <span class="hljs-attr">count</span>: group.<span class="hljs-property">users</span>.<span class="hljs-property">totalCount</span>
+        })) || []
+    }));
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'获取评论异常:'</span>, error);
+    <span class="hljs-keyword">return</span> [];
+  }
+}
+
+</code></pre>
+<p>🔹 评论发布（POST）</p>
+<p>用户提交评论后，调用API创建Discussion或回复</p>
+<p>需要 GitHub Token 授权（通过OAuth获取）</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">createDiscussionBySlug</span>(<span class="hljs-params">
+  <span class="hljs-attr">slug</span>: <span class="hljs-built_in">string</span>
+</span>): <span class="hljs-title class_">Promise</span>&#x3C;<span class="hljs-title class_">DiscussionInfo</span> | <span class="hljs-literal">null</span>> {
+  <span class="hljs-comment">// 如果不存在，创建新的discussion</span>
+  <span class="hljs-comment">// 首先获取讨论分类ID</span>
+  <span class="hljs-keyword">const</span> categoryQuery = <span class="hljs-string">`
+      query {
+        repository(owner: "<span class="hljs-subst">${REPO_OWNER}</span>", name: "<span class="hljs-subst">${REPO_NAME}</span>") {
+          discussionCategories(first: 10) {
+            nodes {
+              id
+              name
+            }
+          }
+        }
+      }
+    `</span>;
+
+  <span class="hljs-keyword">const</span> categoryResponse = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://api.github.com/graphql'</span>, {
+    <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+    <span class="hljs-attr">headers</span>: {
+      <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">`bearer <span class="hljs-subst">${GITHUB_TOKEN || <span class="hljs-string">''</span>}</span>`</span>,
+      <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+    },
+    <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ <span class="hljs-attr">query</span>: categoryQuery })
+  });
+
+  <span class="hljs-keyword">const</span> categoryData = <span class="hljs-keyword">await</span> categoryResponse.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">const</span> categories =
+    categoryData?.<span class="hljs-property">data</span>?.<span class="hljs-property">repository</span>?.<span class="hljs-property">discussionCategories</span>?.<span class="hljs-property">nodes</span> || [];
+
+  <span class="hljs-comment">// 使用第一个分类，或者特定名称的分类</span>
+  <span class="hljs-keyword">const</span> category = categories[<span class="hljs-number">0</span>];
+
+  <span class="hljs-keyword">if</span> (!category) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'无法获取讨论分类'</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-comment">// 获取仓库ID</span>
+  <span class="hljs-keyword">const</span> repoIdQuery = <span class="hljs-string">`
+      query {
+        repository(owner: "<span class="hljs-subst">${REPO_OWNER}</span>", name: "<span class="hljs-subst">${REPO_NAME}</span>") {
+          id
+        }
+      }
+    `</span>;
+
+  <span class="hljs-keyword">const</span> repoIdResponse = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://api.github.com/graphql'</span>, {
+    <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+    <span class="hljs-attr">headers</span>: {
+      <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">`bearer <span class="hljs-subst">${GITHUB_TOKEN || <span class="hljs-string">''</span>}</span>`</span>,
+      <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+    },
+    <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ <span class="hljs-attr">query</span>: repoIdQuery })
+  });
+
+  <span class="hljs-keyword">const</span> repoIdData = <span class="hljs-keyword">await</span> repoIdResponse.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">const</span> repositoryId = repoIdData?.<span class="hljs-property">data</span>?.<span class="hljs-property">repository</span>?.<span class="hljs-property">id</span>;
+
+  <span class="hljs-keyword">if</span> (!repositoryId) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'无法获取仓库ID:'</span>, repoIdData?.<span class="hljs-property">errors</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+  }
+
+  <span class="hljs-comment">// 创建新的discussion</span>
+  <span class="hljs-keyword">const</span> createQuery = <span class="hljs-string">`
+      mutation {
+        createDiscussion(input: {
+          repositoryId: "<span class="hljs-subst">${repositoryId}</span>",
+          categoryId: "<span class="hljs-subst">${category.id}</span>",
+          body: "这是文章 <span class="hljs-subst">${slug}</span> 的评论区",
+          title: "<span class="hljs-subst">${generateDiscussionInfoTitle(slug)}</span>"
+        }) {
+          discussion {
+            id
+            number
+          }
+        }
+      }
+    `</span>;
+
+  <span class="hljs-keyword">const</span> createResponse = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fetch</span>(<span class="hljs-string">'https://api.github.com/graphql'</span>, {
+    <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+    <span class="hljs-attr">headers</span>: {
+      <span class="hljs-title class_">Authorization</span>: <span class="hljs-string">`bearer <span class="hljs-subst">${GITHUB_TOKEN || <span class="hljs-string">''</span>}</span>`</span>,
+      <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>
+    },
+    <span class="hljs-attr">body</span>: <span class="hljs-title class_">JSON</span>.<span class="hljs-title function_">stringify</span>({ <span class="hljs-attr">query</span>: createQuery })
+  });
+
+  <span class="hljs-keyword">const</span> createData = <span class="hljs-keyword">await</span> createResponse.<span class="hljs-title function_">json</span>();
+  <span class="hljs-keyword">const</span> newDiscussion = createData?.<span class="hljs-property">data</span>?.<span class="hljs-property">createDiscussion</span>?.<span class="hljs-property">discussion</span>;
+
+  <span class="hljs-keyword">if</span> (newDiscussion) {
+    <span class="hljs-keyword">return</span> {
+      <span class="hljs-attr">id</span>: newDiscussion.<span class="hljs-property">id</span>,
+      <span class="hljs-attr">number</span>: newDiscussion.<span class="hljs-property">number</span>
+    };
+  }
+
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'创建讨论失败:'</span>, createData?.<span class="hljs-property">errors</span>);
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(<span class="hljs-string">'创建讨论请求详情:'</span>, {
+    repositoryId,
+    <span class="hljs-attr">categoryId</span>: category.<span class="hljs-property">id</span>,
+    <span class="hljs-attr">title</span>: <span class="hljs-title function_">generateDiscussionInfoTitle</span>(slug)
+  });
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>;
+}
+
+<span class="hljs-comment">/**
+ * 添加评论到 Discussion
+ * <span class="hljs-doctag">@param</span> discussionId Discussion 的 ID
+ * <span class="hljs-doctag">@param</span> content 评论内容
+ * <span class="hljs-doctag">@param</span> token 用户的 GitHub 访问令牌
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">addCommentByDiscussionId</span>(<span class="hljs-params">
+  <span class="hljs-attr">discussionId</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">content</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">token</span>: <span class="hljs-built_in">string</span>,
+  <span class="hljs-attr">replyToId</span>?: <span class="hljs-built_in">string</span>
+</span>) {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> mutation = <span class="hljs-string">`
+      mutation {
+        addDiscussionComment(input: {
+          discussionId: "<span class="hljs-subst">${discussionId}</span>",
+          body: "<span class="hljs-subst">${content.replace(/<span class="hljs-string">"/g, '\\"</span><span class="hljs-string">')}"
+          ${replyToId ? `, replyToId: "${replyToId}"` : '</span><span class="hljs-string">'}
+        }) {
+          comment {
+            id
+            author {
+              login
+              avatarUrl
+              url
+            }
+            body
+            createdAt
+            replyTo {
+              id
+            }
+          }
+        }
+      }
+    `;
+
+    const response = await fetch('</span>https://api.github.com/graphql<span class="hljs-string">', {
+      method: '</span>POST<span class="hljs-string">',
+      headers: {
+        Authorization: `bearer ${token}`,
+        '</span>Content-Type<span class="hljs-string">': '</span>application/json<span class="hljs-string">'
+      },
+      body: JSON.stringify({ query: mutation })
+    });
+
+    const data = await response.json();
+
+    if (data.errors) {
+      console.error('</span>添加评论错误:<span class="hljs-string">', data.errors);
+      return null;
+    }
+
+    const comment = data?.data?.addDiscussionComment?.comment;
+
+    if (comment) {
+      return {
+        id: comment.id,
+        author: {
+          login: comment.author?.login || '</span>匿名用户<span class="hljs-string">',
+          avatarUrl: comment.author?.avatarUrl,
+          url: comment.author?.url
+        },
+        content: comment.body,
+        createdAt: comment.createdAt,
+        replyToId: comment.replyTo?.id
+      };
+    }
+
+    return null;
+  } catch (error) {
+    console.error('</span>添加评论异常:<span class="hljs-string">', error);
+    return null;
+  }
+}
+</span></span></span></code></pre>
+<h4 id="用户登录系统"><a aria-hidden="true" tabindex="-1" href="#用户登录系统"><span class="icon icon-link"></span></a>用户登录系统</h4>
+<p>技术栈：GitHub OAuth App + Cookie</p>
+<h4 id="优化点"><a aria-hidden="true" tabindex="-1" href="#优化点"><span class="icon icon-link"></span></a>优化点</h4>
+<ol>
+<li>使用 NextAuth.js 集成GitHub OAuth</li>
+<li>使用 SWR 缓存策略，自动重新获取最新评论</li>
+<li>权限控制：仅允许授权用户评论（避免Spam）</li>
+<li>API限流：GitHub API 每分钟5000次请求限制</li>
+<li>敏感词过滤：服务端校验评论内容</li>
+<li>GitHub Discussions方案替代</li>
+</ol>
+<h3 id="在线新增博客功能"><a aria-hidden="true" tabindex="-1" href="#在线新增博客功能"><span class="icon icon-link"></span></a>在线新增博客功能</h3>
+<p>实现逻辑：</p>
+<ol>
+<li>
+<p>用户通过GitHub登录后，校验用户名是否在白名单</p>
+</li>
+<li>
+<p>使用GitHub API 提交 PR 到项目仓库</p>
+</li>
+<li>
+<p>代码合并后通过自动进行重新部署</p>
+</li>
+</ol>
+<h2 id="未来优化方向"><a aria-hidden="true" tabindex="-1" href="#未来优化方向"><span class="icon icon-link"></span></a>未来优化方向</h2>
+<h3 id="用户体验提升"><a aria-hidden="true" tabindex="-1" href="#用户体验提升"><span class="icon icon-link"></span></a>用户体验提升</h3>
+<ol>
+<li>
+<p>暗黑模式：基于 tailwindcss 完成动态主题切换</p>
+</li>
+<li>
+<p>全文搜索：Algolia集成或本地Fuse.js方案对比</p>
+</li>
+<li>
+<p>交互增强：TOC（目录）自动生成与滚动追踪</p>
+</li>
+</ol>
+<h3 id="技术强化"><a aria-hidden="true" tabindex="-1" href="#技术强化"><span class="icon icon-link"></span></a>技术强化</h3>
+<ol>
+<li>
+<p>增量静态再生（ISR）：动态内容更新策略</p>
+</li>
+<li>
+<p>Edge Runtime：关键API的边缘化部署</p>
+</li>
+<li>
+<p>性能监控：接入Vercel Analytics或自定义Lighthouse检查</p>
+</li>
+</ol>
+<h3 id="内容生态扩展"><a aria-hidden="true" tabindex="-1" href="#内容生态扩展"><span class="icon icon-link"></span></a>内容生态扩展</h3>
+<ol>
+<li>MDX支持：在博文中嵌入React组件</li>
+</ol>
+<h2 id="结语"><a aria-hidden="true" tabindex="-1" href="#结语"><span class="icon icon-link"></span></a>结语</h2>
+<p>这次升级不仅是技术的迭代，更是开发思维的转变——从静态内容发布者到动态应用设计者的角色进化。</p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"博客升级：Next.js 版本更新与功能扩展"}]}],["$","time",null,{"dateTime":"2025-04-21","className":"text-center block my-4 text-sm opacity-60","children":"April\t21, 2025"}],[null,["$","$L18",null,{"theme":"fancy"}],["$","section",null,{"className":"markdown-body-fancy max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+17:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$17:metadata","error":null,"digest":"$undefined"}
