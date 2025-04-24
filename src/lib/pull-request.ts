@@ -1,4 +1,5 @@
 import { Octokit } from '@octokit/rest';
+import { getImageUploader } from './image-upload';
 
 const octokit = new Octokit({
   auth: process.env.NEXT_PUBLIC_GITHUB_TOKEN
@@ -33,7 +34,23 @@ export async function createPullRequest({
       sha: ref.object.sha
     });
 
-    // 创建文件
+    // 获取上传的临时图片
+    const imageUploader = getImageUploader();
+    const uploadedImages = imageUploader.getUploadedImages();
+
+    // 先上传所有图片
+    for (const image of uploadedImages) {
+      await octokit.repos.createOrUpdateFileContents({
+        owner,
+        repo,
+        path: image.path,
+        message: `feat: upload image ${image.name}`,
+        content: image.content,
+        branch: branchName
+      });
+    }
+
+    // 创建文章文件
     await octokit.repos.createOrUpdateFileContents({
       owner,
       repo,
@@ -50,8 +67,11 @@ export async function createPullRequest({
       title,
       head: branchName,
       base: 'main',
-      body: 'auto create pr'
+      body: `auto create pr${uploadedImages.length > 0 ? ` with ${uploadedImages.length} images` : ''}`
     });
+
+    // 清空临时图片记录
+    imageUploader.clearUploadedImages();
 
     return { url: pr.html_url };
   } catch (error) {
