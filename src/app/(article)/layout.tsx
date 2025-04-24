@@ -21,7 +21,7 @@ export default async function ArticleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Layout>{children}</Layout>
-        <Portal href="/practice" />
+        {!process.env.GITHUB_ACTION && <Portal href="/practice" />}
       </body>
     </html>
   );
