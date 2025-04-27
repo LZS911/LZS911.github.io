@@ -40,3 +40,7 @@ next-env.d.ts
 # config
 .hintrc
 .env
+
+# temp files
+/temp/
+/temp/*

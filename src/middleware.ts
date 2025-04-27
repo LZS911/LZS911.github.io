@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
-// 配置中间件只在 /practice 路径下生效
+// 配置中间件在 practice 及其子路径下生效
 export const config = {
-  matcher: '/practice'
+  matcher: ['/practice', '/practice/:path*']
 };
