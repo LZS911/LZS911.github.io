@@ -1,68 +1,90 @@
-import { Octokit } from '@octokit/rest';
+export interface ImageInfo {
+  path: string;
+  content: string;
+  name: string;
+  blobUrl?: string;
+}
 
 // 使用接口以便后续可以轻松替换不同的存储实现
 export interface ImageUploader {
   uploadImage: (file: File | Blob, fileName?: string) => Promise<string>;
-  getUploadedImages: () => { path: string; content: string; name: string }[];
+  getUploadedImages: () => ImageInfo[];
   clearUploadedImages: () => void;
+  deleteImage: (imagePath: string) => void;
+  restoreImages: (images: ImageInfo[]) => Promise<void>;
+  addRestoredImage: (image: ImageInfo) => void;
 }
 
-export class GitHubImageUploader implements ImageUploader {
-  private octokit: Octokit;
-  private owner: string;
-  private repo: string;
-  private imagesPath: string;
+// 使用服务器 API 存储图片的实现
+export class FileSystemImageUploader implements ImageUploader {
   // 存储已上传的临时图片信息，等待发布文章时一起提交
-  private uploadedImages: { path: string; content: string; name: string }[] =
-    [];
-
-  constructor(config?: {
-    auth?: string;
-    owner?: string;
-    repo?: string;
-    imagesPath?: string;
-  }) {
-    this.octokit = new Octokit({
-      auth: config?.auth || process.env.NEXT_PUBLIC_GITHUB_TOKEN
-    });
-    this.owner =
-      config?.owner || process.env.NEXT_PUBLIC_GITHUB_OWNER || 'LZS911';
-    this.repo =
-      config?.repo || process.env.NEXT_PUBLIC_REPO_NAME || 'LZS911.github.io';
-    this.imagesPath = config?.imagesPath || 'public/assets/blog/posts';
-  }
+  private uploadedImages: ImageInfo[] = [];
 
   async uploadImage(file: File | Blob, fileName?: string): Promise<string> {
     try {
       // 生成文件名
       const timestamp = Date.now();
       const generatedFileName = fileName || `image-${timestamp}.png`;
-      const path = `${this.imagesPath}/${generatedFileName}`;
 
-      // 读取文件内容
-      const arrayBuffer = await file.arrayBuffer();
-      const content = Buffer.from(arrayBuffer).toString('base64');
+      // 创建 FormData 对象用于上传
+      const formData = new FormData();
+      formData.append('image', file, generatedFileName);
 
-      // 存储图片信息，但不立即上传到 GitHub
-      this.uploadedImages.push({
-        path,
-        content,
-        name: generatedFileName
+      // 发送到服务器 API
+      const response = await fetch('/api/images', {
+        method: 'POST',
+        body: formData
       });
 
-      // 返回临时图片URL供预览
-      // 这里创建了一个 Blob URL 用于本地预览，它在当前会话中有效
-      const blob = new Blob([new Uint8Array(arrayBuffer)], {
-        type: 'image/png'
-      });
-      const blobUrl = URL.createObjectURL(blob);
+      if (!response.ok) {
+        throw new Error('服务器端图片上传失败');
+      }
 
-      // 同时记录最终的图片路径，用于发布文章时替换
-      return blobUrl + '#' + `/assets/blog/posts/${generatedFileName}`;
+      const result = await response.json();
+
+      // 存储图片信息
+      const imageInfo: ImageInfo = {
+        path: result.url,
+        content: '', // 不再存储内容，只存储引用
+        name: result.fileName,
+        blobUrl: result.url
+      };
+      this.uploadedImages.push(imageInfo);
+
+      // 返回服务器URL
+      return result.url + '#' + `/assets/blog/posts/${result.fileName}`;
     } catch (error) {
       console.error('处理图片失败:', error);
       throw new Error('处理图片失败');
     }
+  }
+
+  // 删除指定图片
+  deleteImage(imagePath: string): void {
+    // 获取实际路径（去除#后面的部分）
+    const actualPath = imagePath.split('#')[0];
+
+    // 找到要删除的图片索引
+    const index = this.uploadedImages.findIndex(
+      (img) => img.path === actualPath || img.blobUrl === actualPath
+    );
+
+    if (index !== -1) {
+      // 从数组中删除
+      this.uploadedImages.splice(index, 1);
+
+      // 尝试通知服务器删除（这里可以添加一个删除API请求）
+      // TODO: 实现服务器端删除
+    }
+  }
+
+  // 恢复已上传的图片（用于持久化）
+  async restoreImages(images: ImageInfo[]): Promise<void> {
+    // 清空现有图片
+    this.clearUploadedImages();
+
+    // 恢复数据结构
+    this.uploadedImages = [...images];
   }
 
   // 获取所有已上传的临时图片
@@ -73,6 +95,11 @@ export class GitHubImageUploader implements ImageUploader {
   // 清空临时图片记录
   clearUploadedImages() {
     this.uploadedImages = [];
+  }
+
+  // 添加单个恢复图片
+  addRestoredImage(image: ImageInfo): void {
+    this.uploadedImages.push(image);
   }
 }
 
@@ -85,16 +112,7 @@ export function getImageUploader(): ImageUploader {
     return imageUploaderInstance;
   }
 
-  // 可以根据环境变量或其他配置决定使用哪个上传器
-  // 例如，可以根据环境变量 STORAGE_TYPE 选择不同的上传器
-  const storageType = process.env.NEXT_PUBLIC_STORAGE_TYPE || 'github';
-
-  switch (storageType.toLowerCase()) {
-    case 'github':
-    default:
-      imageUploaderInstance = new GitHubImageUploader();
-      break;
-  }
+  imageUploaderInstance = new FileSystemImageUploader();
 
   return imageUploaderInstance;
 }
@@ -122,11 +140,24 @@ export function insertImageToMarkdown(
   return content + '\n' + markdownImage;
 }
 
+// 帮助函数: 转义正则表达式中的特殊字符
+export function escapeRegExp(string: string): string {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 // 将临时 Blob URL 替换为实际路径
 export function replaceImageUrls(markdownContent: string): string {
-  // 匹配模式: ![any-text](blob-url#actual-path)
-  const imageRegex = /!\[(.*?)\]\((blob:[^#]+)#([^)]+)\)/g;
-  return markdownContent.replace(imageRegex, (match, alt, blob, actualPath) => {
-    return `![image](${actualPath})`;
+  // 匹配模式: ![any-text](url#actual-path)
+  // URL可能是Blob URL或者API URL
+  const imageRegex = /!\[(.*?)\]\((.*?)#([^)]+)\)/g;
+
+  return markdownContent.replace(imageRegex, (match, alt, url, actualPath) => {
+    // 确保路径以/开头
+    const normalizedPath = actualPath.startsWith('/')
+      ? actualPath
+      : `/${actualPath}`;
+
+    // 构建完整的GitHub路径
+    return `![${alt || 'image'}](${normalizedPath})`;
   });
 }

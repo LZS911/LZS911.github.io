@@ -1,7 +1,7 @@
 import PostBody from '@/ui/article/post-body';
 import { getPostBySlug, getAllPosts } from '../../../../lib/api';
 import PostTitle from '@/ui/article/post-title';
-import markdownToHtml from '@/lib/markdownToHtml';
+import markdownToHtml from '@/lib/markdown-to-html';
 import DateFormatter from '@/ui/article/date-formatter';
 import Comments from '@/ui/article/comments';
 
