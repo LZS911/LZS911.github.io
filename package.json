@@ -8,10 +8,14 @@
     "ts-check": "tsc --noEmit",
     "checker": "bun ts-check && bun lint && bun prettier:c",
     "prettier:w": "prettier -w src/",
-    "prettier:c": "prettier -c src/"
+    "prettier:c": "prettier -c src/",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
   },
   "dependencies": {
     "@octokit/rest": "^21.1.1",
+    "@prisma/client": "^6.7.0",
     "@tailwindcss/postcss": "^4.1.4",
     "@uiw/react-md-editor": "^4.0.5",
     "clsx": "^2.1.1",
@@ -42,7 +46,9 @@
     "@types/ws": "^8.18.0",
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
-    "typescript": "^5",
-    "prettier": "^3"
-  }
+    "prettier": "^3",
+    "prisma": "^6.7.0",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

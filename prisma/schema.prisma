@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// 存储元数据表 - 用于存储预览和图片的元数据信息
+model StorageMetadata {
+  id           String  @id
+  type         String // 'preview' 或 'image'
+  timestamp    BigInt // 创建时间戳
+  expiresAt    BigInt // 过期时间戳
+  contentType  String? // 内容类型 (如 image/jpeg)
+  extension    String? // 文件扩展名
+  originalName String? // 原始文件名
+
+  // 关联内容
+  content StorageContent?
+
+  @@index([expiresAt]) // 索引过期时间，便于清理过期内容
+  @@index([type]) // 按类型查询的索引
+}
+
+// 存储内容表 - 用于存储预览HTML和图片二进制数据
+model StorageContent {
+  id      String @id
+  content Bytes // 二进制内容
+
+  // 关联元数据
+  metadata StorageMetadata @relation(fields: [id], references: [id], onDelete: Cascade)
+}

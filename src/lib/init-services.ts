@@ -1,4 +1,4 @@
-import { initializeStorage, startCleanupScheduler } from './file-storage';
+import { initializeStorage, startCleanupScheduler } from './storage';
 
 // 初始化所有服务
 export function initializeServices() {

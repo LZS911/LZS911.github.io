@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { saveTemporaryImage, initializeStorage } from '@/lib/file-storage';
-
-// 确保临时存储目录存在
-initializeStorage();
+import { saveTemporaryImage } from '@/lib/storage';
 
 // 处理图片上传请求
 export async function POST(request: NextRequest) {
