@@ -5,7 +5,7 @@ date: "2025-05-15"
 image:
 headerImage: false
 star: true
-category: talk
+category: blog
 author: LZS_911
 description: talk
 excerpt: ''
