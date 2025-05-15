@@ -1,6 +1,7 @@
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { FlatCompat } from '@eslint/eslintrc';
+import { globalIgnores } from 'eslint/config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -14,9 +15,9 @@ const eslintConfig = [
   {
     rules: {
       '@typescript-eslint/no-unused-vars': 'warn'
-    },
-    ignorePatterns: ['prisma/migrations']
-  }
+    }
+  },
+  globalIgnores(['**/generated/prisma'])
 ];
 
 export default eslintConfig;
