@@ -4,7 +4,7 @@ import {
   startCleanupScheduler,
   stopCleanupScheduler,
   getCleanupSchedulerStatus
-} from '@/lib/file-storage';
+} from '@/lib/storage';
 
 // 验证API密钥
 function validateApiKey(request: NextRequest): boolean {

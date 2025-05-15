@@ -1,4 +1,4 @@
-import { initializeStorage } from './file-storage';
+import { initializeStorage } from './storage';
 
 // 应用服务端初始化函数
 export function initializeServer() {

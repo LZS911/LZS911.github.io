@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 type CleanupStatus = {
   active: boolean;
@@ -10,31 +9,12 @@ type CleanupStatus = {
 };
 
 export default function CleanupPage() {
-  const router = useRouter();
   const [apiKey, setApiKey] = useState('');
   const [status, setStatus] = useState<CleanupStatus | null>(null);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [interval, setInterval] = useState('86400000'); // 默认24小时
   const [intervalPreset, setIntervalPreset] = useState('86400000');
-
-  // 检查登录状态
-  useEffect(() => {
-    async function checkAuth() {
-      try {
-        const response = await fetch('/api/auth/check');
-        if (!response.ok) {
-          // 未登录，跳转到主页
-          router.push('/');
-        }
-      } catch (error) {
-        console.error('检查认证状态失败:', error);
-        router.push('/');
-      }
-    }
-
-    checkAuth();
-  }, [router]);
 
   // 从 localStorage 加载 API 密钥并获取状态
   useEffect(() => {

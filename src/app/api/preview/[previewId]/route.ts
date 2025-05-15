@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getPreviewContent } from '@/lib/file-storage';
+import { getPreviewContent } from '@/lib/storage';
 
 // 处理特定预览ID的获取请求
 export async function GET(
@@ -18,9 +18,7 @@ export async function GET(
       });
     }
 
-    // 从文件系统获取预览内容
     const { html, expired } = await getPreviewContent(previewId);
-
     if (expired || !html) {
       return new NextResponse('预览不存在或已过期', {
         status: 404,

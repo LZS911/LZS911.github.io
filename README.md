@@ -25,3 +25,22 @@
 - [x] 导航页
 
 - [x] 博客页面添加锚点功能
+
+## 存储系统
+
+本项目支持两种存储模式，可通过环境变量配置：
+
+1. **文件系统存储**（默认）：适用于本地开发环境和支持文件系统的部署环境
+2. **数据库存储**：适用于 Vercel 等无服务器环境，使用 Prisma ORM 操作 PostgreSQL 数据库存储临时图片和预览内容
+
+详细配置请参考：
+- [环境变量配置说明](./docs/environment-variables.md)
+- [Vercel 部署指南](./docs/vercel-deployment.md)
+
+## 技术栈
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Prisma (用于数据库存储)

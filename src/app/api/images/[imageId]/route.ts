@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getTemporaryImage } from '@/lib/file-storage';
+import { getTemporaryImage } from '@/lib/storage';
 
 export async function GET(
   request: NextRequest,
