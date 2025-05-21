@@ -20,12 +20,12 @@ function highlightText(text: string, query: string) {
 }
 
 interface SearchPageProps {
-  searchParams: {
+  searchParams: Promise<{
     q?: string;
     tag?: string;
     category?: string;
     subCategory?: string;
-  };
+  }>;
 }
 
 export const dynamic = 'force-dynamic';
@@ -34,10 +34,7 @@ export const revalidate = 0;
 export async function generateMetadata({
   searchParams
 }: SearchPageProps): Promise<Metadata> {
-  const query = searchParams.q || '';
-  const tag = searchParams.tag || '';
-  const category = searchParams.category || '';
-  const subCategory = searchParams.subCategory || '';
+  const { q: query, tag, category, subCategory } = await searchParams;
 
   let title = '搜索结果';
   if (query) title = `"${query}" 的搜索结果`;
@@ -51,10 +48,7 @@ export async function generateMetadata({
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
-  const query = searchParams.q || '';
-  const tag = searchParams.tag || '';
-  const category = searchParams.category || '';
-  const subCategory = searchParams.subCategory || '';
+  const { q: query, tag, category, subCategory } = await searchParams;
 
   if (!query && !tag && !category && !subCategory) {
     notFound();
@@ -221,7 +215,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
                       </p>
                     )}
 
-                    {post.matchSnippet && (
+                    {post.matchSnippet && query && (
                       <div className="mt-4 bg-gray-50 dark:bg-gray-800 p-4 rounded-md border border-gray-200 dark:border-gray-700">
                         <p className="text-sm text-gray-600 dark:text-gray-300">
                           <span className="font-semibold">匹配内容: </span>

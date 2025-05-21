@@ -52,7 +52,7 @@ const DraftsList: React.FC<DraftsListProps> = ({
               className={`p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 flex justify-between ${draft.id === currentArticleId ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
             >
               <div className="flex-1">
-                <p className="font-medium truncate">
+                <p className="font-medium truncate max-w-[200px]">
                   {draft.title || '无标题草稿'}
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">

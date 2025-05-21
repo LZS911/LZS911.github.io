@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface TagPageProps {
-  params: { tag: string };
+  params: Promise<{ tag: string }>;
 }
 
 export const dynamic = 'force-dynamic';
@@ -14,15 +14,16 @@ export const revalidate = 0;
 export async function generateMetadata({
   params
 }: TagPageProps): Promise<Metadata> {
-  const tag = decodeURIComponent(params.tag);
+  const { tag } = await params;
+  const decodedTag = decodeURIComponent(tag);
 
   return {
-    title: `标签: ${tag}`
+    title: `标签: ${decodedTag}`
   };
 }
 
 export default async function TagPage({ params }: TagPageProps) {
-  const tag = decodeURIComponent(params.tag);
+  const tag = decodeURIComponent((await params).tag);
 
   // 获取所有文章
   const allPosts = getAllPosts([

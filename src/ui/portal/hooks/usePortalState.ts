@@ -10,7 +10,9 @@ export default function usePortalState() {
     function handleClickOutside(event: MouseEvent) {
       if (
         portalRef.current &&
-        !portalRef.current.contains(event.target as Node)
+        !portalRef.current.contains(event.target as Node) &&
+        // 确保点击的是遮罩层，而不是内部元素
+        (event.target as Element).classList.contains('portal-overlay')
       ) {
         setIsOpen(false);
       }
