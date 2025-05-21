@@ -1,0 +1,17 @@
+.portal-button-namespace.transform-style-fix {
+  transition-property:
+    background-color, border-color, color, fill, stroke, opacity, box-shadow,
+    filter, backdrop-filter;
+}
+.portal-button-namespace.transform-style-fix:hover {
+  transform: scale(1.1);
+}
+
+.portal-overlay {
+  transform-origin: top left;
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+}

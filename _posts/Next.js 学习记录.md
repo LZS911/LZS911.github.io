@@ -5,8 +5,14 @@ date: '2022-09-28'
 image:
 headerImage: false
 tag:
-  - next.js
-  - react
+  - Next.js
+  - React
+  - SSR
+  - SSG
+  - 前端框架
+  - 服务端渲染
+  - 静态生成
+  - 预渲染
 star: true
 category: blog
 author: LZS_911

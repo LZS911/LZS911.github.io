@@ -4,7 +4,13 @@ date: "2024-12-05"
 image: 
 headerImage: false
 tag:
-  - Typescript
+  - TypeScript
+  - 性能优化
+  - 最佳实践
+  - 编译优化
+  - 类型系统
+  - 工程化
+  - 代码质量
 star: true
 category: blog
 author: Ai.Haibara
@@ -18,10 +24,9 @@ theme: orange
 
 TypeScript 性能问题会严重影响开发体验，尤其是在 IDE 响应能力可能受到影响的大型项目中。理解和实施性能优化​​策略对于保持顺畅的开发工作流程至关重要。
 
-
 ## 关键优化策略
 
->原文地址：https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections
+>原文地址：<https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections>
 
 ### 优先选择 Interface 而不是 Intersection Types
 
@@ -97,7 +102,6 @@ declare function printSchedule(schedule: WeekdaySchedule | WeekendSchedule);
 但是，如果您的联合体有十多个元素，则可能会导致编译速度出现实际问题。
 例如，为了从联合中消除冗余成员，必须将元素进行成对比较，这是二次的。当与大型联合相交时，可能会发生这种检查，其中对每个联合成员进行相交可能会产生巨大的类型，然后需要减少这些类型。避免这种情况的一种方法是使用子类型，而不是联合。
 
-
 ```
 interface Schedule {
   day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
@@ -120,7 +124,6 @@ declare function printSchedule(schedule: Schedule);
 ```
 
 当尝试对每个内置 DOM 元素类型进行建模时，可能会出现一个更现实的示例。在这种情况下，最好创建一个具有DivElement 、 ImgElement等所有扩展的通用成员的基本HtmlElement类型，而不是创建一个详尽的联合，例如 DivElement | /*...*/ | ImgElement | /*...*/ 。
-
 
 ### 命名复杂类型
 
@@ -192,7 +195,6 @@ interface SomeType<T> {
 ------------                ------------
 ```
 
-
 ### 指定文件
 
 您应该始终确保您的配置文件不会同时包含太多文件。
@@ -232,6 +234,7 @@ Duplicate identifier 'require'.
 ```
 
 在不需要全局包的情况下，修复就像在tsconfig.json / jsconfig.json中为"types"选项指定一个空字段一样简单
+
 ```
 // src/tsconfig.json
 {

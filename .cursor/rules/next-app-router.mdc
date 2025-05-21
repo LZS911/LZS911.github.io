@@ -1,0 +1,56 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Next.js App Router 指南
+
+## 路由结构
+- 使用 Next.js 15 的 App Router 架构
+- 路由文件位于 `src/app/` 目录
+- 每个路由目录需要包含一个 `page.tsx` 文件作为路由入口
+
+## 路由类型
+- 静态路由: `src/app/about/page.tsx` → `/about`
+- 动态路由: `src/app/[slug]/page.tsx` → `/any-slug`
+- 路由组: `src/app/(group)/page.tsx` → 仅用于组织，不影响 URL
+- 平行路由: `src/app/@sidebar/page.tsx` → 同级平行渲染组件
+
+## 特殊文件
+- `layout.tsx` - 为路由及其子路由提供共享布局
+- `loading.tsx` - 加载状态组件
+- `error.tsx` - 错误处理组件
+- `not-found.tsx` - 404 页面
+- `route.ts` - API 路由处理
+
+## 数据获取
+- Server Components 内使用直接获取数据的方式
+- 使用 `use server` 指令创建服务器操作
+- 复杂交互使用 `useFormState`、`useFormStatus` 钩子
+- 使用服务器组件优先获取数据，避免不必要的客户端渲染
+
+## 示例
+```tsx
+// src/app/posts/[slug]/page.tsx
+import { getPostBySlug } from '@/lib/posts';
+import { notFound } from 'next/navigation';
+
+export default async function PostPage({ 
+  params 
+}: { 
+  params: { slug: string } 
+}) {
+  const post = await getPostBySlug(params.slug);
+  
+  if (!post) {
+    notFound();
+  }
+  
+  return (
+    <article>
+      <h1>{post.title}</h1>
+      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+    </article>
+  );
+}
+```

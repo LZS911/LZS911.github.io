@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "postinstall": "prisma generate",
-    "dev": "next dev --port=4545 --turbopack",
+    "dev": "bun run setup:dev-db && next dev --port=4545 --turbopack",
     "build:app": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,7 +12,9 @@
     "prettier:c": "prettier -c src/",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio"
+    "prisma:push": "prisma db push --accept-data-loss",
+    "prisma:studio": "prisma studio",
+    "setup:dev-db": "bun run prisma/setup-dev-db.ts"
   },
   "dependencies": {
     "@octokit/rest": "^21.1.1",

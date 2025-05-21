@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { geistMono, geistSans } from '@/ui/fonts';
 import { WEB_TITLE } from '@/lib/constants';
 import '@/styles/globals.css';
-import '@/lib/server-init';
 
 export const metadata: Metadata = {
   title: WEB_TITLE,

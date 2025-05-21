@@ -23,10 +23,10 @@ const PageFooter = () => {
       <a
         rel="noopener noreferrer"
         className="underline hover:bg-indigo"
-        href="https://pages.github.com/?(null)"
+        href="https://vercel.com/"
         target="_blank"
       >
-        GitHub Pages
+        Vercel
       </a>
     </footer>
   );
