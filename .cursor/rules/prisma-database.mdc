@@ -1,0 +1,76 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Prisma 数据库指南
+
+## 数据库配置
+- 使用 Prisma ORM 进行数据库操作
+- 数据库 schema 定义在 `prisma/schema.prisma`
+- 客户端代码在 `src/lib/db.ts` 或类似位置
+
+## 常用命令
+- 生成 Prisma 客户端: `bun prisma:generate`
+- 迁移数据库: `bun prisma:migrate`
+- 启动 Prisma Studio: `bun prisma:studio`
+
+## 数据模型
+使用 Prisma schema 定义数据模型，如:
+```prisma
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   String?
+  published Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+```
+
+## 数据操作
+使用 Prisma Client 进行数据操作:
+```typescript
+// 实例化 Prisma 客户端
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
+
+// 创建记录
+async function createPost(title: string, content: string) {
+  return await prisma.post.create({
+    data: {
+      title,
+      content,
+    },
+  });
+}
+
+// 查询记录
+async function getPosts() {
+  return await prisma.post.findMany({
+    where: { published: true },
+    orderBy: { createdAt: 'desc' },
+  });
+}
+
+// 更新记录
+async function updatePost(id: string, data: Partial<Post>) {
+  return await prisma.post.update({
+    where: { id },
+    data,
+  });
+}
+
+// 删除记录
+async function deletePost(id: string) {
+  return await prisma.post.delete({
+    where: { id },
+  });
+}
+```
+
+## 最佳实践
+- 使用事务处理关联操作
+- 优化查询通过选择特定字段
+- 使用中间件进行日志记录或数据转换
+- 注意处理 Prisma 异常，特别是记录不存在的情况

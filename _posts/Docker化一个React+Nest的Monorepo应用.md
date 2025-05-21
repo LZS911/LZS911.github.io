@@ -13,6 +13,10 @@ tag:
   - Nginx
   - Jenkins
   - PostgreSQL
+  - 部署
+  - CI/CD
+  - DevOps
+  - 全栈开发
 star: true
 category: blog
 author: Ai.Haibara

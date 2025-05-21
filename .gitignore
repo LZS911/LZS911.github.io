@@ -45,3 +45,4 @@ next-env.d.ts
 /temp/
 /temp/*
 prisma/migrations
+/prisma/dev.db

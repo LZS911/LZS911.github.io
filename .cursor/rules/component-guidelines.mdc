@@ -1,0 +1,61 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 组件开发指南
+
+## 组件结构
+- UI 组件放置在 `src/ui/` 目录
+- 页面组件放置在 `src/app/` 目录中相应的路由文件夹
+- 使用 TypeScript 类型定义组件 props
+
+## 样式约定
+- 使用 Tailwind CSS 类名进行样式定义
+- 使用 clsx 处理条件样式：`className={clsx('base-style', { 'conditional-style': condition })}`
+- 复杂组件考虑使用 CSS 模块或 styled-components
+
+## 组件最佳实践
+- 使用函数组件和 React Hooks
+- 为复杂组件添加适当的注释
+- 组件文件使用 PascalCase 命名方式
+- 组件实现遵循单一职责原则
+
+## 状态管理
+- 简单状态使用 `useState` 和 `useReducer`
+- 跨组件状态共享优先考虑 Context API
+- 避免过深的组件嵌套和 props 传递
+
+## 代码示例
+```tsx
+// 组件示例
+import { useState } from 'react';
+import clsx from 'clsx';
+
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary';
+  onClick?: () => void;
+}
+
+export function Button({ 
+  children, 
+  variant = 'primary', 
+  onClick 
+}: ButtonProps) {
+  return (
+    <button
+      className={clsx(
+        'px-4 py-2 rounded font-medium',
+        {
+          'bg-blue-500 text-white': variant === 'primary',
+          'bg-gray-200 text-gray-800': variant === 'secondary'
+        }
+      )}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+}
+```

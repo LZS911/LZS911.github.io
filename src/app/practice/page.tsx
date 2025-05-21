@@ -33,7 +33,7 @@ export default function Page() {
   // 编辑器内容状态
   const [content, setContent] = useState('');
   const [title, setTitle] = useState('');
-  const [category, setCategory] = useState<PostType['category']>(categories[0]);
+  const [category, setCategory] = useState<PostType['category']>(categories[2]);
   const [theme, setTheme] = useState<Theme>(THEMES[7]);
   const searchParams = useSearchParams();
 
@@ -236,6 +236,22 @@ export default function Page() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category, content, isAutoSaving, theme, title]);
+
+  // 添加键盘快捷键监听（Ctrl+S 或 Command+S）保存草稿
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // 检测 Ctrl+S 或 Command+S
+      if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+        e.preventDefault(); // 阻止浏览器默认保存行为
+        saveDraft();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [saveDraft]);
 
   // 草稿列表管理
   const handleShowDraftList = () => {

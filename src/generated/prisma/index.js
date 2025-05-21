@@ -87,9 +87,6 @@ Prisma.NullTypes = {
  * Enums
  */
 exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
-  ReadUncommitted: 'ReadUncommitted',
-  ReadCommitted: 'ReadCommitted',
-  RepeatableRead: 'RepeatableRead',
   Serializable: 'Serializable'
 });
 
@@ -111,11 +108,6 @@ exports.Prisma.StorageContentScalarFieldEnum = {
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
-};
-
-exports.Prisma.QueryMode = {
-  default: 'default',
-  insensitive: 'insensitive'
 };
 
 exports.Prisma.NullsOrder = {
@@ -166,18 +158,17 @@ const config = {
   "datasourceNames": [
     "db"
   ],
-  "activeProvider": "postgresql",
-  "postinstall": false,
+  "activeProvider": "sqlite",
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": null
+        "value": "file://Users/liyu/code/LZS911.github.io/prisma/dev.db"
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\n// 存储元数据表 - 用于存储预览和图片的元数据信息\nmodel StorageMetadata {\n  id           String  @id\n  type         String // 'preview' 或 'image'\n  timestamp    BigInt // 创建时间戳\n  expiresAt    BigInt // 过期时间戳\n  contentType  String? // 内容类型 (如 image/jpeg)\n  extension    String? // 文件扩展名\n  originalName String? // 原始文件名\n\n  // 关联内容\n  content StorageContent?\n\n  @@index([expiresAt]) // 索引过期时间，便于清理过期内容\n  @@index([type]) // 按类型查询的索引\n}\n\n// 存储内容表 - 用于存储预览HTML和图片二进制数据\nmodel StorageContent {\n  id      String @id\n  content Bytes // 二进制内容\n\n  // 关联元数据\n  metadata StorageMetadata @relation(fields: [id], references: [id], onDelete: Cascade)\n}\n",
-  "inlineSchemaHash": "757a04893247c6b3e83bdf7bca236678a8744970c92eef15fe7a24c929c1d144",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\n// 数据库配置，根据环境决定使用PostgreSQL或SQLite\n// 开发环境自动使用SQLite，生产环境使用PostgreSQL\ndatasource db {\n  provider = \"sqlite\"\n  url      = env(\"DATABASE_URL\")\n}\n\n// 存储元数据表 - 用于存储预览和图片的元数据信息\nmodel StorageMetadata {\n  id           String  @id\n  type         String // 'preview' 或 'image'\n  timestamp    BigInt // 创建时间戳\n  expiresAt    BigInt // 过期时间戳\n  contentType  String? // 内容类型 (如 image/jpeg)\n  extension    String? // 文件扩展名\n  originalName String? // 原始文件名\n\n  // 关联内容\n  content StorageContent?\n\n  @@index([expiresAt]) // 索引过期时间，便于清理过期内容\n  @@index([type]) // 按类型查询的索引\n}\n\n// 存储内容表 - 用于存储预览HTML和图片二进制数据\nmodel StorageContent {\n  id      String @id\n  content Bytes // 二进制内容\n\n  // 关联元数据\n  metadata StorageMetadata @relation(fields: [id], references: [id], onDelete: Cascade)\n}\n",
+  "inlineSchemaHash": "033aa8fcfca4d1deab8b8d14104bdcd55226ccdde3005845b952cd577c2e9ed8",
   "copyEngine": true
 }
 

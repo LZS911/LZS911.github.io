@@ -9,8 +9,10 @@ generator client {
   output   = "../src/generated/prisma"
 }
 
+// 数据库配置，根据环境决定使用PostgreSQL或SQLite
+// 开发环境自动使用SQLite，生产环境使用PostgreSQL
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 

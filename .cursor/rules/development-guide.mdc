@@ -1,0 +1,34 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 开发规范指南
+
+## 包管理
+- 使用 Bun 作为包管理工具
+- 添加新依赖: `bun add <package-name>`
+- 添加开发依赖: `bun add -d <package-name>`
+- 安装依赖: `bun install`
+
+## 样式方案
+- 使用 Tailwind CSS 进行样式开发
+- 全局样式定义在 [src/styles/globals.css](mdc:src/styles/globals.css)
+- 使用 clsx 库进行条件样式组合
+
+## 代码风格
+- 使用 ESLint 和 Prettier 进行代码格式化
+- 提交代码前运行: `bun checker` 检查代码规范
+- 格式化代码: `bun prettier:w`
+
+## 开发流程
+- 开发服务器: `bun dev`
+- 类型检查: `bun ts-check`
+- 构建应用: `bun build:app`
+- 启动生产环境: `bun start`
+
+## 数据库操作
+- 使用 Prisma ORM
+- 生成 Prisma 客户端: `bun prisma:generate`
+- 数据库迁移: `bun prisma:migrate`
+- 启动 Prisma Studio: `bun prisma:studio`

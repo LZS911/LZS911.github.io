@@ -4,7 +4,7 @@ import PostTitle from './post-title';
 
 type Props = {
   posts: Items[];
-  type: 'BLOGS' | 'PROJECTS' | 'TALKS';
+  type: 'BLOGS' | 'PROJECTS' | 'TALKS' | 'TAG' | 'ARCHIVE';
 };
 
 const HeroPost: React.FC<Props> = ({ posts, type }) => {

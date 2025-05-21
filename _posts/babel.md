@@ -6,6 +6,9 @@ image:
 headerImage: false
 tag:
   - babel
+  - JavaScript
+  - 工具
+  - 编译器
 star: true
 category: blog
 author: LZS_911

@@ -6,10 +6,15 @@ image:
 headerImage: false
 tag:
   - Webpack
-  - javascript
-  - node.js
-  - vite
-  - babel
+  - Vite
+  - JavaScript
+  - Node.js
+  - Babel
+  - Tree Shaking
+  - 打包工具
+  - 性能优化
+  - 模块化
+  - 构建工具
 star: true
 category: blog
 author: LZS_911
