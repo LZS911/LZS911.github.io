@@ -56,6 +56,8 @@ export type Items = {
   [key in keyof PostType]?: PostType[key];
 } & {
   matchSnippet?: string; // 搜索匹配的内容片段
+  originalSlug?: string; // 原始文件名（不包含 .md 后缀）
+  hashSlug?: string; // hash 格式的 slug
 };
 
 export default PostType;

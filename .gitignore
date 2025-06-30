@@ -44,5 +44,6 @@ next-env.d.ts
 # temp files
 /temp/
 /temp/*
-prisma/migrations
+/prisma/migrations
 /prisma/dev.db
+/generated/prisma

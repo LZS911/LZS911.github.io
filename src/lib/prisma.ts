@@ -21,13 +21,11 @@ const setupDevDatabase = () => {
       !process.env.DATABASE_URL ||
       !process.env.DATABASE_URL.includes('sqlite')
     ) {
-      console.log('设置开发环境使用SQLite数据库');
       process.env.DATABASE_URL = sqliteURL;
 
       // 确保已执行Prisma迁移
       try {
         if (!fs.existsSync(sqliteDbPath)) {
-          console.log('正在为SQLite创建数据库架构...');
           execSync('npx prisma db push', { stdio: 'inherit' });
         }
       } catch (error) {

@@ -15,8 +15,6 @@ export async function GET(
     // 移除扩展名，仅保留ID部分
     const cleanImageId = imageId.split('.')[0];
 
-    console.log(`尝试获取图片，ID: ${cleanImageId}`);
-
     // 获取图片内容
     const { content, contentType, expired } =
       await getTemporaryImage(cleanImageId);
