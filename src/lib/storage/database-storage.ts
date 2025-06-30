@@ -22,11 +22,9 @@ export class DatabaseStorage implements StorageSystem {
 
   // 初始化数据库连接
   async initialize(): Promise<void> {
-    console.log('初始化数据库连接...');
     try {
       // 验证数据库连接
       await this.db.$connect();
-      console.log('数据库连接成功初始化');
     } catch (error) {
       console.error('数据库连接初始化失败:', error);
       throw new Error('数据库连接初始化失败');

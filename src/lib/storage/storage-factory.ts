@@ -22,7 +22,6 @@ export function getStorageSystem(): StorageSystem {
 
   // 获取存储类型环境变量
   const storageType = (process.env.STORAGE_TYPE || 'filesystem').toLowerCase();
-  console.log(storageType);
   if (storageType === StorageType.Database) {
     storageInstance = new DatabaseStorage();
   } else {

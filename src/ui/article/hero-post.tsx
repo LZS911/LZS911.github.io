@@ -17,11 +17,7 @@ const HeroPost: React.FC<Props> = ({ posts, type }) => {
           return (
             <div key={v.title} className="mt-16 p-10 text-center">
               <h2 className="font-[Arial] text-shadow-de text-2xl tracking-wider font-bold text-black">
-                <Link
-                  as={`/posts/${v.slug}`}
-                  href="/posts/[slug]"
-                  className="hover:underline"
-                >
+                <Link href={`/posts/${v.slug}`} className="hover:underline">
                   {v.title}
                 </Link>
               </h2>
@@ -29,8 +25,7 @@ const HeroPost: React.FC<Props> = ({ posts, type }) => {
               <span className="text-black opacity-60 text-sm">
                 {v.excerpt || 'excerpt'} {' | '}
                 <Link
-                  as={`/posts/${v.slug}`}
-                  href="/posts/[slug]"
+                  href={`/posts/${v.slug}`}
                   className="hover:underline text-center hover:bg-indigo"
                 >
                   Link
