@@ -1,0 +1,215 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","75972cc1e73c217026120047"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","75972cc1e73c217026120047","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","75972cc1e73c217026120047","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","R9kYyrFEKdM7V4ShIBbx0",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+18:T42ee,<p>在 JavaScript 中，抽象类的概念并不像 Java、TypeScript 和 Python 等其他语言那样得到原生支持。然而，我们可以通过编写自定义代码来模拟 JavaScript 中抽象类的行为。</p>
+<p>本文将解释什么是抽象类、抽象类与函数式编程的对比，以及如何在 JavaScript 中实现抽象类。鉴于 TypeScript 是一种基于 JavaScript 的编程语言，这里将用它来解释抽象类的概念，以便于理解。</p>
+<h2 id="什么是抽象类"><a aria-hidden="true" tabindex="-1" href="#什么是抽象类"><span class="icon icon-link"></span></a>什么是抽象类？</h2>
+<p>在面向对象编程（OOP）中，所有的对象都是通过类来描述的。然而，并不是所有的类都用于描述具体的对象。如果一个类中没有包含足够的信息来描述一个具体的对象，这样的类就是<strong>抽象类</strong>。</p>
+<p>抽象类除了不能实例化对象之外，类的其他功能依然存在。成员变量、成员方法和构造方法的访问方式与普通类一样。</p>
+<p>由于抽象类不能实例化对象，因此抽象类必须被继承才能使用。这也是为什么通常在设计阶段就要决定是否要设计抽象类。</p>
+<p>父类包含了子类集合的常见方法，但由于父类本身是抽象的，因此不能直接使用这些方法。</p>
+<h3 id="示例typescript-中的抽象类"><a aria-hidden="true" tabindex="-1" href="#示例typescript-中的抽象类"><span class="icon icon-link"></span></a>示例：TypeScript 中的抽象类</h3>
+<p>在 TypeScript 中，类、方法和字段可以是抽象的。抽象方法或抽象字段是尚未提供实现的方法或字段。这些成员必须存在于抽象类中，而抽象类不能直接实例化。</p>
+<p>抽象类的作用是作为子类的基类，子类会实现所有抽象成员。如果一个类没有任何抽象成员，则称其为<strong>具体类</strong>。</p>
+<p>以下是一个抽象类 <code>BaseConfigUtils</code> 的示例：</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BaseConfigUtils</span>&#x3C;
+  T <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseConfig</span>,
+  <span class="hljs-title class_">InitOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseOptions</span>,
+  <span class="hljs-title class_">ResolvedOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">InitOptions</span>
+> {
+  <span class="hljs-comment">// ...existing code...</span>
+
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"><span class="hljs-attr">options</span>: <span class="hljs-title class_">ConfigOptions</span>&#x3C;T, <span class="hljs-title class_">InitOptions</span>, <span class="hljs-title class_">ResolvedOptions</span>></span>) {
+    <span class="hljs-comment">// ...existing code...</span>
+  }
+
+  <span class="hljs-keyword">async</span> <span class="hljs-title function_">resolveConfig</span>(<span class="hljs-attr">opts</span>: <span class="hljs-built_in">unknown</span>): <span class="hljs-title class_">Promise</span>&#x3C;T> {
+    <span class="hljs-comment">// ...existing code...</span>
+  }
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">async</span> <span class="hljs-title function_">handleNonInteractiveMode</span>(
+    <span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>,
+    <span class="hljs-attr">existingConfig</span>: T | <span class="hljs-literal">null</span>
+  ): <span class="hljs-title class_">Promise</span>&#x3C;T> {
+    <span class="hljs-comment">// ...existing code...</span>
+  }
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">abstract</span> <span class="hljs-title function_">handleInteractiveMode</span>(
+    <span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>,
+    <span class="hljs-attr">existingConfig</span>: T | <span class="hljs-literal">null</span>
+  ): <span class="hljs-title class_">Promise</span>&#x3C;T>;
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">abstract</span> <span class="hljs-title function_">mergeConfig</span>(
+    <span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>,
+    <span class="hljs-attr">existingConfig</span>: T
+  ): <span class="hljs-title class_">Promise</span>&#x3C;T>;
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">abstract</span> <span class="hljs-title function_">transformToConfig</span>(<span class="hljs-attr">opts</span>: <span class="hljs-title class_">ResolvedOptions</span>): T;
+
+  <span class="hljs-keyword">protected</span> <span class="hljs-keyword">abstract</span> <span class="hljs-title function_">getConfigIdentifier</span>(<span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>): <span class="hljs-built_in">string</span>;
+
+  <span class="hljs-comment">// ...existing code...</span>
+}
+</code></pre>
+<p>在这个示例中，<code>BaseConfigUtils</code> 定义了处理配置文件的结构。子类必须实现 <code>handleInteractiveMode</code>、<code>mergeConfig</code>、<code>transformToConfig</code> 和 <code>getConfigIdentifier</code> 等方法。</p>
+<h2 id="函数式编程方法"><a aria-hidden="true" tabindex="-1" href="#函数式编程方法"><span class="icon icon-link"></span></a>函数式编程方法</h2>
+<p>函数式编程（FP）是一种将计算视为数学函数求值的范式，它避免改变状态和可变数据。FP 不使用类和继承，而是依赖纯函数和高阶函数。</p>
+<h3 id="示例typescript中的函数式编程"><a aria-hidden="true" tabindex="-1" href="#示例typescript中的函数式编程"><span class="icon icon-link"></span></a>示例：TypeScript中的函数式编程</h3>
+<p>以下是使用函数式编程实现类似功能的示例：</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">type</span> <span class="hljs-title class_">ConfigKey</span> = <span class="hljs-string">'client'</span> | <span class="hljs-string">'mocks'</span>;
+
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">BaseConfig</span> {
+  [<span class="hljs-attr">key</span>: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">string</span>;
+}
+
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">BaseOptions</span> {
+  <span class="hljs-attr">yes</span>: <span class="hljs-built_in">boolean</span>;
+  <span class="hljs-attr">cwd</span>: <span class="hljs-built_in">string</span>;
+  [<span class="hljs-attr">key</span>: <span class="hljs-built_in">string</span>]: <span class="hljs-built_in">unknown</span>;
+}
+
+<span class="hljs-keyword">interface</span> <span class="hljs-title class_">ConfigOptions</span>&#x3C;T <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseConfig</span>, <span class="hljs-title class_">InitOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseOptions</span>, <span class="hljs-title class_">ResolvedOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">InitOptions</span>> {
+  <span class="hljs-attr">configKey</span>: <span class="hljs-title class_">ConfigKey</span>;
+  <span class="hljs-attr">initOptionsSchema</span>: z.<span class="hljs-property">ZodSchema</span>&#x3C;<span class="hljs-title class_">InitOptions</span>>;
+  <span class="hljs-attr">resolvedOptionsSchema</span>: z.<span class="hljs-property">ZodSchema</span>&#x3C;<span class="hljs-title class_">ResolvedOptions</span>>;
+  <span class="hljs-attr">defaultConfig</span>: T;
+  <span class="hljs-attr">command</span>: <span class="hljs-title class_">Command</span>;
+  <span class="hljs-attr">cwd</span>: <span class="hljs-built_in">string</span>;
+  <span class="hljs-title function_">handleInteractiveMode</span>(
+    <span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>,
+    <span class="hljs-attr">existingConfig</span>: T | <span class="hljs-literal">null</span>
+  ): <span class="hljs-title class_">Promise</span>&#x3C;T>;
+  <span class="hljs-title function_">transformToConfig</span>(<span class="hljs-attr">opts</span>: <span class="hljs-title class_">ResolvedOptions</span>): T;
+  <span class="hljs-title function_">getConfigIdentifier</span>(<span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>): <span class="hljs-built_in">string</span>;
+  <span class="hljs-title function_">mergeConfig</span>(
+    <span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>,
+    <span class="hljs-attr">existingConfig</span>: T
+  ): <span class="hljs-title class_">Promise</span>&#x3C;T>;
+}
+
+<span class="hljs-keyword">const</span> resolveConfig = <span class="hljs-keyword">async</span> &#x3C;T <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseConfig</span>, <span class="hljs-title class_">InitOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseOptions</span>, <span class="hljs-title class_">ResolvedOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">InitOptions</span>>(
+  <span class="hljs-attr">options</span>: <span class="hljs-title class_">ConfigOptions</span>&#x3C;T, <span class="hljs-title class_">InitOptions</span>, <span class="hljs-title class_">ResolvedOptions</span>>,
+  <span class="hljs-attr">opts</span>: <span class="hljs-built_in">unknown</span>
+): <span class="hljs-title class_">Promise</span>&#x3C;T> => {
+  <span class="hljs-keyword">const</span> { transformToConfig, getConfigIdentifier, mergeConfig, handleInteractiveMode } = options;
+  <span class="hljs-keyword">const</span> validatedOpts = <span class="hljs-keyword">await</span> options.<span class="hljs-property">initOptionsSchema</span>.<span class="hljs-title function_">parseAsync</span>(opts).<span class="hljs-title function_">catch</span>(<span class="hljs-function">(<span class="hljs-params">error</span>) =></span> {
+    <span class="hljs-title function_">handleSchemaError</span>(error, options.<span class="hljs-property">command</span>);
+  });
+
+  <span class="hljs-keyword">const</span> existingConfig = <span class="hljs-keyword">await</span> <span class="hljs-title function_">getRawConfigs</span>(options.<span class="hljs-property">cwd</span>, options.<span class="hljs-property">configKey</span>, <span class="hljs-title function_">getConfigIdentifier</span>(validatedOpts));
+
+  <span class="hljs-keyword">if</span> (validatedOpts.<span class="hljs-property">yes</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">handleNonInteractiveMode</span>(options, validatedOpts, existingConfig);
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">handleInteractiveMode</span>(options, validatedOpts, existingConfig);
+};
+
+<span class="hljs-keyword">const</span> handleNonInteractiveMode = <span class="hljs-keyword">async</span> &#x3C;T <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseConfig</span>, <span class="hljs-title class_">InitOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseOptions</span>, <span class="hljs-title class_">ResolvedOptions</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">InitOptions</span>>(
+  <span class="hljs-attr">options</span>: <span class="hljs-title class_">ConfigOptions</span>&#x3C;T, <span class="hljs-title class_">InitOptions</span>, <span class="hljs-title class_">ResolvedOptions</span>>,
+  <span class="hljs-attr">opts</span>: <span class="hljs-title class_">InitOptions</span>,
+  <span class="hljs-attr">existingConfig</span>: T | <span class="hljs-literal">null</span>
+): <span class="hljs-title class_">Promise</span>&#x3C;T> => {
+  <span class="hljs-keyword">if</span> (existingConfig) {
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">mergeConfig</span>(opts, existingConfig);
+  }
+
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> validatedOpts = <span class="hljs-keyword">await</span> options.<span class="hljs-property">resolvedOptionsSchema</span>.<span class="hljs-title function_">parseAsync</span>(opts);
+    <span class="hljs-keyword">return</span> <span class="hljs-title function_">transformToConfig</span>(validatedOpts);
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-title function_">handleSchemaError</span>(error, options.<span class="hljs-property">command</span>);
+  }
+};
+
+<span class="hljs-comment">// 定义其他函数，如 getRawConfigs</span>
+</code></pre>
+<h2 id="抽象类与函数式编程的比较"><a aria-hidden="true" tabindex="-1" href="#抽象类与函数式编程的比较"><span class="icon icon-link"></span></a>抽象类与函数式编程的比较</h2>
+<h3 id="抽象类"><a aria-hidden="true" tabindex="-1" href="#抽象类"><span class="icon icon-link"></span></a>抽象类</h3>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>结构清晰，组织有序。</li>
+<li>强制一致的接口。</li>
+<li>对于熟悉面向对象编程（OOP）的开发人员来说更容易理解。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>可能导致复杂的继承层次结构。</li>
+<li>在组合方面灵活性较差。</li>
+</ul>
+</li>
+</ul>
+<h3 id="函数式编程"><a aria-hidden="true" tabindex="-1" href="#函数式编程"><span class="icon icon-link"></span></a>函数式编程</h3>
+<ul>
+<li><strong>优点</strong>：
+<ul>
+<li>提倡不变性和纯函数。</li>
+<li>更容易组合和重用函数。</li>
+<li>避免了继承的陷阱。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>对于习惯于 OOP 的开发人员来说可能更难理解。</li>
+<li>在管理状态和依赖项时可能会导致更多的样板代码。</li>
+</ul>
+</li>
+</ul>
+<h2 id="javascript-中的抽象类"><a aria-hidden="true" tabindex="-1" href="#javascript-中的抽象类"><span class="icon icon-link"></span></a>JavaScript 中的抽象类</h2>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Base</span> {
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params">name</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">constructor</span> == <span class="hljs-title class_">Base</span>) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">"Class is of abstract type and can't be instantiated"</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">getName</span> == <span class="hljs-literal">undefined</span>) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">'getName method must be implemented'</span>);
+    }
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">name</span> = name;
+  }
+
+  <span class="hljs-title function_">printName</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'Hello, '</span> + <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">getName</span>());
+  }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">Derived</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_ inherited__">Base</span> {
+  <span class="hljs-title function_">getName</span>(<span class="hljs-params"></span>) {
+     <span class="hljs-keyword">return</span> <span class="hljs-string">'world'</span>;
+  }
+}
+
+<span class="hljs-comment">// const b = new Base();</span>
+<span class="hljs-keyword">const</span> d = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Derived</span>();
+
+d.<span class="hljs-title function_">printName</span>();
+</code></pre>
+<h2 id="结论"><a aria-hidden="true" tabindex="-1" href="#结论"><span class="icon icon-link"></span></a>结论</h2>
+<p>抽象类和函数式编程各有优缺点。抽象类提供了一种清晰且结构化的方法来强制接口和共享行为，而函数式编程则提供了灵活性并提倡不变性。选择哪种方法取决于项目的具体需求和团队对每种范式的熟悉程度。</p>
+<p>如果想要在 JavaScript 中创建抽象类，建议使用 TypeScript，因为它不仅提供了类型安全性，还原生支持抽象类的概念。</p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"JavaScript 中的抽象类"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2025-03-05","className":"text-center block my-4 text-sm opacity-60","children":"March\t5, 2025"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],null]}],[null,["$","$L17",null,{"theme":"condensed-night-purple"}],["$","section",null,{"className":"markdown-body-condensed-night-purple max-w-3xl","dangerouslySetInnerHTML":{"__html":"$18"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

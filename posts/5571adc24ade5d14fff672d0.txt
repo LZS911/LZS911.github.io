@@ -1,0 +1,112 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","5571adc24ade5d14fff672d0"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","5571adc24ade5d14fff672d0","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","5571adc24ade5d14fff672d0","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","Hnr4H9L1twXa3mudV-MBm",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T2d45,<h2 id="引言"><a aria-hidden="true" tabindex="-1" href="#引言"><span class="icon icon-link"></span></a>引言</h2>
+<p>在开发 To B 端的项目时，导出 CSV 文件进行数据分析是一项常规操作。然而，这一过程并非总是顺畅无阻。试想一下，当你信心满满地将一个 CSV 文件拖入 Excel ，期待看到一个整齐的数据表格时，却遭遇了乱码的尴尬场景。这不仅令人沮丧，而且可能严重影响工作效率。那么，CSV 文件与 Excel 之间存在哪些差异？我们如何确保在 Excel 中能够正常打开 CSV 文件？</p>
+<p>本文将针对这些疑问展开探讨，从一次 CSV 文件导入 Excel 时出现的乱码问题入手，逐步剖析背后的原因。重点探讨<code>BOM（Byte Order Mark）</code>字节和 HTTP 响应中的<code>Content-Type</code>如何影响前端对数据的加载和解析，以及这些因素对 Excel 文件兼容性的影响。</p>
+<h2 id="csv文件与excel的差异-1"><a aria-hidden="true" tabindex="-1" href="#csv文件与excel的差异-1"><span class="icon icon-link"></span></a>CSV文件与Excel的差异 <sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup></h2>
+<ol>
+<li>Excel是一个二进制文件，它保存有关工作簿中所有工作表的信息。CSV代表 Comma Separated Values 。这是一个纯文本格式，用逗号分隔一系列值。</li>
+<li>Excel不仅可以存储数据，还可以对数据进行操作。CSV文件只是一个文本文件，它存储数据，但不包含格式，公式，宏等。它也被称为平面文件。</li>
+<li>Excel是一个电子表格，将文件保存为自己的专有格式，即xls或xlsx。CSV是将表格信息保存为扩展名为.csv的分隔文本文件的格式。</li>
+<li>保存在excel中的文件不能被文本编辑器打开或编辑。CSV文件可以通过文本编辑器（如记事本）打开或编辑。</li>
+</ol>
+<h2 id="bom字节的概念与作用"><a aria-hidden="true" tabindex="-1" href="#bom字节的概念与作用"><span class="icon icon-link"></span></a>BOM字节的概念与作用</h2>
+<p>在解释BOM字节前，我们先看一下 CSV 文件在 WPS 和 Microsoft Excel 中的表现区别</p>
+<h3 id="wps"><a aria-hidden="true" tabindex="-1" href="#wps"><span class="icon icon-link"></span></a>WPS</h3>
+<p><img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/6c8989cf-0386-4f4b-bcdb-1dfef747f2dc" alt="image"></p>
+<h3 id="microsoft-excel"><a aria-hidden="true" tabindex="-1" href="#microsoft-excel"><span class="icon icon-link"></span></a>Microsoft Excel</h3>
+<p><img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/1eb61e35-19f5-4aaa-b1fa-b0f6a5be24f7" alt="image"></p>
+<h3 id="为什么会出现中文乱码"><a aria-hidden="true" tabindex="-1" href="#为什么会出现中文乱码"><span class="icon icon-link"></span></a>为什么会出现中文乱码？</h3>
+<p>当出现乱码后，首先应该考虑的是文件的编码格式问题。通常，CSV 文件采用 UTF-8 编码，这是一种广泛使用的字符编码，支持包括中文在内的多种语言。然而 Microsoft Excel 会默认使用 ANSI 编码来解析文件，而 ANSI 编码实际上是依赖于系统区域设置的特定编码，比如在中文 Windows 系统中通常是GBK。</p>
+<h3 id="解决方案"><a aria-hidden="true" tabindex="-1" href="#解决方案"><span class="icon icon-link"></span></a>解决方案</h3>
+<ol>
+<li>
+<p>修改csv文件编码格式。 执行命令 <code>iconv -f UTF-8 -t GB18030 old_file.csv > new_file.csv</code>（在 macos 中能够正常执行，若 Windows 无法执行需寻找替代方案，例如使用文本编辑器（如Notepad++）的另存为功能，选择GBK作为保存编码），重新生成的 new_file 便能正常在 Microsoft Excel 中显示中文了。
+尽管使用命令行工具进行编码转换对于技术用户来说是一个高效的方法，但确实可能对普通用户来说有一定的使用门槛。</p>
+</li>
+<li>
+<p>使用 BOM 来进行编码表示。 BOM是一个特殊的字节序列，用于标识文件的编码格式。UTF-8编码的BOM字节序列是<code>0xEF 0xBB 0xBF</code>。当Excel打开带有BOM的CSV文件时，BOM帮助Excel识别文件是以UTF-8编码的，从而避免了使用错误的编码解析文件内容。
+代码案例：<a href="https://github.com/LZS911/csv-bom-excel-example">https://github.com/LZS911/csv-bom-excel-example</a> <sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref aria-describedby="footnote-label">2</a></sup></p>
+<p><img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/260b5efb-a0a9-4b2b-a4ed-8e8e84a8ddd8" alt="image">
+<img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/aeade430-b59a-4e57-a92f-f81f1604f48e" alt="image"></p>
+<blockquote>
+<p>其中文件大小为 60b 的为附带了 BOM 字节的 csv 文件</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="response-type在http响应中的作用"><a aria-hidden="true" tabindex="-1" href="#response-type在http响应中的作用"><span class="icon icon-link"></span></a>Response-Type在HTTP响应中的作用</h2>
+<p>我们来看一行代码： <a href="https://github.com/LZS911/csv-bom-excel-example/blob/main/index.html#L15">https://github.com/LZS911/csv-bom-excel-example/blob/main/index.html#L15</a></p>
+<p>首先了解下 ResponseType<sup><a href="#user-content-fn-3" id="user-content-fnref-3" data-footnote-ref aria-describedby="footnote-label">3</a></sup> 的作用</p>
+<blockquote>
+<p><code>XMLHttpRequest</code> 属性 <code>responseType</code> 是一个枚举字符串值，用于指定响应中包含的数据类型。
+它还允许作者更改响应类型。如果将 <code>responseType</code> 的值设置为空字符串，则会使用 <code>'text'</code> 作为默认值。</p>
+</blockquote>
+<p>文章可能看的有点迷糊，我们直接将这行代码注释，然后观察下载得到的文件的表现
+<img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/d6084364-3e6b-4beb-a012-02efede30366" alt="image">
+<img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/0434db6d-3f2e-4ed1-aa37-c81b7bf6cd7f" alt="image"></p>
+<p>可以发现，前端获取到的 csv 文件又丢失掉了后端附加的 BOM 字节，导致在 Microsoft Excel 中出现了乱码。</p>
+<p>所以，可以得出结论：</p>
+<p>当服务端端在返回数据首部添加字节<code>BOM（Byte Order Mark）</code>时，前端如果没有特别设置 <code>XMLHttpRequest的responseType</code> 为 <code>'blob'</code>，会丢失BOM字节。</p>
+<p>这是因为<code>XMLHttpRequest</code>的默认<code>responseType</code>是 <code>'text'</code>，当设置为<code>'text'</code>时，浏览器会尝试将响应体解码为字符串文本。</p>
+<h2 id="如何避免bom字节的丢失"><a aria-hidden="true" tabindex="-1" href="#如何避免bom字节的丢失"><span class="icon icon-link"></span></a>如何避免BOM字节的丢失</h2>
+<h3 id="后端处理"><a aria-hidden="true" tabindex="-1" href="#后端处理"><span class="icon icon-link"></span></a>后端处理</h3>
+<p>在前端不进行任何额外的处理情况下，后端可以使用字符串首部添加字节 <code>\ufeff</code> 的方式。 见代码：<a href="https://github.com/LZS911/csv-bom-excel-example/blob/main/server.js#L5">https://github.com/LZS911/csv-bom-excel-example/blob/main/server.js#L5</a>。当然，最后代码能不能过 review 就不好说了🤪。</p>
+<h3 id="前端处理"><a aria-hidden="true" tabindex="-1" href="#前端处理"><span class="icon icon-link"></span></a>前端处理</h3>
+<ol>
+<li>前端手动添加 <code>{responseType: 'blob'}</code>， 存在一定的心智负担。</li>
+<li>统一在请求在 <code>context-type</code> 为 'text/csv' 的情况下，在返回的data前部加上 <code>\ufeff</code>。 同样需要经过代码 review 的考验。</li>
+</ol>
+<h3 id="最佳实践"><a aria-hidden="true" tabindex="-1" href="#最佳实践"><span class="icon icon-link"></span></a>最佳实践</h3>
+<p>目前对比下来，上述的几种方案都不是特别完美。但我们可以通过综合利用项目中现有的工具和流程来找寻到最佳实践。</p>
+<p>我们的前端项目使用了 <code>Typescript</code>，并且 api 定义部分使用一段脚本通过获取后端的 swagger.json 文件来自动生成，例如下面这段代码：<a href="https://github.com/actiontech/dms-ui/blob/08f7de1a9e724008e18f73e498eaa9aca456ed1d/packages/shared/lib/api/sqle/service/task/index.ts#L206">https://github.com/actiontech/dms-ui/blob/08f7de1a9e724008e18f73e498eaa9aca456ed1d/packages/shared/lib/api/sqle/service/task/index.ts#L206</a></p>
+<p><img src="https://github.com/LZS911/LZS911.github.io/assets/42765421/0ca221f5-4417-4d12-b257-08c90d5ab709" alt="image"></p>
+<p>于是我们可以根据后端的 swagger 定义，确定需要设置 {responseType: 'blob'} 的接口，然后在 api 模板部分自动添加上该参数，便能减少心智负担，确保该参数的存在。</p>
+<h2 id="结语4"><a aria-hidden="true" tabindex="-1" href="#结语4"><span class="icon icon-link"></span></a>结语<sup><a href="#user-content-fn-4" id="user-content-fnref-4" data-footnote-ref aria-describedby="footnote-label">4</a></sup></h2>
+<p>在本文中，我们深入探讨了在 Web 开发过程中处理CSV文件时可能会遇到的一个棘手问题——乱码，以及与之相关的技术细节。我们分析了乱码产生的原因，主要集中在字符编码的不匹配，尤其是当 CSV 文件使用 UTF-8 编码且带有BOM字节，而前端或 Excel 等电子表格软件未能正确识别和处理这些字节时。
+通过提供一系列的解决方案，包括在服务端正确设置 HTTP 响应的<code>Content-Type</code>头部，以及在前端通过<code>XMLHttpRequest</code>以适当的<code>responseType</code>接收二进制数据，我们展示了如何有效地避免数据在传输和加载过程中出现乱码。</p>
+<h2 id="附录"><a aria-hidden="true" tabindex="-1" href="#附录"><span class="icon icon-link"></span></a>附录</h2>
+<blockquote>
+<p>通过 <a href="https://kimi.moonshot.cn/">Kimi</a> 辅助生成文章标题以及具体大纲，并且进行细节优化。</p>
+</blockquote>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label"><a aria-hidden="true" tabindex="-1" href="#footnote-label"><span class="icon icon-link"></span></a>Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p><a href="https://zhuanlan.zhihu.com/p/148209693">CSV文件与Excel的差异</a> <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-2">
+<p><a href="https://github.com/LZS911/csv-bom-excel-example">示例代码由 Kimi 生成</a> <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-3">
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest/responseType">ResponseType</a> <a href="#user-content-fnref-3" data-footnote-backref="" aria-label="Back to reference 3" class="data-footnote-backref">↩</a></p>
+</li>
+<li id="user-content-fn-4">
+<p><a href="https://kimi.moonshot.cn/">来自 Kimi</a> <a href="#user-content-fnref-4" data-footnote-backref="" aria-label="Back to reference 4" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"解析前端数据加载：BOM字节、Response-Type与Excel文件兼容性"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2024-04-10","className":"text-center block my-4 text-sm opacity-60","children":"April\t10, 2024"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","null",{"href":"/tags/null","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":null}]]}]]}],[null,["$","$L18",null,{"theme":"fancy"}],["$","section",null,{"className":"markdown-body-fancy max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

@@ -1,0 +1,185 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","1d8bb9ca04f430ca51959afc"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","1d8bb9ca04f430ca51959afc","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","1d8bb9ca04f430ca51959afc","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","OIATFlJtcD9HQ4OBIf5RQ",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T31d5,<h2 id="类型和语法"><a aria-hidden="true" tabindex="-1" href="#类型和语法"><span class="icon icon-link"></span></a>类型和语法</h2>
+<ol>
+<li>
+<p>javascript 有七种内置类型(null、undefined、boolean、number、string、object、symbol) 除对象之外, 其他统称为 “基本类型”</p>
+</li>
+<li>
+<p><code>typeof null === "object"; //true</code>
+正确的返回结果应该是 <code>null</code>, 但这个 <code>bug</code> 由来已久, 在 <code>javascript</code> 中已经存在了将近二十年, 也许永远不会修复, 因为这牵扯到太多的 <code>Web</code> 系统, "修复" 它会产生更多的 <code>bug</code>, 令许多系统无法正常工作.
+<code>null</code> 是基本类型中的唯一一个 “假值” 类型.</p>
+</li>
+<li>
+<p><code>javascript</code> 中的变量是没有类型的, 只有值才有. 变量可以随时持有任何类型的值.</p>
+</li>
+<li>
+<p>很多开发人员将 <code>undefined</code> 和 <code>undeclared</code> 混为一谈，但在 <code>JavaScript</code> 中它们是两码事.
+<code>undefined</code> 是值的一种。<code>undeclared</code> 则表示变量还没有被声明过.</p>
+</li>
+<li>
+<p>使用 <code>delete</code> 运算符可以将单元从数组中删除，但是请注意，单元删除后，数
+组的 <code>length</code> 属性并不会发生变化.</p>
+</li>
+<li>
+<p>如果字符串键值能够被强制类型转换为十进制数字的话，它就会被当作数字索引来处理。</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> a = [];
+a[<span class="hljs-string">'13'</span>] = <span class="hljs-number">42</span>;
+a.<span class="hljs-property">length</span>; <span class="hljs-comment">// 14</span>
+</code></pre>
+</li>
+<li>
+<p>JavaScript 中字符串是不可变的，而数组是可变的. 字符串不可变是指字符串的成员函数不会改变其原始值，而是创建并返回一个新的字符串. 而数组的成员函数都是在其原始值上进行操作.</p>
+</li>
+<li>
+<p><code>42.toFixed(3)</code> 是无效语法，因为 . 被视为常量 42. 的一部分（如前所述），所以没有 . 属性访问运算符来调用 <code>toFixed</code> 方法。</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 无效语法</span>
+<span class="hljs-number">42.</span><span class="hljs-title function_">toFixed</span>( <span class="hljs-number">3</span> ); <span class="hljs-comment">// SyntaxError</span>
+<span class="hljs-comment">// 下面的语法都有效：</span>
+(<span class="hljs-number">42</span>).<span class="hljs-title function_">toFixed</span>( <span class="hljs-number">3</span> ); <span class="hljs-comment">// "42.000"</span>
+<span class="hljs-number">0.42</span>.<span class="hljs-title function_">toFixed</span>( <span class="hljs-number">3</span> ); <span class="hljs-comment">// "0.420"</span>
+<span class="hljs-number">42.</span>.<span class="hljs-title function_">toFixed</span>( <span class="hljs-number">3</span> ); <span class="hljs-comment">// "42.000"</span>
+</code></pre>
+</li>
+<li>
+<p>要检测一个值是否是整数，可以使用 <code>ES6</code> 中的 <code>Number.isInteger(..)</code> 方法</p>
+</li>
+<li>
+<p>undefined 类型只有一个值，即 undefined。null 类型也只有一个值，即 null。它们的名称既是类型也是值。
+undefined 和 null 常被用来表示“空的”值或“不是值”的值。二者之间有一些细微的差别。例如：</p>
+<pre><code>• null 指空值（empty value）
+
+• undefined 指没有值（missing value）
+
+或者：
+
+• undefined 指从未赋值
+
+• null 指曾赋过值，但是目前没有值
+
+null 是一个特殊关键字，不是标识符，我们不能将其当作变量来使用和赋值。然而
+undefined 却是一个标识符，可以被当作变量来使用和赋值。
+</code></pre>
+</li>
+<li>
+<p><code>isNaN</code> 与 <code>Number.isNan</code> 是有区别的, 前者为全局方法, 后者为 <code>ES6</code> 新增工具函数.</p>
+<pre><code class="hljs language-javascript"><span class="hljs-built_in">isNaN</span>(<span class="hljs-string">'foo'</span>); <span class="hljs-comment">// true</span>
+<span class="hljs-title class_">Number</span>.<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">'foo'</span>); <span class="hljs-comment">//false</span>
+
+<span class="hljs-keyword">if</span> (!<span class="hljs-title class_">Number</span>.<span class="hljs-property">isNaN</span>) {
+  <span class="hljs-title class_">Number</span>.<span class="hljs-property">isNaN</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params">n</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> n === <span class="hljs-string">'number'</span> &#x26;&#x26; <span class="hljs-built_in">isNaN</span>(n);
+  };
+}
+</code></pre>
+</li>
+<li>
+<p>由于引用指向的是值本身而非变量，所以一个引用无法更改另一个引用的指向。</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-keyword">var</span> b = a;
+a; <span class="hljs-comment">// [1,2,3]</span>
+b; <span class="hljs-comment">// [1,2,3]</span>
+<span class="hljs-comment">// 然后</span>
+b = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+a; <span class="hljs-comment">// [1,2,3]</span>
+b; <span class="hljs-comment">// [4,5,6]</span>
+</code></pre>
+<p><code>b=[4,5,6]</code> 并不影响 <code>a</code> 指向值 [<code>1,2,3]</code>，除非 <code>b</code>不是指向数组的引用，而是指向<code>a</code> 的指针，
+但在 JavaScript 中不存在这种情况！</p>
+<p>函数参数就经常让人产生这样的困惑：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">foo</span>(<span class="hljs-params">x</span>) {
+  x.<span class="hljs-title function_">push</span>(<span class="hljs-number">4</span>);
+  x; <span class="hljs-comment">// [1,2,3,4]</span>
+  <span class="hljs-comment">// 然后</span>
+  x = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+  x.<span class="hljs-title function_">push</span>(<span class="hljs-number">7</span>);
+  x; <span class="hljs-comment">// [4,5,6,7]</span>
+}
+<span class="hljs-keyword">var</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+<span class="hljs-title function_">foo</span>(a);
+a; <span class="hljs-comment">// 是[1,2,3,4]，不是[4,5,6,7]</span>
+</code></pre>
+<p>我们向函数传递 a 的时候，实际是将引用 a 的一个复本赋值给 x，而 a 仍然指向 [1,2,3]。在函数中我们可以通过引用 x 来更改数组的值（push(4) 之后变为 [1,2,3,4]）。但 x = [4,5,6] 并不影响 a 的指向，所以 a 仍然指向 [1,2,3,4]。我们不能通过引用 x 来更改引用 a 的指向，只能更改 a 和 x 共同指向的值。</p>
+</li>
+<li>
+<p>封 装 对 象（object wrapper） 扮 演 着 十 分 重 要 的 角 色。 由 于 基 本 类 型 值 没 有 .length
+和 .toString() 这样的属性和方法，需要通过封装对象才能访问，此时 JavaScript 会自动为基本类型值包装（box 或者 wrap）一个封装对象. 一般情况下，我们不需要直接使用封装对象。最好的办法是让 JavaScript 引擎自己决定什
+么时候应该使用封装对象。换句话说，就是应该优先考虑使用 "abc" 和 42 这样的基本类型值，而非 new String("abc") 和 new Number(42).</p>
+</li>
+<li>
+<p>关于 Boolean 封装对象</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Boolean</span>(<span class="hljs-literal">false</span>);
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(!a); <span class="hljs-comment">//false</span>
+</code></pre>
+</li>
+<li>
+<p>如果想要自行封装基本类型值，可以使用 Object(..) 函数（不带 new 关键字）：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-string">'abc'</span>;
+<span class="hljs-keyword">var</span> b = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(a);
+<span class="hljs-keyword">var</span> c = <span class="hljs-title class_">Object</span>(a);
+<span class="hljs-keyword">typeof</span> a; <span class="hljs-comment">// "string"</span>
+<span class="hljs-keyword">typeof</span> b; <span class="hljs-comment">// "object"</span>
+<span class="hljs-keyword">typeof</span> c; <span class="hljs-comment">// "object"</span>
+b <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">String</span>; <span class="hljs-comment">// true</span>
+c <span class="hljs-keyword">instanceof</span> <span class="hljs-title class_">String</span>; <span class="hljs-comment">// true</span>
+<span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(b); <span class="hljs-comment">// "[object String]"</span>
+<span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">toString</span>.<span class="hljs-title function_">call</span>(c); <span class="hljs-comment">// "[object String]"</span>
+</code></pre>
+</li>
+<li>
+<p>如果想要得到封装对象中的基本类型值，可以使用 valueOf() 函数.</p>
+</li>
+<li>
+<p>将包含至少一个“空单元”的数组称为“稀疏数组”。</p>
+</li>
+<li>
+<p>术语“异步”和“并行”常常被混为一谈，但实际上它们的意义完全不同。记住，异步是关于现在和将来的时间间隙，而并行是关于能够同时发生的事情。</p>
+</li>
+<li>
+<p>对于任务队列最好的理解方式就是，它是挂在事件循环队列的每个 tick 之后的一个队列。在事件循环的每个 tick 中，可能出现的异步动作不会导致一个完整的新事件添加到事件循环队列中，而会在当前 tick 的任务队列末尾添加一个项目（一个任务）。</p>
+</li>
+<li>
+<p>JavaScript 程序总是至少分为两个块：第一块现在运行；下一块将来运行，以响应某个事件。尽管程序是一块一块执行的，但是所有这些块共享对程序作用域和状态的访问，所以对状态的修改都是在之前累积的修改之上进行的。一旦有事件需要运行，事件循环就会运行，直到队列清空。事件循环的每一轮称为一个 tick。用户交互、IO 和定时器会向事件队列中加入事件。</p>
+</li>
+<li>
+<p>回调会受到控制反转的影响，因为回调暗中把控制权交给第三方（通常是不受你控制的第三方工具！）来调用你代码中的 continuation。这种控制转移导致一系列麻烦的信任问题，比如回调被调用的次数是否会超出预期。</p>
+</li>
+<li>
+<p>Promise 决议后就是外部不可变的值，我们可以安全地把这个值传递给第三方，并确信它不会被有意无意地修改。特别是对于多方查看同一个 Promise 决议的情况，尤其如此。一方不可能影响另一方对 Promise 决议的观察结果。</p>
+</li>
+<li>
+<p>我们侦听的 Promise 决议“事件”严格说来并不算是事件（尽管它们实现目标的行为方式确实很像事件），通常也不叫作 "completion" 或 "error"。事实上，我们通过 then(..) 注册一个 "then" 事件。或者可能更精确地说，then(..) 注册 "fullfillment" 和 / 或 "rejection" 事件，尽管我们并不会在代码中直接使用这些术语。</p>
+</li>
+<li>
+<p>调用 Promise 的 then(..) 会自动创建一个新的 Promise 从调用返回。在完成或拒绝处理函数内部，如果返回一个值或抛出一个异常，新返回的（可链接的）Promise 就相应地决议。如果完成或拒绝处理函数返回一个 Promise，它将会被展开，这样一来，不管它的决议值是什么，都会成为当前 then(..) 返回的链接 Promise 的决议值。</p>
+</li>
+<li>
+<p>一旦创建了一个 Promise 并为其注册了完成和 / 或拒绝处理函数，如果出现某种情况使得这个任务悬而未决的话，你也没有办法从外部停止它的进程。</p>
+</li>
+</ol>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"你不知道的javascript中-笔记"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2022-05-10","className":"text-center block my-4 text-sm opacity-60","children":"May\t10, 2022"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","javascript",{"href":"/tags/javascript","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"javascript"}]]}]]}],[null,["$","$L18",null,{"theme":"orange"}],["$","section",null,{"className":"markdown-body-orange max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

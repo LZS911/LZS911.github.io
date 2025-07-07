@@ -1,0 +1,61 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","b5171b29e439a94b5cbeacfe"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","b5171b29e439a94b5cbeacfe","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","b5171b29e439a94b5cbeacfe","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","4wOncwI2Bev2ojVGrLs39",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T986,<h2 id="概述"><a aria-hidden="true" tabindex="-1" href="#概述"><span class="icon icon-link"></span></a>概述</h2>
+<p>最近阅读了 Robert C. Martin 的《架构整洁之道》中关于编程范式的章节。这部分主要介绍了三种主要的编程范式：结构化编程、面向对象编程和函数式编程。每种范式都通过某种方式对程序控制权或数据进行了限制。</p>
+<h3 id="结构化编程"><a aria-hidden="true" tabindex="-1" href="#结构化编程"><span class="icon icon-link"></span></a>结构化编程</h3>
+<p>由 Dijkstra 在 1968 年提出
+核心思想：限制直接转移控制权
+引入了模块化和测试的概念
+去除了无限制的 GOTO 语句，引入了 if/then/else 和 do/while/until 等结构
+主要贡献：让程序可以被分解为可证明的单元</p>
+<h3 id="面向对象编程"><a aria-hidden="true" tabindex="-1" href="#面向对象编程"><span class="icon icon-link"></span></a>面向对象编程</h3>
+<p>核心特性：封装、继承和多态
+最重要的是多态，它为插件架构提供了基础
+通过多态实现了依赖反转
+允许控制源代码依赖关系的方向
+帮助解决跨模块和跨架构的依赖管理问题</p>
+<h3 id="函数式编程"><a aria-hidden="true" tabindex="-1" href="#函数式编程"><span class="icon icon-link"></span></a>函数式编程</h3>
+<p>基于 λ 演算
+核心思想：不可变性
+所有变量都是不可变的
+没有赋值语句
+通过管理状态的可变性来控制程序的复杂度</p>
+<h3 id="个人思考"><a aria-hidden="true" tabindex="-1" href="#个人思考"><span class="icon icon-link"></span></a>个人思考</h3>
+<p>这三种范式各自解决了不同的问题：</p>
+<ul>
+<li>结构化编程解决了直接转移控制权的问题</li>
+<li>面向对象编程解决了间接转移控制权的问题</li>
+<li>函数式编程解决了变量赋值的问题</li>
+</ul>
+<p>在实际开发中，这些范式常常是混合使用的。理解它们的本质和限制，有助于我们在架构设计时做出更好的决策。</p>
+<h3 id="实践启示"><a aria-hidden="true" tabindex="-1" href="#实践启示"><span class="icon icon-link"></span></a>实践启示</h3>
+<p>在设计架构时，要充分利用多态来管理依赖关系
+尽可能使用不可变数据，减少状态管理的复杂度
+合理划分模块，保证每个组件都是可测试的
+在适当的场景选择合适的范式</p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"《架构整洁之道》读书笔记 - 编程范式篇"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2024-11-11","className":"text-center block my-4 text-sm opacity-60","children":"November\t11, 2024"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","读书笔记",{"href":"/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"读书笔记"}],["$","$L17","架构设计",{"href":"/tags/%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"架构设计"}],["$","$L17","编程范式",{"href":"/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"编程范式"}],["$","$L17","软件工程",{"href":"/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"软件工程"}],["$","$L17","最佳实践",{"href":"/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"最佳实践"}]]}]]}],[null,["$","$L18",null,{"theme":"fancy"}],["$","section",null,{"className":"markdown-body-fancy max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

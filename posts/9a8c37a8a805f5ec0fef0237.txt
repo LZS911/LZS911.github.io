@@ -1,0 +1,257 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","9a8c37a8a805f5ec0fef0237"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","9a8c37a8a805f5ec0fef0237","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","9a8c37a8a805f5ec0fef0237","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","1ClYoyJkHs7xwBnWmQ5Ku",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T4bb3,<h2 id="babel-介绍"><a aria-hidden="true" tabindex="-1" href="#babel-介绍"><span class="icon icon-link"></span></a><code>babel</code> 介绍</h2>
+<hr>
+<h3 id="1-babel-的诞生"><a aria-hidden="true" tabindex="-1" href="#1-babel-的诞生"><span class="icon icon-link"></span></a>1. <code>babel</code> 的诞生</h3>
+<p>在学习一个框架/库之前, 我们可以先去追根溯源了解它诞生的原因以及在开发上具体解决了什么问题, 这样可以更容易理解以及学习它.</p>
+<p><code>babel</code> 的前身是一个名叫 <code>6to5</code> 的库, <code>6to5</code> 的作者 是 <code>Facebook</code> 的澳大利亚的工程师 <a href="https://github.com/sebmck">Sebastian McKenzie</a>, 主要功能就是 <code>ES6</code> 转成 <code>ES5</code>, 它使用转换 <code>AST</code> 的引擎是 <code>fork</code> 了一个更古老的库 <a href="https://github.com/acornjs/acorn">acorn</a>, 在后来 <code>6to5</code> 和 <code>Esnext</code> 库的团队决定一起开发 <code>6to5</code>, 并改名为 <code>Babel</code>, 解析引擎改名为 <code>Babylon</code>, 再后来 <code>Babylon</code> 移入到 <code>@babel/parser</code>.</p>
+<h3 id="2-babel-含义"><a aria-hidden="true" tabindex="-1" href="#2-babel-含义"><span class="icon icon-link"></span></a>2. <code>babel</code> 含义</h3>
+<p><code>babel</code> 指的是 通天塔, 是巴比伦文明里面的 通天塔</p>
+<blockquote>
+<p>当时地上的人们都说同一种语言, 当人们离开东方之后, 他们来到了示拿之地。在那里, 人们想方设法烧砖好让他们能够造出一座城和一座高耸入云的塔来传播自己的名声, 以免他们分散到世界各地。上帝来到人间后看到了这座城和这座塔, 说一群只说一种语言的人以后便没有他们做不成的事了；于是上帝将他们的语言打乱, 这样他们就不能听懂对方说什么了, 还把他们分散到了世界各地, 这座城市也停止了修建。这座城市就被称为“巴别城”。
+-- 《创世记》</p>
+<p>来自: <a href="https://en.wikipedia.org/wiki/Tower_of_Babel">https://en.wikipedia.org/wiki/Tower_of_Babel</a></p>
+</blockquote>
+<p>果然, 大佬就是大佬, 起名都很艺术.</p>
+<h3 id="3-babel-的意义"><a aria-hidden="true" tabindex="-1" href="#3-babel-的意义"><span class="icon icon-link"></span></a>3. <code>babel</code> 的意义</h3>
+<p>为什么需要用到 <code>babel</code> 来对转换代码?</p>
+<p>在 2015 年 <code>ES6</code> 发布后, 为了兼容某些低版本浏览器, 于是需要将代码进行转换, 当然还有一些其他的兼容方式, 例如添加 <code>Polyfill</code>, 比如如果某个版本的浏览器不支持 <code>Array.prototype.find</code> 方法, 但是我们的代码中有用到 <code>Array</code> 的 <code>find</code> 函数, 为了支持这些代码, 我们会人为的加一些兼容代码.</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">if</span> (!<span class="hljs-title class_">Array</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">find</span>) {
+  <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">defineProperty</span>(<span class="hljs-title class_">Array</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>,  <span class="hljs-string">'find'</span>,  {
+      <span class="hljs-comment">// 实现代码</span>
+      ...
+  });
+}
+</code></pre>
+<p>但是有一些情况我们使用到了一些新语法, 或者一些其他写法, 例如</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">//箭头函数</span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">fn</span> = (<span class="hljs-params"></span>) => <span class="hljs-string">'hello javascript!'</span>;
+<span class="hljs-comment">// jsx</span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">Component</span> = (<span class="hljs-params"></span>) => <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> /></span></span>;
+</code></pre>
+<p>因为一些浏览器根本就不识别这些代码, 这时候就需要把这些代码转换成浏览器识别的代码。<code>babel</code> 就是做这个事情的。</p>
+<h2 id="babel-具体做了些什么"><a aria-hidden="true" tabindex="-1" href="#babel-具体做了些什么"><span class="icon icon-link"></span></a><code>babel</code> 具体做了些什么</h2>
+<hr>
+<p><code>babel</code> 在转换代码这块主要做了三件事:</p>
+<ul>
+<li><code>parser</code> 解析我们的代码转换为 <code>AST</code>.</li>
+<li><code>transform</code> 利用我们配置好的 <code>plugins/presets</code> 把 <code>parser</code> 生成的 <code>AST</code> 转变为新的 <code>AST</code>.</li>
+<li><code>generator</code> 把转换后的 <code>AST</code> 生成新的代码.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LZS911/LZS911.github.io/backend-main/assets/images/study/babel/mind.jpg" alt="alt"></p>
+<p>其中 <code>transform</code> 占了很大一块比重, 这个转换过程是 <code>babel</code> 中最为复杂的一部分, 平时所添加的 <code>plugins/presets</code> 便是在这个过程中起的作用.</p>
+<p>先来看下 <code>parser</code> 与 <code>generator</code> 部分</p>
+<ol>
+<li>
+<p><a href="(https://babeljs.io/docs/en/babel-parser#docsNav)">@babel/parser</a>: <code>parser</code> 主要的作用是将字符串代码转换为 <code>AST</code>, 具体过程参考: <a href="https://mp.weixin.qq.com/s/fH2xYo_Bad0mgvo0OdYRZQ">https://mp.weixin.qq.com/s/fH2xYo_Bad0mgvo0OdYRZQ</a></p>
+</li>
+<li>
+<p><a href="https://babeljs.io/docs/en/babel-generator">@babel/generator</a>: 代码生成步骤把最终（经过一系列转换之后）的 <code>AST</code> 转换成字符串形式的代码, 同时还会创建源码映射（<code>source maps</code>）。代码生成过程采用<a href="https://segmentfault.com/a/1190000018706578">深度优先遍历</a>整个 <code>AST</code>, 然后构建可以表示转换后代码的字符串。</p>
+</li>
+</ol>
+<h2 id="transform"><a aria-hidden="true" tabindex="-1" href="#transform"><span class="icon icon-link"></span></a><code>transform</code></h2>
+<hr>
+<p>在拿到 <code>parser</code> 生成的 <code>AST</code> 结构后, 经过一系列的操作对 <code>AST</code> 节点进行变更, 然后转换成字符串代码. 那么如何去修改 <code>AST</code> 节点呢?</p>
+<p><a href="https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md#toc-writing-your-first-babel-plugin">babel 插件形式</a></p>
+<p>依葫芦画瓢来一个简单的栗子:</p>
+<p>代码地址: <a href="https://codesandbox.io/s/node-js-forked-ub0e6?file=/remove-clg/example/index.js">https://codesandbox.io/s/node-js-forked-ub0e6?file=/remove-clg/example/index.js</a></p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// example/index.js</span>
+<span class="hljs-keyword">const</span> babel = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@babel/core'</span>);
+<span class="hljs-keyword">const</span> removeClg = <span class="hljs-built_in">require</span>(<span class="hljs-string">'../index'</span>);
+
+<span class="hljs-keyword">const</span> code = <span class="hljs-string">`
+const num = 123;
+console.log(num);
+console.info(num);
+const fn = () => 123
+fn();
+`</span>;
+<span class="hljs-keyword">const</span> result = babel.<span class="hljs-title function_">transform</span>(code, {
+  <span class="hljs-attr">plugins</span>: [removeClg],
+});
+
+<span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(result); <span class="hljs-comment">// code : const num = 123;\n\nconst fn = () => 123;\n\nfn();</span>
+</code></pre>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">//index.js</span>
+<span class="hljs-keyword">const</span> visitor = {
+  <span class="hljs-title class_">CallExpression</span>(_path) {
+    <span class="hljs-keyword">const</span> isClg =
+      _path.<span class="hljs-property">node</span>?.<span class="hljs-property">callee</span>?.<span class="hljs-property">type</span> === <span class="hljs-string">'MemberExpression'</span> &#x26;&#x26;
+      _path.<span class="hljs-property">node</span>?.<span class="hljs-property">callee</span>?.<span class="hljs-property">object</span>?.<span class="hljs-property">name</span> === <span class="hljs-string">'console'</span>;
+
+    <span class="hljs-keyword">if</span> (isClg) {
+      _path.<span class="hljs-title function_">remove</span>();
+    }
+  },
+};
+<span class="hljs-comment">//如果 plugins 是个函数则返回的对象要有 visitor 属性, 如果是个对象则直接定义 visitor 属性</span>
+<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = { visitor };
+</code></pre>
+<p>这样便简单实现了一个移除代码中的 <code>console.xxx</code> 的 <code>babel</code> 插件.</p>
+<p>那么当遍历到对应类型节点时这个 <code>_path</code> 是什么呢?</p>
+<p><code>visitor</code> 在遍历到对应节点执行对应函数时候会给我们传入 <code>_path</code> 参数, 辅助我们完成替换节点等操作。注意 <code>_path</code> 是表示两个节点之间连接的对象, 而不是当前节点. 大致结构如下:</p>
+<pre><code class="hljs language-javascript">{
+  <span class="hljs-attr">parent</span>: {
+    <span class="hljs-attr">type</span>: <span class="hljs-string">"ExpressionStatement"</span>
+    <span class="hljs-comment">// ...</span>
+  },
+  <span class="hljs-attr">node</span>: {
+    <span class="hljs-attr">type</span>: <span class="hljs-string">"CallExpression"</span>
+    <span class="hljs-comment">// ...</span>
+  }
+}
+</code></pre>
+<p>我们可以通过 <code>_path</code> 访问到当前节点、父节点以及一系列跟节点操作相关的方法(例如: <code>remove</code>, <code>replaceWith</code>)</p>
+<p><a href="https://babeljs.io/docs/en/babel-traverse#docsNav">@babel/traverse</a>: 该工具提供遍历 <code>AST</code> 节点功能, 使用该工具时, 我们可以不使用插件形式来操作 <code>AST</code> 节点.</p>
+<p>举个栗子: <a href="https://lzs911.github.io/posts/%E5%9B%BD%E9%99%85%E5%8C%96%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%87%AA%E5%8A%A8%E5%8C%96%E8%AF%AD%E8%A8%80%E5%8C%85%E7%9A%84vite%E6%8F%92%E4%BB%B6">一个并没啥用的 <code>vite</code> 插件</a></p>
+<h2 id="pluginpreset"><a aria-hidden="true" tabindex="-1" href="#pluginpreset"><span class="icon icon-link"></span></a><code>plugin</code>、<code>preset</code></h2>
+<hr>
+<p><code>plugin</code> 应该不用再过多的介绍了, 它是对 <code>AST</code> 节点进行操作的关键工具, 那么 <code>preset</code> 又起到什么作用呢?</p>
+<p><code>babel</code> 插件在设计时一般拆成了最小粒度, 开发者可按需引用. 比如 <code>ES6</code> 转 <code>ES5</code> 的功能, <code>babel</code> 官方拆成了很多个独立的插件.
+这样的好处显而易见, 既提高了性能, 也提高了扩展性.</p>
+<p>比如开发者想要体验 <code>ES6</code> 的箭头函数特性, 那他只需要引入 <code>transform-es2015-arrow-functions</code> 插件就可以, 而不是加载 <code>ES6</code> 全家桶.</p>
+<p>但很多时候, 逐个插件引入的效率比较低下. 比如在项目开发中, 开发者想要将所有 <code>ES6</code> 的代码转成 <code>ES5</code>, 插件逐个引入的方式令人抓狂.</p>
+<p>这个时候, 可以采用 <code>preset</code>, 可以简单的把 <code>preset</code> 视为 <code>plugin</code> 的集合。比如 <code>babel-preset-es2015</code> 就包含了所有跟 <code>ES6</code> 转换有关的插件. 换个角度可以理解成脚手架中的预设模版.</p>
+<h3 id="plugin-与-preset-的执行顺序"><a aria-hidden="true" tabindex="-1" href="#plugin-与-preset-的执行顺序"><span class="icon icon-link"></span></a><code>plugin</code> 与 <code>preset</code> 的执行顺序</h3>
+<p>如果 <code>babel</code> 中配置的多个插件都将对节点进行操作时, 那么这个时候插件的执行顺序便很重要, 那么它们的执行顺序是什么样的呢?</p>
+<p>这里直接从 <code>babel</code> 官网中拿到结果:</p>
+<ul>
+<li>插件在预设之前运行.</li>
+<li>插件排序从头到尾.</li>
+<li>预设顺序颠倒（从后到前).</li>
+</ul>
+<h3 id="一些常用的-plugin-与-preset"><a aria-hidden="true" tabindex="-1" href="#一些常用的-plugin-与-preset"><span class="icon icon-link"></span></a>一些常用的 <code>plugin</code> 与 <code>preset</code></h3>
+<ol>
+<li>
+<p><a href="https://babeljs.io/docs/en/babel-preset-env">@babel/preset-env</a>:</p>
+<p>首先, 介绍下历史背景. 最初, 为了让开发者能够尽早用上新的 <code>JS</code> <code>特性, babel</code> 团队开发了 <code>babel-preset-latest</code>。这个 <code>preset</code> 比较特殊, 它是多个 <code>preset</code> 的集合(<code>es2015+</code>), 并且随着 <code>ECMA</code> 规范的更新更增加它的内容.</p>
+<p>比如, 在 2018 年时, 它包含的 <code>preset</code> 包括：<code>es2017、es2016、es2015</code>.</p>
+<p>到了 2019, 可能它包含的 <code>preset</code> 就包括：<code>es2018、es2017、es2016、es2015</code>.</p>
+<p>随着时间的推移, <code>babel-preset-latest</code> 包含的插件越来越多, 这带来了如下问题：</p>
+<p>加载的插件越来越多, 编译速度会越来越慢. 随着用户浏览器的升级, <code>ECMA</code> 规范的支持逐步完善, 编译至低版本规范的必要性在减少. 因此, <code>babel</code> 官方推出了 <code>babel-preset-env</code> 插件.</p>
+<p>它可以根据开发者的配置, 按需加载插件, 主要配置项:</p>
+<ul>
+<li>
+<p><code>targets</code>: 可以利用 <a href="https://github.com/browserslist/browserslist">browserslist</a> 来指定来兼容哪些浏览器.</p>
+<p>配置方式:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">//在配置文件中</span>
+<span class="hljs-attr">plugins</span>: [
+  [
+    <span class="hljs-string">'@babel/preset-env'</span>,
+    {
+      <span class="hljs-attr">targets</span>: <span class="hljs-string">'> 0.25%, not dead'</span>,
+    },
+  ],
+];
+</code></pre>
+<p>在 package.json 中</p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"browserslist"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"production"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">">0.2%"</span><span class="hljs-punctuation">,</span> <span class="hljs-string">"not dead"</span><span class="hljs-punctuation">,</span> <span class="hljs-string">"not ie &#x3C;= 11"</span><span class="hljs-punctuation">,</span> <span class="hljs-string">"not op_mini all"</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
+    <span class="hljs-attr">"development"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>
+      <span class="hljs-string">"last 1 chrome version"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-string">"last 1 firefox version"</span><span class="hljs-punctuation">,</span>
+      <span class="hljs-string">"last 1 safari version"</span>
+    <span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<ul>
+<li>0.2%：所有浏览器至少占全球市场份额的 0.2%</li>
+<li>not dead: 24 个月内没有官方支持的浏览器</li>
+<li>not ie &#x3C;= 11：排除 IE 11 和旧版本</li>
+<li>not op_mini all：排除 Opera Mini</li>
+</ul>
+<p>当然也可以直接指定浏览器以及版本:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">//在配置文件中</span>
+<span class="hljs-attr">plugins</span>: [
+  [
+    <span class="hljs-string">'@babel/preset-env'</span>,
+    {
+      <span class="hljs-attr">targets</span>: {
+        <span class="hljs-attr">chrome</span>: <span class="hljs-string">'58'</span>,
+        <span class="hljs-attr">ie</span>: <span class="hljs-string">'11'</span>,
+      },
+    },
+  ],
+];
+</code></pre>
+</li>
+<li>
+<p><code>useBuiltIns</code>: 该配置指定 <code>@babel/preset-env</code> 如何处理 <code>polyfill</code>, 主要用来配合 <code>@babel/polyfill</code> .</p>
+<ol>
+<li><code>false</code>: 不做任何处理.</li>
+<li><code>entry</code>: 主动引入 <code>@babel/polyfill</code>, 会进行全量引入.</li>
+<li><code>usage</code>: 只会引入使用到的 <code>polyfill</code>.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://babeljs.io/docs/en/babel-preset-react">@babel/preset-react</a>: 看名字应该就可以猜出该预设主要是为了处理 <code>react</code> 项目中的文件转换. 该预设始终包含一下三个插件</p>
+<ul>
+<li><a href="https://www.babeljs.cn/docs/babel-plugin-syntax-jsx">@babel/plugin-syntax-jsx</a>: 解析 <code>JSX</code> 语法.</li>
+<li><a href="https://www.babeljs.cn/docs/babel-plugin-transform-react-jsx">@babel/plugin-transform-react-jsx</a>: 转换 <code>JSX</code> 语法, 在 <code>babel v7.9.0</code> 中添加自动运行时功能, 将自动导入 JSX 编译成的函数. 也就是 <code>React 17.0</code> 中提供的全新的 <code>JSX</code> 转换, 在文件中不导入 <code>react</code> 包的情况下直接使用 <code>JSX</code> 语法.</li>
+<li><a href="https://babeljs.io/docs/en/babel-plugin-transform-react-display-name">@babel/plugin-transform-react-display-name</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/361874935">@babel/polyfill、@babel/plugin-transform-runtime、core-js3</a></p>
+</li>
+</ol>
+<h2 id="babel-与-webpack"><a aria-hidden="true" tabindex="-1" href="#babel-与-webpack"><span class="icon icon-link"></span></a><code>babel</code> 与 <code>webpack</code></h2>
+<hr>
+<p>在 <code>webpack</code> 中提供了 <code>babel-loader</code> 来配置 <code>babel</code></p>
+<pre><code class="hljs language-javascript"><span class="hljs-attr">module</span>: {
+  <span class="hljs-attr">rules</span>: [
+    {
+      <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.(js|jsx|ts|tsx)$/</span>,
+      <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/node_modules/</span>,
+      <span class="hljs-attr">use</span>: {
+        <span class="hljs-attr">loader</span>: <span class="hljs-string">'babel-loader'</span>,
+        <span class="hljs-attr">options</span>: {
+          <span class="hljs-attr">presets</span>: [
+            <span class="hljs-string">'@babel/preset-env'</span>,
+            <span class="hljs-string">'@babel/preset-react'</span>,
+            <span class="hljs-string">'@babel/preset-typescript'</span>,
+          ],
+          <span class="hljs-attr">plugins</span>: [
+            [
+              <span class="hljs-string">'@babel/plugin-transform-runtime'</span>,
+              {
+                <span class="hljs-attr">corejs</span>: <span class="hljs-number">3</span>,
+              },
+            ],
+          ],
+        },
+      },
+    },
+  ];
+}
+</code></pre>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"babel"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2021-11-30","className":"text-center block my-4 text-sm opacity-60","children":"November\t30, 2021"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","babel",{"href":"/tags/babel","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"babel"}],["$","$L17","JavaScript",{"href":"/tags/JavaScript","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"JavaScript"}],["$","$L17","工具",{"href":"/tags/%E5%B7%A5%E5%85%B7","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"工具"}],["$","$L17","编译器",{"href":"/tags/%E7%BC%96%E8%AF%91%E5%99%A8","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"编译器"}]]}]]}],[null,["$","$L18",null,{"theme":"Chinese-red"}],["$","section",null,{"className":"markdown-body-Chinese-red max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

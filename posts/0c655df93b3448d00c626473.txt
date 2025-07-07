@@ -1,0 +1,47 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","0c655df93b3448d00c626473"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","0c655df93b3448d00c626473","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","0c655df93b3448d00c626473","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","W3NE7jy8SmO_o_oWI0XB0",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T9b9,<p>最近工作中遇到一个需求, 需要在 <code>post</code> 接口 <code>request</code> 的 <code>headers</code> 中塞一个 <code>timestamp</code> 字段, 值为当前时间的时间戳. 实现方式很简单, 只需要在 <code>api</code> 封装的 <code>post</code> 方法的 <code>headers</code> 中新增 <code>timestamp: Date.now()</code> 即可. 然后想当然的在单元测试关于 <code>headers</code> 的 <code>toEqual</code> 中同时也加上该字段, 跑一遍 <code>ut</code>, 发现测试能过, 于是开了一个 <code>MR</code> 指给复审人, 可是此时却发现 <code>ci</code> 上的 <code>ut</code> 关于这里的断言却是有错误的. 在本地多跑几遍后, 发现确实有可能出现 <code>Date.now()</code> 对应不上的情况.</p>
+<p>后续仔细一想发现跑不过其实应该才是普遍的现象, 毕竟在给对象添加 <code>timestamp</code> 字段的时间戳不可能与 <code>toEqual</code> 时的时间戳完全一致. 找到错误原因后解决的思路就很简单了, 只需要在 <code>ut</code> 时给 <code>Date.now()</code> 一个固定值就好了.</p>
+<p>大致代码:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">MOCK_DATE_NOW</span> = <span class="hljs-number">1530518207007</span>;
+
+<span class="hljs-keyword">const</span> realDateNow = <span class="hljs-title class_">Date</span>.<span class="hljs-property">now</span>.<span class="hljs-title function_">bind</span>(<span class="hljs-variable language_">global</span>.<span class="hljs-property">Date</span>);
+
+<span class="hljs-title function_">describe</span>(<span class="hljs-string">'api test'</span>, <span class="hljs-function">() =></span> {
+  <span class="hljs-title function_">beforeAll</span>(<span class="hljs-function">() =></span> {
+    <span class="hljs-keyword">const</span> dateNowStub = jest.<span class="hljs-title function_">fn</span>(<span class="hljs-function">() =></span> <span class="hljs-variable constant_">MOCK_DATE_NOW</span>);
+    <span class="hljs-variable language_">global</span>.<span class="hljs-property">Date</span>.<span class="hljs-property">now</span> = dateNowStub;
+  });
+
+  <span class="hljs-title function_">afterAll</span>(<span class="hljs-function">() =></span> {
+    <span class="hljs-variable language_">global</span>.<span class="hljs-property">Date</span>.<span class="hljs-property">now</span> = realDateNow;
+  });
+}
+
+</code></pre>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"如何使用jest测试 Date.now?"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2022-07-06","className":"text-center block my-4 text-sm opacity-60","children":"July\t6, 2022"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","jest",{"href":"/tags/jest","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"jest"}],["$","$L17","javascript",{"href":"/tags/javascript","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"javascript"}]]}]]}],[null,["$","$L18",null,{"theme":"awesome-green"}],["$","section",null,{"className":"markdown-body-awesome-green max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

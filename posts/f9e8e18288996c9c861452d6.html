@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/569ce4b8f30dc480-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/60adccb42f39203c.css" data-precedence="next"/><link rel="stylesheet" href="/_next/static/css/c7f6e508dc13ee25.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-9cdb0b2d6ee94dc8.js"/><script src="/_next/static/chunks/4bd1b696-c9bd88c3e79a40cd.js" async=""></script><script src="/_next/static/chunks/684-ea7b2db13f3dd55b.js" async=""></script><script src="/_next/static/chunks/main-app-8a63285bca825cb3.js" async=""></script><script src="/_next/static/chunks/874-90f68e0a3827b559.js" async=""></script><script src="/_next/static/chunks/app/error-d036ecfd03716e30.js" async=""></script><script src="/_next/static/chunks/app/not-found-2113bbd7a2f55e8f.js" async=""></script><script src="/_next/static/chunks/app/loading-b73dd9bd22c3caa2.js" async=""></script><script src="/_next/static/chunks/296-93bf38127a29d878.js" async=""></script><script src="/_next/static/chunks/766-3404ce8492c1c2aa.js" async=""></script><script src="/_next/static/chunks/846-5073d6248f7e4d01.js" async=""></script><script src="/_next/static/chunks/app/(article)/layout-0113e097a12c4d28.js" async=""></script><script src="/_next/static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js" async=""></script><meta name="next-size-adjust" content=""/><title>Ai.Haibara codes</title><meta name="description" content="LZS Blog"/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="96x96"/><script>document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))</script><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__variable_5cfdac __variable_9a8899 antialiased"><!--$--><html lang="en"><body class="__variable_5cfdac __variable_9a8899 antialiased"><div class="min-h-screen"><header class="text-white bg-black drop-shadow-2xl"><div class="mx-auto my-0 max-w-[960px] py-6 px-4 flex items-center"><div class="flex items-center"><img alt="Ai.Haibara" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class=" rounded-full" style="color:transparent" srcSet="/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=128&amp;q=75 1x, /_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=256&amp;q=75 2x" src="/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=256&amp;q=75"/></div><div class="ml-6"><a class=" font-bold text-3xl" href="/">Ai.Haibara codes</a><div class="mt-2"><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/">Home</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/projects">Projects</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/talks">Talks</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/blogs">Blogs</a></div></div></div></header><main class="p-6 flex justify-center"><article><div class="flex justify-center font-[Arial] max-w-[864px] text-center"><h1 class="text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]">Typescript性能探究</h1></div><div class="flex flex-wrap items-center gap-4 mb-6"><time dateTime="2024-12-05" class="text-center block my-4 text-sm opacity-60">December	5, 2024</time><span class="px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800">blog</span><div class="flex flex-wrap gap-2"><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/TypeScript">TypeScript</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">性能优化</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96">编译优化</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F">类型系统</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96">工程化</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F">代码质量</a></div></div><section class="markdown-body-orange max-w-3xl"><h2 id="为什么-typescript-性能很重要"><a aria-hidden="true" tabindex="-1" href="#为什么-typescript-性能很重要"><span class="icon icon-link"></span></a>为什么 TypeScript 性能很重要</h2>
+<p>TypeScript 性能问题会严重影响开发体验，尤其是在 IDE 响应能力可能受到影响的大型项目中。理解和实施性能优化​​策略对于保持顺畅的开发工作流程至关重要。</p>
+<h2 id="关键优化策略"><a aria-hidden="true" tabindex="-1" href="#关键优化策略"><span class="icon icon-link"></span></a>关键优化策略</h2>
+<blockquote>
+<p>原文地址：<a href="https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections">https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections</a></p>
+</blockquote>
+<h3 id="优先选择-interface-而不是-intersection-types"><a aria-hidden="true" tabindex="-1" href="#优先选择-interface-而不是-intersection-types"><span class="icon icon-link"></span></a>优先选择 Interface 而不是 Intersection Types</h3>
+<p>大多数时候，对象类型的简单类型别名的作用与接口非常相似。</p>
+<pre><code>interface Foo { prop: string }
+
+type Bar = { prop: string };
+</code></pre>
+<p>但是，一旦您需要组合两个或多个类型，您就可以选择使用接口扩展这些类型，或者在类型别名中将它们相交，此时差异就开始变得重要了。</p>
+<ol>
+<li>interface 创建了一个单一的平面对象类型，可以检测属性冲突，这通常是需要解决的重要问题！ 另一方面，intersections 只是递归合并属性，在某些情况下永远不会产生属性冲突。</li>
+</ol>
+<p><img src="https://github.com/user-attachments/assets/65b15da2-9a72-4ece-adf2-4346eb86d947" alt="image"></p>
+<p><img src="https://github.com/user-attachments/assets/f8d16d70-92bf-491f-88c9-70f485249327" alt="image"></p>
+<ol start="2">
+<li>
+<p>interface 的显示效果也更好，而 intersections 的类型别名不能显示为其他交集的一部分。 interface 之间的类型关系也会被缓存，而 intersections 类型则不会被整体缓存。</p>
+</li>
+<li>
+<p>最后一个值得注意的区别是，在针对目标交叉类型进行检查时，在针对 "有效"/"扁平化 "类型进行检查之前，会先检查每个类型。</p>
+</li>
+</ol>
+<p>因此，建议使用interfaces/ extends来扩展类型，而不是创建交集类型。</p>
+<pre><code>- type Foo = Bar &#x26; Baz &#x26; {
+-     someProp: string;
+- }
++ interface Foo extends Bar, Baz {
++     someProp: string;
++ }
+</code></pre>
+<h3 id="显示标注类型而不是依赖类型推断"><a aria-hidden="true" tabindex="-1" href="#显示标注类型而不是依赖类型推断"><span class="icon icon-link"></span></a>显示标注类型而不是依赖类型推断</h3>
+<p>添加类型注解，尤其是返回类型，可以为编译器节省大量工作。 部分原因是命名类型往往比匿名类型（编译器可能会推断出匿名类型）更紧凑，这就减少了读写声明文件（例如增量编译）所花费的时间。 类型推断非常方便，因此没有必要普遍使用，但如果你发现代码中有一段运行速度较慢，可以尝试使用。</p>
+<pre><code>- import { otherFunc } from "other";
++ import { otherFunc, OtherType } from "other";
+
+- export function func() {
++ export function func(): OtherType {
+      return otherFunc();
+  }
+</code></pre>
+<h3 id="优先选择基本类型而不是联合类型"><a aria-hidden="true" tabindex="-1" href="#优先选择基本类型而不是联合类型"><span class="icon icon-link"></span></a>优先选择基本类型而不是联合类型</h3>
+<p>联合类型很棒 - 它们可以让您表达类型的可能值的范围。</p>
+<pre><code>interface WeekdaySchedule {
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+  wake: Time;
+  startWork: Time;
+  endWork: Time;
+  sleep: Time;
+}
+
+interface WeekendSchedule {
+  day: "Saturday" | "Sunday";
+  wake: Time;
+  familyMeal: Time;
+  sleep: Time;
+}
+
+declare function printSchedule(schedule: WeekdaySchedule | WeekendSchedule);
+</code></pre>
+<p>然而，它们也是有代价的。每次将参数传递给printSchedule时，都必须将其与并集的每个元素进行比较。对于二元联合来说，这是微不足道且廉价的。
+但是，如果您的联合体有十多个元素，则可能会导致编译速度出现实际问题。
+例如，为了从联合中消除冗余成员，必须将元素进行成对比较，这是二次的。当与大型联合相交时，可能会发生这种检查，其中对每个联合成员进行相交可能会产生巨大的类型，然后需要减少这些类型。避免这种情况的一种方法是使用子类型，而不是联合。</p>
+<pre><code>interface Schedule {
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday" | "Saturday" | "Sunday";
+  wake: Time;
+  sleep: Time;
+}
+
+interface WeekdaySchedule extends Schedule {
+  day: "Monday" | "Tuesday" | "Wednesday" | "Thursday" | "Friday";
+  startWork: Time;
+  endWork: Time;
+}
+
+interface WeekendSchedule extends Schedule {
+  day: "Saturday" | "Sunday";
+  familyMeal: Time;
+}
+
+declare function printSchedule(schedule: Schedule);
+</code></pre>
+<p>当尝试对每个内置 DOM 元素类型进行建模时，可能会出现一个更现实的示例。在这种情况下，最好创建一个具有DivElement 、 ImgElement等所有扩展的通用成员的基本HtmlElement类型，而不是创建一个详尽的联合，例如 DivElement | /<em>...</em>/ | ImgElement | /<em>...</em>/ 。</p>
+<h3 id="命名复杂类型"><a aria-hidden="true" tabindex="-1" href="#命名复杂类型"><span class="icon icon-link"></span></a>命名复杂类型</h3>
+<p>可以在允许类型注释的任何地方编写复杂类型。</p>
+<pre><code>interface SomeType&#x3C;T> {
+    foo&#x3C;U>(x: U):
+        U extends TypeA&#x3C;T> ? ProcessTypeA&#x3C;U, T> :
+        U extends TypeB&#x3C;T> ? ProcessTypeB&#x3C;U, T> :
+        U extends TypeC&#x3C;T> ? ProcessTypeC&#x3C;U, T> :
+        U;
+}
+</code></pre>
+<p>这很方便，但现在，每次调用foo时，TypeScript 都必须重新运行条件类型。此外，关联SomeType的任何两个实例需要重新关联foo返回类型的结构。</p>
+<p>如果此示例中的返回类型被提取到类型别名，则编译器可以缓存更多信息：</p>
+<pre><code>type FooResult&#x3C;U, T> =
+    U extends TypeA&#x3C;T> ? ProcessTypeA&#x3C;U, T> :
+    U extends TypeB&#x3C;T> ? ProcessTypeB&#x3C;U, T> :
+    U extends TypeC&#x3C;T> ? ProcessTypeC&#x3C;U, T> :
+    U;
+
+interface SomeType&#x3C;T> {
+    foo&#x3C;U>(x: U): FooResult&#x3C;U, T>;
+}
+</code></pre>
+<h3 id="项目拆分"><a aria-hidden="true" tabindex="-1" href="#项目拆分"><span class="icon icon-link"></span></a>项目拆分</h3>
+<p>当使用 TypeScript 构建任何规模不小的代码库时，将代码库组织成几个独立的项目会很有帮助。每个项目都有自己的tsconfig.json ，它依赖于其他项目。这有助于避免在一次编译中加载太多文件，并且还使某些代码库布局策略更容易组合在一起。</p>
+<p>有一些非常基本的方法可以将代码库组织到项目中。例如，一个程序可能包含一个客户端项目、一个服务器项目以及一个在两者之间共享的项目。</p>
+<pre><code>              ------------
+              |          |
+              |  Shared  |
+              ^----------^
+             /            \
+            /              \
+------------                ------------
+|          |                |          |
+|  Client  |                |  Server  |
+-----^------                ------^-----
+</code></pre>
+<p>测试也可以分解到自己的项目中。</p>
+<pre><code>              ------------
+              |          |
+              |  Shared  |
+              ^-----^----^
+             /      |     \
+            /       |      \
+------------  ------------  ------------
+|          |  |  Shared  |  |          |
+|  Client  |  |  Tests   |  |  Server  |
+-----^------  ------------  ------^-----
+     |                            |
+     |                            |
+------------                ------------
+|  Client  |                |  Server  |
+|  Tests   |                |  Tests   |
+------------                ------------
+</code></pre>
+<h3 id="指定文件"><a aria-hidden="true" tabindex="-1" href="#指定文件"><span class="icon icon-link"></span></a>指定文件</h3>
+<p>您应该始终确保您的配置文件不会同时包含太多文件。</p>
+<p>在tsconfig.json中，有两种方法可以指定项目中的文件。</p>
+<ol>
+<li>files列表</li>
+<li>include和exclude列表</li>
+</ol>
+<p>两者之间的主要区别在于files需要源文件的文件路径列表，并且include / exclude使用通配模式来匹配文件。</p>
+<p>虽然指定files将允许 TypeScript 直接快速加载文件，但如果您的项目中有很多文件而只有几个顶级入口点，则可能会很麻烦。此外，很容易忘记将新文件添加到tsconfig.json中，这意味着您最终可能会遇到奇怪的编辑器行为，其中这些新文件被错误地分析。所有这些都可能很麻烦。</p>
+<p>include / exclude有助于避免需要指定这些文件，但代价是：必须通过遍历包含的目录来发现文件。当运行大量文件夹时，这可能会减慢编译速度。此外，有时编译会包含大量不必要的.d.ts文件和测试文件，这会增加编译时间和内存开销。
+最后，虽然exclude有一些合理的默认值，但某些配置（如 mono-repos）意味着“重”文件夹（如node_modules仍然可以被包含在内。</p>
+<p>对于最佳实践，我们建议如下：</p>
+<ol>
+<li>仅指定项目中的输入文件夹（即要包含其源代码以进行编译/分析的文件夹）。</li>
+<li>不要在同一文件夹中混合来自其他项目的源文件。</li>
+<li>如果将测试与其他源文件保存在同一文件夹中，请为它们指定一个不同的名称，以便可以轻松排除它们。</li>
+<li>避免大型构建工件和依赖项文件夹，例如源目录中的node_modules 。</li>
+</ol>
+<p><strong>注意：如果没有exclude列表，则默认排除node_modules ；一旦添加，将node_modules显式添加到列表中非常重要。</strong></p>
+<h3 id="控制types范围"><a aria-hidden="true" tabindex="-1" href="#控制types范围"><span class="icon icon-link"></span></a>控制@types范围</h3>
+<p>默认情况下，TypeScript 会自动包含它在node_modules文件夹中找到的每个@types包，无论您是否导入它。这是为了让某些事情在使用 Node.js、Jasmine、Mocha、Chai 等时“正常工作”，因为这些工具/包不是导入的 - 它们只是加载到全局环境中。</p>
+<p>有时，这种逻辑会在编译和编辑场景中减慢程序构建时间，甚至可能导致多个声明冲突的全局包出现问题，从而导致诸如</p>
+<pre><code>Duplicate identifier 'IteratorResult'.
+Duplicate identifier 'it'.
+Duplicate identifier 'define'.
+Duplicate identifier 'require'.
+</code></pre>
+<p>在不需要全局包的情况下，修复就像在tsconfig.json / jsconfig.json中为"types"选项指定一个空字段一样简单</p>
+<pre><code>// src/tsconfig.json
+{
+   "compilerOptions": {
+       // ...
+
+       // Don't automatically include anything.
+       // Only include `@types` packages that we need to import.
+       "types" : []
+   },
+   "files": ["foo.ts"]
+}
+</code></pre>
+<p>如果您仍然需要一些全局包，请将它们添加到types字段。</p>
+<pre><code>// tests/tsconfig.json
+{
+   "compilerOptions": {
+       // ...
+
+       // Only include `@types/node` and `@types/mocha`.
+       "types" : ["node", "mocha"]
+   },
+   "files": ["foo.test.ts"]
+}
+</code></pre>
+<h3 id="跳过dts检查"><a aria-hidden="true" tabindex="-1" href="#跳过dts检查"><span class="icon icon-link"></span></a>跳过.d.ts检查</h3>
+<p>默认情况下，TypeScript 会重新检查项目中的所有 .d.ts 文件，以查找问题和不一致之处；但这通常是不必要的。 在大多数情况下，.d.ts 文件已知已经正常工作--类型之间相互扩展的方式已经验证过一次，重要的声明无论如何都会被检查。</p>
+<p>TypeScript 提供了使用skipDefaultLibCheck标志跳过对其附带的.d.ts文件（例如lib.d.ts ）的类型检查的选项。</p>
+<p>或者，您还可以启用skipLibCheck标志来跳过检查编译中的所有.d.ts文件。</p>
+<p>这两个选项通常会隐藏.d.ts文件中的错误配置和冲突，因此我们建议仅将它们用于更快的构建。</p></section></article><!--$--><!--/$--><!--$--><!--/$--></main><footer class="bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4">© 2022 - <!-- -->2025<a rel="noopener noreferrer" class="hover:underline hover:bg-indigo" href="https://github.com/LZS911" target="_blank">, LZS_911</a>, build with<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://nextjs.org/" target="_blank">Next.js</a> <!-- -->and<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://vercel.com/" target="_blank">Vercel</a></footer></div><!--/$--><script src="/_next/static/chunks/webpack-9cdb0b2d6ee94dc8.js" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[7555,[],\"\"]\n3:I[1901,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"39\",\"static/chunks/app/error-d036ecfd03716e30.js\"],\"default\"]\n4:I[1295,[],\"\"]\n5:I[9543,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"345\",\"static/chunks/app/not-found-2113bbd7a2f55e8f.js\"],\"default\"]\n8:I[9665,[],\"MetadataBoundary\"]\na:I[9665,[],\"OutletBoundary\"]\nd:I[4911,[],\"AsyncMetadataOutlet\"]\nf:I[8460,[\"209\",\"static/chunks/app/loading-b73dd9bd22c3caa2.js\"],\"default\"]\n10:I[9665,[],\"ViewportBoundary\"]\n12:I[6614,[],\"\"]\n:HL[\"/_next/static/media/569ce4b8f30dc480-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/93f479601ee12b01-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/60adccb42f39203c.css\",\"style\"]\n:HL[\"/_next/static/css/c7f6e508dc13ee25.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"fPyRDf3jU8EaKreMEXeMB\",\"p\":\"\",\"c\":[\"\",\"posts\",\"f9e8e18288996c9c861452d6\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"(article)\",{\"children\":[\"posts\",{\"children\":[[\"slug\",\"f9e8e18288996c9c861452d6\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/60adccb42f39203c.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_5cfdac __variable_9a8899 antialiased\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$3\",\"errorStyles\":[],\"errorScripts\":[],\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L5\",null,{}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[\"(article)\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/c7f6e508dc13ee25.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],\"$L6\"]}],{\"children\":[\"posts\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"f9e8e18288996c9c861452d6\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"children\":\"$L9\"}],null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",\"$Lc\",[\"$\",\"$Ld\",null,{\"promise\":\"$@e\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[[\"$\",\"$Lf\",\"l\",{}],[],[]],false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"f0DtbAJ3yVE-m2feGFc_Y\",{\"children\":[[\"$\",\"$L10\",null,{\"children\":\"$L11\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"13:I[2034,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"846\",\"static/chunks/846-5073d6248f7e4d01.js\",\"651\",\"static/chunks/app/(article)/layout-0113e097a12c4d28.js\"],\"default\"]\n14:\"$Sreact.suspense\"\n15:I[4911,[],\"AsyncMetadata\"]\n6:[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_5cfdac __variable_9a8899 antialiased\",\"children\":[[\"$\",\"div\",null,{\"className\":\"min-h-screen\",\"children\":[[\"$\",\"$L13\",null,{}],[\"$\",\"main\",null,{\"className\":\"p-6 flex justify-center\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",\"footer\",null,{\"className\":\"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4\",\"children\":[\"© 2022 - \",2025,[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"hover:underline hover:bg-indigo\",\"href\":\"https://github.com/LZS911\",\"target\":\"_blank\",\"children\":\", LZS_911\"}],\", build with\",\" \",[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"underline hover:bg-indigo\",\"href\":\"https://nextjs.org/\",\"target\":\"_blank\",\"children\":\"Next.js\"}],\" \",\"and\",\" \",[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"underline hover:bg-indigo\",\"href\":\"https://vercel.com/\",\"target\":\"_blank\",\"children\":\"Vercel\"}]]}]]}],false]}]}]\n9:[\"$\",\"$14\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{\"promise\":\"$@16\"}]}]\n"])</script><script>self.__next_f.push([1,"c:null\n"])</script><script>self.__next_f.push([1,"17:I[6874,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"520\",\"static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js\"],\"\"]\n18:I[5099,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"520\",\"static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js\"],\"ThemeLoader\"]\n19:T31b5,"])</script><script>self.__next_f.push([1,"\u003ch2 id=\"为什么-typescript-性能很重要\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#为什么-typescript-性能很重要\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e为什么 TypeScript 性能很重要\u003c/h2\u003e\n\u003cp\u003eTypeScript 性能问题会严重影响开发体验，尤其是在 IDE 响应能力可能受到影响的大型项目中。理解和实施性能优化​​策略对于保持顺畅的开发工作流程至关重要。\u003c/p\u003e\n\u003ch2 id=\"关键优化策略\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#关键优化策略\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e关键优化策略\u003c/h2\u003e\n\u003cblockquote\u003e\n\u003cp\u003e原文地址：\u003ca href=\"https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections\"\u003ehttps://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections\u003c/a\u003e\u003c/p\u003e\n\u003c/blockquote\u003e\n\u003ch3 id=\"优先选择-interface-而不是-intersection-types\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#优先选择-interface-而不是-intersection-types\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e优先选择 Interface 而不是 Intersection Types\u003c/h3\u003e\n\u003cp\u003e大多数时候，对象类型的简单类型别名的作用与接口非常相似。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface Foo { prop: string }\n\ntype Bar = { prop: string };\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e但是，一旦您需要组合两个或多个类型，您就可以选择使用接口扩展这些类型，或者在类型别名中将它们相交，此时差异就开始变得重要了。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003einterface 创建了一个单一的平面对象类型，可以检测属性冲突，这通常是需要解决的重要问题！ 另一方面，intersections 只是递归合并属性，在某些情况下永远不会产生属性冲突。\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cimg src=\"https://github.com/user-attachments/assets/65b15da2-9a72-4ece-adf2-4346eb86d947\" alt=\"image\"\u003e\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://github.com/user-attachments/assets/f8d16d70-92bf-491f-88c9-70f485249327\" alt=\"image\"\u003e\u003c/p\u003e\n\u003col start=\"2\"\u003e\n\u003cli\u003e\n\u003cp\u003einterface 的显示效果也更好，而 intersections 的类型别名不能显示为其他交集的一部分。 interface 之间的类型关系也会被缓存，而 intersections 类型则不会被整体缓存。\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e最后一个值得注意的区别是，在针对目标交叉类型进行检查时，在针对 \"有效\"/\"扁平化 \"类型进行检查之前，会先检查每个类型。\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e因此，建议使用interfaces/ extends来扩展类型，而不是创建交集类型。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e- type Foo = Bar \u0026#x26; Baz \u0026#x26; {\n-     someProp: string;\n- }\n+ interface Foo extends Bar, Baz {\n+     someProp: string;\n+ }\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"显示标注类型而不是依赖类型推断\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#显示标注类型而不是依赖类型推断\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e显示标注类型而不是依赖类型推断\u003c/h3\u003e\n\u003cp\u003e添加类型注解，尤其是返回类型，可以为编译器节省大量工作。 部分原因是命名类型往往比匿名类型（编译器可能会推断出匿名类型）更紧凑，这就减少了读写声明文件（例如增量编译）所花费的时间。 类型推断非常方便，因此没有必要普遍使用，但如果你发现代码中有一段运行速度较慢，可以尝试使用。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e- import { otherFunc } from \"other\";\n+ import { otherFunc, OtherType } from \"other\";\n\n- export function func() {\n+ export function func(): OtherType {\n      return otherFunc();\n  }\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"优先选择基本类型而不是联合类型\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#优先选择基本类型而不是联合类型\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e优先选择基本类型而不是联合类型\u003c/h3\u003e\n\u003cp\u003e联合类型很棒 - 它们可以让您表达类型的可能值的范围。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface WeekdaySchedule {\n  day: \"Monday\" | \"Tuesday\" | \"Wednesday\" | \"Thursday\" | \"Friday\";\n  wake: Time;\n  startWork: Time;\n  endWork: Time;\n  sleep: Time;\n}\n\ninterface WeekendSchedule {\n  day: \"Saturday\" | \"Sunday\";\n  wake: Time;\n  familyMeal: Time;\n  sleep: Time;\n}\n\ndeclare function printSchedule(schedule: WeekdaySchedule | WeekendSchedule);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e然而，它们也是有代价的。每次将参数传递给printSchedule时，都必须将其与并集的每个元素进行比较。对于二元联合来说，这是微不足道且廉价的。\n但是，如果您的联合体有十多个元素，则可能会导致编译速度出现实际问题。\n例如，为了从联合中消除冗余成员，必须将元素进行成对比较，这是二次的。当与大型联合相交时，可能会发生这种检查，其中对每个联合成员进行相交可能会产生巨大的类型，然后需要减少这些类型。避免这种情况的一种方法是使用子类型，而不是联合。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface Schedule {\n  day: \"Monday\" | \"Tuesday\" | \"Wednesday\" | \"Thursday\" | \"Friday\" | \"Saturday\" | \"Sunday\";\n  wake: Time;\n  sleep: Time;\n}\n\ninterface WeekdaySchedule extends Schedule {\n  day: \"Monday\" | \"Tuesday\" | \"Wednesday\" | \"Thursday\" | \"Friday\";\n  startWork: Time;\n  endWork: Time;\n}\n\ninterface WeekendSchedule extends Schedule {\n  day: \"Saturday\" | \"Sunday\";\n  familyMeal: Time;\n}\n\ndeclare function printSchedule(schedule: Schedule);\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e当尝试对每个内置 DOM 元素类型进行建模时，可能会出现一个更现实的示例。在这种情况下，最好创建一个具有DivElement 、 ImgElement等所有扩展的通用成员的基本HtmlElement类型，而不是创建一个详尽的联合，例如 DivElement | /\u003cem\u003e...\u003c/em\u003e/ | ImgElement | /\u003cem\u003e...\u003c/em\u003e/ 。\u003c/p\u003e\n\u003ch3 id=\"命名复杂类型\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#命名复杂类型\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e命名复杂类型\u003c/h3\u003e\n\u003cp\u003e可以在允许类型注释的任何地方编写复杂类型。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003einterface SomeType\u0026#x3C;T\u003e {\n    foo\u0026#x3C;U\u003e(x: U):\n        U extends TypeA\u0026#x3C;T\u003e ? ProcessTypeA\u0026#x3C;U, T\u003e :\n        U extends TypeB\u0026#x3C;T\u003e ? ProcessTypeB\u0026#x3C;U, T\u003e :\n        U extends TypeC\u0026#x3C;T\u003e ? ProcessTypeC\u0026#x3C;U, T\u003e :\n        U;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这很方便，但现在，每次调用foo时，TypeScript 都必须重新运行条件类型。此外，关联SomeType的任何两个实例需要重新关联foo返回类型的结构。\u003c/p\u003e\n\u003cp\u003e如果此示例中的返回类型被提取到类型别名，则编译器可以缓存更多信息：\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003etype FooResult\u0026#x3C;U, T\u003e =\n    U extends TypeA\u0026#x3C;T\u003e ? ProcessTypeA\u0026#x3C;U, T\u003e :\n    U extends TypeB\u0026#x3C;T\u003e ? ProcessTypeB\u0026#x3C;U, T\u003e :\n    U extends TypeC\u0026#x3C;T\u003e ? ProcessTypeC\u0026#x3C;U, T\u003e :\n    U;\n\ninterface SomeType\u0026#x3C;T\u003e {\n    foo\u0026#x3C;U\u003e(x: U): FooResult\u0026#x3C;U, T\u003e;\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"项目拆分\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#项目拆分\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e项目拆分\u003c/h3\u003e\n\u003cp\u003e当使用 TypeScript 构建任何规模不小的代码库时，将代码库组织成几个独立的项目会很有帮助。每个项目都有自己的tsconfig.json ，它依赖于其他项目。这有助于避免在一次编译中加载太多文件，并且还使某些代码库布局策略更容易组合在一起。\u003c/p\u003e\n\u003cp\u003e有一些非常基本的方法可以将代码库组织到项目中。例如，一个程序可能包含一个客户端项目、一个服务器项目以及一个在两者之间共享的项目。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e              ------------\n              |          |\n              |  Shared  |\n              ^----------^\n             /            \\\n            /              \\\n------------                ------------\n|          |                |          |\n|  Client  |                |  Server  |\n-----^------                ------^-----\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e测试也可以分解到自己的项目中。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e              ------------\n              |          |\n              |  Shared  |\n              ^-----^----^\n             /      |     \\\n            /       |      \\\n------------  ------------  ------------\n|          |  |  Shared  |  |          |\n|  Client  |  |  Tests   |  |  Server  |\n-----^------  ------------  ------^-----\n     |                            |\n     |                            |\n------------                ------------\n|  Client  |                |  Server  |\n|  Tests   |                |  Tests   |\n------------                ------------\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"指定文件\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#指定文件\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e指定文件\u003c/h3\u003e\n\u003cp\u003e您应该始终确保您的配置文件不会同时包含太多文件。\u003c/p\u003e\n\u003cp\u003e在tsconfig.json中，有两种方法可以指定项目中的文件。\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003efiles列表\u003c/li\u003e\n\u003cli\u003einclude和exclude列表\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e两者之间的主要区别在于files需要源文件的文件路径列表，并且include / exclude使用通配模式来匹配文件。\u003c/p\u003e\n\u003cp\u003e虽然指定files将允许 TypeScript 直接快速加载文件，但如果您的项目中有很多文件而只有几个顶级入口点，则可能会很麻烦。此外，很容易忘记将新文件添加到tsconfig.json中，这意味着您最终可能会遇到奇怪的编辑器行为，其中这些新文件被错误地分析。所有这些都可能很麻烦。\u003c/p\u003e\n\u003cp\u003einclude / exclude有助于避免需要指定这些文件，但代价是：必须通过遍历包含的目录来发现文件。当运行大量文件夹时，这可能会减慢编译速度。此外，有时编译会包含大量不必要的.d.ts文件和测试文件，这会增加编译时间和内存开销。\n最后，虽然exclude有一些合理的默认值，但某些配置（如 mono-repos）意味着“重”文件夹（如node_modules仍然可以被包含在内。\u003c/p\u003e\n\u003cp\u003e对于最佳实践，我们建议如下：\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e仅指定项目中的输入文件夹（即要包含其源代码以进行编译/分析的文件夹）。\u003c/li\u003e\n\u003cli\u003e不要在同一文件夹中混合来自其他项目的源文件。\u003c/li\u003e\n\u003cli\u003e如果将测试与其他源文件保存在同一文件夹中，请为它们指定一个不同的名称，以便可以轻松排除它们。\u003c/li\u003e\n\u003cli\u003e避免大型构建工件和依赖项文件夹，例如源目录中的node_modules 。\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e\u003cstrong\u003e注意：如果没有exclude列表，则默认排除node_modules ；一旦添加，将node_modules显式添加到列表中非常重要。\u003c/strong\u003e\u003c/p\u003e\n\u003ch3 id=\"控制types范围\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#控制types范围\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e控制@types范围\u003c/h3\u003e\n\u003cp\u003e默认情况下，TypeScript 会自动包含它在node_modules文件夹中找到的每个@types包，无论您是否导入它。这是为了让某些事情在使用 Node.js、Jasmine、Mocha、Chai 等时“正常工作”，因为这些工具/包不是导入的 - 它们只是加载到全局环境中。\u003c/p\u003e\n\u003cp\u003e有时，这种逻辑会在编译和编辑场景中减慢程序构建时间，甚至可能导致多个声明冲突的全局包出现问题，从而导致诸如\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eDuplicate identifier 'IteratorResult'.\nDuplicate identifier 'it'.\nDuplicate identifier 'define'.\nDuplicate identifier 'require'.\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e在不需要全局包的情况下，修复就像在tsconfig.json / jsconfig.json中为\"types\"选项指定一个空字段一样简单\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// src/tsconfig.json\n{\n   \"compilerOptions\": {\n       // ...\n\n       // Don't automatically include anything.\n       // Only include `@types` packages that we need to import.\n       \"types\" : []\n   },\n   \"files\": [\"foo.ts\"]\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e如果您仍然需要一些全局包，请将它们添加到types字段。\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e// tests/tsconfig.json\n{\n   \"compilerOptions\": {\n       // ...\n\n       // Only include `@types/node` and `@types/mocha`.\n       \"types\" : [\"node\", \"mocha\"]\n   },\n   \"files\": [\"foo.test.ts\"]\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"跳过dts检查\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#跳过dts检查\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e跳过.d.ts检查\u003c/h3\u003e\n\u003cp\u003e默认情况下，TypeScript 会重新检查项目中的所有 .d.ts 文件，以查找问题和不一致之处；但这通常是不必要的。 在大多数情况下，.d.ts 文件已知已经正常工作--类型之间相互扩展的方式已经验证过一次，重要的声明无论如何都会被检查。\u003c/p\u003e\n\u003cp\u003eTypeScript 提供了使用skipDefaultLibCheck标志跳过对其附带的.d.ts文件（例如lib.d.ts ）的类型检查的选项。\u003c/p\u003e\n\u003cp\u003e或者，您还可以启用skipLibCheck标志来跳过检查编译中的所有.d.ts文件。\u003c/p\u003e\n\u003cp\u003e这两个选项通常会隐藏.d.ts文件中的错误配置和冲突，因此我们建议仅将它们用于更快的构建。\u003c/p\u003e"])</script><script>self.__next_f.push([1,"7:[\"$\",\"article\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"flex justify-center font-[Arial] max-w-[864px] text-center\",\"children\":[\"$\",\"h1\",null,{\"className\":\"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]\",\"children\":\"Typescript性能探究\"}]}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap items-center gap-4 mb-6\",\"children\":[[\"$\",\"time\",null,{\"dateTime\":\"2024-12-05\",\"className\":\"text-center block my-4 text-sm opacity-60\",\"children\":\"December\\t5, 2024\"}],[\"$\",\"span\",null,{\"className\":\"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800\",\"children\":\"blog\"}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap gap-2\",\"children\":[[\"$\",\"$L17\",\"TypeScript\",{\"href\":\"/tags/TypeScript\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"TypeScript\"}],[\"$\",\"$L17\",\"性能优化\",{\"href\":\"/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"性能优化\"}],[\"$\",\"$L17\",\"最佳实践\",{\"href\":\"/tags/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"最佳实践\"}],[\"$\",\"$L17\",\"编译优化\",{\"href\":\"/tags/%E7%BC%96%E8%AF%91%E4%BC%98%E5%8C%96\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"编译优化\"}],[\"$\",\"$L17\",\"类型系统\",{\"href\":\"/tags/%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"类型系统\"}],[\"$\",\"$L17\",\"工程化\",{\"href\":\"/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"工程化\"}],[\"$\",\"$L17\",\"代码质量\",{\"href\":\"/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"代码质量\"}]]}]]}],[null,[\"$\",\"$L18\",null,{\"theme\":\"orange\"}],[\"$\",\"section\",null,{\"className\":\"markdown-body-orange max-w-3xl\",\"dangerouslySetInnerHTML\":{\"__html\":\"$19\"}}]],null]}]\n"])</script><script>self.__next_f.push([1,"11:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])</script><script>self.__next_f.push([1,"16:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Ai.Haibara codes\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"LZS Blog\"}],[\"$\",\"link\",\"2\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"96x96\"}]],\"error\":null,\"digest\":\"$undefined\"}\ne:{\"metadata\":\"$16:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n"])</script></body></html>

@@ -1,0 +1,366 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","bda8cb142f024ba5fc01b7d5"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","bda8cb142f024ba5fc01b7d5","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","bda8cb142f024ba5fc01b7d5","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","AYt2txahxc4fex7GG4gcf",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T7705,<h2 id="前言"><a aria-hidden="true" tabindex="-1" href="#前言"><span class="icon icon-link"></span></a>前言</h2>
+<hr>
+<p>在包含国际化的前端项目中, 需要提取出对应语言的文本数据, 在代码中使用函数调用的方式来添加文本<a href="https://react.i18next.com/">(react 国际化插件</a>). 这样在开发过程中每添加一行文本信息就得去对应的语言包文件中添加对应的数据, 若只有中文和英语还好, 只需要添加两种语言数据, 可当对应的语言包很多时, 有没有一种简单的方式来自动添加呢?</p>
+<h2 id="vite-插件介绍"><a aria-hidden="true" tabindex="-1" href="#vite-插件介绍"><span class="icon icon-link"></span></a><code>vite</code> 插件介绍</h2>
+<hr>
+<p>官方文档链接: <a href="https://cn.vitejs.dev/guide/api-plugin.html">https://cn.vitejs.dev/guide/api-plugin.html</a></p>
+<p><code>vite</code> 插件通常的惯例为返回一个实际插件对象的工厂函数, 该函数可以接受允许用户自定义插件行为的选项.</p>
+<p>在这里只需要用到 <code>vite</code> 的独有钩子函数 <a href="https://cn.vitejs.dev/guide/api-plugin.html#handlehotupdate">handleHotUpdate</a>. 它可以执行自定义 <code>HMR</code> 更新处理, 在代码文件更新时去添加或者修改语言包文件.</p>
+<h2 id="准备"><a aria-hidden="true" tabindex="-1" href="#准备"><span class="icon icon-link"></span></a>准备</h2>
+<hr>
+<ol>
+<li>
+<p>定义用户自定义插件的选项</p>
+<table>
+<thead>
+<tr>
+<th align="center">name</th>
+<th align="center">defaultValue</th>
+<th align="center">type</th>
+<th align="center">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">funName</td>
+<td align="center">t</td>
+<td align="center">string</td>
+<td align="center">function call name</td>
+</tr>
+<tr>
+<td align="center">splitCode</td>
+<td align="center">#</td>
+<td align="center">string</td>
+<td align="center">split code</td>
+</tr>
+<tr>
+<td align="center">languageDir</td>
+<td align="center">['locale/zh-CN', 'locale/en-US']</td>
+<td align="center">string[]</td>
+<td align="center">localeage path</td>
+</tr>
+<tr>
+<td align="center">include</td>
+<td align="center">['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts']</td>
+<td align="center">string[]</td>
+<td align="center">include directory</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>代码解析工具 —— <code>babel</code></p>
+<ul>
+<li><a href="https://babeljs.io/docs/en/babel-parser#docsNav">babel-parse(parseSync)</a>: 将字符串格式的 <code>javascript</code> 源码解析为 <code>AST</code> , 同时也支持 <code>JSX、 Flow、 Typescript</code> (使用各种插件).</li>
+<li><a href="https://babeljs.io/docs/en/babel-preset-typescript#docsNav">babel-preset-typescript</a>: 支持 <code>parse</code> 来解析 <code>typescript</code> 类型文件的插件.</li>
+<li><a href="https://babeljs.io/docs/en/babel-traverse#docsNav">babel-traverse</a>: 遍历所有 <code>AST</code> 节点和更新节点.</li>
+<li><a href="https://babeljs.io/docs/en/babel-generator#docsNav">babel-generator</a>: 将 <code>AST</code> 转换为代码, <code>parse</code> 的逆向操作.</li>
+<li><a href="https://babeljs.io/docs/en/babel-types#docsNav">babel-types</a>: 手动构建 <code>AST</code> 和检查 <code>AST</code> 节点类型.</li>
+</ul>
+</li>
+<li>
+<p>其他工具</p>
+<ul>
+<li><a href="https://www.npmjs.com/package/fast-glob">fast-glob</a>: 根据指定的参数获取符合规则的所有文件名称, 用来排除无需执行自定义更新处理的文件(例如 <code>index.d.ts</code> 类型文件).</li>
+<li><a href="https://www.npmjs.com/package/prettier">prettier</a>: 在写入文件前对字符串格式的代码进行格式化.</li>
+<li><a href="https://www.npmjs.com/package/chalk">chalk</a>: 控制台输出文本高亮显示, 用来显示错误信息.</li>
+<li><a href="http://nodejs.cn/api/fs.html">fs</a>: <code>node</code> 中操作文件的 <code>API</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="实现"><a aria-hidden="true" tabindex="-1" href="#实现"><span class="icon icon-link"></span></a>实现</h2>
+<hr>
+<h3 id="1-构建工厂函数"><a aria-hidden="true" tabindex="-1" href="#1-构建工厂函数"><span class="icon icon-link"></span></a>1. 构建工厂函数</h3>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> (<span class="hljs-params"><span class="hljs-attr">userOptions</span>: <span class="hljs-title class_">Options</span> = {}</span>): <span class="hljs-title class_">Plugin</span> {
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'vite-plugin-watch-i18'</span>,
+    <span class="hljs-keyword">async</span> <span class="hljs-title function_">handleHotUpdate</span>(<span class="hljs-params">ctx</span>) {
+      <span class="hljs-comment">//get options default value</span>
+      <span class="hljs-keyword">const</span> {
+        funName = <span class="hljs-string">'t'</span>,
+        splitCode = <span class="hljs-string">'#'</span>,
+        languageDir = [<span class="hljs-string">'locale/zh-CN'</span>, <span class="hljs-string">'locale/en-US'</span>],
+        include = [<span class="hljs-string">'src/**/*.{js,jsx,ts,tsx}'</span>, <span class="hljs-string">'!src/**/*.d.ts'</span>],
+      } = userOptions;
+      <span class="hljs-comment">//...</span>
+    },
+  };
+}
+</code></pre>
+<h3 id="2-排除无需处理文件"><a aria-hidden="true" tabindex="-1" href="#2-排除无需处理文件"><span class="icon icon-link"></span></a>2. 排除无需处理文件</h3>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">import</span> fg <span class="hljs-keyword">from</span> <span class="hljs-string">'fast-glob'</span>;
+<span class="hljs-keyword">const</span> filePath = ctx.<span class="hljs-property">file</span>;
+<span class="hljs-keyword">const</span> allFile = <span class="hljs-keyword">await</span> <span class="hljs-title function_">fg</span>(include);
+<span class="hljs-keyword">if</span> (!allFile.<span class="hljs-title function_">some</span>(<span class="hljs-function">(<span class="hljs-params">i</span>) =></span> path.<span class="hljs-title function_">resolve</span>(i) === filePath)) {
+  <span class="hljs-keyword">return</span>;
+}
+</code></pre>
+<h3 id="3-处理源代码文件"><a aria-hidden="true" tabindex="-1" href="#3-处理源代码文件"><span class="icon icon-link"></span></a>3. 处理源代码文件</h3>
+<ul>
+<li>
+<p>将代码解析为 <code>AST</code></p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> isTs = <span class="hljs-regexp">/^.+\.(ts|tsx)$/</span>.<span class="hljs-title function_">test</span>(filePath);
+<span class="hljs-keyword">const</span> ast = isTs
+  ? <span class="hljs-title function_">parseSync</span>(fileCode, {
+      <span class="hljs-attr">presets</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">'@babel/preset-typescript'</span>).<span class="hljs-property">default</span>],
+      <span class="hljs-attr">filename</span>: filePath,
+    })
+  : <span class="hljs-title function_">parseSync</span>(fileCode, {});
+</code></pre>
+<p>通过文件后缀名判断是否为 <code>typescript</code> 类型文件, 然后使用 <code>babel-parse</code> 中的同步方法将其解析为 <code>AST</code>,</p>
+</li>
+<li>
+<p>遍历 <code>AST</code> 中的 <a href="https://babeljs.io/docs/en/babel-types#callexpression">CallExpression</a> 类型节点, 找到所有函数名为 <code>funName</code>的节点, 拿到参数信息. 这里需要注意的是一般会有两种调用方式( <code>t('') || i18n.t('')</code> )</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> <span class="hljs-attr">localeInfo</span>: <span class="hljs-built_in">string</span>[] = [];
+<span class="hljs-keyword">const</span> <span class="hljs-attr">localeFileNameArr</span>: <span class="hljs-built_in">string</span>[] = [];
+<span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span>;
+<span class="hljs-title function_">traverse</span>(ast, {
+  <span class="hljs-title class_">CallExpression</span>(_path) {
+    <span class="hljs-keyword">let</span> isFun = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">const</span> { node } = _path;
+    <span class="hljs-keyword">if</span> (node.<span class="hljs-property">callee</span>.<span class="hljs-property">type</span> === <span class="hljs-string">'Identifier'</span>) {
+      isFun = node.<span class="hljs-property">callee</span>.<span class="hljs-property">name</span> === funName;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (node.<span class="hljs-property">callee</span>.<span class="hljs-property">type</span> === <span class="hljs-string">'MemberExpression'</span>) {
+      isFun = (node.<span class="hljs-property">callee</span>.<span class="hljs-property">property</span> <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>).<span class="hljs-property">name</span> === funName;
+    }
+    <span class="hljs-keyword">if</span> (isFun) {
+      <span class="hljs-keyword">const</span> arg = (node.<span class="hljs-property">arguments</span>[<span class="hljs-number">0</span>] <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>).<span class="hljs-property">value</span>;
+      <span class="hljs-keyword">if</span> (
+        !arg.<span class="hljs-title function_">includes</span>(splitCode) ||
+        arg.<span class="hljs-title function_">split</span>(splitCode).<span class="hljs-property">length</span> !== langLength + <span class="hljs-number">1</span>
+      ) {
+        <span class="hljs-keyword">return</span>;
+      }
+      localeInfo.<span class="hljs-title function_">push</span>(arg.<span class="hljs-title function_">split</span>(splitCode));
+      localeFileNameArr.<span class="hljs-title function_">push</span>(arg.<span class="hljs-title function_">split</span>(<span class="hljs-string">'.'</span>)[<span class="hljs-number">0</span>]);
+      <span class="hljs-keyword">const</span> replaceArgs = node.<span class="hljs-property">arguments</span>.<span class="hljs-title function_">slice</span>() <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>;
+      replaceArgs[<span class="hljs-number">0</span>].<span class="hljs-property">value</span> = localeInfo[index][<span class="hljs-number">0</span>];
+      _path.<span class="hljs-title function_">replaceWith</span>(t.<span class="hljs-title function_">callExpression</span>(node.<span class="hljs-property">callee</span>, replaceArgs));
+      _path.<span class="hljs-title function_">skip</span>();
+      index++;
+    }
+  },
+});
+<span class="hljs-keyword">const</span> code = !!ast
+  ? <span class="hljs-title function_">generator</span>(ast, { <span class="hljs-attr">jsescOption</span>: { <span class="hljs-attr">minimal</span>: <span class="hljs-literal">true</span> } })?.<span class="hljs-property">code</span> ?? <span class="hljs-string">''</span>
+  : <span class="hljs-string">''</span>;
+<span class="hljs-keyword">const</span> formatCode = prettier.<span class="hljs-title function_">format</span>(code, { <span class="hljs-attr">parser</span>: <span class="hljs-string">'typescript'</span> });
+<span class="hljs-keyword">const</span> formatOriginCode = prettier.<span class="hljs-title function_">format</span>(fileCode, { <span class="hljs-attr">parser</span>: <span class="hljs-string">'typescript'</span> });
+formatCode !== formatOriginCode &#x26;&#x26; <span class="hljs-title function_">writeFile</span>(filePath, code);
+</code></pre>
+<p>因为 <code>AST</code> 节点往往会是一个很复杂的对象, 所以在判断节点时一般是先拿到所有的节点信息, 然后反过来和代码进行比较, 以此来作为判断条件. 最后获取到参数信息, 收集参数信息, 并将参数中多余的部分移除, 最后将 <code>AST</code> 还原为字符串格式, 并写入文件.</p>
+<p>注意点:</p>
+<ol>
+<li>在写入源文件时需在写入语言包文件后, 不然会造成源文件修改而语言包未添加等异常.</li>
+<li>需要进行额外的校验, 只有当源文件发生改变后才重新写入, 因为 <code>vite HMR</code> 是在保存文件后立刻执行, 不会判断文件是否改变, 若直接重新写入会造成无限循环.</li>
+<li>需要判断通过 <code>splitCode</code> 分割后的数组长度是否与 <code>languageDir.length + 1</code> 相等.</li>
+</ol>
+<p>最后, 这一段代码拿到的信息为两个数组, 分别是 <code>funName</code> 函数中参数的第一段, 也就是要写入的文件名, 以及一个二维数组, 其中每项为 <code>funName</code> 函数参数通过 <code>splitCode</code> 分割后的数组.</p>
+<p>举个栗子:</p>
+<pre><code class="hljs language-typescript"><span class="hljs-title function_">t</span>(<span class="hljs-string">"Common.index.confirm#确认#confirm"</span>);
+<span class="hljs-title function_">t</span>(<span class="hljs-string">"Common.index.cancel#取消#cancel"</span>);
+
+<span class="hljs-comment">/**
+ * 获取到的信息:
+ * localeInfo: [['Common.index.confirm', '确认', 'confirm'], ['Common.index.cancel', '取消', 'cancel']]
+ * localeFileNameArr: ['Common', 'Common']
+ * /
+</span></code></pre>
+</li>
+</ul>
+<h3 id="4-处理语言包文件"><a aria-hidden="true" tabindex="-1" href="#4-处理语言包文件"><span class="icon icon-link"></span></a>4 处理语言包文件</h3>
+<p>遍历参数 <code>languageDir</code>, 找到需要添加语言包的目录, 同时将源文件中获取的信息与对应的语言包路径传入处理函数中.(源文件中语言包数据顺序需与语言包路径顺序对应)</p>
+<pre><code class="hljs language-typescript">languageDir.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">v, index</span>) =></span> {
+  <span class="hljs-title function_">writeLocale</span>({
+    <span class="hljs-attr">localeDir</span>: <span class="hljs-title function_">normalizePath</span>(v),
+    localeFileNameArr,
+    isTs,
+    <span class="hljs-attr">localeInfo</span>: localeInfo.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">info</span>) =></span> ({
+      <span class="hljs-attr">path</span>: info[<span class="hljs-number">0</span>].<span class="hljs-title function_">split</span>(<span class="hljs-string">'.'</span>),
+      <span class="hljs-attr">value</span>: info[index + <span class="hljs-number">1</span>],
+    })),
+  });
+});
+</code></pre>
+<p><code>writeLocale</code> 函数作用为修改语言包文件, 在这步中对上步过程中获取的信息进行二次处理, 分别处理对应的语言包文件.</p>
+<p>先抛开 <code>AST</code> 部分将这其转换为算法:</p>
+<p><code>给定一个对象 obj、数组 path, 字符串 value, 其中数组类型为字符串数组, 按数组顺序将键值写入 obj, 值为 value. 例: obj: { a:1, b:{ c:2 } }, path: ['a', 'b', 'd'], value: 'add', 最后需要得到 obj: {a: 1, b: { c: 2, d: 'add' } }</code></p>
+<p>其中需要注意在 <code>path</code> 与 <code>obj</code> 同层有重复键值情况下:</p>
+<ul>
+<li>当重复键为 <code>path</code> 中最后一项时, 若 <code>obj</code> 中重复键值类型为基础类型时, 进行替换操作</li>
+<li>当重复键为 <code>path</code> 中最后一项时, 若 <code>obj</code> 中重复键值类型为对象时, 不进行替换操作</li>
+<li>当重复键值为 <code>path</code> 中不为最后一项时, 若 <code>obj</code> 中重复键值类型为对象时, 继续执行</li>
+<li>当重复键值为 <code>path</code> 中不为最后一项时, 若 <code>obj</code> 中重复键值类型为基础类型时时, 停止执行</li>
+</ul>
+<p>具体实现方式应该有多种, 这里放上递归版本(包含 <code>AST</code> 节点操作)</p>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">/**
+ * origin: 原始 ast 节点
+ * localeInfo: 数组结构, 插入多项数据
+ **/</span>
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">assemblyLocaleObj</span> = (<span class="hljs-params">
+  <span class="hljs-attr">origin</span>: <span class="hljs-built_in">any</span>,
+  <span class="hljs-attr">localeInfo</span>: <span class="hljs-title class_">Array</span>&#x3C;{ path: <span class="hljs-built_in">string</span>[]; value: <span class="hljs-built_in">string</span> }>
+</span>) => {
+  <span class="hljs-keyword">const</span> <span class="hljs-title function_">addProp</span> = (<span class="hljs-params"><span class="hljs-attr">objPath</span>: <span class="hljs-built_in">string</span>[], <span class="hljs-attr">value</span>: <span class="hljs-built_in">string</span>, originAst = []</span>) => {
+    <span class="hljs-comment">// 当 path 最后一层时</span>
+    <span class="hljs-keyword">if</span> (objPath.<span class="hljs-property">length</span> === <span class="hljs-number">1</span>) {
+      <span class="hljs-keyword">const</span> <span class="hljs-attr">existProp</span>: <span class="hljs-built_in">any</span> = originAst.<span class="hljs-title function_">find</span>(
+        <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">o</span>: <span class="hljs-built_in">any</span></span>) =></span> o.<span class="hljs-property">key</span>.<span class="hljs-property">name</span> === objPath[<span class="hljs-number">0</span>]
+      );
+      <span class="hljs-comment">//存在相同键, 且值类型为 string, 进行值的替换</span>
+      <span class="hljs-keyword">if</span> (existProp?.<span class="hljs-property">value</span>?.<span class="hljs-property">type</span> === <span class="hljs-string">'StringLiteral'</span>) {
+        originAst.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">o</span>: <span class="hljs-built_in">any</span></span>) =></span> {
+          <span class="hljs-keyword">if</span> (o.<span class="hljs-property">key</span>.<span class="hljs-property">name</span> === objPath[<span class="hljs-number">0</span>]) {
+            o.<span class="hljs-property">value</span>.<span class="hljs-property">value</span> = value;
+          }
+        });
+        <span class="hljs-keyword">return</span> originAst;
+      }
+
+      <span class="hljs-comment">//值不为 string, 抛出异常, 在外层函数中进行捕获</span>
+      <span class="hljs-keyword">if</span> (existProp?.<span class="hljs-property">value</span>?.<span class="hljs-property">type</span> === <span class="hljs-string">'ObjectExpression'</span>) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(
+          <span class="hljs-string">'ERROR: There are duplicates in the locale, please check the data!'</span>
+        );
+      }
+
+      <span class="hljs-comment">//不存在相同键, 进行正常添加</span>
+      <span class="hljs-keyword">const</span> item = t.<span class="hljs-title function_">objectProperty</span>(
+        t.<span class="hljs-title function_">identifier</span>(objPath[<span class="hljs-number">0</span>]),
+        t.<span class="hljs-title function_">stringLiteral</span>(value)
+      );
+      <span class="hljs-keyword">return</span> [...originAst, item];
+    }
+    <span class="hljs-comment">// 存在相同键, 但不为 path 最后一层时</span>
+    <span class="hljs-keyword">if</span> (originAst.<span class="hljs-title function_">some</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">o</span>: <span class="hljs-built_in">any</span></span>) =></span> o.<span class="hljs-property">key</span>.<span class="hljs-property">name</span> === objPath[<span class="hljs-number">0</span>])) {
+      <span class="hljs-keyword">const</span> <span class="hljs-attr">existProp</span>: <span class="hljs-built_in">any</span> = originAst.<span class="hljs-title function_">find</span>(
+        <span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">o</span>: <span class="hljs-built_in">any</span></span>) =></span> o.<span class="hljs-property">key</span>.<span class="hljs-property">name</span> === objPath[<span class="hljs-number">0</span>]
+      );
+      <span class="hljs-comment">//判断存在键的值的类型是否为object</span>
+      <span class="hljs-keyword">if</span> (existProp?.<span class="hljs-property">value</span>?.<span class="hljs-property">type</span> !== <span class="hljs-string">'ObjectExpression'</span>) {
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(
+          <span class="hljs-string">'ERROR: There are duplicates in the locale, please check the data!'</span>
+        );
+      }
+      <span class="hljs-comment">//继续往下层查找, 拿到 path 最后一层时的返回值</span>
+      <span class="hljs-keyword">const</span> item = <span class="hljs-title function_">addProp</span>(objPath.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>), value, existProp.<span class="hljs-property">value</span>.<span class="hljs-property">properties</span>);
+      <span class="hljs-keyword">const</span> tmp = originAst.<span class="hljs-title function_">slice</span>();
+      <span class="hljs-comment">//进行替换操作</span>
+      tmp.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">o</span>: <span class="hljs-built_in">any</span></span>) =></span> {
+        <span class="hljs-keyword">if</span> (o.<span class="hljs-property">key</span>.<span class="hljs-property">name</span> === objPath[<span class="hljs-number">0</span>]) {
+          o.<span class="hljs-property">value</span>.<span class="hljs-property">properties</span> = item;
+        }
+      });
+      <span class="hljs-keyword">return</span> tmp;
+    }
+    <span class="hljs-comment">//不存在相同键时</span>
+    <span class="hljs-keyword">const</span> ast = t.<span class="hljs-title function_">objectProperty</span>(
+      t.<span class="hljs-title function_">identifier</span>(objPath[<span class="hljs-number">0</span>]),
+      t.<span class="hljs-title function_">objectExpression</span>(<span class="hljs-title function_">addProp</span>(objPath.<span class="hljs-title function_">slice</span>(<span class="hljs-number">1</span>), value))
+    );
+    <span class="hljs-keyword">return</span> [...originAst, ast];
+  };
+  <span class="hljs-keyword">let</span> properties = <span class="hljs-title class_">Array</span>.<span class="hljs-title function_">isArray</span>(origin) ? origin.<span class="hljs-title function_">slice</span>() : origin;
+  localeInfo.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params"><span class="hljs-attr">info</span>: <span class="hljs-built_in">any</span></span>) =></span> {
+    <span class="hljs-comment">//递归入口</span>
+    properties = <span class="hljs-title function_">addProp</span>(info.<span class="hljs-property">path</span>, info.<span class="hljs-property">value</span>, properties);
+  });
+  <span class="hljs-keyword">return</span> properties;
+};
+</code></pre>
+<p>最后拿到新的 <code>AST</code> 后进行替换然后转换为字符串格式并写入文件即可.</p>
+<h3 id="5-新增语言包"><a aria-hidden="true" tabindex="-1" href="#5-新增语言包"><span class="icon icon-link"></span></a>5. 新增语言包</h3>
+<p>对要写入的语言包文件进行是否存在判断, 若不存在, 则创建新文件, 并将其导入添加至当前目录下的 <code>index.ts 或 index.js</code> 文件中.</p>
+<p>举个栗子:</p>
+<p><img src="https://raw.githubusercontent.com/LZS911/LZS911.github.io/backend-main/assets/images/vite-plugin/watch-i18/example/new.gif" alt="example"></p>
+<p>具体实现也是通过对 <code>AST</code> 节点的操作, 直接放代码.</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">addLocaleImport</span> = (<span class="hljs-params">{ localeDir, fileName, isTs }: <span class="hljs-built_in">any</span></span>) => {
+  <span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">const</span> root = isTs
+      ? path.<span class="hljs-title function_">resolve</span>(path.<span class="hljs-title function_">join</span>(<span class="hljs-string">'src'</span>, localeDir), <span class="hljs-string">'index.ts'</span>)
+      : path.<span class="hljs-title function_">resolve</span>(path.<span class="hljs-title function_">join</span>(<span class="hljs-string">'src'</span>, localeDir), <span class="hljs-string">'index.js'</span>);
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-title function_">existsSync</span>(root)) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Error</span>(<span class="hljs-string">'The default export language pack file was not found!'</span>);
+    }
+
+    <span class="hljs-keyword">const</span> code =
+      <span class="hljs-title function_">readFileSync</span>(root, <span class="hljs-string">'utf-8'</span>) || <span class="hljs-string">`export default {translation:{}}`</span>;
+    <span class="hljs-keyword">const</span> ast = isTs
+      ? <span class="hljs-title function_">parseSync</span>(code, {
+          <span class="hljs-attr">presets</span>: [<span class="hljs-built_in">require</span>(<span class="hljs-string">'@babel/preset-typescript'</span>).<span class="hljs-property">default</span>],
+          <span class="hljs-attr">filename</span>: root,
+        })
+      : <span class="hljs-title function_">parseSync</span>(code, {});
+    <span class="hljs-title function_">traverse</span>(ast, {
+      <span class="hljs-comment">//添加import语句</span>
+      <span class="hljs-title class_">Program</span>(_path) {
+        _path.<span class="hljs-title function_">unshiftContainer</span>(
+          <span class="hljs-string">'body'</span>,
+          t.<span class="hljs-title function_">importDeclaration</span>(
+            [t.<span class="hljs-title function_">importDefaultSpecifier</span>(t.<span class="hljs-title function_">identifier</span>(fileName))],
+            t.<span class="hljs-title function_">stringLiteral</span>(<span class="hljs-string">`./<span class="hljs-subst">${fileName}</span>`</span>)
+          )
+        );
+      },
+      <span class="hljs-comment">//添加导出对象</span>
+      <span class="hljs-title class_">ExportDefaultDeclaration</span>(_path) {
+        <span class="hljs-keyword">const</span> properties = (_path.<span class="hljs-property">node</span>.<span class="hljs-property">declaration</span> <span class="hljs-keyword">as</span> <span class="hljs-built_in">any</span>).<span class="hljs-property">properties</span>.<span class="hljs-title function_">slice</span>();
+        properties[<span class="hljs-number">0</span>].<span class="hljs-property">value</span>.<span class="hljs-property">properties</span>.<span class="hljs-title function_">push</span>(
+          t.<span class="hljs-title function_">objectProperty</span>(t.<span class="hljs-title function_">identifier</span>(fileName), t.<span class="hljs-title function_">identifier</span>(fileName))
+        );
+        _path.<span class="hljs-title function_">replaceWith</span>(
+          t.<span class="hljs-title function_">exportDefaultDeclaration</span>(t.<span class="hljs-title function_">objectExpression</span>(properties))
+        );
+        _path.<span class="hljs-title function_">skip</span>();
+      },
+    });
+    <span class="hljs-comment">//写入文件</span>
+    <span class="hljs-title function_">writeFile</span>(
+      root,
+      !!ast
+        ? <span class="hljs-title function_">generator</span>(ast, { <span class="hljs-attr">jsescOption</span>: { <span class="hljs-attr">minimal</span>: <span class="hljs-literal">true</span> } })?.<span class="hljs-property">code</span> ?? <span class="hljs-string">''</span>
+        : <span class="hljs-string">''</span>
+    );
+  } <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">trace</span>(<span class="hljs-title function_">red</span>(error));
+  }
+};
+</code></pre>
+<h2 id="总结"><a aria-hidden="true" tabindex="-1" href="#总结"><span class="icon icon-link"></span></a>总结</h2>
+<hr>
+<p>以上代码便使用 <code>babel</code> 实现了一个简单的 <code>vite</code> 插件, 它可以在工作中或者在平时编码中自动添加语言包, 提高编码效率.</p>
+<p>之前有看到尤雨溪的一篇<a href="https://mp.weixin.qq.com/s?src=11&#x26;timestamp=1637831843&#x26;ver=3458&#x26;signature=0YFjtA3N5CYF9IPtO30ywCaa4ti5J*zPSuiUyckkYr9gEFbFgEmqFrYZpAm*FgxTlIqPoUWTLxzGd6xikJ0JHjNtaA0511q5C7k3S7NXC*vpMvVIW2QeKbK-p2gCGBmr&#x26;new=1">采访</a>, 里面一段内容使我感触很深, 也是这个插件诞生的初衷. 希望以后能以此为初心, 一直坚持下去 ✊.</p>
+<blockquote>
+<p>如果想要跳出这种单纯做业务的状态，就得去寻找在当前的业务场景下，是否有更有意义、更有价值的这些问题去解决，或者说有没有什么机会可以让团队的效率更高，或者说业务上有什么痛点可以用我的技术去解决。前端在整个产品里面扮演着一个怎样的角色，有没有什么机会在前端这个环节给整个链路去创造一些价值。</p>
+<p>如果能找到这样的东西，如何跟我擅长的技术去结合起来，或者说我觉得这个东西很值得解决，我通过怎样的学习可以让自己能够去解决这个问题。找到更高、更明确的目标，这样在学习的时候会更有指向性。还有另一种选择，如果你发现你所在的岗位完全没有任何可以用前端去创造改变的可能性，那么可以跳个槽，提升一下技术能力，进大厂找找机会。</p>
+</blockquote>
+<p>最后附上项目地址: <a href="https://github.com/LZS911/vite-plugin-watch-i18">https://github.com/LZS911/vite-plugin-watch-i18</a></p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"国际化项目中自动化语言包的vite插件"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2021-11-23","className":"text-center block my-4 text-sm opacity-60","children":"November\t23, 2021"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","vite plugin",{"href":"/tags/vite%20plugin","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"vite plugin"}],["$","$L17","react",{"href":"/tags/react","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"react"}],["$","$L17","i18n",{"href":"/tags/i18n","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"i18n"}]]}]]}],[null,["$","$L18",null,{"theme":"nico"}],["$","section",null,{"className":"markdown-body-nico max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

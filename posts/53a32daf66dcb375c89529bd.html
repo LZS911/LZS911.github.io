@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/569ce4b8f30dc480-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/60adccb42f39203c.css" data-precedence="next"/><link rel="stylesheet" href="/_next/static/css/c7f6e508dc13ee25.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-9cdb0b2d6ee94dc8.js"/><script src="/_next/static/chunks/4bd1b696-c9bd88c3e79a40cd.js" async=""></script><script src="/_next/static/chunks/684-ea7b2db13f3dd55b.js" async=""></script><script src="/_next/static/chunks/main-app-8a63285bca825cb3.js" async=""></script><script src="/_next/static/chunks/874-90f68e0a3827b559.js" async=""></script><script src="/_next/static/chunks/app/error-d036ecfd03716e30.js" async=""></script><script src="/_next/static/chunks/app/not-found-2113bbd7a2f55e8f.js" async=""></script><script src="/_next/static/chunks/app/loading-b73dd9bd22c3caa2.js" async=""></script><script src="/_next/static/chunks/296-93bf38127a29d878.js" async=""></script><script src="/_next/static/chunks/766-3404ce8492c1c2aa.js" async=""></script><script src="/_next/static/chunks/846-5073d6248f7e4d01.js" async=""></script><script src="/_next/static/chunks/app/(article)/layout-0113e097a12c4d28.js" async=""></script><script src="/_next/static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js" async=""></script><meta name="next-size-adjust" content=""/><title>Ai.Haibara codes</title><meta name="description" content="LZS Blog"/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="96x96"/><script>document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))</script><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__variable_5cfdac __variable_9a8899 antialiased"><!--$--><html lang="en"><body class="__variable_5cfdac __variable_9a8899 antialiased"><div class="min-h-screen"><header class="text-white bg-black drop-shadow-2xl"><div class="mx-auto my-0 max-w-[960px] py-6 px-4 flex items-center"><div class="flex items-center"><img alt="Ai.Haibara" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class=" rounded-full" style="color:transparent" srcSet="/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=128&amp;q=75 1x, /_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=256&amp;q=75 2x" src="/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=256&amp;q=75"/></div><div class="ml-6"><a class=" font-bold text-3xl" href="/">Ai.Haibara codes</a><div class="mt-2"><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/">Home</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/projects">Projects</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/talks">Talks</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/blogs">Blogs</a></div></div></div></header><main class="p-6 flex justify-center"><article><div class="flex justify-center font-[Arial] max-w-[864px] text-center"><h1 class="text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]">Rolldown-Vite 实践体验：基于 Rust 的新一代构建工具</h1></div><div class="flex flex-wrap items-center gap-4 mb-6"><time dateTime="2025-06-11" class="text-center block my-4 text-sm opacity-60">June	11, 2025</time><span class="px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800">blog</span></div><section class="markdown-body-fancy max-w-3xl"><h2 id="前言"><a aria-hidden="true" tabindex="-1" href="#前言"><span class="icon icon-link"></span></a>前言</h2>
+<p>作为一名长期使用 Vite 进行前端开发的工程师，当看到官方发布 rolldown-vite 的消息时，我对这个基于 Rust 的新构建工具产生了浓厚的兴趣。</p>
+<p>本文将记录我在实际项目中使用 rolldown-vite 的体验过程，包括迁移步骤、性能对比、新特性分析以及使用建议。</p>
+<h2 id="rolldown-概述"><a aria-hidden="true" tabindex="-1" href="#rolldown-概述"><span class="icon icon-link"></span></a>Rolldown 概述</h2>
+<h3 id="技术背景"><a aria-hidden="true" tabindex="-1" href="#技术背景"><span class="icon icon-link"></span></a>技术背景</h3>
+<p>Rolldown 是一个用 Rust 编写的现代化 JavaScript 打包工具，定位为 Rollup 的高性能替代方案。在当前前端工具链普遍向 Rust 迁移的趋势下（如 swc、esbuild、turbo），Vite 团队也选择了这条技术路线。</p>
+<p>Rolldown 的核心目标是在保持与现有生态系统完全兼容的前提下，通过 Rust 的性能优势实现显著的构建速度提升。</p>
+<h3 id="架构优势分析"><a aria-hidden="true" tabindex="-1" href="#架构优势分析"><span class="icon icon-link"></span></a>架构优势分析</h3>
+<p>相比传统方案，Rolldown 带来了三个主要改进：</p>
+<p><strong>1. 工具链统一</strong></p>
+<p>传统 Vite 架构存在二元化问题：</p>
+<ul>
+<li>开发环境：esbuild 负责依赖预打包</li>
+<li>生产环境：Rollup 负责最终构建</li>
+</ul>
+<p>这种架构分离偶尔会导致开发与生产环境的行为不一致。Rolldown 通过统一的构建引擎解决了这一问题。</p>
+<p><strong>2. 性能优化</strong></p>
+<p>Rust 的系统级性能优势在 I/O 密集型的构建任务中表现尤为明显。虽然具体提升程度因项目规模而异，但理论上应该有显著的性能收益。</p>
+<h2 id="迁移实践"><a aria-hidden="true" tabindex="-1" href="#迁移实践"><span class="icon icon-link"></span></a>迁移实践</h2>
+<h3 id="迁移流程"><a aria-hidden="true" tabindex="-1" href="#迁移流程"><span class="icon icon-link"></span></a>迁移流程</h3>
+<p>迁移过程相对简单，主要通过 npm 别名机制实现：</p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"dependencies"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+    <span class="hljs-attr">"vite"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"npm:rolldown-vite@latest"</span>
+  <span class="hljs-punctuation">}</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<p>完成依赖更新后，重新执行 <code>npm install</code> 即可。需要注意的是，首次安装可能需要较长时间，建议使用稳定的网络环境或配置国内镜像源。</p>
+<h3 id="性能测试结果"><a aria-hidden="true" tabindex="-1" href="#性能测试结果"><span class="icon icon-link"></span></a>性能测试结果</h3>
+<p>我在一个包含约 200+ 组件的中型 React 项目上进行了构建性能对比：</p>
+<p><strong>原版 Vite 构建时间：</strong>
+<img src="/assets/blog/posts/image-1749636229985-8a74u9y.png" alt="图片"></p>
+<p><strong>Rolldown-Vite 构建时间：</strong>
+<img src="/assets/blog/posts/image-1749636117701-v9ijxti.png" alt="图片"></p>
+<p>从测试结果来看，在构建项目产物场景下确实能观察到性能提升。</p>
+<h2 id="核心特性变化"><a aria-hidden="true" tabindex="-1" href="#核心特性变化"><span class="icon icon-link"></span></a>核心特性变化</h2>
+<h3 id="分块策略调整"><a aria-hidden="true" tabindex="-1" href="#分块策略调整"><span class="icon icon-link"></span></a>分块策略调整</h3>
+<p>Rolldown 最显著的变化是将 <code>manualChunks</code> 替换为 <code>advancedChunks</code>，这是一个更具表达力的分块配置系统：</p>
+<pre><code class="hljs language-typescript"><span class="hljs-comment">// 传统 Rollup 配置</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">build</span>: {
+    <span class="hljs-attr">rollupOptions</span>: {
+      <span class="hljs-attr">output</span>: {
+        <span class="hljs-title function_">manualChunks</span>(<span class="hljs-params">id</span>) {
+          <span class="hljs-keyword">if</span> (<span class="hljs-regexp">/\/react(?:-dom)?/</span>.<span class="hljs-title function_">test</span>(id)) {
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'vendor'</span>
+          }
+        }
+      }
+    }
+  }
+}
+
+<span class="hljs-comment">// Rolldown 新配置</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">build</span>: {
+    <span class="hljs-attr">rollupOptions</span>: {
+      <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">advancedChunks</span>: {
+          <span class="hljs-attr">groups</span>: [{ <span class="hljs-attr">name</span>: <span class="hljs-string">'vendor'</span>, <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\/react(?:-dom)?/</span> }]
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p><code>advancedChunks</code> 的行为模式更接近 webpack 的 <code>splitChunks</code>，提供了更精细的分块控制能力。</p>
+<h3 id="runtime-chunk-机制"><a aria-hidden="true" tabindex="-1" href="#runtime-chunk-机制"><span class="icon icon-link"></span></a>Runtime Chunk 机制</h3>
+<p>使用 <code>advancedChunks</code> 后，构建产物会自动生成一个 <code>rolldown-runtime-{hash}</code> 文件。这个看似简单的变化，实际上解决了传统 Rollup <code>manualChunks</code> 配置中的一个重要痛点。</p>
+<h4 id="传统-manualchunks-的依赖问题"><a aria-hidden="true" tabindex="-1" href="#传统-manualchunks-的依赖问题"><span class="icon icon-link"></span></a>传统 manualChunks 的依赖问题</h4>
+<p>在使用 Rollup 的 <code>manualChunks</code> 功能时，我们经常会遇到这样的配置：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 典型的 manualChunks 配置</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  <span class="hljs-attr">build</span>: {
+    <span class="hljs-attr">rollupOptions</span>: {
+      <span class="hljs-attr">output</span>: {
+        <span class="hljs-attr">manualChunks</span>: {
+          <span class="hljs-string">'vendor'</span>: [<span class="hljs-string">'react'</span>, <span class="hljs-string">'react-dom'</span>],
+          <span class="hljs-string">'utils'</span>: [<span class="hljs-string">'lodash'</span>, <span class="hljs-string">'axios'</span>],
+          <span class="hljs-string">'ui'</span>: [<span class="hljs-string">'antd'</span>, <span class="hljs-string">'@ant-design/icons'</span>]
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>这种配置在大多数情况下工作正常，但在复杂项目中容易产生以下问题：</p>
+<p><strong>1. 循环依赖导致的加载顺序问题</strong></p>
+<p>假设我们有这样的模块依赖关系：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// moduleA.js</span>
+<span class="hljs-keyword">import</span> { utilB } <span class="hljs-keyword">from</span> <span class="hljs-string">'./moduleB.js'</span>
+<span class="hljs-keyword">import</span> { thirdPartyLib } <span class="hljs-keyword">from</span> <span class="hljs-string">'some-lib'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">utilA</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">return</span> <span class="hljs-title function_">utilB</span>() + <span class="hljs-title function_">thirdPartyLib</span>()
+}
+
+<span class="hljs-comment">// moduleB.js  </span>
+<span class="hljs-keyword">import</span> { utilA } <span class="hljs-keyword">from</span> <span class="hljs-string">'./moduleA.js'</span>
+<span class="hljs-keyword">import</span> { anotherLib } <span class="hljs-keyword">from</span> <span class="hljs-string">'another-lib'</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title function_">utilB</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-comment">// 在某些条件下可能会调用 utilA</span>
+  <span class="hljs-keyword">return</span> someCondition ? <span class="hljs-title function_">utilA</span>() : <span class="hljs-title function_">anotherLib</span>()
+}
+</code></pre>
+<p>当 <code>manualChunks</code> 将这些模块分配到不同的 chunk 时，可能会产生这样的输出：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// chunk-vendor.js (包含 some-lib, another-lib)</span>
+<span class="hljs-comment">// chunk-utils.js (包含 moduleA, moduleB)</span>
+<span class="hljs-comment">// main.js (应用入口)</span>
+</code></pre>
+<p><strong>2. 运行时错误的具体表现</strong></p>
+<p>在实际项目中，我曾遇到过这样的错误：</p>
+<pre><code class="hljs language-bash">Uncaught ReferenceError: Cannot access <span class="hljs-string">'utilA'</span> before initialization
+</code></pre>
+<p>或者更隐蔽的问题：</p>
+<pre><code class="hljs language-bash">Uncaught TypeError: utilB is not a <span class="hljs-keyword">function</span>
+</code></pre>
+<p>这类错误通常只在生产环境出现，因为开发环境使用的是非打包模式，模块加载顺序由浏览器的 ES Module 机制保证。</p>
+<p><strong>3. 问题的根本原因</strong></p>
+<p>问题的核心在于：当模块被分割到不同的 chunk 后，模块的初始化顺序变得不可预测。Rollup 在生成 chunk 时，可能会将循环依赖的模块放在不同的文件中，导致：</p>
+<ul>
+<li>Chunk A 需要 Chunk B 中的模块</li>
+<li>Chunk B 也需要 Chunk A 中的模块</li>
+<li>但运行时加载顺序无法保证正确的初始化序列</li>
+</ul>
+<h4 id="rolldown-的-runtime-chunk-解决方案"><a aria-hidden="true" tabindex="-1" href="#rolldown-的-runtime-chunk-解决方案"><span class="icon icon-link"></span></a>Rolldown 的 Runtime Chunk 解决方案</h4>
+<p>Rolldown 通过强制生成 <code>runtime.js</code> 文件来解决这个问题：</p>
+<p><strong>1. 运行时代码提取</strong></p>
+<p><code>runtime.js</code> 包含了所有必要的运行时帮助函数和模块加载逻辑：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// runtime.js (简化示例)</span>
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">__esm</span> = (<span class="hljs-params">fn, <span class="hljs-variable language_">module</span></span>) => {
+  <span class="hljs-keyword">return</span> <span class="hljs-function">() =></span> {
+    <span class="hljs-keyword">if</span> (!<span class="hljs-variable language_">module</span>.<span class="hljs-property">init</span>) {
+      <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = {};
+      <span class="hljs-variable language_">module</span>.<span class="hljs-property">init</span> = <span class="hljs-literal">true</span>;
+      fn.<span class="hljs-title function_">call</span>(<span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span>, <span class="hljs-variable language_">module</span>, <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span>);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span>;
+  };
+};
+
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">__export</span> = (<span class="hljs-params">target, all</span>) => {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> name <span class="hljs-keyword">in</span> all)
+    target[name] = all[name];
+};
+
+<span class="hljs-comment">// 模块注册表</span>
+<span class="hljs-keyword">var</span> __modules = {};
+<span class="hljs-keyword">var</span> <span class="hljs-title function_">__register</span> = (<span class="hljs-params">id, fn</span>) => {
+  __modules[id] = { fn, <span class="hljs-attr">exports</span>: {}, <span class="hljs-attr">init</span>: <span class="hljs-literal">false</span> };
+};
+</code></pre>
+<p><strong>2. 确定的加载顺序</strong></p>
+<p>所有其他 chunk 都会依赖 <code>runtime.js</code>，确保运行时代码始终最先执行：</p>
+<pre><code class="hljs language-html"><span class="hljs-comment">&#x3C;!-- HTML 中的加载顺序 --></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/runtime-abc123.js"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">script</span>></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/vendor-def456.js"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">script</span>></span>
+<span class="hljs-tag">&#x3C;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"/assets/main-ghi789.js"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">script</span>></span>
+</code></pre>
+<p><strong>3. 安全的模块初始化</strong></p>
+<p>通过运行时的模块管理机制，即使存在循环依赖，也能保证安全的初始化：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 在 runtime 管理下的模块加载</span>
+<span class="hljs-keyword">var</span> init_moduleA = <span class="hljs-title function_">__esm</span>({
+  <span class="hljs-string">"moduleA.js"</span>() {
+    <span class="hljs-comment">// 延迟初始化，避免循环依赖问题</span>
+    <span class="hljs-keyword">var</span> moduleB = <span class="hljs-title function_">__require</span>(<span class="hljs-string">"moduleB.js"</span>);
+    <span class="hljs-built_in">exports</span>.<span class="hljs-property">utilA</span> = <span class="hljs-function">() =></span> {
+      <span class="hljs-keyword">return</span> moduleB.<span class="hljs-title function_">utilB</span>() + <span class="hljs-title function_">thirdPartyLib</span>();
+    };
+  }
+});
+</code></pre>
+<h4 id="权衡考虑"><a aria-hidden="true" tabindex="-1" href="#权衡考虑"><span class="icon icon-link"></span></a>权衡考虑</h4>
+<p>当然，<code>runtime.js</code> 也带来了一些权衡：</p>
+<p><strong>优势：</strong></p>
+<ul>
+<li>彻底解决循环依赖问题</li>
+<li>提高大型项目的运行时稳定性</li>
+<li>为模块联邦等高级功能奠定基础</li>
+</ul>
+<p><strong>成本：</strong></p>
+<ul>
+<li>增加一个额外的 HTTP 请求</li>
+<li>轻微增加总的 bundle 大小（通常 &#x3C; 5KB）</li>
+<li>需要调整构建流水线以适应新的文件结构</li>
+</ul>
+<p>从我的实际使用体验来看，这个权衡是值得的。相比于在生产环境中调试循环依赖问题的复杂性，多一个 runtime 文件的成本几乎可以忽略不计。</p>
+<h2 id="插件生态适配"><a aria-hidden="true" tabindex="-1" href="#插件生态适配"><span class="icon icon-link"></span></a>插件生态适配</h2>
+<h3 id="react-插件优化"><a aria-hidden="true" tabindex="-1" href="#react-插件优化"><span class="icon icon-link"></span></a>React 插件优化</h3>
+<p>对于 React 项目，官方推荐使用 <code>@vitejs/plugin-react-oxc</code> 替代传统的 React 插件：</p>
+<ul>
+<li><strong>技术基础</strong>：基于 Oxc（Rust 编写的前端工具链）</li>
+<li><strong>性能优势</strong>：与 rolldown-vite 的 Rust 架构更好匹配</li>
+<li><strong>限制条件</strong>：不支持自定义 Babel 或 SWC 插件</li>
+</ul>
+<p>这个限制对于依赖复杂 Babel 配置的项目可能是个障碍，需要权衡性能收益与功能需求。</p>
+<h3 id="钩子过滤机制"><a aria-hidden="true" tabindex="-1" href="#钩子过滤机制"><span class="icon icon-link"></span></a>钩子过滤机制</h3>
+<p>Rolldown 引入了插件钩子过滤功能，这是一个重要的性能优化特性，解决了 Rust 打包器中跨语言调用的性能瓶颈问题。</p>
+<h4 id="传统插件钩子的性能问题"><a aria-hidden="true" tabindex="-1" href="#传统插件钩子的性能问题"><span class="icon icon-link"></span></a>传统插件钩子的性能问题</h4>
+<p>在传统的 Rollup 插件中，我们经常看到这样的模式：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 典型的 Rollup 插件写法</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">stylePlugin</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'style-processor'</span>,
+    <span class="hljs-title function_">transform</span>(<span class="hljs-params">code, id</span>) {
+      <span class="hljs-comment">// 每个模块都会触发这个钩子</span>
+      <span class="hljs-keyword">if</span> (!id.<span class="hljs-title function_">endsWith</span>(<span class="hljs-string">'.css'</span>) &#x26;&#x26; !id.<span class="hljs-title function_">endsWith</span>(<span class="hljs-string">'.scss'</span>)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span> <span class="hljs-comment">// 大部分情况下都是早期返回</span>
+      }
+      
+      <span class="hljs-comment">// 实际的样式处理逻辑</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-title function_">processStyles</span>(code, id)
+    },
+    <span class="hljs-title function_">load</span>(<span class="hljs-params">id</span>) {
+      <span class="hljs-keyword">if</span> (!id.<span class="hljs-title function_">includes</span>(<span class="hljs-string">'?inline'</span>)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span> <span class="hljs-comment">// 又是一次无效调用</span>
+      }
+      
+      <span class="hljs-keyword">return</span> <span class="hljs-title function_">inlineStyleLoader</span>(id)
+    }
+  }
+}
+</code></pre>
+<p>这种设计在 JavaScript 打包器中工作良好，但在 Rust 打包器中存在严重的性能问题：</p>
+<p><strong>1. 频繁的跨语言调用开销</strong></p>
+<p>在一个包含 1000+ 模块的项目中：</p>
+<ul>
+<li>每个模块都会触发 <code>transform</code> 钩子</li>
+<li>大部分调用最终都是无效的（早期返回）</li>
+<li>Rust 到 JS 的调用本身就有开销</li>
+<li>累积起来成为显著的性能瓶颈</li>
+</ul>
+<p><strong>2. 破坏 Rust 的并行优化</strong></p>
+<p>由于 JavaScript 的单线程特性：</p>
+<ul>
+<li>即使 Rust 端可以并行处理多个模块</li>
+<li>但插件调用必须串行化到 JS 主线程</li>
+<li>降低了整体的并行处理效率</li>
+</ul>
+<h4 id="rolldown-的过滤器设计"><a aria-hidden="true" tabindex="-1" href="#rolldown-的过滤器设计"><span class="icon icon-link"></span></a>Rolldown 的过滤器设计</h4>
+<p>Rolldown 通过在插件钩子中引入 <code>filter</code> 属性来解决这个问题：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">stylePlugin</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">return</span> {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'style-processor'</span>,
+    <span class="hljs-attr">transform</span>: {
+      <span class="hljs-comment">// 在 Rust 层面进行预过滤</span>
+      <span class="hljs-attr">filter</span>: {
+        <span class="hljs-attr">id</span>: {
+          <span class="hljs-attr">include</span>: [<span class="hljs-regexp">/\.css$/</span>, <span class="hljs-regexp">/\.scss$/</span>],
+          <span class="hljs-attr">exclude</span>: <span class="hljs-regexp">/\.module\./</span>
+        }
+      },
+      <span class="hljs-title function_">handler</span>(<span class="hljs-params">code, id</span>) {
+        <span class="hljs-comment">// 只有通过过滤器的模块才会到达这里</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-title function_">processStyles</span>(code, id)
+      }
+    },
+    <span class="hljs-attr">load</span>: {
+      <span class="hljs-attr">filter</span>: {
+        <span class="hljs-attr">id</span>: <span class="hljs-regexp">/\?inline$/</span>
+      },
+      <span class="hljs-title function_">handler</span>(<span class="hljs-params">id</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-title function_">inlineStyleLoader</span>(id)
+      }
+    }
+  }
+}
+</code></pre>
+<h4 id="过滤器的详细配置"><a aria-hidden="true" tabindex="-1" href="#过滤器的详细配置"><span class="icon icon-link"></span></a>过滤器的详细配置</h4>
+<p>过滤器支持多种匹配条件：</p>
+<pre><code class="hljs language-javascript">{
+  <span class="hljs-attr">transform</span>: {
+    <span class="hljs-attr">filter</span>: {
+      <span class="hljs-comment">// 基于文件 ID 过滤</span>
+      <span class="hljs-attr">id</span>: {
+        <span class="hljs-attr">include</span>: [<span class="hljs-regexp">/\.ts$/</span>, <span class="hljs-regexp">/\.tsx$/</span>],
+        <span class="hljs-attr">exclude</span>: [<span class="hljs-regexp">/\.d\.ts$/</span>, <span class="hljs-regexp">/node_modules/</span>]
+      },
+      
+      <span class="hljs-comment">// 基于模块类型过滤</span>
+      <span class="hljs-attr">moduleType</span>: <span class="hljs-string">'js'</span>,
+      
+      <span class="hljs-comment">// 基于源代码内容过滤</span>
+      <span class="hljs-attr">code</span>: {
+        <span class="hljs-attr">include</span>: [<span class="hljs-string">'export default'</span>, <span class="hljs-string">'export const'</span>],
+        <span class="hljs-attr">exclude</span>: [<span class="hljs-string">'// @skip-transform'</span>]
+      }
+    },
+    <span class="hljs-title function_">handler</span>(<span class="hljs-params">code, id</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-title function_">transformTypeScript</span>(code, id)
+    }
+  }
+}
+</code></pre>
+<p><strong>过滤逻辑：</strong></p>
+<ul>
+<li><code>include</code> 数组中任意一个匹配即可通过</li>
+<li><code>exclude</code> 优先级高于 <code>include</code></li>
+<li>多个过滤属性之间是 AND 关系（必须全部匹配）</li>
+</ul>
+<h2 id="全量打包模式探索"><a aria-hidden="true" tabindex="-1" href="#全量打包模式探索"><span class="icon icon-link"></span></a>全量打包模式探索</h2>
+<p>全量打包模式是 rolldown-vite 的一个实验性功能，代表了对传统 Vite 开发模式的重要反思和创新尝试。</p>
+<h4 id="传统-vite-开发模式的挑战"><a aria-hidden="true" tabindex="-1" href="#传统-vite-开发模式的挑战"><span class="icon icon-link"></span></a>传统 Vite 开发模式的挑战</h4>
+<p>Vite 的核心竞争力源于其非打包开发服务器，这种设计在早期带来了显著的性能优势：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 传统开发模式：每个模块独立请求</span>
+<span class="hljs-comment">// /src/App.tsx -> http://localhost:3000/src/App.tsx</span>
+<span class="hljs-comment">// /src/components/Header.tsx -> http://localhost:3000/src/components/Header.tsx  </span>
+<span class="hljs-comment">// /src/utils/api.ts -> http://localhost:3000/src/utils/api.ts</span>
+</code></pre>
+<p>然而，随着项目规模增长，这种模式逐渐暴露出两个核心问题：</p>
+<p><strong>1. 开发与生产环境的行为差异</strong></p>
+<p>我在实际项目中遇到过这样的问题：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 开发环境正常运行的代码</span>
+<span class="hljs-keyword">import</span> { debounce } <span class="hljs-keyword">from</span> <span class="hljs-string">'lodash'</span>
+<span class="hljs-keyword">import</span> utils <span class="hljs-keyword">from</span> <span class="hljs-string">'./utils'</span> <span class="hljs-comment">// 这里存在循环依赖</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">SearchComponent</span>(<span class="hljs-params"></span>) {
+  <span class="hljs-keyword">const</span> debouncedSearch = <span class="hljs-title function_">debounce</span>(utils.<span class="hljs-property">search</span>, <span class="hljs-number">300</span>)
+  <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<ul>
+<li><strong>开发环境</strong>：浏览器的原生 ES Module 机制处理模块加载，循环依赖被自然解决</li>
+<li><strong>生产环境</strong>：Rollup 打包后，模块的初始化顺序发生变化，导致运行时错误</li>
+</ul>
+<p><strong>2. 网络性能衰减问题</strong></p>
+<p>在一个包含 300+ 组件的大型项目中，初始页面加载可能触发：</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Chrome DevTools Network 面板中的典型场景</span>
+200+ HTTP requests (modules)
+150+ HTTP requests (dependencies)  
+50+ HTTP requests (assets)
+---
+Total: 400+ requests during development
+</code></pre>
+<p>这带来了几个实际问题：</p>
+<ul>
+<li><strong>开发服务器启动延迟</strong>：大量模块的按需编译</li>
+<li><strong>页面刷新缓慢</strong>：特别是在网络代理环境下</li>
+<li><strong>调试困难</strong>：网络面板中充斥着大量的模块请求</li>
+</ul>
+<h4 id="全量打包模式的设计理念"><a aria-hidden="true" tabindex="-1" href="#全量打包模式的设计理念"><span class="icon icon-link"></span></a>全量打包模式的设计理念</h4>
+<p>rolldown-vite 的全量打包模式试图在保持开发性能的同时解决上述问题：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 全量打包模式的工作流程</span>
+<span class="hljs-number">1.</span> 启动时进行快速的全量打包 (基于 <span class="hljs-title class_">Rust</span> 的高性能)
+<span class="hljs-number">2.</span> 生成统一的 bundle，但保持模块边界清晰
+<span class="hljs-number">3.</span> <span class="hljs-variable constant_">HMR</span> 仍然基于模块级别进行精确更新
+<span class="hljs-number">4.</span> 开发与生产环境使用相同的模块加载机制
+</code></pre>
+<h2 id="结语"><a aria-hidden="true" tabindex="-1" href="#结语"><span class="icon icon-link"></span></a>结语</h2>
+<p>rolldown-vite 作为 Vite 生态的重要演进，展现了前端构建工具向 Rust 生态迁移的技术趋势。通过实际体验，可以感受到其在性能优化、开发一致性等方面的改进。新的分块机制、钩子过滤、以及实验性的全量打包模式，都体现了对传统构建工具痛点的深度思考和创新尝试。</p></section></article><!--$--><!--/$--><!--$--><!--/$--></main><footer class="bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4">© 2022 - <!-- -->2025<a rel="noopener noreferrer" class="hover:underline hover:bg-indigo" href="https://github.com/LZS911" target="_blank">, LZS_911</a>, build with<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://nextjs.org/" target="_blank">Next.js</a> <!-- -->and<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://vercel.com/" target="_blank">Vercel</a></footer></div><!--/$--><script src="/_next/static/chunks/webpack-9cdb0b2d6ee94dc8.js" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[7555,[],\"\"]\n3:I[1901,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"39\",\"static/chunks/app/error-d036ecfd03716e30.js\"],\"default\"]\n4:I[1295,[],\"\"]\n5:I[9543,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"345\",\"static/chunks/app/not-found-2113bbd7a2f55e8f.js\"],\"default\"]\n8:I[9665,[],\"MetadataBoundary\"]\na:I[9665,[],\"OutletBoundary\"]\nd:I[4911,[],\"AsyncMetadataOutlet\"]\nf:I[8460,[\"209\",\"static/chunks/app/loading-b73dd9bd22c3caa2.js\"],\"default\"]\n10:I[9665,[],\"ViewportBoundary\"]\n12:I[6614,[],\"\"]\n:HL[\"/_next/static/media/569ce4b8f30dc480-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/93f479601ee12b01-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/60adccb42f39203c.css\",\"style\"]\n:HL[\"/_next/static/css/c7f6e508dc13ee25.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"fPyRDf3jU8EaKreMEXeMB\",\"p\":\"\",\"c\":[\"\",\"posts\",\"53a32daf66dcb375c89529bd\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"(article)\",{\"children\":[\"posts\",{\"children\":[[\"slug\",\"53a32daf66dcb375c89529bd\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/60adccb42f39203c.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_5cfdac __variable_9a8899 antialiased\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$3\",\"errorStyles\":[],\"errorScripts\":[],\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L5\",null,{}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[\"(article)\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/c7f6e508dc13ee25.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],\"$L6\"]}],{\"children\":[\"posts\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"53a32daf66dcb375c89529bd\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"children\":\"$L9\"}],null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",\"$Lc\",[\"$\",\"$Ld\",null,{\"promise\":\"$@e\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[[\"$\",\"$Lf\",\"l\",{}],[],[]],false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"R-a8gY79Ot_sEOx9iKOLQ\",{\"children\":[[\"$\",\"$L10\",null,{\"children\":\"$L11\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"13:I[2034,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"846\",\"static/chunks/846-5073d6248f7e4d01.js\",\"651\",\"static/chunks/app/(article)/layout-0113e097a12c4d28.js\"],\"default\"]\n14:\"$Sreact.suspense\"\n15:I[4911,[],\"AsyncMetadata\"]\n6:[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_5cfdac __variable_9a8899 antialiased\",\"children\":[[\"$\",\"div\",null,{\"className\":\"min-h-screen\",\"children\":[[\"$\",\"$L13\",null,{}],[\"$\",\"main\",null,{\"className\":\"p-6 flex justify-center\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",\"footer\",null,{\"className\":\"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4\",\"children\":[\"© 2022 - \",2025,[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"hover:underline hover:bg-indigo\",\"href\":\"https://github.com/LZS911\",\"target\":\"_blank\",\"children\":\", LZS_911\"}],\", build with\",\" \",[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"underline hover:bg-indigo\",\"href\":\"https://nextjs.org/\",\"target\":\"_blank\",\"children\":\"Next.js\"}],\" \",\"and\",\" \",[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"underline hover:bg-indigo\",\"href\":\"https://vercel.com/\",\"target\":\"_blank\",\"children\":\"Vercel\"}]]}]]}],false]}]}]\n9:[\"$\",\"$14\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{\"promise\":\"$@16\"}]}]\n"])</script><script>self.__next_f.push([1,"c:null\n"])</script><script>self.__next_f.push([1,"17:I[5099,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"520\",\"static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js\"],\"ThemeLoader\"]\n18:T6bdd,"])</script><script>self.__next_f.push([1,"\u003ch2 id=\"前言\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#前言\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e前言\u003c/h2\u003e\n\u003cp\u003e作为一名长期使用 Vite 进行前端开发的工程师，当看到官方发布 rolldown-vite 的消息时，我对这个基于 Rust 的新构建工具产生了浓厚的兴趣。\u003c/p\u003e\n\u003cp\u003e本文将记录我在实际项目中使用 rolldown-vite 的体验过程，包括迁移步骤、性能对比、新特性分析以及使用建议。\u003c/p\u003e\n\u003ch2 id=\"rolldown-概述\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#rolldown-概述\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eRolldown 概述\u003c/h2\u003e\n\u003ch3 id=\"技术背景\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#技术背景\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e技术背景\u003c/h3\u003e\n\u003cp\u003eRolldown 是一个用 Rust 编写的现代化 JavaScript 打包工具，定位为 Rollup 的高性能替代方案。在当前前端工具链普遍向 Rust 迁移的趋势下（如 swc、esbuild、turbo），Vite 团队也选择了这条技术路线。\u003c/p\u003e\n\u003cp\u003eRolldown 的核心目标是在保持与现有生态系统完全兼容的前提下，通过 Rust 的性能优势实现显著的构建速度提升。\u003c/p\u003e\n\u003ch3 id=\"架构优势分析\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#架构优势分析\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e架构优势分析\u003c/h3\u003e\n\u003cp\u003e相比传统方案，Rolldown 带来了三个主要改进：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. 工具链统一\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e传统 Vite 架构存在二元化问题：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e开发环境：esbuild 负责依赖预打包\u003c/li\u003e\n\u003cli\u003e生产环境：Rollup 负责最终构建\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e这种架构分离偶尔会导致开发与生产环境的行为不一致。Rolldown 通过统一的构建引擎解决了这一问题。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e2. 性能优化\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eRust 的系统级性能优势在 I/O 密集型的构建任务中表现尤为明显。虽然具体提升程度因项目规模而异，但理论上应该有显著的性能收益。\u003c/p\u003e\n\u003ch2 id=\"迁移实践\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#迁移实践\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e迁移实践\u003c/h2\u003e\n\u003ch3 id=\"迁移流程\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#迁移流程\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e迁移流程\u003c/h3\u003e\n\u003cp\u003e迁移过程相对简单，主要通过 npm 别名机制实现：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-json\"\u003e\u003cspan class=\"hljs-punctuation\"\u003e{\u003c/span\u003e\n  \u003cspan class=\"hljs-attr\"\u003e\"dependencies\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-punctuation\"\u003e{\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003e\"vite\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"npm:rolldown-vite@latest\"\u003c/span\u003e\n  \u003cspan class=\"hljs-punctuation\"\u003e}\u003c/span\u003e\n\u003cspan class=\"hljs-punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e完成依赖更新后，重新执行 \u003ccode\u003enpm install\u003c/code\u003e 即可。需要注意的是，首次安装可能需要较长时间，建议使用稳定的网络环境或配置国内镜像源。\u003c/p\u003e\n\u003ch3 id=\"性能测试结果\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#性能测试结果\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e性能测试结果\u003c/h3\u003e\n\u003cp\u003e我在一个包含约 200+ 组件的中型 React 项目上进行了构建性能对比：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e原版 Vite 构建时间：\u003c/strong\u003e\n\u003cimg src=\"/assets/blog/posts/image-1749636229985-8a74u9y.png\" alt=\"图片\"\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eRolldown-Vite 构建时间：\u003c/strong\u003e\n\u003cimg src=\"/assets/blog/posts/image-1749636117701-v9ijxti.png\" alt=\"图片\"\u003e\u003c/p\u003e\n\u003cp\u003e从测试结果来看，在构建项目产物场景下确实能观察到性能提升。\u003c/p\u003e\n\u003ch2 id=\"核心特性变化\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#核心特性变化\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e核心特性变化\u003c/h2\u003e\n\u003ch3 id=\"分块策略调整\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#分块策略调整\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e分块策略调整\u003c/h3\u003e\n\u003cp\u003eRolldown 最显著的变化是将 \u003ccode\u003emanualChunks\u003c/code\u003e 替换为 \u003ccode\u003eadvancedChunks\u003c/code\u003e，这是一个更具表达力的分块配置系统：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-typescript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 传统 Rollup 配置\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003edefault\u003c/span\u003e {\n  \u003cspan class=\"hljs-attr\"\u003ebuild\u003c/span\u003e: {\n    \u003cspan class=\"hljs-attr\"\u003erollupOptions\u003c/span\u003e: {\n      \u003cspan class=\"hljs-attr\"\u003eoutput\u003c/span\u003e: {\n        \u003cspan class=\"hljs-title function_\"\u003emanualChunks\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003eid\u003c/span\u003e) {\n          \u003cspan class=\"hljs-keyword\"\u003eif\u003c/span\u003e (\u003cspan class=\"hljs-regexp\"\u003e/\\/react(?:-dom)?/\u003c/span\u003e.\u003cspan class=\"hljs-title function_\"\u003etest\u003c/span\u003e(id)) {\n            \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'vendor'\u003c/span\u003e\n          }\n        }\n      }\n    }\n  }\n}\n\n\u003cspan class=\"hljs-comment\"\u003e// Rolldown 新配置\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003edefault\u003c/span\u003e {\n  \u003cspan class=\"hljs-attr\"\u003ebuild\u003c/span\u003e: {\n    \u003cspan class=\"hljs-attr\"\u003erollupOptions\u003c/span\u003e: {\n      \u003cspan class=\"hljs-attr\"\u003eoutput\u003c/span\u003e: {\n        \u003cspan class=\"hljs-attr\"\u003eadvancedChunks\u003c/span\u003e: {\n          \u003cspan class=\"hljs-attr\"\u003egroups\u003c/span\u003e: [{ \u003cspan class=\"hljs-attr\"\u003ename\u003c/span\u003e: \u003cspan class=\"hljs-string\"\u003e'vendor'\u003c/span\u003e, \u003cspan class=\"hljs-attr\"\u003etest\u003c/span\u003e: \u003cspan class=\"hljs-regexp\"\u003e/\\/react(?:-dom)?/\u003c/span\u003e }]\n        }\n      }\n    }\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ccode\u003eadvancedChunks\u003c/code\u003e 的行为模式更接近 webpack 的 \u003ccode\u003esplitChunks\u003c/code\u003e，提供了更精细的分块控制能力。\u003c/p\u003e\n\u003ch3 id=\"runtime-chunk-机制\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#runtime-chunk-机制\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eRuntime Chunk 机制\u003c/h3\u003e\n\u003cp\u003e使用 \u003ccode\u003eadvancedChunks\u003c/code\u003e 后，构建产物会自动生成一个 \u003ccode\u003erolldown-runtime-{hash}\u003c/code\u003e 文件。这个看似简单的变化，实际上解决了传统 Rollup \u003ccode\u003emanualChunks\u003c/code\u003e 配置中的一个重要痛点。\u003c/p\u003e\n\u003ch4 id=\"传统-manualchunks-的依赖问题\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#传统-manualchunks-的依赖问题\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e传统 manualChunks 的依赖问题\u003c/h4\u003e\n\u003cp\u003e在使用 Rollup 的 \u003ccode\u003emanualChunks\u003c/code\u003e 功能时，我们经常会遇到这样的配置：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 典型的 manualChunks 配置\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003edefault\u003c/span\u003e {\n  \u003cspan class=\"hljs-attr\"\u003ebuild\u003c/span\u003e: {\n    \u003cspan class=\"hljs-attr\"\u003erollupOptions\u003c/span\u003e: {\n      \u003cspan class=\"hljs-attr\"\u003eoutput\u003c/span\u003e: {\n        \u003cspan class=\"hljs-attr\"\u003emanualChunks\u003c/span\u003e: {\n          \u003cspan class=\"hljs-string\"\u003e'vendor'\u003c/span\u003e: [\u003cspan class=\"hljs-string\"\u003e'react'\u003c/span\u003e, \u003cspan class=\"hljs-string\"\u003e'react-dom'\u003c/span\u003e],\n          \u003cspan class=\"hljs-string\"\u003e'utils'\u003c/span\u003e: [\u003cspan class=\"hljs-string\"\u003e'lodash'\u003c/span\u003e, \u003cspan class=\"hljs-string\"\u003e'axios'\u003c/span\u003e],\n          \u003cspan class=\"hljs-string\"\u003e'ui'\u003c/span\u003e: [\u003cspan class=\"hljs-string\"\u003e'antd'\u003c/span\u003e, \u003cspan class=\"hljs-string\"\u003e'@ant-design/icons'\u003c/span\u003e]\n        }\n      }\n    }\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这种配置在大多数情况下工作正常，但在复杂项目中容易产生以下问题：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. 循环依赖导致的加载顺序问题\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e假设我们有这样的模块依赖关系：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// moduleA.js\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eimport\u003c/span\u003e { utilB } \u003cspan class=\"hljs-keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'./moduleB.js'\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eimport\u003c/span\u003e { thirdPartyLib } \u003cspan class=\"hljs-keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'some-lib'\u003c/span\u003e\n\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eutilA\u003c/span\u003e = (\u003cspan class=\"hljs-params\"\u003e\u003c/span\u003e) =\u003e {\n  \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eutilB\u003c/span\u003e() + \u003cspan class=\"hljs-title function_\"\u003ethirdPartyLib\u003c/span\u003e()\n}\n\n\u003cspan class=\"hljs-comment\"\u003e// moduleB.js  \u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eimport\u003c/span\u003e { utilA } \u003cspan class=\"hljs-keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'./moduleA.js'\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eimport\u003c/span\u003e { anotherLib } \u003cspan class=\"hljs-keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'another-lib'\u003c/span\u003e\n\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eutilB\u003c/span\u003e = (\u003cspan class=\"hljs-params\"\u003e\u003c/span\u003e) =\u003e {\n  \u003cspan class=\"hljs-comment\"\u003e// 在某些条件下可能会调用 utilA\u003c/span\u003e\n  \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e someCondition ? \u003cspan class=\"hljs-title function_\"\u003eutilA\u003c/span\u003e() : \u003cspan class=\"hljs-title function_\"\u003eanotherLib\u003c/span\u003e()\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e当 \u003ccode\u003emanualChunks\u003c/code\u003e 将这些模块分配到不同的 chunk 时，可能会产生这样的输出：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// chunk-vendor.js (包含 some-lib, another-lib)\u003c/span\u003e\n\u003cspan class=\"hljs-comment\"\u003e// chunk-utils.js (包含 moduleA, moduleB)\u003c/span\u003e\n\u003cspan class=\"hljs-comment\"\u003e// main.js (应用入口)\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003e2. 运行时错误的具体表现\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e在实际项目中，我曾遇到过这样的错误：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-bash\"\u003eUncaught ReferenceError: Cannot access \u003cspan class=\"hljs-string\"\u003e'utilA'\u003c/span\u003e before initialization\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e或者更隐蔽的问题：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-bash\"\u003eUncaught TypeError: utilB is not a \u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这类错误通常只在生产环境出现，因为开发环境使用的是非打包模式，模块加载顺序由浏览器的 ES Module 机制保证。\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e3. 问题的根本原因\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e问题的核心在于：当模块被分割到不同的 chunk 后，模块的初始化顺序变得不可预测。Rollup 在生成 chunk 时，可能会将循环依赖的模块放在不同的文件中，导致：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eChunk A 需要 Chunk B 中的模块\u003c/li\u003e\n\u003cli\u003eChunk B 也需要 Chunk A 中的模块\u003c/li\u003e\n\u003cli\u003e但运行时加载顺序无法保证正确的初始化序列\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"rolldown-的-runtime-chunk-解决方案\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#rolldown-的-runtime-chunk-解决方案\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eRolldown 的 Runtime Chunk 解决方案\u003c/h4\u003e\n\u003cp\u003eRolldown 通过强制生成 \u003ccode\u003eruntime.js\u003c/code\u003e 文件来解决这个问题：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. 运行时代码提取\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eruntime.js\u003c/code\u003e 包含了所有必要的运行时帮助函数和模块加载逻辑：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// runtime.js (简化示例)\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003e__esm\u003c/span\u003e = (\u003cspan class=\"hljs-params\"\u003efn, \u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e\u003c/span\u003e) =\u003e {\n  \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-function\"\u003e() =\u003e\u003c/span\u003e {\n    \u003cspan class=\"hljs-keyword\"\u003eif\u003c/span\u003e (!\u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003einit\u003c/span\u003e) {\n      \u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003eexports\u003c/span\u003e = {};\n      \u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003einit\u003c/span\u003e = \u003cspan class=\"hljs-literal\"\u003etrue\u003c/span\u003e;\n      fn.\u003cspan class=\"hljs-title function_\"\u003ecall\u003c/span\u003e(\u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003eexports\u003c/span\u003e, \u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e, \u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003eexports\u003c/span\u003e);\n    }\n    \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-variable language_\"\u003emodule\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003eexports\u003c/span\u003e;\n  };\n};\n\n\u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003e__export\u003c/span\u003e = (\u003cspan class=\"hljs-params\"\u003etarget, all\u003c/span\u003e) =\u003e {\n  \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e (\u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e name \u003cspan class=\"hljs-keyword\"\u003ein\u003c/span\u003e all)\n    target[name] = all[name];\n};\n\n\u003cspan class=\"hljs-comment\"\u003e// 模块注册表\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e __modules = {};\n\u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003e__register\u003c/span\u003e = (\u003cspan class=\"hljs-params\"\u003eid, fn\u003c/span\u003e) =\u003e {\n  __modules[id] = { fn, \u003cspan class=\"hljs-attr\"\u003eexports\u003c/span\u003e: {}, \u003cspan class=\"hljs-attr\"\u003einit\u003c/span\u003e: \u003cspan class=\"hljs-literal\"\u003efalse\u003c/span\u003e };\n};\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003e2. 确定的加载顺序\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e所有其他 chunk 都会依赖 \u003ccode\u003eruntime.js\u003c/code\u003e，确保运行时代码始终最先执行：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-html\"\u003e\u003cspan class=\"hljs-comment\"\u003e\u0026#x3C;!-- HTML 中的加载顺序 --\u003e\u003c/span\u003e\n\u003cspan class=\"hljs-tag\"\u003e\u0026#x3C;\u003cspan class=\"hljs-name\"\u003escript\u003c/span\u003e \u003cspan class=\"hljs-attr\"\u003esrc\u003c/span\u003e=\u003cspan class=\"hljs-string\"\u003e\"/assets/runtime-abc123.js\"\u003c/span\u003e\u003e\u003c/span\u003e\u003cspan class=\"hljs-tag\"\u003e\u0026#x3C;/\u003cspan class=\"hljs-name\"\u003escript\u003c/span\u003e\u003e\u003c/span\u003e\n\u003cspan class=\"hljs-tag\"\u003e\u0026#x3C;\u003cspan class=\"hljs-name\"\u003escript\u003c/span\u003e \u003cspan class=\"hljs-attr\"\u003esrc\u003c/span\u003e=\u003cspan class=\"hljs-string\"\u003e\"/assets/vendor-def456.js\"\u003c/span\u003e\u003e\u003c/span\u003e\u003cspan class=\"hljs-tag\"\u003e\u0026#x3C;/\u003cspan class=\"hljs-name\"\u003escript\u003c/span\u003e\u003e\u003c/span\u003e\n\u003cspan class=\"hljs-tag\"\u003e\u0026#x3C;\u003cspan class=\"hljs-name\"\u003escript\u003c/span\u003e \u003cspan class=\"hljs-attr\"\u003esrc\u003c/span\u003e=\u003cspan class=\"hljs-string\"\u003e\"/assets/main-ghi789.js\"\u003c/span\u003e\u003e\u003c/span\u003e\u003cspan class=\"hljs-tag\"\u003e\u0026#x3C;/\u003cspan class=\"hljs-name\"\u003escript\u003c/span\u003e\u003e\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003e3. 安全的模块初始化\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e通过运行时的模块管理机制，即使存在循环依赖，也能保证安全的初始化：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 在 runtime 管理下的模块加载\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e init_moduleA = \u003cspan class=\"hljs-title function_\"\u003e__esm\u003c/span\u003e({\n  \u003cspan class=\"hljs-string\"\u003e\"moduleA.js\"\u003c/span\u003e() {\n    \u003cspan class=\"hljs-comment\"\u003e// 延迟初始化，避免循环依赖问题\u003c/span\u003e\n    \u003cspan class=\"hljs-keyword\"\u003evar\u003c/span\u003e moduleB = \u003cspan class=\"hljs-title function_\"\u003e__require\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\"moduleB.js\"\u003c/span\u003e);\n    \u003cspan class=\"hljs-built_in\"\u003eexports\u003c/span\u003e.\u003cspan class=\"hljs-property\"\u003eutilA\u003c/span\u003e = \u003cspan class=\"hljs-function\"\u003e() =\u003e\u003c/span\u003e {\n      \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e moduleB.\u003cspan class=\"hljs-title function_\"\u003eutilB\u003c/span\u003e() + \u003cspan class=\"hljs-title function_\"\u003ethirdPartyLib\u003c/span\u003e();\n    };\n  }\n});\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4 id=\"权衡考虑\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#权衡考虑\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e权衡考虑\u003c/h4\u003e\n\u003cp\u003e当然，\u003ccode\u003eruntime.js\u003c/code\u003e 也带来了一些权衡：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e优势：\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e彻底解决循环依赖问题\u003c/li\u003e\n\u003cli\u003e提高大型项目的运行时稳定性\u003c/li\u003e\n\u003cli\u003e为模块联邦等高级功能奠定基础\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e成本：\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e增加一个额外的 HTTP 请求\u003c/li\u003e\n\u003cli\u003e轻微增加总的 bundle 大小（通常 \u0026#x3C; 5KB）\u003c/li\u003e\n\u003cli\u003e需要调整构建流水线以适应新的文件结构\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e从我的实际使用体验来看，这个权衡是值得的。相比于在生产环境中调试循环依赖问题的复杂性，多一个 runtime 文件的成本几乎可以忽略不计。\u003c/p\u003e\n\u003ch2 id=\"插件生态适配\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#插件生态适配\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e插件生态适配\u003c/h2\u003e\n\u003ch3 id=\"react-插件优化\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#react-插件优化\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eReact 插件优化\u003c/h3\u003e\n\u003cp\u003e对于 React 项目，官方推荐使用 \u003ccode\u003e@vitejs/plugin-react-oxc\u003c/code\u003e 替代传统的 React 插件：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e技术基础\u003c/strong\u003e：基于 Oxc（Rust 编写的前端工具链）\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e性能优势\u003c/strong\u003e：与 rolldown-vite 的 Rust 架构更好匹配\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e限制条件\u003c/strong\u003e：不支持自定义 Babel 或 SWC 插件\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e这个限制对于依赖复杂 Babel 配置的项目可能是个障碍，需要权衡性能收益与功能需求。\u003c/p\u003e\n\u003ch3 id=\"钩子过滤机制\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#钩子过滤机制\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e钩子过滤机制\u003c/h3\u003e\n\u003cp\u003eRolldown 引入了插件钩子过滤功能，这是一个重要的性能优化特性，解决了 Rust 打包器中跨语言调用的性能瓶颈问题。\u003c/p\u003e\n\u003ch4 id=\"传统插件钩子的性能问题\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#传统插件钩子的性能问题\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e传统插件钩子的性能问题\u003c/h4\u003e\n\u003cp\u003e在传统的 Rollup 插件中，我们经常看到这样的模式：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 典型的 Rollup 插件写法\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003edefault\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003estylePlugin\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003e\u003c/span\u003e) {\n  \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e {\n    \u003cspan class=\"hljs-attr\"\u003ename\u003c/span\u003e: \u003cspan class=\"hljs-string\"\u003e'style-processor'\u003c/span\u003e,\n    \u003cspan class=\"hljs-title function_\"\u003etransform\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003ecode, id\u003c/span\u003e) {\n      \u003cspan class=\"hljs-comment\"\u003e// 每个模块都会触发这个钩子\u003c/span\u003e\n      \u003cspan class=\"hljs-keyword\"\u003eif\u003c/span\u003e (!id.\u003cspan class=\"hljs-title function_\"\u003eendsWith\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e'.css'\u003c/span\u003e) \u0026#x26;\u0026#x26; !id.\u003cspan class=\"hljs-title function_\"\u003eendsWith\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e'.scss'\u003c/span\u003e)) {\n        \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003enull\u003c/span\u003e \u003cspan class=\"hljs-comment\"\u003e// 大部分情况下都是早期返回\u003c/span\u003e\n      }\n      \n      \u003cspan class=\"hljs-comment\"\u003e// 实际的样式处理逻辑\u003c/span\u003e\n      \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eprocessStyles\u003c/span\u003e(code, id)\n    },\n    \u003cspan class=\"hljs-title function_\"\u003eload\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003eid\u003c/span\u003e) {\n      \u003cspan class=\"hljs-keyword\"\u003eif\u003c/span\u003e (!id.\u003cspan class=\"hljs-title function_\"\u003eincludes\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e'?inline'\u003c/span\u003e)) {\n        \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003enull\u003c/span\u003e \u003cspan class=\"hljs-comment\"\u003e// 又是一次无效调用\u003c/span\u003e\n      }\n      \n      \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003einlineStyleLoader\u003c/span\u003e(id)\n    }\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这种设计在 JavaScript 打包器中工作良好，但在 Rust 打包器中存在严重的性能问题：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. 频繁的跨语言调用开销\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e在一个包含 1000+ 模块的项目中：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e每个模块都会触发 \u003ccode\u003etransform\u003c/code\u003e 钩子\u003c/li\u003e\n\u003cli\u003e大部分调用最终都是无效的（早期返回）\u003c/li\u003e\n\u003cli\u003eRust 到 JS 的调用本身就有开销\u003c/li\u003e\n\u003cli\u003e累积起来成为显著的性能瓶颈\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e2. 破坏 Rust 的并行优化\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e由于 JavaScript 的单线程特性：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e即使 Rust 端可以并行处理多个模块\u003c/li\u003e\n\u003cli\u003e但插件调用必须串行化到 JS 主线程\u003c/li\u003e\n\u003cli\u003e降低了整体的并行处理效率\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"rolldown-的过滤器设计\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#rolldown-的过滤器设计\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eRolldown 的过滤器设计\u003c/h4\u003e\n\u003cp\u003eRolldown 通过在插件钩子中引入 \u003ccode\u003efilter\u003c/code\u003e 属性来解决这个问题：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003edefault\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003estylePlugin\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003e\u003c/span\u003e) {\n  \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e {\n    \u003cspan class=\"hljs-attr\"\u003ename\u003c/span\u003e: \u003cspan class=\"hljs-string\"\u003e'style-processor'\u003c/span\u003e,\n    \u003cspan class=\"hljs-attr\"\u003etransform\u003c/span\u003e: {\n      \u003cspan class=\"hljs-comment\"\u003e// 在 Rust 层面进行预过滤\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003efilter\u003c/span\u003e: {\n        \u003cspan class=\"hljs-attr\"\u003eid\u003c/span\u003e: {\n          \u003cspan class=\"hljs-attr\"\u003einclude\u003c/span\u003e: [\u003cspan class=\"hljs-regexp\"\u003e/\\.css$/\u003c/span\u003e, \u003cspan class=\"hljs-regexp\"\u003e/\\.scss$/\u003c/span\u003e],\n          \u003cspan class=\"hljs-attr\"\u003eexclude\u003c/span\u003e: \u003cspan class=\"hljs-regexp\"\u003e/\\.module\\./\u003c/span\u003e\n        }\n      },\n      \u003cspan class=\"hljs-title function_\"\u003ehandler\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003ecode, id\u003c/span\u003e) {\n        \u003cspan class=\"hljs-comment\"\u003e// 只有通过过滤器的模块才会到达这里\u003c/span\u003e\n        \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eprocessStyles\u003c/span\u003e(code, id)\n      }\n    },\n    \u003cspan class=\"hljs-attr\"\u003eload\u003c/span\u003e: {\n      \u003cspan class=\"hljs-attr\"\u003efilter\u003c/span\u003e: {\n        \u003cspan class=\"hljs-attr\"\u003eid\u003c/span\u003e: \u003cspan class=\"hljs-regexp\"\u003e/\\?inline$/\u003c/span\u003e\n      },\n      \u003cspan class=\"hljs-title function_\"\u003ehandler\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003eid\u003c/span\u003e) {\n        \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003einlineStyleLoader\u003c/span\u003e(id)\n      }\n    }\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4 id=\"过滤器的详细配置\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#过滤器的详细配置\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e过滤器的详细配置\u003c/h4\u003e\n\u003cp\u003e过滤器支持多种匹配条件：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e{\n  \u003cspan class=\"hljs-attr\"\u003etransform\u003c/span\u003e: {\n    \u003cspan class=\"hljs-attr\"\u003efilter\u003c/span\u003e: {\n      \u003cspan class=\"hljs-comment\"\u003e// 基于文件 ID 过滤\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003eid\u003c/span\u003e: {\n        \u003cspan class=\"hljs-attr\"\u003einclude\u003c/span\u003e: [\u003cspan class=\"hljs-regexp\"\u003e/\\.ts$/\u003c/span\u003e, \u003cspan class=\"hljs-regexp\"\u003e/\\.tsx$/\u003c/span\u003e],\n        \u003cspan class=\"hljs-attr\"\u003eexclude\u003c/span\u003e: [\u003cspan class=\"hljs-regexp\"\u003e/\\.d\\.ts$/\u003c/span\u003e, \u003cspan class=\"hljs-regexp\"\u003e/node_modules/\u003c/span\u003e]\n      },\n      \n      \u003cspan class=\"hljs-comment\"\u003e// 基于模块类型过滤\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003emoduleType\u003c/span\u003e: \u003cspan class=\"hljs-string\"\u003e'js'\u003c/span\u003e,\n      \n      \u003cspan class=\"hljs-comment\"\u003e// 基于源代码内容过滤\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ecode\u003c/span\u003e: {\n        \u003cspan class=\"hljs-attr\"\u003einclude\u003c/span\u003e: [\u003cspan class=\"hljs-string\"\u003e'export default'\u003c/span\u003e, \u003cspan class=\"hljs-string\"\u003e'export const'\u003c/span\u003e],\n        \u003cspan class=\"hljs-attr\"\u003eexclude\u003c/span\u003e: [\u003cspan class=\"hljs-string\"\u003e'// @skip-transform'\u003c/span\u003e]\n      }\n    },\n    \u003cspan class=\"hljs-title function_\"\u003ehandler\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003ecode, id\u003c/span\u003e) {\n      \u003cspan class=\"hljs-keyword\"\u003ereturn\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003etransformTypeScript\u003c/span\u003e(code, id)\n    }\n  }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003e过滤逻辑：\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003einclude\u003c/code\u003e 数组中任意一个匹配即可通过\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003eexclude\u003c/code\u003e 优先级高于 \u003ccode\u003einclude\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e多个过滤属性之间是 AND 关系（必须全部匹配）\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"全量打包模式探索\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#全量打包模式探索\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e全量打包模式探索\u003c/h2\u003e\n\u003cp\u003e全量打包模式是 rolldown-vite 的一个实验性功能，代表了对传统 Vite 开发模式的重要反思和创新尝试。\u003c/p\u003e\n\u003ch4 id=\"传统-vite-开发模式的挑战\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#传统-vite-开发模式的挑战\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e传统 Vite 开发模式的挑战\u003c/h4\u003e\n\u003cp\u003eVite 的核心竞争力源于其非打包开发服务器，这种设计在早期带来了显著的性能优势：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 传统开发模式：每个模块独立请求\u003c/span\u003e\n\u003cspan class=\"hljs-comment\"\u003e// /src/App.tsx -\u003e http://localhost:3000/src/App.tsx\u003c/span\u003e\n\u003cspan class=\"hljs-comment\"\u003e// /src/components/Header.tsx -\u003e http://localhost:3000/src/components/Header.tsx  \u003c/span\u003e\n\u003cspan class=\"hljs-comment\"\u003e// /src/utils/api.ts -\u003e http://localhost:3000/src/utils/api.ts\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e然而，随着项目规模增长，这种模式逐渐暴露出两个核心问题：\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e1. 开发与生产环境的行为差异\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e我在实际项目中遇到过这样的问题：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 开发环境正常运行的代码\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eimport\u003c/span\u003e { debounce } \u003cspan class=\"hljs-keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'lodash'\u003c/span\u003e\n\u003cspan class=\"hljs-keyword\"\u003eimport\u003c/span\u003e utils \u003cspan class=\"hljs-keyword\"\u003efrom\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'./utils'\u003c/span\u003e \u003cspan class=\"hljs-comment\"\u003e// 这里存在循环依赖\u003c/span\u003e\n\n\u003cspan class=\"hljs-keyword\"\u003eexport\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003edefault\u003c/span\u003e \u003cspan class=\"hljs-keyword\"\u003efunction\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003eSearchComponent\u003c/span\u003e(\u003cspan class=\"hljs-params\"\u003e\u003c/span\u003e) {\n  \u003cspan class=\"hljs-keyword\"\u003econst\u003c/span\u003e debouncedSearch = \u003cspan class=\"hljs-title function_\"\u003edebounce\u003c/span\u003e(utils.\u003cspan class=\"hljs-property\"\u003esearch\u003c/span\u003e, \u003cspan class=\"hljs-number\"\u003e300\u003c/span\u003e)\n  \u003cspan class=\"hljs-comment\"\u003e// ...\u003c/span\u003e\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e开发环境\u003c/strong\u003e：浏览器的原生 ES Module 机制处理模块加载，循环依赖被自然解决\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e生产环境\u003c/strong\u003e：Rollup 打包后，模块的初始化顺序发生变化，导致运行时错误\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e2. 网络性能衰减问题\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e在一个包含 300+ 组件的大型项目中，初始页面加载可能触发：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-bash\"\u003e\u003cspan class=\"hljs-comment\"\u003e# Chrome DevTools Network 面板中的典型场景\u003c/span\u003e\n200+ HTTP requests (modules)\n150+ HTTP requests (dependencies)  \n50+ HTTP requests (assets)\n---\nTotal: 400+ requests during development\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e这带来了几个实际问题：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e开发服务器启动延迟\u003c/strong\u003e：大量模块的按需编译\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e页面刷新缓慢\u003c/strong\u003e：特别是在网络代理环境下\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e调试困难\u003c/strong\u003e：网络面板中充斥着大量的模块请求\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"全量打包模式的设计理念\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#全量打包模式的设计理念\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e全量打包模式的设计理念\u003c/h4\u003e\n\u003cp\u003erolldown-vite 的全量打包模式试图在保持开发性能的同时解决上述问题：\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-javascript\"\u003e\u003cspan class=\"hljs-comment\"\u003e// 全量打包模式的工作流程\u003c/span\u003e\n\u003cspan class=\"hljs-number\"\u003e1.\u003c/span\u003e 启动时进行快速的全量打包 (基于 \u003cspan class=\"hljs-title class_\"\u003eRust\u003c/span\u003e 的高性能)\n\u003cspan class=\"hljs-number\"\u003e2.\u003c/span\u003e 生成统一的 bundle，但保持模块边界清晰\n\u003cspan class=\"hljs-number\"\u003e3.\u003c/span\u003e \u003cspan class=\"hljs-variable constant_\"\u003eHMR\u003c/span\u003e 仍然基于模块级别进行精确更新\n\u003cspan class=\"hljs-number\"\u003e4.\u003c/span\u003e 开发与生产环境使用相同的模块加载机制\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"结语\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#结语\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e结语\u003c/h2\u003e\n\u003cp\u003erolldown-vite 作为 Vite 生态的重要演进，展现了前端构建工具向 Rust 生态迁移的技术趋势。通过实际体验，可以感受到其在性能优化、开发一致性等方面的改进。新的分块机制、钩子过滤、以及实验性的全量打包模式，都体现了对传统构建工具痛点的深度思考和创新尝试。\u003c/p\u003e"])</script><script>self.__next_f.push([1,"7:[\"$\",\"article\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"flex justify-center font-[Arial] max-w-[864px] text-center\",\"children\":[\"$\",\"h1\",null,{\"className\":\"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]\",\"children\":\"Rolldown-Vite 实践体验：基于 Rust 的新一代构建工具\"}]}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap items-center gap-4 mb-6\",\"children\":[[\"$\",\"time\",null,{\"dateTime\":\"2025-06-11\",\"className\":\"text-center block my-4 text-sm opacity-60\",\"children\":\"June\\t11, 2025\"}],[\"$\",\"span\",null,{\"className\":\"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800\",\"children\":\"blog\"}],\"$undefined\"]}],[null,[\"$\",\"$L17\",null,{\"theme\":\"fancy\"}],[\"$\",\"section\",null,{\"className\":\"markdown-body-fancy max-w-3xl\",\"dangerouslySetInnerHTML\":{\"__html\":\"$18\"}}]],null]}]\n"])</script><script>self.__next_f.push([1,"11:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])</script><script>self.__next_f.push([1,"16:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Ai.Haibara codes\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"LZS Blog\"}],[\"$\",\"link\",\"2\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"96x96\"}]],\"error\":null,\"digest\":\"$undefined\"}\ne:{\"metadata\":\"$16:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n"])</script></body></html>

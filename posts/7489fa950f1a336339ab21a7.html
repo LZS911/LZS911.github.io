@@ -1,0 +1,506 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/569ce4b8f30dc480-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="preload" href="/_next/static/media/93f479601ee12b01-s.p.woff2" as="font" crossorigin="" type="font/woff2"/><link rel="stylesheet" href="/_next/static/css/60adccb42f39203c.css" data-precedence="next"/><link rel="stylesheet" href="/_next/static/css/c7f6e508dc13ee25.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-9cdb0b2d6ee94dc8.js"/><script src="/_next/static/chunks/4bd1b696-c9bd88c3e79a40cd.js" async=""></script><script src="/_next/static/chunks/684-ea7b2db13f3dd55b.js" async=""></script><script src="/_next/static/chunks/main-app-8a63285bca825cb3.js" async=""></script><script src="/_next/static/chunks/874-90f68e0a3827b559.js" async=""></script><script src="/_next/static/chunks/app/error-d036ecfd03716e30.js" async=""></script><script src="/_next/static/chunks/app/not-found-2113bbd7a2f55e8f.js" async=""></script><script src="/_next/static/chunks/app/loading-b73dd9bd22c3caa2.js" async=""></script><script src="/_next/static/chunks/296-93bf38127a29d878.js" async=""></script><script src="/_next/static/chunks/766-3404ce8492c1c2aa.js" async=""></script><script src="/_next/static/chunks/846-5073d6248f7e4d01.js" async=""></script><script src="/_next/static/chunks/app/(article)/layout-0113e097a12c4d28.js" async=""></script><script src="/_next/static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js" async=""></script><meta name="next-size-adjust" content=""/><title>Ai.Haibara codes</title><meta name="description" content="LZS Blog"/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="96x96"/><script>document.querySelectorAll('body link[rel="icon"], body link[rel="apple-touch-icon"]').forEach(el => document.head.appendChild(el))</script><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body class="__variable_5cfdac __variable_9a8899 antialiased"><!--$--><html lang="en"><body class="__variable_5cfdac __variable_9a8899 antialiased"><div class="min-h-screen"><header class="text-white bg-black drop-shadow-2xl"><div class="mx-auto my-0 max-w-[960px] py-6 px-4 flex items-center"><div class="flex items-center"><img alt="Ai.Haibara" loading="lazy" width="100" height="100" decoding="async" data-nimg="1" class=" rounded-full" style="color:transparent" srcSet="/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=128&amp;q=75 1x, /_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=256&amp;q=75 2x" src="/_next/image?url=%2Fassets%2Fblog%2Fauthors%2Fhaibara_2.jpg&amp;w=256&amp;q=75"/></div><div class="ml-6"><a class=" font-bold text-3xl" href="/">Ai.Haibara codes</a><div class="mt-2"><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/">Home</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/projects">Projects</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/talks">Talks</a><a class="p-1 rounded-sm text-xl mr-2 hover:border-b-2 border-lime-300" href="/blogs">Blogs</a></div></div></div></header><main class="p-6 flex justify-center"><article><div class="flex justify-center font-[Arial] max-w-[864px] text-center"><h1 class="text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]">Docker化一个React+Nest的Monorepo应用</h1></div><div class="flex flex-wrap items-center gap-4 mb-6"><time dateTime="2023-04-25" class="text-center block my-4 text-sm opacity-60">April	25, 2023</time><span class="px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800">blog</span><div class="flex flex-wrap gap-2"><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Docker">Docker</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Docker%20Compose">Docker Compose</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/React">React</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Nest">Nest</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Monorepo">Monorepo</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Pnpm">Pnpm</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Nginx">Nginx</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/Jenkins">Jenkins</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/PostgreSQL">PostgreSQL</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E9%83%A8%E7%BD%B2">部署</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/CI%2FCD">CI/CD</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/DevOps">DevOps</a><a class="inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800" href="/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91">全栈开发</a></div></div><section class="markdown-body-orange max-w-3xl"><h2 id="目标"><a aria-hidden="true" tabindex="-1" href="#目标"><span class="icon icon-link"></span></a>目标</h2>
+<p>使用 <code>Docker</code> 和 <code>Docker Compose</code> 将一个使用 <a href="https://react.dev/">React</a> + <a href="https://nestjs.com/">NestJS</a> + <a href="https://www.postgresql.org/">PostgreSQL</a> + <a href="https://www.prisma.io/">prisma</a> 构建的 Web 应用程序 <strong>Dockerize</strong>。</p>
+<h2 id="前置准备"><a aria-hidden="true" tabindex="-1" href="#前置准备"><span class="icon icon-link"></span></a>前置准备</h2>
+<ul>
+<li>安装 <a href="https://nodejs.org/en">Node.js</a>, 且保证 Node.js 版本为 v14.17.0 或者更高版本.</li>
+<li>安装 <a href="https://docs.nestjs.com/cli/overview">Nest.js CLI</a></li>
+<li>安装 <a href="https://pnpm.io/">Pnpm</a></li>
+<li>安装 <a href="https://docs.docker.com/engine/install/">Docker Engine</a></li>
+<li>安装 <a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
+<li>安装 <a href="https://opensource.com/article/18/8/what-how-makefile">Make</a></li>
+</ul>
+<h2 id="项目结构"><a aria-hidden="true" tabindex="-1" href="#项目结构"><span class="icon icon-link"></span></a>项目结构</h2>
+<h3 id="使用-pnpm-的-workspace-功能构建一个-monorepo"><a aria-hidden="true" tabindex="-1" href="#使用-pnpm-的-workspace-功能构建一个-monorepo"><span class="icon icon-link"></span></a>使用 Pnpm 的 <a href="https://pnpm.io/workspaces">Workspace</a> 功能构建一个 Monorepo</h3>
+<p>对于一个 <code>Monorepo</code>, 我们需要创建在项目根路径创建一个 <code>packages</code> 文件夹. <code>packages</code> 里面包含了由 <a href="https://www.npmjs.com/package/create-vite">create-vite</a> 创建的 <code>React</code> 项目以及由 <code>Nest.js CLI</code> 创建的后端服务. 当然, 在项目根路径也需要创建一些全局的配置文件.</p>
+<p>具体操作步骤如下:</p>
+<ul>
+<li>
+<p>在根目录初始化一个新的 git 仓库并创建以下文件:</p>
+<pre><code class="hljs language-sh">.dockerignore
+.gitignore
+.<span class="hljs-built_in">env</span>
+.docker-compose.yaml
+Makefile
+</code></pre>
+</li>
+<li>
+<p>创建 packages 文件用于存放前后端项目:</p>
+<pre><code class="hljs language-sh"><span class="hljs-built_in">mkdir</span> packages &#x26;&#x26; <span class="hljs-built_in">cd</span> packages
+</code></pre>
+</li>
+<li>
+<p>创建前端项目, 并添加 Dockerfile.local 以及 Dockerfile.production 文件</p>
+<pre><code class="hljs language-sh">pnpm create vite
+</code></pre>
+</li>
+<li>
+<p>创建后端项目, 并且在执行完后手动删除 node_modules, 同时也添加 Dockerfile.local 以及 Dockerfile.production 文件</p>
+<pre><code class="hljs language-sh">nest new backend
+</code></pre>
+</li>
+<li>
+<p>重新配置 tsconfig.json:</p>
+<p>首先在项目根目录执行: <code>tsc --init</code>, 初始化一份 <code>tsconfig.json</code>, 并且将文件内容修改至以下内容:</p>
+<pre><code class="hljs language-json">  <span class="hljs-punctuation">{</span>
+   <span class="hljs-attr">"compilerOptions"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+     <span class="hljs-attr">"module"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"commonjs"</span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"declaration"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"removeComments"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"emitDecoratorMetadata"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"experimentalDecorators"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"allowSyntheticDefaultImports"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"target"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"es2017"</span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"sourceMap"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"outDir"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"./dist"</span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"baseUrl"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"./"</span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"incremental"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"skipLibCheck"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"strictNullChecks"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"noImplicitAny"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"strictBindCallApply"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"forceConsistentCasingInFileNames"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"noFallthroughCasesInSwitch"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"strict"</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">"jsx"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"react-jsx"</span>
+   <span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">"include"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">"packages/*/src"</span><span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">}</span>
+</code></pre>
+<p>最后将前后端项目中由工具创建的 <code>tsconfig.json</code> 文件内容修改至以下内容:</p>
+<pre><code class="hljs language-json">  <span class="hljs-punctuation">{</span>
+   <span class="hljs-attr">"extends"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"../../tsconfig.json"</span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">"include"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">"./src"</span><span class="hljs-punctuation">]</span>
+  <span class="hljs-punctuation">}</span>
+</code></pre>
+</li>
+<li>
+<p>创建 pnpm-workspace.yml, 填充以下内容:</p>
+<pre><code class="hljs language-yml">  <span class="hljs-attr">packages:</span>
+ <span class="hljs-bullet">-</span> <span class="hljs-string">'packages/**'</span>
+</code></pre>
+</li>
+<li>
+<p>在根目录创建 package.json 文件, 并且将前后端相同的依赖项提取至其中. 执行 <code>pnpm install -r</code> , 完成依赖的安装.</p>
+</li>
+</ul>
+<p>最后, 得到的项目结构应如下图所示</p>
+<p><img src="/assets/docker-react-nest/example1.png" alt="alt"></p>
+<h2 id="dockerize"><a aria-hidden="true" tabindex="-1" href="#dockerize"><span class="icon icon-link"></span></a>Dockerize</h2>
+<h3 id="backend-dockerfile"><a aria-hidden="true" tabindex="-1" href="#backend-dockerfile"><span class="icon icon-link"></span></a>Backend Dockerfile</h3>
+<p>回到本文主题, 现在, 我们的 Backend 文件夹中包含了两个 Dockerfile 文件. 其中一个用于在本地运行项目, 它用于docker-compose.yaml 文件, 而另一个用于生产环境.</p>
+<p>现在将以下内容填充至 Dockerfile.local:</p>
+<pre><code class="hljs language-dockerfile">#获取node镜像源
+FROM node:16.16.0-alpine
+
+#设置工作目录
+WORKDIR /projects
+
+# 将 pnpm-lock.yaml 拷贝至工作目录, 为后续的 pnpm fetch 做准备
+COPY ./pnpm-lock.yaml ./
+
+# 安装 pnpm, 并且固定版本, 也可以考虑在获取node镜像源时直接获取带有pnpm的镜像, 这样就能省略这一步了
+RUN npm install -g pnpm@8.3.1
+
+# pnpm fetch 通过提供仅使用锁定文件中的信息将包加载到虚拟存储中的能力，完美地解决了上述问题. 具体见: https://pnpm.io/cli/fetch
+RUN pnpm fetch
+
+COPY . .
+
+# 安装依赖, 关于 --offline 见: https://pnpm.io/cli/fetch
+RUN pnpm install -r --offline
+
+# https://zhuanlan.zhihu.com/p/89335014
+VOLUME ["/projects/node_modules/", "/projects/packages/backend/node_modules/", "/projects/.pnpm-store/"]
+
+# https://yeasy.gitbook.io/docker_practice/image/dockerfile/expose
+EXPOSE $BACKEND_PORT
+
+# 启动后端服务
+CMD rm -rf dist &#x26;&#x26; cd packages/backend &#x26;&#x26; pnpm start:debug
+</code></pre>
+<h3 id="frontend-dockerfile"><a aria-hidden="true" tabindex="-1" href="#frontend-dockerfile"><span class="icon icon-link"></span></a>Frontend Dockerfile</h3>
+<p>前端文件夹下的 Dockerfile:</p>
+<pre><code class="hljs language-dockerfile">#获取node镜像源
+FROM node:16.16.0-alpine
+
+#设置工作目录
+WORKDIR /app
+
+# 将 pnpm-lock.yaml 拷贝至工作目录, 为后续的 pnpm fetch 做准备
+COPY ./pnpm-lock.yaml ./
+
+# 安装 pnpm, 并且固定版本, 也可以考虑在获取node镜像源时直接获取带有pnpm的镜像, 这样就能省略这一步了
+RUN npm install -g pnpm@8.3.1
+
+# pnpm fetch 通过提供仅使用锁定文件中的信息将包加载到虚拟存储中的能力，完美地解决了上述问题. 具体见: https://pnpm.io/cli/fetch
+RUN pnpm fetch
+
+COPY . .
+
+# 安装依赖, 关于 --offline 见: https://pnpm.io/cli/fetch
+RUN pnpm install -r --offline
+
+# https://zhuanlan.zhihu.com/p/89335014
+VOLUME ["/app/node_modules/", "/app/packages/frontend/node_modules/", "/app/.pnpm-store/"]
+
+# 启动前端服务
+CMD cd packages/frontend &#x26;&#x26; pnpm start
+
+</code></pre>
+<h3 id="创建-docker-compose-文件并运行项目"><a aria-hidden="true" tabindex="-1" href="#创建-docker-compose-文件并运行项目"><span class="icon icon-link"></span></a>创建 Docker Compose 文件并运行项目</h3>
+<ol>
+<li>
+<p>配置环境变量: 将以下内容填充至 <code>&#x3C;rootDir>/.env</code></p>
+<pre><code class="hljs language-sh">   NODE_ENV=development
+   FRONTEND_PORT=7879
+   BACKEND_PORT=7878
+   JWT_SECRET=jwt_secret_key_here
+   JWT_EXPIRES_IN=30d
+   DB_HOST=bp-pg-db
+   DB_NAME=bp-pg-db
+   DB_USER=postgres
+   DB_PASSWORD=root
+   DB_PORT=5432
+   PGADMIN_DEFAULT_EMAIL=admin@backend.com
+   PGADMIN_DEFAULT_PASSWORD=pass@123
+   PGADMIN_PORT=5055
+</code></pre>
+</li>
+<li>
+<p>将以下内容填充至 <code>&#x3C;rootDIr>/docker-compose.yml</code></p>
+<pre><code class="hljs language-yml">    <span class="hljs-attr">version:</span> <span class="hljs-string">'3.9'</span>
+    <span class="hljs-attr">services:</span>
+      <span class="hljs-attr">frontend:</span>
+        <span class="hljs-attr">container_name:</span> <span class="hljs-string">frontend</span>
+        <span class="hljs-attr">build:</span>
+          <span class="hljs-attr">context:</span> <span class="hljs-string">./</span>
+          <span class="hljs-attr">dockerfile:</span> <span class="hljs-string">./packages/frontend/Dockerfile.local</span>
+        <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+        <span class="hljs-attr">env_file:</span> <span class="hljs-string">.env</span>
+        <span class="hljs-attr">ports:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">'${FRONTEND_PORT}:${FRONTEND_PORT}'</span>
+        <span class="hljs-attr">volumes:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">.:/app</span>
+        <span class="hljs-attr">networks:</span>
+          <span class="hljs-attr">bp-network:</span>
+            <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.3</span>
+      <span class="hljs-attr">backend:</span>
+        <span class="hljs-attr">container_name:</span> <span class="hljs-string">backend</span>
+        <span class="hljs-attr">build:</span>
+          <span class="hljs-attr">context:</span> <span class="hljs-string">./</span>
+          <span class="hljs-attr">dockerfile:</span> <span class="hljs-string">./packages/backend/Dockerfile.local</span>
+        <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+        <span class="hljs-attr">env_file:</span> <span class="hljs-string">.env</span>
+        <span class="hljs-attr">volumes:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">.:/app</span>
+        <span class="hljs-attr">networks:</span>
+          <span class="hljs-attr">bp-network:</span>
+            <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.2</span>
+        <span class="hljs-attr">ports:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">'${BACKEND_PORT}:${BACKEND_PORT}'</span>
+        <span class="hljs-attr">depends_on:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">bp-pg-db</span>
+        <span class="hljs-attr">links:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">bp-pg-db</span>
+      <span class="hljs-attr">bp-pg-db:</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">postgres:12-alpine</span>
+        <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+        <span class="hljs-attr">container_name:</span> <span class="hljs-string">bp-pg-db</span>
+        <span class="hljs-attr">env_file:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">.env</span>
+        <span class="hljs-attr">environment:</span>
+          <span class="hljs-attr">POSTGRES_PASSWORD:</span> <span class="hljs-string">${DB_PASSWORD}</span>
+          <span class="hljs-attr">PGDATA:</span> <span class="hljs-string">/var/lib/postgresql/data</span>
+          <span class="hljs-attr">POSTGRES_USER:</span> <span class="hljs-string">${DB_USER}</span>
+          <span class="hljs-attr">POSTGRES_DB:</span> <span class="hljs-string">${DB_NAME}</span>
+        <span class="hljs-attr">ports:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">'${DB_PORT}:${DB_PORT}'</span>
+        <span class="hljs-attr">volumes:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">pgdata:/var/lib/postgresql/data</span>
+        <span class="hljs-attr">networks:</span>
+          <span class="hljs-attr">bp-network:</span>
+            <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.5</span>
+      <span class="hljs-attr">pgadmin-portal:</span>
+        <span class="hljs-attr">image:</span> <span class="hljs-string">dpage/pgadmin4</span>
+        <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+        <span class="hljs-attr">container_name:</span> <span class="hljs-string">pgadmin-portal</span>
+        <span class="hljs-attr">env_file:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">.env</span>
+        <span class="hljs-attr">environment:</span>
+          <span class="hljs-attr">PGADMIN_DEFAULT_PASSWORD:</span> <span class="hljs-string">'${PGADMIN_DEFAULT_PASSWORD}'</span>
+          <span class="hljs-attr">PGADMIN_DEFAULT_EMAIL:</span> <span class="hljs-string">'${PGADMIN_DEFAULT_EMAIL}'</span>
+        <span class="hljs-attr">volumes:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">pgadmin:/root/.pgadmin</span>
+        <span class="hljs-attr">ports:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">'${PGADMIN_PORT}:80'</span>
+        <span class="hljs-attr">depends_on:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-string">bp-pg-db</span>
+        <span class="hljs-attr">networks:</span>
+          <span class="hljs-attr">bp-network:</span>
+            <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.6</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-attr">pgdata:</span>
+      <span class="hljs-attr">pgadmin:</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">bp-network:</span>
+        <span class="hljs-attr">driver:</span> <span class="hljs-string">bridge</span>
+        <span class="hljs-attr">ipam:</span>
+          <span class="hljs-attr">config:</span>
+            <span class="hljs-bullet">-</span> <span class="hljs-attr">subnet:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-string">/16</span>
+    
+</code></pre>
+<ol>
+<li><code>Services</code>: 每个服务代表一个将要创建的 Docker 容器</li>
+</ol>
+<ul>
+<li>frontend: 基于前端项目的 Dockerfile.local 构建镜像以及容器. 此容器将会控制前端服务的启停.</li>
+<li>backend: 基于后端项目的 Dockerfile.local 构建镜像以及容器. 此容器将会控制后端服务的启停.</li>
+<li>bp-pg-db: 基于镜像 postgres:12-alpine 构建的 postgres 数据库容器.</li>
+<li>pgadmin-portal: 基于镜像 dpage/pgadmin4 构建的 postgres 可视化界面操作服务.</li>
+</ul>
+</li>
+<li>
+<p>添加 Makefile 用来启动:</p>
+<pre><code class="hljs language-Makefile"><span class="hljs-section">local: </span>
+   docker-compose stop &#x26;&#x26; docker-compose up --build -d --remove-orphans
+</code></pre>
+</li>
+</ol>
+<p>使用 <code>make local</code> 命令后, 将构建镜像并启动容器服务, 此时便能通过配置中暴露出的端口号来正常的访问到前端、后端以及数据库服务. 同时, 得益于 <code>VOlUME</code>, 我们在本地修改代码后能及时的映射到容器的挂卷中, 通过项目的热更新来开发项目.</p>
+<h2 id="生产环境部署"><a aria-hidden="true" tabindex="-1" href="#生产环境部署"><span class="icon icon-link"></span></a>生产环境部署</h2>
+<h3 id="frontend-项目"><a aria-hidden="true" tabindex="-1" href="#frontend-项目"><span class="icon icon-link"></span></a>frontend 项目</h3>
+<p><strong>目标: 利用 github webhook 在项目push代码后自动触发 jenkins 流水线用来构建项目</strong></p>
+<p>环境准备:</p>
+<ol>
+<li>
+<p>创建以下文件夹:</p>
+<ul>
+<li>jenkins/jenkins/home: 用来存放 jenkins 配置文件以及插件和 jenkins 的工作区等内容.</li>
+<li>nginx/default.conf: nginx 的配置文件</li>
+<li>webserver/static/jenkins/dist: 存放前端项目打包后的产物</li>
+<li>docker-compose.yml: docker-compose 的配置文件</li>
+</ul>
+<p>default.conf 内容如下(本文不涉及 nginx 配置知识, 所以这里使用一个最基本的配置文件):</p>
+<pre><code class="hljs language-conf">  server{
+    listen  80;
+    server_name localhost;
+    root /usr/share/nginx/html;
+    index index.html;
+  
+    location / {
+       try_files $uri $uri/ /index.html =404;
+    }
+          
+  # location /v {
+  # 根据项目配置反向代理  
+  #   proxy_pass &#x3C;http://localhost:7878>
+  # }
+}
+</code></pre>
+</li>
+<li>
+<p>编写 <code>docker-compose.yml</code> 来构建 jenkins 容器以及部署前端项目的 nginx 容器, 内容如下:</p>
+<pre><code class="hljs language-yml">   <span class="hljs-attr">version:</span> <span class="hljs-string">"3.9"</span>
+     <span class="hljs-attr">services:</span>                                      
+       <span class="hljs-attr">docker_jenkins:</span>
+         <span class="hljs-attr">environment:</span>
+           <span class="hljs-bullet">-</span> <span class="hljs-string">TZ=Asia/Shanghai</span>
+         <span class="hljs-attr">user:</span> <span class="hljs-string">root</span>                                
+         <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>                           
+         <span class="hljs-attr">image:</span> <span class="hljs-string">jenkins/jenkins:lts</span>              
+         <span class="hljs-attr">container_name:</span> <span class="hljs-string">cicd-jenkins</span>                 
+         <span class="hljs-attr">ports:</span>                                
+           <span class="hljs-bullet">-</span> <span class="hljs-number">8077</span><span class="hljs-string">:8080</span>                             
+           <span class="hljs-bullet">-</span> <span class="hljs-number">50000</span><span class="hljs-string">:50000</span>                          
+         <span class="hljs-attr">volumes:</span>                               
+           <span class="hljs-bullet">-</span> <span class="hljs-string">./jenkins/jenkins_home/:/var/jenkins_home</span>  
+           <span class="hljs-bullet">-</span> <span class="hljs-string">/var/run/docker.sock:/var/run/docker.sock</span>
+           <span class="hljs-bullet">-</span> <span class="hljs-string">/usr/bin/docker:/usr/bin/docker</span>              
+           <span class="hljs-bullet">-</span> <span class="hljs-string">/usr/local/bin/docker-compose:/usr/local/bin/docker-compose</span>
+       <span class="hljs-attr">docker_nginx:</span>
+         <span class="hljs-attr">environment:</span>
+           <span class="hljs-bullet">-</span> <span class="hljs-string">TZ=Asia/Shanghai</span>
+         <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+         <span class="hljs-attr">image:</span> <span class="hljs-string">nginx:stable-alpine</span>               
+         <span class="hljs-attr">container_name:</span> <span class="hljs-string">cicd-nginx</span>
+         <span class="hljs-attr">ports:</span>
+           <span class="hljs-bullet">-</span> <span class="hljs-number">7070</span><span class="hljs-string">:80</span>                             
+         <span class="hljs-attr">volumes:</span>
+           <span class="hljs-bullet">-</span> <span class="hljs-string">./nginx/:/etc/nginx/conf.d/</span>
+           <span class="hljs-bullet">-</span> <span class="hljs-string">./webserver/static/jenkins/dist/:/usr/share/nginx/html/</span>
+</code></pre>
+</li>
+<li>
+<p>执行 <code>docker-compose up --build -d --remove-orphans</code> 后, 此时应该会成功启动两个容器, 可以使用 <code>docker container ls</code> 查看:, 大致内容如下:</p>
+<p><img src="/assets/docker-react-nest/example2.png" alt="alt"></p>
+<p>此时在本地访问 <code>http://ip(容器的宿主主机ip地址):8077</code> 应该能够正常访问 jenkins 服务, 初始化界面应该如下:</p>
+<p><img src="/assets/docker-react-nest/example3.png" alt="alt"></p>
+<p>在宿主主机上执行 <code>docker logs [container_id]</code>, 从 log 信息从获取管理源密码, 然后进入插件安装页面, 这里安装推荐插件即可.</p>
+</li>
+<li>
+<p>插件安装完成且创建用户进入 jenkins 后点击 <strong>Manage Jenkins</strong>, 然后再点击进入<strong>Manage Plugins</strong>. 这里需要安装 <code>Node</code> 插件以及 <code>Publish over SSH</code>.</p>
+<p>前者为构建流程提供 <code>NodeJs</code> 环境, 后者将构建完成后得到的前端产物压缩包上传至目标服务器.</p>
+<p><img src="/assets/docker-react-nest/example4.png" alt="alt"></p>
+</li>
+<li>
+<p>配置 <code>NodeJs</code> 环境. 点击 <strong>系统管理</strong>, 然后再点击进入<strong>全局工具配置</strong>, 找到 NodeJS, 点击 <strong>新增NodeJS</strong>. 最后根据项目的需求进行选择 <code>Node</code> 版本以及是否要安装全局工具即可.</p>
+<p><img src="/assets/docker-react-nest/example5.png" alt="alt"></p>
+</li>
+<li>
+<p>点击系统管理中的<strong>Credentials</strong>, 然后添加 github 的凭据. 可以添加 github 的 token、账号密码以及公私钥三种类型的凭据.</p>
+</li>
+<li>
+<p>配置 github-webhook. 点击系统管理中的<strong>系统配置</strong>, 找到 Github, 然后点击<strong>添加Github</strong>服务器, 在凭据一栏添加在上一步添加的 Github 凭据.</p>
+<p><img src="/assets/docker-react-nest/example6.png" alt="alt"></p>
+<p>找到最下方的更多按钮, 点击后会出现覆盖 Hook URL的选项, 将这里的地址绑定到 github 项目上的 webhook 即可.
+当然, 如果 jenkins 容器宿主主机为本地主机或者为内网主机, 可使用 <a href="https://dashboard.ngrok.com/">ngrok</a> 实现内网穿透, 来保证 github 能访问到 jenkins.</p>
+<p>注意事项:</p>
+<ol>
+<li>github-webhook地址前缀需与 jenkins 配置中的 <strong>Jenkins URL</strong> 保持一致.</li>
+<li>关于 <a href="https://docs.github.com/en/webhooks-and-events/webhooks/about-webhooks">github webhook</a>.</li>
+</ol>
+</li>
+<li>
+<p>添加服务器信息. 在系统配置中找到<strong>Publish over SSH</strong>, 在 Passphrase 一栏填入服务器密码, 然后点击<strong>新增</strong>, 填入服务器信息.</p>
+<p><img src="/assets/docker-react-nest/example7.png" alt="alt"></p>
+</li>
+<li>
+<p>创建任务</p>
+<ul>
+<li>
+<p>点击新建任务, 输入任务名称后选择<strong>构建一个自由风格的软件项目</strong>
+<img src="/assets/docker-react-nest/example8.png" alt="alt"></p>
+</li>
+<li>
+<p>源码管理里输入项目地址、添加 Github 凭据, 选择项目分支.
+<img src="/assets/docker-react-nest/example9.png" alt="alt"></p>
+</li>
+<li>
+<p>构建触发器里选择 <strong>GitHub hook trigger for GITScm polling</strong>
+<img src="/assets/docker-react-nest/example10.png" alt="alt"></p>
+</li>
+<li>
+<p>选择构建环境
+<img src="/assets/docker-react-nest/example11.png" alt="alt"></p>
+</li>
+<li>
+<p>添加构建步骤. 这里可以将步骤放在 <code>Makefile</code> 文件中或者 <code>sh</code> 脚本中, 这样每次更新步骤只需要更新配置文件, 而不用修改 jenkins 配置. 当然这一步也可以用 <a href="https://www.jenkins.io/zh/doc/book/pipeline/jenkinsfile/">Jenkinsfile</a>替代.
+<img src="/assets/docker-react-nest/example12.png" alt="alt"></p>
+<p><code>build.sh</code>:</p>
+<pre><code class="hljs language-sh"> pnpm fetch
+ pnpm install -r --offline
+ 
+ <span class="hljs-comment"># frontend</span>
+ pnpm build:frontend
+ <span class="hljs-built_in">cd</span> ./packages/frontend
+ tar zcf frontend.tar.gz ./dist
+ <span class="hljs-built_in">mv</span> ./frontend.tar.gz ../../frontend.tar.gz
+</code></pre>
+</li>
+<li>
+<p>添加构建后的操作. 这里选择 <strong>Send build artifacts over SSH</strong>, 填入以下内容:
+<img src="/assets/docker-react-nest/example13.png" alt="alt">
+其中 SSH Server Name 为上一步添加的服务器名称.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>到这里, 一个前端项目的自动化部署基本完成了. 在提交项目代码后, 便会自动触发任务, 进行项目构建, 并将构建后的产物上传至目标服务器. 然后将文件内容映射到 nginx 容器中.</p>
+<p>关于 <code>NestJs</code> 服务的部署, 将构建开发环境中的 <code>docker-compose.yml</code>稍微进行改造即可, 内容如下:</p>
+<pre><code class="hljs language-yml"><span class="hljs-attr">version:</span> <span class="hljs-string">'3.9'</span>
+<span class="hljs-attr">services:</span>
+  <span class="hljs-attr">backend-prod:</span>
+    <span class="hljs-attr">container_name:</span> <span class="hljs-string">backend-prod</span>
+    <span class="hljs-attr">user:</span> <span class="hljs-string">root</span>
+    <span class="hljs-attr">build:</span>
+      <span class="hljs-attr">context:</span> <span class="hljs-string">./</span>
+      <span class="hljs-attr">dockerfile:</span> <span class="hljs-string">./packages/backend/Dockerfile.prod</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">webserver-backend-prod</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">env_file:</span> <span class="hljs-string">.env</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">bp-network:</span>
+        <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.2</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">'${BACKEND_PORT}:3535'</span>
+    <span class="hljs-attr">depends_on:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">bp-pg-db-prod</span>
+    <span class="hljs-attr">command:</span> [<span class="hljs-string">sh</span>, <span class="hljs-string">-c</span>, <span class="hljs-string">"cd packages/backend &#x26;&#x26; pnpm migrate:postgres &#x26;&#x26; pnpm prisma:gen &#x26;&#x26; pnpm build &#x26;&#x26; pnpm start:prod"</span>]
+  <span class="hljs-attr">bp-pg-db-prod:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">postgres:12-alpine</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">container_name:</span> <span class="hljs-string">bp-pg-db-prod</span>
+    <span class="hljs-attr">env_file:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">.env</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-attr">POSTGRES_PASSWORD:</span> <span class="hljs-string">${DB_PASSWORD}</span>
+      <span class="hljs-attr">PGDATA:</span> <span class="hljs-string">/var/lib/postgresql/data</span>
+      <span class="hljs-attr">POSTGRES_USER:</span> <span class="hljs-string">${DB_USER}</span>
+      <span class="hljs-attr">POSTGRES_DB:</span> <span class="hljs-string">${DB_NAME}</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">'${DB_PORT}:${DB_PORT}'</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">pgdata:/var/lib/postgresql/data</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">bp-network:</span>
+        <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.5</span>
+  <span class="hljs-attr">pgadmin-portal-prod:</span>
+    <span class="hljs-attr">image:</span> <span class="hljs-string">dpage/pgadmin4</span>
+    <span class="hljs-attr">restart:</span> <span class="hljs-string">always</span>
+    <span class="hljs-attr">container_name:</span> <span class="hljs-string">pgadmin-portal-prod</span>
+    <span class="hljs-attr">env_file:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">.env</span>
+    <span class="hljs-attr">environment:</span>
+      <span class="hljs-attr">PGADMIN_DEFAULT_PASSWORD:</span> <span class="hljs-string">'${PGADMIN_DEFAULT_PASSWORD}'</span>
+      <span class="hljs-attr">PGADMIN_DEFAULT_EMAIL:</span> <span class="hljs-string">'${PGADMIN_DEFAULT_EMAIL}'</span>
+    <span class="hljs-attr">volumes:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">pgadmin:/root/.pgadmin</span>
+    <span class="hljs-attr">ports:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">'${PGADMIN_PORT}:80'</span>
+    <span class="hljs-attr">depends_on:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">bp-pg-db-prod</span>
+    <span class="hljs-attr">networks:</span>
+      <span class="hljs-attr">bp-network:</span>
+        <span class="hljs-attr">ipv4_address:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.6</span>
+<span class="hljs-attr">volumes:</span>
+  <span class="hljs-attr">pgdata:</span>
+  <span class="hljs-attr">pgadmin:</span>
+<span class="hljs-attr">networks:</span>
+  <span class="hljs-attr">bp-network:</span>
+    <span class="hljs-attr">driver:</span> <span class="hljs-string">bridge</span>
+    <span class="hljs-attr">ipam:</span>
+      <span class="hljs-attr">config:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">subnet:</span> <span class="hljs-number">172.25</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span><span class="hljs-string">/16</span>
+
+</code></pre>
+<p>Dockerfile.prod:</p>
+<pre><code class="hljs language-dockerfile">FROM node:16.16.0-alpine
+
+
+WORKDIR /app
+
+COPY ./pnpm-lock.yaml ./
+
+RUN npm install -g pnpm@8.3.1
+
+RUN pnpm fetch
+
+COPY . .
+
+RUN pnpm install -r --offline
+
+VOLUME ["/app/node_modules/", "/app/packages/backend/node_modules/", "/app/.pnpm-store/"]
+</code></pre>
+<p>由于本文所构建项目为一个 Monorepo, 所以在提交前端代码时同时会触发后端项目的构建, 所以我们仅需将以下内容添加至前端构建流程中的 <code>./scripts/build.sh</code>即可:</p>
+<pre><code class="hljs language-sh">docker-compose -f docker-compose.server.yaml stop &#x26;&#x26; docker-compose -f docker-compose.server.yaml up --build -d --remove-orphans
+</code></pre>
+<p>注意事项:</p>
+<ol>
+<li>需要移除 docker-compose 中后端服务的 volume. 由于jenkins在构建完成后会清空工作区, 所以这里不需要同构建开发环境一样进行文件映射.</li>
+<li>NestJS 项目中开发环境以及生产环境中环境变量的区分.</li>
+</ol>
+<p>最后, 构建完成后, 宿主主机上容器列表如下:</p>
+<p><img src="/assets/docker-react-nest/example14.png" alt="alt"></p>
+<p>通过 http:[ip]:7878 即可正常访问后端服务, http:[ip]:5055 可访问 pgadmin.</p>
+<p>项目地址: <a href="https://github.com/LZS911/todo-react-nest-docker">https://github.com/LZS911/todo-react-nest-docker</a></p>
+<p>jenkins+nginx容器构建: <a href="https://github.com/LZS911/jenkins-nginx-docker">https://github.com/LZS911/jenkins-nginx-docker</a></p></section></article><!--$--><!--/$--><!--$--><!--/$--></main><footer class="bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4">© 2022 - <!-- -->2025<a rel="noopener noreferrer" class="hover:underline hover:bg-indigo" href="https://github.com/LZS911" target="_blank">, LZS_911</a>, build with<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://nextjs.org/" target="_blank">Next.js</a> <!-- -->and<!-- --> <a rel="noopener noreferrer" class="underline hover:bg-indigo" href="https://vercel.com/" target="_blank">Vercel</a></footer></div><!--/$--><script src="/_next/static/chunks/webpack-9cdb0b2d6ee94dc8.js" async=""></script></body></html><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[7555,[],\"\"]\n3:I[1901,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"39\",\"static/chunks/app/error-d036ecfd03716e30.js\"],\"default\"]\n4:I[1295,[],\"\"]\n5:I[9543,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"345\",\"static/chunks/app/not-found-2113bbd7a2f55e8f.js\"],\"default\"]\n8:I[9665,[],\"MetadataBoundary\"]\na:I[9665,[],\"OutletBoundary\"]\nd:I[4911,[],\"AsyncMetadataOutlet\"]\nf:I[8460,[\"209\",\"static/chunks/app/loading-b73dd9bd22c3caa2.js\"],\"default\"]\n10:I[9665,[],\"ViewportBoundary\"]\n12:I[6614,[],\"\"]\n:HL[\"/_next/static/media/569ce4b8f30dc480-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/media/93f479601ee12b01-s.p.woff2\",\"font\",{\"crossOrigin\":\"\",\"type\":\"font/woff2\"}]\n:HL[\"/_next/static/css/60adccb42f39203c.css\",\"style\"]\n:HL[\"/_next/static/css/c7f6e508dc13ee25.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"fPyRDf3jU8EaKreMEXeMB\",\"p\":\"\",\"c\":[\"\",\"posts\",\"7489fa950f1a336339ab21a7\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"(article)\",{\"children\":[\"posts\",{\"children\":[[\"slug\",\"7489fa950f1a336339ab21a7\",\"d\"],{\"children\":[\"__PAGE__\",{}]}]}]}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/60adccb42f39203c.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_5cfdac __variable_9a8899 antialiased\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$3\",\"errorStyles\":[],\"errorScripts\":[],\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"$L5\",null,{}],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}]}]]}],{\"children\":[\"(article)\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/c7f6e508dc13ee25.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],\"$L6\"]}],{\"children\":[\"posts\",[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[[\"slug\",\"7489fa950f1a336339ab21a7\",\"d\"],[\"$\",\"$1\",\"c\",{\"children\":[null,[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[\"$L7\",[\"$\",\"$L8\",null,{\"children\":\"$L9\"}],null,[\"$\",\"$La\",null,{\"children\":[\"$Lb\",\"$Lc\",[\"$\",\"$Ld\",null,{\"promise\":\"$@e\"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[[\"$\",\"$Lf\",\"l\",{}],[],[]],false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"L0BRoty6tD3p-Vb-TB6Mj\",{\"children\":[[\"$\",\"$L10\",null,{\"children\":\"$L11\"}],[\"$\",\"meta\",null,{\"name\":\"next-size-adjust\",\"content\":\"\"}]]}],null]}],false]],\"m\":\"$undefined\",\"G\":[\"$12\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"13:I[2034,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"846\",\"static/chunks/846-5073d6248f7e4d01.js\",\"651\",\"static/chunks/app/(article)/layout-0113e097a12c4d28.js\"],\"default\"]\n14:\"$Sreact.suspense\"\n15:I[4911,[],\"AsyncMetadata\"]\n6:[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_5cfdac __variable_9a8899 antialiased\",\"children\":[[\"$\",\"div\",null,{\"className\":\"min-h-screen\",\"children\":[[\"$\",\"$L13\",null,{}],[\"$\",\"main\",null,{\"className\":\"p-6 flex justify-center\",\"children\":[\"$\",\"$L2\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$L4\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]}],[\"$\",\"footer\",null,{\"className\":\"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4\",\"children\":[\"© 2022 - \",2025,[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"hover:underline hover:bg-indigo\",\"href\":\"https://github.com/LZS911\",\"target\":\"_blank\",\"children\":\", LZS_911\"}],\", build with\",\" \",[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"underline hover:bg-indigo\",\"href\":\"https://nextjs.org/\",\"target\":\"_blank\",\"children\":\"Next.js\"}],\" \",\"and\",\" \",[\"$\",\"a\",null,{\"rel\":\"noopener noreferrer\",\"className\":\"underline hover:bg-indigo\",\"href\":\"https://vercel.com/\",\"target\":\"_blank\",\"children\":\"Vercel\"}]]}]]}],false]}]}]\n9:[\"$\",\"$14\",null,{\"fallback\":null,\"children\":[\"$\",\"$L15\",null,{\"promise\":\"$@16\"}]}]\n"])</script><script>self.__next_f.push([1,"c:null\n"])</script><script>self.__next_f.push([1,"17:I[6874,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"520\",\"static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js\"],\"\"]\n18:I[5099,[\"874\",\"static/chunks/874-90f68e0a3827b559.js\",\"296\",\"static/chunks/296-93bf38127a29d878.js\",\"766\",\"static/chunks/766-3404ce8492c1c2aa.js\",\"520\",\"static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js\"],\"ThemeLoader\"]\n19:T89d3,"])</script><script>self.__next_f.push([1,"\u003ch2 id=\"目标\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#目标\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e目标\u003c/h2\u003e\n\u003cp\u003e使用 \u003ccode\u003eDocker\u003c/code\u003e 和 \u003ccode\u003eDocker Compose\u003c/code\u003e 将一个使用 \u003ca href=\"https://react.dev/\"\u003eReact\u003c/a\u003e + \u003ca href=\"https://nestjs.com/\"\u003eNestJS\u003c/a\u003e + \u003ca href=\"https://www.postgresql.org/\"\u003ePostgreSQL\u003c/a\u003e + \u003ca href=\"https://www.prisma.io/\"\u003eprisma\u003c/a\u003e 构建的 Web 应用程序 \u003cstrong\u003eDockerize\u003c/strong\u003e。\u003c/p\u003e\n\u003ch2 id=\"前置准备\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#前置准备\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e前置准备\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e安装 \u003ca href=\"https://nodejs.org/en\"\u003eNode.js\u003c/a\u003e, 且保证 Node.js 版本为 v14.17.0 或者更高版本.\u003c/li\u003e\n\u003cli\u003e安装 \u003ca href=\"https://docs.nestjs.com/cli/overview\"\u003eNest.js CLI\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e安装 \u003ca href=\"https://pnpm.io/\"\u003ePnpm\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e安装 \u003ca href=\"https://docs.docker.com/engine/install/\"\u003eDocker Engine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e安装 \u003ca href=\"https://docs.docker.com/compose/install/\"\u003eDocker Compose\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e安装 \u003ca href=\"https://opensource.com/article/18/8/what-how-makefile\"\u003eMake\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"项目结构\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#项目结构\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e项目结构\u003c/h2\u003e\n\u003ch3 id=\"使用-pnpm-的-workspace-功能构建一个-monorepo\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#使用-pnpm-的-workspace-功能构建一个-monorepo\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e使用 Pnpm 的 \u003ca href=\"https://pnpm.io/workspaces\"\u003eWorkspace\u003c/a\u003e 功能构建一个 Monorepo\u003c/h3\u003e\n\u003cp\u003e对于一个 \u003ccode\u003eMonorepo\u003c/code\u003e, 我们需要创建在项目根路径创建一个 \u003ccode\u003epackages\u003c/code\u003e 文件夹. \u003ccode\u003epackages\u003c/code\u003e 里面包含了由 \u003ca href=\"https://www.npmjs.com/package/create-vite\"\u003ecreate-vite\u003c/a\u003e 创建的 \u003ccode\u003eReact\u003c/code\u003e 项目以及由 \u003ccode\u003eNest.js CLI\u003c/code\u003e 创建的后端服务. 当然, 在项目根路径也需要创建一些全局的配置文件.\u003c/p\u003e\n\u003cp\u003e具体操作步骤如下:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e在根目录初始化一个新的 git 仓库并创建以下文件:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003e.dockerignore\n.gitignore\n.\u003cspan class=\"hljs-built_in\"\u003eenv\u003c/span\u003e\n.docker-compose.yaml\nMakefile\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e创建 packages 文件用于存放前后端项目:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003e\u003cspan class=\"hljs-built_in\"\u003emkdir\u003c/span\u003e packages \u0026#x26;\u0026#x26; \u003cspan class=\"hljs-built_in\"\u003ecd\u003c/span\u003e packages\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e创建前端项目, 并添加 Dockerfile.local 以及 Dockerfile.production 文件\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003epnpm create vite\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e创建后端项目, 并且在执行完后手动删除 node_modules, 同时也添加 Dockerfile.local 以及 Dockerfile.production 文件\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003enest new backend\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e重新配置 tsconfig.json:\u003c/p\u003e\n\u003cp\u003e首先在项目根目录执行: \u003ccode\u003etsc --init\u003c/code\u003e, 初始化一份 \u003ccode\u003etsconfig.json\u003c/code\u003e, 并且将文件内容修改至以下内容:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-json\"\u003e  \u003cspan class=\"hljs-punctuation\"\u003e{\u003c/span\u003e\n   \u003cspan class=\"hljs-attr\"\u003e\"compilerOptions\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-punctuation\"\u003e{\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"module\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"commonjs\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"declaration\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"removeComments\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"emitDecoratorMetadata\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"experimentalDecorators\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"allowSyntheticDefaultImports\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"target\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"es2017\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"sourceMap\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"outDir\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"./dist\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"baseUrl\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"./\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"incremental\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"skipLibCheck\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"strictNullChecks\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003efalse\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"noImplicitAny\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003efalse\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"strictBindCallApply\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003efalse\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"forceConsistentCasingInFileNames\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"noFallthroughCasesInSwitch\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003efalse\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"strict\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-literal\"\u003e\u003cspan class=\"hljs-keyword\"\u003etrue\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003e\"jsx\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"react-jsx\"\u003c/span\u003e\n   \u003cspan class=\"hljs-punctuation\"\u003e}\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n   \u003cspan class=\"hljs-attr\"\u003e\"include\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-punctuation\"\u003e[\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e\"packages/*/src\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e]\u003c/span\u003e\n  \u003cspan class=\"hljs-punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e最后将前后端项目中由工具创建的 \u003ccode\u003etsconfig.json\u003c/code\u003e 文件内容修改至以下内容:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-json\"\u003e  \u003cspan class=\"hljs-punctuation\"\u003e{\u003c/span\u003e\n   \u003cspan class=\"hljs-attr\"\u003e\"extends\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"../../tsconfig.json\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e,\u003c/span\u003e\n   \u003cspan class=\"hljs-attr\"\u003e\"include\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e:\u003c/span\u003e \u003cspan class=\"hljs-punctuation\"\u003e[\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e\"./src\"\u003c/span\u003e\u003cspan class=\"hljs-punctuation\"\u003e]\u003c/span\u003e\n  \u003cspan class=\"hljs-punctuation\"\u003e}\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e创建 pnpm-workspace.yml, 填充以下内容:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-yml\"\u003e  \u003cspan class=\"hljs-attr\"\u003epackages:\u003c/span\u003e\n \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'packages/**'\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e在根目录创建 package.json 文件, 并且将前后端相同的依赖项提取至其中. 执行 \u003ccode\u003epnpm install -r\u003c/code\u003e , 完成依赖的安装.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e最后, 得到的项目结构应如下图所示\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example1.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003ch2 id=\"dockerize\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#dockerize\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eDockerize\u003c/h2\u003e\n\u003ch3 id=\"backend-dockerfile\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#backend-dockerfile\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eBackend Dockerfile\u003c/h3\u003e\n\u003cp\u003e回到本文主题, 现在, 我们的 Backend 文件夹中包含了两个 Dockerfile 文件. 其中一个用于在本地运行项目, 它用于docker-compose.yaml 文件, 而另一个用于生产环境.\u003c/p\u003e\n\u003cp\u003e现在将以下内容填充至 Dockerfile.local:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-dockerfile\"\u003e#获取node镜像源\nFROM node:16.16.0-alpine\n\n#设置工作目录\nWORKDIR /projects\n\n# 将 pnpm-lock.yaml 拷贝至工作目录, 为后续的 pnpm fetch 做准备\nCOPY ./pnpm-lock.yaml ./\n\n# 安装 pnpm, 并且固定版本, 也可以考虑在获取node镜像源时直接获取带有pnpm的镜像, 这样就能省略这一步了\nRUN npm install -g pnpm@8.3.1\n\n# pnpm fetch 通过提供仅使用锁定文件中的信息将包加载到虚拟存储中的能力，完美地解决了上述问题. 具体见: https://pnpm.io/cli/fetch\nRUN pnpm fetch\n\nCOPY . .\n\n# 安装依赖, 关于 --offline 见: https://pnpm.io/cli/fetch\nRUN pnpm install -r --offline\n\n# https://zhuanlan.zhihu.com/p/89335014\nVOLUME [\"/projects/node_modules/\", \"/projects/packages/backend/node_modules/\", \"/projects/.pnpm-store/\"]\n\n# https://yeasy.gitbook.io/docker_practice/image/dockerfile/expose\nEXPOSE $BACKEND_PORT\n\n# 启动后端服务\nCMD rm -rf dist \u0026#x26;\u0026#x26; cd packages/backend \u0026#x26;\u0026#x26; pnpm start:debug\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"frontend-dockerfile\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#frontend-dockerfile\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003eFrontend Dockerfile\u003c/h3\u003e\n\u003cp\u003e前端文件夹下的 Dockerfile:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-dockerfile\"\u003e#获取node镜像源\nFROM node:16.16.0-alpine\n\n#设置工作目录\nWORKDIR /app\n\n# 将 pnpm-lock.yaml 拷贝至工作目录, 为后续的 pnpm fetch 做准备\nCOPY ./pnpm-lock.yaml ./\n\n# 安装 pnpm, 并且固定版本, 也可以考虑在获取node镜像源时直接获取带有pnpm的镜像, 这样就能省略这一步了\nRUN npm install -g pnpm@8.3.1\n\n# pnpm fetch 通过提供仅使用锁定文件中的信息将包加载到虚拟存储中的能力，完美地解决了上述问题. 具体见: https://pnpm.io/cli/fetch\nRUN pnpm fetch\n\nCOPY . .\n\n# 安装依赖, 关于 --offline 见: https://pnpm.io/cli/fetch\nRUN pnpm install -r --offline\n\n# https://zhuanlan.zhihu.com/p/89335014\nVOLUME [\"/app/node_modules/\", \"/app/packages/frontend/node_modules/\", \"/app/.pnpm-store/\"]\n\n# 启动前端服务\nCMD cd packages/frontend \u0026#x26;\u0026#x26; pnpm start\n\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"创建-docker-compose-文件并运行项目\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#创建-docker-compose-文件并运行项目\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e创建 Docker Compose 文件并运行项目\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e配置环境变量: 将以下内容填充至 \u003ccode\u003e\u0026#x3C;rootDir\u003e/.env\u003c/code\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003e   NODE_ENV=development\n   FRONTEND_PORT=7879\n   BACKEND_PORT=7878\n   JWT_SECRET=jwt_secret_key_here\n   JWT_EXPIRES_IN=30d\n   DB_HOST=bp-pg-db\n   DB_NAME=bp-pg-db\n   DB_USER=postgres\n   DB_PASSWORD=root\n   DB_PORT=5432\n   PGADMIN_DEFAULT_EMAIL=admin@backend.com\n   PGADMIN_DEFAULT_PASSWORD=pass@123\n   PGADMIN_PORT=5055\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e将以下内容填充至 \u003ccode\u003e\u0026#x3C;rootDIr\u003e/docker-compose.yml\u003c/code\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-yml\"\u003e    \u003cspan class=\"hljs-attr\"\u003eversion:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'3.9'\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eservices:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003efrontend:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003efrontend\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003ebuild:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003econtext:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003edockerfile:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./packages/frontend/Dockerfile.local\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${FRONTEND_PORT}:${FRONTEND_PORT}'\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.:/app\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n            \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.3\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ebackend:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebackend\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003ebuild:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003econtext:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003edockerfile:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./packages/backend/Dockerfile.local\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.:/app\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n            \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.2\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${BACKEND_PORT}:${BACKEND_PORT}'\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003edepends_on:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003elinks:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ebp-pg-db:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epostgres:12-alpine\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eenvironment:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ePOSTGRES_PASSWORD:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e${DB_PASSWORD}\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ePGDATA:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e/var/lib/postgresql/data\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ePOSTGRES_USER:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e${DB_USER}\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ePOSTGRES_DB:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e${DB_NAME}\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${DB_PORT}:${DB_PORT}'\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epgdata:/var/lib/postgresql/data\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n            \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.5\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003epgadmin-portal:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003edpage/pgadmin4\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epgadmin-portal\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eenvironment:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ePGADMIN_DEFAULT_PASSWORD:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${PGADMIN_DEFAULT_PASSWORD}'\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ePGADMIN_DEFAULT_EMAIL:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${PGADMIN_DEFAULT_EMAIL}'\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epgadmin:/root/.pgadmin\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${PGADMIN_PORT}:80'\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003edepends_on:\u003c/span\u003e\n          \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n            \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.6\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003epgdata:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003epgadmin:\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003edriver:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebridge\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eipam:\u003c/span\u003e\n          \u003cspan class=\"hljs-attr\"\u003econfig:\u003c/span\u003e\n            \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-attr\"\u003esubnet:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e/16\u003c/span\u003e\n    \n\u003c/code\u003e\u003c/pre\u003e\n\u003col\u003e\n\u003cli\u003e\u003ccode\u003eServices\u003c/code\u003e: 每个服务代表一个将要创建的 Docker 容器\u003c/li\u003e\n\u003c/ol\u003e\n\u003cul\u003e\n\u003cli\u003efrontend: 基于前端项目的 Dockerfile.local 构建镜像以及容器. 此容器将会控制前端服务的启停.\u003c/li\u003e\n\u003cli\u003ebackend: 基于后端项目的 Dockerfile.local 构建镜像以及容器. 此容器将会控制后端服务的启停.\u003c/li\u003e\n\u003cli\u003ebp-pg-db: 基于镜像 postgres:12-alpine 构建的 postgres 数据库容器.\u003c/li\u003e\n\u003cli\u003epgadmin-portal: 基于镜像 dpage/pgadmin4 构建的 postgres 可视化界面操作服务.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e添加 Makefile 用来启动:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-Makefile\"\u003e\u003cspan class=\"hljs-section\"\u003elocal: \u003c/span\u003e\n   docker-compose stop \u0026#x26;\u0026#x26; docker-compose up --build -d --remove-orphans\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e使用 \u003ccode\u003emake local\u003c/code\u003e 命令后, 将构建镜像并启动容器服务, 此时便能通过配置中暴露出的端口号来正常的访问到前端、后端以及数据库服务. 同时, 得益于 \u003ccode\u003eVOlUME\u003c/code\u003e, 我们在本地修改代码后能及时的映射到容器的挂卷中, 通过项目的热更新来开发项目.\u003c/p\u003e\n\u003ch2 id=\"生产环境部署\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#生产环境部署\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003e生产环境部署\u003c/h2\u003e\n\u003ch3 id=\"frontend-项目\"\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#frontend-项目\"\u003e\u003cspan class=\"icon icon-link\"\u003e\u003c/span\u003e\u003c/a\u003efrontend 项目\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003e目标: 利用 github webhook 在项目push代码后自动触发 jenkins 流水线用来构建项目\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e环境准备:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\n\u003cp\u003e创建以下文件夹:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003ejenkins/jenkins/home: 用来存放 jenkins 配置文件以及插件和 jenkins 的工作区等内容.\u003c/li\u003e\n\u003cli\u003enginx/default.conf: nginx 的配置文件\u003c/li\u003e\n\u003cli\u003ewebserver/static/jenkins/dist: 存放前端项目打包后的产物\u003c/li\u003e\n\u003cli\u003edocker-compose.yml: docker-compose 的配置文件\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003edefault.conf 内容如下(本文不涉及 nginx 配置知识, 所以这里使用一个最基本的配置文件):\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-conf\"\u003e  server{\n    listen  80;\n    server_name localhost;\n    root /usr/share/nginx/html;\n    index index.html;\n  \n    location / {\n       try_files $uri $uri/ /index.html =404;\n    }\n          \n  # location /v {\n  # 根据项目配置反向代理  \n  #   proxy_pass \u0026#x3C;http://localhost:7878\u003e\n  # }\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e编写 \u003ccode\u003edocker-compose.yml\u003c/code\u003e 来构建 jenkins 容器以及部署前端项目的 nginx 容器, 内容如下:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-yml\"\u003e   \u003cspan class=\"hljs-attr\"\u003eversion:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\"3.9\"\u003c/span\u003e\n     \u003cspan class=\"hljs-attr\"\u003eservices:\u003c/span\u003e                                      \n       \u003cspan class=\"hljs-attr\"\u003edocker_jenkins:\u003c/span\u003e\n         \u003cspan class=\"hljs-attr\"\u003eenvironment:\u003c/span\u003e\n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003eTZ=Asia/Shanghai\u003c/span\u003e\n         \u003cspan class=\"hljs-attr\"\u003euser:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003eroot\u003c/span\u003e                                \n         \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e                           \n         \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ejenkins/jenkins:lts\u003c/span\u003e              \n         \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ecicd-jenkins\u003c/span\u003e                 \n         \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e                                \n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e8077\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e:8080\u003c/span\u003e                             \n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e50000\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e:50000\u003c/span\u003e                          \n         \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e                               \n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./jenkins/jenkins_home/:/var/jenkins_home\u003c/span\u003e  \n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e/var/run/docker.sock:/var/run/docker.sock\u003c/span\u003e\n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e/usr/bin/docker:/usr/bin/docker\u003c/span\u003e              \n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e/usr/local/bin/docker-compose:/usr/local/bin/docker-compose\u003c/span\u003e\n       \u003cspan class=\"hljs-attr\"\u003edocker_nginx:\u003c/span\u003e\n         \u003cspan class=\"hljs-attr\"\u003eenvironment:\u003c/span\u003e\n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003eTZ=Asia/Shanghai\u003c/span\u003e\n         \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n         \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003enginx:stable-alpine\u003c/span\u003e               \n         \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ecicd-nginx\u003c/span\u003e\n         \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e7070\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e:80\u003c/span\u003e                             \n         \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./nginx/:/etc/nginx/conf.d/\u003c/span\u003e\n           \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./webserver/static/jenkins/dist/:/usr/share/nginx/html/\u003c/span\u003e\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e执行 \u003ccode\u003edocker-compose up --build -d --remove-orphans\u003c/code\u003e 后, 此时应该会成功启动两个容器, 可以使用 \u003ccode\u003edocker container ls\u003c/code\u003e 查看:, 大致内容如下:\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example2.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e此时在本地访问 \u003ccode\u003ehttp://ip(容器的宿主主机ip地址):8077\u003c/code\u003e 应该能够正常访问 jenkins 服务, 初始化界面应该如下:\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example3.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e在宿主主机上执行 \u003ccode\u003edocker logs [container_id]\u003c/code\u003e, 从 log 信息从获取管理源密码, 然后进入插件安装页面, 这里安装推荐插件即可.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e插件安装完成且创建用户进入 jenkins 后点击 \u003cstrong\u003eManage Jenkins\u003c/strong\u003e, 然后再点击进入\u003cstrong\u003eManage Plugins\u003c/strong\u003e. 这里需要安装 \u003ccode\u003eNode\u003c/code\u003e 插件以及 \u003ccode\u003ePublish over SSH\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003e前者为构建流程提供 \u003ccode\u003eNodeJs\u003c/code\u003e 环境, 后者将构建完成后得到的前端产物压缩包上传至目标服务器.\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example4.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e配置 \u003ccode\u003eNodeJs\u003c/code\u003e 环境. 点击 \u003cstrong\u003e系统管理\u003c/strong\u003e, 然后再点击进入\u003cstrong\u003e全局工具配置\u003c/strong\u003e, 找到 NodeJS, 点击 \u003cstrong\u003e新增NodeJS\u003c/strong\u003e. 最后根据项目的需求进行选择 \u003ccode\u003eNode\u003c/code\u003e 版本以及是否要安装全局工具即可.\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example5.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e点击系统管理中的\u003cstrong\u003eCredentials\u003c/strong\u003e, 然后添加 github 的凭据. 可以添加 github 的 token、账号密码以及公私钥三种类型的凭据.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e配置 github-webhook. 点击系统管理中的\u003cstrong\u003e系统配置\u003c/strong\u003e, 找到 Github, 然后点击\u003cstrong\u003e添加Github\u003c/strong\u003e服务器, 在凭据一栏添加在上一步添加的 Github 凭据.\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example6.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e找到最下方的更多按钮, 点击后会出现覆盖 Hook URL的选项, 将这里的地址绑定到 github 项目上的 webhook 即可.\n当然, 如果 jenkins 容器宿主主机为本地主机或者为内网主机, 可使用 \u003ca href=\"https://dashboard.ngrok.com/\"\u003engrok\u003c/a\u003e 实现内网穿透, 来保证 github 能访问到 jenkins.\u003c/p\u003e\n\u003cp\u003e注意事项:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003egithub-webhook地址前缀需与 jenkins 配置中的 \u003cstrong\u003eJenkins URL\u003c/strong\u003e 保持一致.\u003c/li\u003e\n\u003cli\u003e关于 \u003ca href=\"https://docs.github.com/en/webhooks-and-events/webhooks/about-webhooks\"\u003egithub webhook\u003c/a\u003e.\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e添加服务器信息. 在系统配置中找到\u003cstrong\u003ePublish over SSH\u003c/strong\u003e, 在 Passphrase 一栏填入服务器密码, 然后点击\u003cstrong\u003e新增\u003c/strong\u003e, 填入服务器信息.\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example7.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e创建任务\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e点击新建任务, 输入任务名称后选择\u003cstrong\u003e构建一个自由风格的软件项目\u003c/strong\u003e\n\u003cimg src=\"/assets/docker-react-nest/example8.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e源码管理里输入项目地址、添加 Github 凭据, 选择项目分支.\n\u003cimg src=\"/assets/docker-react-nest/example9.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e构建触发器里选择 \u003cstrong\u003eGitHub hook trigger for GITScm polling\u003c/strong\u003e\n\u003cimg src=\"/assets/docker-react-nest/example10.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e选择构建环境\n\u003cimg src=\"/assets/docker-react-nest/example11.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e添加构建步骤. 这里可以将步骤放在 \u003ccode\u003eMakefile\u003c/code\u003e 文件中或者 \u003ccode\u003esh\u003c/code\u003e 脚本中, 这样每次更新步骤只需要更新配置文件, 而不用修改 jenkins 配置. 当然这一步也可以用 \u003ca href=\"https://www.jenkins.io/zh/doc/book/pipeline/jenkinsfile/\"\u003eJenkinsfile\u003c/a\u003e替代.\n\u003cimg src=\"/assets/docker-react-nest/example12.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003ebuild.sh\u003c/code\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003e pnpm fetch\n pnpm install -r --offline\n \n \u003cspan class=\"hljs-comment\"\u003e# frontend\u003c/span\u003e\n pnpm build:frontend\n \u003cspan class=\"hljs-built_in\"\u003ecd\u003c/span\u003e ./packages/frontend\n tar zcf frontend.tar.gz ./dist\n \u003cspan class=\"hljs-built_in\"\u003emv\u003c/span\u003e ./frontend.tar.gz ../../frontend.tar.gz\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e添加构建后的操作. 这里选择 \u003cstrong\u003eSend build artifacts over SSH\u003c/strong\u003e, 填入以下内容:\n\u003cimg src=\"/assets/docker-react-nest/example13.png\" alt=\"alt\"\u003e\n其中 SSH Server Name 为上一步添加的服务器名称.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e到这里, 一个前端项目的自动化部署基本完成了. 在提交项目代码后, 便会自动触发任务, 进行项目构建, 并将构建后的产物上传至目标服务器. 然后将文件内容映射到 nginx 容器中.\u003c/p\u003e\n\u003cp\u003e关于 \u003ccode\u003eNestJs\u003c/code\u003e 服务的部署, 将构建开发环境中的 \u003ccode\u003edocker-compose.yml\u003c/code\u003e稍微进行改造即可, 内容如下:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-yml\"\u003e\u003cspan class=\"hljs-attr\"\u003eversion:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'3.9'\u003c/span\u003e\n\u003cspan class=\"hljs-attr\"\u003eservices:\u003c/span\u003e\n  \u003cspan class=\"hljs-attr\"\u003ebackend-prod:\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebackend-prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003euser:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003eroot\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003ebuild:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003econtext:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003edockerfile:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e./packages/backend/Dockerfile.prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ewebserver-backend-prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.2\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${BACKEND_PORT}:3535'\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003edepends_on:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db-prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003ecommand:\u003c/span\u003e [\u003cspan class=\"hljs-string\"\u003esh\u003c/span\u003e, \u003cspan class=\"hljs-string\"\u003e-c\u003c/span\u003e, \u003cspan class=\"hljs-string\"\u003e\"cd packages/backend \u0026#x26;\u0026#x26; pnpm migrate:postgres \u0026#x26;\u0026#x26; pnpm prisma:gen \u0026#x26;\u0026#x26; pnpm build \u0026#x26;\u0026#x26; pnpm start:prod\"\u003c/span\u003e]\n  \u003cspan class=\"hljs-attr\"\u003ebp-pg-db-prod:\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epostgres:12-alpine\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db-prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eenvironment:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ePOSTGRES_PASSWORD:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e${DB_PASSWORD}\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ePGDATA:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e/var/lib/postgresql/data\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ePOSTGRES_USER:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e${DB_USER}\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ePOSTGRES_DB:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e${DB_NAME}\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${DB_PORT}:${DB_PORT}'\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epgdata:/var/lib/postgresql/data\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.5\u003c/span\u003e\n  \u003cspan class=\"hljs-attr\"\u003epgadmin-portal-prod:\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eimage:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003edpage/pgadmin4\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003erestart:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ealways\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003econtainer_name:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epgadmin-portal-prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eenv_file:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e.env\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eenvironment:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ePGADMIN_DEFAULT_PASSWORD:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${PGADMIN_DEFAULT_PASSWORD}'\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ePGADMIN_DEFAULT_EMAIL:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${PGADMIN_DEFAULT_EMAIL}'\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003epgadmin:/root/.pgadmin\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eports:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e'${PGADMIN_PORT}:80'\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003edepends_on:\u003c/span\u003e\n      \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebp-pg-db-prod\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n        \u003cspan class=\"hljs-attr\"\u003eipv4_address:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.6\u003c/span\u003e\n\u003cspan class=\"hljs-attr\"\u003evolumes:\u003c/span\u003e\n  \u003cspan class=\"hljs-attr\"\u003epgdata:\u003c/span\u003e\n  \u003cspan class=\"hljs-attr\"\u003epgadmin:\u003c/span\u003e\n\u003cspan class=\"hljs-attr\"\u003enetworks:\u003c/span\u003e\n  \u003cspan class=\"hljs-attr\"\u003ebp-network:\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003edriver:\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003ebridge\u003c/span\u003e\n    \u003cspan class=\"hljs-attr\"\u003eipam:\u003c/span\u003e\n      \u003cspan class=\"hljs-attr\"\u003econfig:\u003c/span\u003e\n        \u003cspan class=\"hljs-bullet\"\u003e-\u003c/span\u003e \u003cspan class=\"hljs-attr\"\u003esubnet:\u003c/span\u003e \u003cspan class=\"hljs-number\"\u003e172.25\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-number\"\u003e.0\u003c/span\u003e\u003cspan class=\"hljs-string\"\u003e/16\u003c/span\u003e\n\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eDockerfile.prod:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-dockerfile\"\u003eFROM node:16.16.0-alpine\n\n\nWORKDIR /app\n\nCOPY ./pnpm-lock.yaml ./\n\nRUN npm install -g pnpm@8.3.1\n\nRUN pnpm fetch\n\nCOPY . .\n\nRUN pnpm install -r --offline\n\nVOLUME [\"/app/node_modules/\", \"/app/packages/backend/node_modules/\", \"/app/.pnpm-store/\"]\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e由于本文所构建项目为一个 Monorepo, 所以在提交前端代码时同时会触发后端项目的构建, 所以我们仅需将以下内容添加至前端构建流程中的 \u003ccode\u003e./scripts/build.sh\u003c/code\u003e即可:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"hljs language-sh\"\u003edocker-compose -f docker-compose.server.yaml stop \u0026#x26;\u0026#x26; docker-compose -f docker-compose.server.yaml up --build -d --remove-orphans\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e注意事项:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e需要移除 docker-compose 中后端服务的 volume. 由于jenkins在构建完成后会清空工作区, 所以这里不需要同构建开发环境一样进行文件映射.\u003c/li\u003e\n\u003cli\u003eNestJS 项目中开发环境以及生产环境中环境变量的区分.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e最后, 构建完成后, 宿主主机上容器列表如下:\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"/assets/docker-react-nest/example14.png\" alt=\"alt\"\u003e\u003c/p\u003e\n\u003cp\u003e通过 http:[ip]:7878 即可正常访问后端服务, http:[ip]:5055 可访问 pgadmin.\u003c/p\u003e\n\u003cp\u003e项目地址: \u003ca href=\"https://github.com/LZS911/todo-react-nest-docker\"\u003ehttps://github.com/LZS911/todo-react-nest-docker\u003c/a\u003e\u003c/p\u003e\n\u003cp\u003ejenkins+nginx容器构建: \u003ca href=\"https://github.com/LZS911/jenkins-nginx-docker\"\u003ehttps://github.com/LZS911/jenkins-nginx-docker\u003c/a\u003e\u003c/p\u003e"])</script><script>self.__next_f.push([1,"7:[\"$\",\"article\",null,{\"children\":[[\"$\",\"div\",null,{\"className\":\"flex justify-center font-[Arial] max-w-[864px] text-center\",\"children\":[\"$\",\"h1\",null,{\"className\":\"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]\",\"children\":\"Docker化一个React+Nest的Monorepo应用\"}]}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap items-center gap-4 mb-6\",\"children\":[[\"$\",\"time\",null,{\"dateTime\":\"2023-04-25\",\"className\":\"text-center block my-4 text-sm opacity-60\",\"children\":\"April\\t25, 2023\"}],[\"$\",\"span\",null,{\"className\":\"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800\",\"children\":\"blog\"}],[\"$\",\"div\",null,{\"className\":\"flex flex-wrap gap-2\",\"children\":[[\"$\",\"$L17\",\"Docker\",{\"href\":\"/tags/Docker\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Docker\"}],[\"$\",\"$L17\",\"Docker Compose\",{\"href\":\"/tags/Docker%20Compose\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Docker Compose\"}],[\"$\",\"$L17\",\"React\",{\"href\":\"/tags/React\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"React\"}],[\"$\",\"$L17\",\"Nest\",{\"href\":\"/tags/Nest\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Nest\"}],[\"$\",\"$L17\",\"Monorepo\",{\"href\":\"/tags/Monorepo\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Monorepo\"}],[\"$\",\"$L17\",\"Pnpm\",{\"href\":\"/tags/Pnpm\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Pnpm\"}],[\"$\",\"$L17\",\"Nginx\",{\"href\":\"/tags/Nginx\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Nginx\"}],[\"$\",\"$L17\",\"Jenkins\",{\"href\":\"/tags/Jenkins\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"Jenkins\"}],[\"$\",\"$L17\",\"PostgreSQL\",{\"href\":\"/tags/PostgreSQL\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"PostgreSQL\"}],[\"$\",\"$L17\",\"部署\",{\"href\":\"/tags/%E9%83%A8%E7%BD%B2\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"部署\"}],[\"$\",\"$L17\",\"CI/CD\",{\"href\":\"/tags/CI%2FCD\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"CI/CD\"}],[\"$\",\"$L17\",\"DevOps\",{\"href\":\"/tags/DevOps\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"DevOps\"}],[\"$\",\"$L17\",\"全栈开发\",{\"href\":\"/tags/%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91\",\"className\":\"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800\",\"children\":\"全栈开发\"}]]}]]}],[null,[\"$\",\"$L18\",null,{\"theme\":\"orange\"}],[\"$\",\"section\",null,{\"className\":\"markdown-body-orange max-w-3xl\",\"dangerouslySetInnerHTML\":{\"__html\":\"$19\"}}]],null]}]\n"])</script><script>self.__next_f.push([1,"11:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\nb:null\n"])</script><script>self.__next_f.push([1,"16:{\"metadata\":[[\"$\",\"title\",\"0\",{\"children\":\"Ai.Haibara codes\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"LZS Blog\"}],[\"$\",\"link\",\"2\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"96x96\"}]],\"error\":null,\"digest\":\"$undefined\"}\ne:{\"metadata\":\"$16:metadata\",\"error\":null,\"digest\":\"$undefined\"}\n"])</script></body></html>

@@ -1,0 +1,192 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","2766f65a73f1c4e0a30cdb9e"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","2766f65a73f1c4e0a30cdb9e","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","2766f65a73f1c4e0a30cdb9e","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","24BmBDZTAOCaT_0-Ai-P5",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T3ce8,<pre><code class="hljs language-rust"><span class="hljs-keyword">let</span> <span class="hljs-variable">apples</span> = <span class="hljs-number">5</span>; <span class="hljs-comment">//不可变</span>
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut </span><span class="hljs-variable">bananas</span> = <span class="hljs-number">5</span>;<span class="hljs-comment">// 可变</span>
+
+<span class="hljs-keyword">let</span> <span class="hljs-keyword">mut </span><span class="hljs-variable">guess</span> = <span class="hljs-type">String</span>::<span class="hljs-title function_ invoke__">new</span>(); <span class="hljs-comment">//声明一个 String 的新实例, String::new 表示 new 为 String 类型的一个关联函数(静态方法)</span>
+</code></pre>
+<pre><code class="hljs language-rust">    <span class="hljs-title function_ invoke__">stdin</span>().<span class="hljs-title function_ invoke__">read_line</span>(&#x26;<span class="hljs-keyword">mut</span> guess).<span class="hljs-title function_ invoke__">expect</span>(<span class="hljs-string">"Failed to read line"</span>);
+</code></pre>
+<p><code>read_line</code> 返回一个 <code>Result</code> 类型的值, 需要使用 <code>expect</code> 方法来对返回值进行处理.</p>
+<p>使用 crate 来增加更多功能. crate 类似 node.js 中的 npm, 可以应用第三方发布的包, 同时, 也存在一个类似 package.json 的文件: Cargo.toml, 可以配置项目的一些信息以及添加第三方依赖.</p>
+<pre><code class="hljs language-toml"><span class="hljs-section">[dependencies]</span>
+<span class="hljs-attr">rand</span> = <span class="hljs-string">"0.8.5"</span>
+</code></pre>
+<p>当执行 cargo run 出现 Blocking waiting for file lock on the registry index 的解决方案:</p>
+<pre><code class="hljs language-sh"><span class="hljs-built_in">rm</span> -rf ~/.cargo/.package-cache 
+
+//或
+<span class="hljs-built_in">rm</span> -rf ~/.cargo/registry/index/*
+</code></pre>
+<p>运行 cargo doc --open 命令来构建所有本地依赖提供的文档，并在浏览器中打开.</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">match</span> guess.<span class="hljs-title function_ invoke__">cmp</span>(&#x26;secret_number) {
+        Ordering::Less => <span class="hljs-built_in">println!</span>(<span class="hljs-string">"Too small!"</span>),
+        Ordering::Greater => <span class="hljs-built_in">println!</span>(<span class="hljs-string">"Too big!"</span>),
+        Ordering::Equal => <span class="hljs-built_in">println!</span>(<span class="hljs-string">"You win!"</span>),
+    }
+</code></pre>
+<p>一个 match 表达式由 分支（arms） 构成. 一个分支包含一个 模式（pattern）和表达式开头的值与分支模式相匹配时应该执行的代码. Rust 获取提供给 match 的值并挨个检查每个分支的模式</p>
+<pre><code class="hljs language-rust"> <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut </span><span class="hljs-variable">guess</span> = <span class="hljs-type">String</span>::<span class="hljs-title function_ invoke__">new</span>();
+
+  io::<span class="hljs-title function_ invoke__">stdin</span>()
+        .<span class="hljs-title function_ invoke__">read_line</span>(&#x26;<span class="hljs-keyword">mut</span> guess)
+        .<span class="hljs-title function_ invoke__">expect</span>(<span class="hljs-string">"Failed to read line"</span>);
+
+ <span class="hljs-keyword">let</span> <span class="hljs-variable">guess</span>: <span class="hljs-type">u32</span> = guess.<span class="hljs-title function_ invoke__">trim</span>().<span class="hljs-title function_ invoke__">parse</span>().<span class="hljs-title function_ invoke__">expect</span>(<span class="hljs-string">"Please type a number!"</span>);
+</code></pre>
+<p>在 rust 中可以复用同一个变量名(如上述代码). 这个功能常用在需要转换值类型之类的场景, 它允许我们复用 guess 变量的名字, 而不是被迫创建两个不同变量.</p>
+<p><code>loop</code> 关键字会创建一个无限循环. 当执行到 <code>break</code> 时退出循环.</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">let</span> <span class="hljs-variable">end_flag</span> = <span class="hljs-number">10</span>;
+    <span class="hljs-keyword">let</span> <span class="hljs-keyword">mut </span><span class="hljs-variable">flag</span> = <span class="hljs-number">0</span>;
+    <span class="hljs-built_in">println!</span>(<span class="hljs-string">"start loop"</span>);
+    <span class="hljs-keyword">loop</span> {
+        flag = flag + <span class="hljs-number">1</span>;
+
+        <span class="hljs-keyword">if</span> flag == end_flag {
+            <span class="hljs-built_in">println!</span>(<span class="hljs-string">"end loop"</span>);
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+</code></pre>
+<p>rust 中的类型</p>
+<ol>
+<li>
+<p>标量类型: 整型、浮点型、布尔类型和字符类型.</p>
+</li>
+<li>
+<p>复合类型: 元组、数组.</p>
+</li>
+</ol>
+<p>元组是一个将多个其他类型的值组合进一个复合类型的主要方式, 组长度固定：一旦声明，其长度不会增大或缩小.</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">let</span> <span class="hljs-variable">tup</span>: (<span class="hljs-type">i32</span>, <span class="hljs-type">f64</span>, <span class="hljs-type">u8</span>, <span class="hljs-type">char</span>) = (<span class="hljs-number">500</span>, <span class="hljs-number">6.4</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'r'</span>);
+</code></pre>
+<p>元组解构</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">let</span> <span class="hljs-variable">tup</span>: (<span class="hljs-type">i32</span>, <span class="hljs-type">f64</span>, <span class="hljs-type">u8</span>, <span class="hljs-type">char</span>) = (<span class="hljs-number">500</span>, <span class="hljs-number">6.4</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'r'</span>);
+    <span class="hljs-keyword">let</span> (a, b, c, d) = tup;
+</code></pre>
+<p>rust 中的数组长度是固定的. 若需要长度可变的集合时, 可以使用 vector.</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">let</span> <span class="hljs-variable">v1</span>: <span class="hljs-type">Vec</span>&#x3C;<span class="hljs-type">i32</span>> = <span class="hljs-type">Vec</span>::<span class="hljs-title function_ invoke__">new</span>();
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">v2</span> = <span class="hljs-built_in">vec!</span>[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+</code></pre>
+<p>rust 中的函数</p>
+<pre><code class="hljs language-rust">
+<span class="hljs-keyword">fn</span> <span class="hljs-title function_">get_value</span>(arg: <span class="hljs-type">i32</span>) <span class="hljs-punctuation">-></span> <span class="hljs-type">String</span> {
+    arg.<span class="hljs-title function_ invoke__">to_string</span>()
+}
+
+</code></pre>
+<p>定义函数使用关键字 fn, 函数的返回值可以省略 return 关键字, 注意此时同时需要省略语句结尾的分号.</p>
+<p><strong>rust 中的所有权</strong></p>
+<blockquote>
+<p>所有程序都必须管理其运行时使用计算机内存的方式。一些语言中具有垃圾回收机制，在程序运行时有规律地寻找不再使用的内存；在另一些语言中，程序员必须亲自分配和释放内存。Rust 则选择了第三种方式：通过所有权系统管理内存，编译器在编译时会根据一系列的规则进行检查。如果违反了任何这些规则，程序都不能编译。在运行时，所有权系统的任何功能都不会减慢程序。</p>
+</blockquote>
+<p><a href="https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html">https://kaisery.github.io/trpl-zh-cn/ch04-01-what-is-ownership.html</a></p>
+<p>枚举的定义</p>
+<pre><code class="hljs language-rust"><span class="hljs-keyword">enum</span> <span class="hljs-title class_">IpAddrKind</span>{
+  V4,
+  V6,
+}
+</code></pre>
+<p>在枚举值表示类型的同时并且赋予其值</p>
+<pre><code class="hljs language-rust"><span class="hljs-keyword">enum</span> <span class="hljs-title class_">IpAdd</span>{
+  <span class="hljs-title function_ invoke__">V4</span>(<span class="hljs-type">String</span>),
+  <span class="hljs-title function_ invoke__">V6</span>(<span class="hljs-type">String</span>),
+}
+
+<span class="hljs-keyword">let</span> <span class="hljs-variable">home</span> = IpAddr::<span class="hljs-title function_ invoke__">V4</span>(<span class="hljs-type">String</span>::<span class="hljs-title function_ invoke__">from</span>(<span class="hljs-string">"127.0.0.1"</span>));
+
+<span class="hljs-keyword">let</span> <span class="hljs-variable">loopback</span> = IpAddr::<span class="hljs-title function_ invoke__">V6</span>(<span class="hljs-type">String</span>::<span class="hljs-title function_ invoke__">from</span>(<span class="hljs-string">"::1"</span>));
+</code></pre>
+<p>Options 枚举</p>
+<p>Option 是标准库定义的另一个枚举. Option 类型应用广泛因为它编码了一个非常普遍的场景, 即一个值要么有值要么没值.</p>
+<pre><code class="hljs language-rust"><span class="hljs-keyword">enum</span> <span class="hljs-title class_">Option</span>&#x3C;T> {
+    <span class="hljs-literal">None</span>,
+    <span class="hljs-title function_ invoke__">Some</span>(T),
+}
+</code></pre>
+<p><code>Option&#x3C;T></code> 枚举是如此有用以至于它甚至被包含在了 prelude 之中, 你不需要将其显式引入作用域. 另外, 它的成员也是如此, 可以不需要 <code>Option::</code> 前缀来直接使用 <code>Some</code> 和 <code>None</code>. 即便如此 <code>Option&#x3C;T></code> 也仍是常规的枚举, <code>Some(T)</code> 和 <code>None</code> 仍是 <code>Option&#x3C;T></code> 的成员.</p>
+<p>当一个变量为 <code>Option&#x3C;T></code>  时, 如果为 <code>Some</code>, 则必须在使用它之前处理了为空的情况. 且在使用它时需要将其由 <code>Option&#x3C;T></code> 转化为 <code>T</code> 类型才可以使用.</p>
+<pre><code class="hljs language-rust"><span class="hljs-keyword">fn</span> <span class="hljs-title function_">some</span>() {
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">a</span> = <span class="hljs-title function_ invoke__">Some</span>(<span class="hljs-number">4</span>);
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">b</span> = <span class="hljs-number">4</span>;
+    <span class="hljs-built_in">assert_eq!</span>(a.<span class="hljs-title function_ invoke__">expect</span>(<span class="hljs-string">"Option"</span>) + b, <span class="hljs-number">8</span>);
+}
+<span class="hljs-keyword">fn</span> <span class="hljs-title function_">none</span>() {
+    <span class="hljs-keyword">let</span> <span class="hljs-variable">a</span>: <span class="hljs-type">Option</span>&#x3C;<span class="hljs-type">u32</span>> = <span class="hljs-literal">None</span>;
+    <span class="hljs-built_in">assert_eq!</span>(a.<span class="hljs-title function_ invoke__">is_none</span>(), <span class="hljs-literal">true</span>);
+}
+</code></pre>
+<p>其中 <code>assert_eq!</code> 类似 jest 中的 <code>expect</code></p>
+<p>使用 <code>match</code> 匹配 <code>Option&#x3C;T></code></p>
+<pre><code class="hljs language-rust"><span class="hljs-keyword">fn</span> <span class="hljs-title function_">match_option</span>(x: <span class="hljs-type">Option</span>&#x3C;<span class="hljs-type">i32</span>>) <span class="hljs-punctuation">-></span> <span class="hljs-type">Option</span>&#x3C;<span class="hljs-type">i32</span>> {
+    <span class="hljs-keyword">match</span> x {
+        <span class="hljs-literal">None</span> => <span class="hljs-literal">None</span>,
+        <span class="hljs-title function_ invoke__">Some</span>(i) => <span class="hljs-title function_ invoke__">Some</span>(i + <span class="hljs-number">1</span>),
+    }
+}
+<span class="hljs-keyword">let</span> <span class="hljs-variable">five</span> = <span class="hljs-title function_ invoke__">Some</span>(<span class="hljs-number">5</span>);
+<span class="hljs-keyword">let</span> <span class="hljs-variable">six</span> = <span class="hljs-title function_ invoke__">match_option</span>(five);
+<span class="hljs-keyword">let</span> <span class="hljs-variable">none</span> = <span class="hljs-title function_ invoke__">match_option</span>(<span class="hljs-literal">None</span>);
+</code></pre>
+<p><code>match</code> 的分支必须覆盖了所有的可能性, 也有时说 rust 中的匹配是 穷尽的（exhaustive: 必须穷举到最后的可能性来使代码有效</p>
+<p>拓展: 如何使用 javascript 实现类似 <code>match</code> 的功能.</p>
+<p>通配模式</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">let</span> <span class="hljs-variable">val</span> = <span class="hljs-number">10</span>;
+
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">add</span>() {}
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">remove</span>() {}
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">skip</span>() {}
+    <span class="hljs-keyword">match</span> val {
+        <span class="hljs-number">1</span> => <span class="hljs-title function_ invoke__">add</span>(),
+        <span class="hljs-number">2</span> => <span class="hljs-title function_ invoke__">remove</span>(),
+        other => <span class="hljs-title function_ invoke__">skip</span>(),
+    }
+</code></pre>
+<p>这里的 other 代表了 val 的值 除了 1、2 之外的所有情况</p>
+<p>占位模式</p>
+<pre><code class="hljs language-rust">    <span class="hljs-keyword">let</span> <span class="hljs-variable">val</span> = <span class="hljs-number">10</span>;
+
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">add</span>() {}
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">remove</span>() {}
+    <span class="hljs-keyword">fn</span> <span class="hljs-title function_">skip</span>() {}
+    <span class="hljs-keyword">match</span> val {
+        <span class="hljs-number">1</span> => <span class="hljs-title function_ invoke__">add</span>(),
+        <span class="hljs-number">2</span> => <span class="hljs-title function_ invoke__">remove</span>(),
+        _ => ()
+    }
+</code></pre>
+<p><code>if let</code> 简洁控制流</p>
+<p><code>if let</code> 是 <code>match</code> 的一个语法糖, 它当值匹配某一模式时执行代码而忽略所有其他值.</p>
+<pre><code class="hljs language-rust">   <span class="hljs-keyword">let</span> <span class="hljs-variable">config_max</span> = <span class="hljs-title function_ invoke__">Some</span>(<span class="hljs-number">32</span>);
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">let</span> <span class="hljs-variable">Some</span>(max) = config_max {
+        <span class="hljs-built_in">assert_eq!</span>(max, <span class="hljs-number">32</span>)
+    }
+</code></pre>
+<p><code>if let</code> 语法获取通过等号分隔的一个模式和一个表达式. 它的工作方式与 <code>match</code> 相同, 这里的表达式对应 <code>match</code> 而模式则对应第一个分支.</p>
+<p><strong>使用包、Create和模块管理不断增长的项目</strong></p>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"rust学习记录"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2022-12-30","className":"text-center block my-4 text-sm opacity-60","children":"December\t30, 2022"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","rust",{"href":"/tags/rust","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"rust"}]]}]]}],[null,["$","$L18",null,{"theme":"fancy"}],["$","section",null,{"className":"markdown-body-fancy max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

@@ -1,0 +1,228 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","2a2e223f3c52c82c2857f4ee"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","2a2e223f3c52c82c2857f4ee","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","2a2e223f3c52c82c2857f4ee","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","xZFBEVDMkOmCvb3904jjT",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[6874,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],""]
+18:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+19:T3f4c,<h2 id="eventemit-简介"><a aria-hidden="true" tabindex="-1" href="#eventemit-简介"><span class="icon icon-link"></span></a>EventEmit 简介</h2>
+<p><code>node.js</code> 所有的异步 <code>I/O</code> 操作在完成时都会发送一个事件到事件队列. 一个 <code>fs.readStream</code> 对象会在文件被打开的时候触发一个事件. 所有这些产生事件的对象都是 <code>events.EventEmitter</code> 的实例.</p>
+<p><code>EventEmit</code> 是 <code>node.js</code> 内置模块 <code>events</code> 提供的一个 <code>class</code>, 在 <code>node.js</code> 环境中可以直接 <code>require</code> 后使用. 在 <code>web</code> 环境中我们可以使用第三方 <code>npm</code> 包或者原生的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget">EventTarget</a>. 当然, 也可以自己实现一个类似 <code>node.js</code> 的简易版本.</p>
+<p>我们先来看下 <code>EventEmit</code> 的基本使用方法:</p>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> { <span class="hljs-title class_">EventEmitter</span> } = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node:events'</span>);
+
+<span class="hljs-keyword">const</span> event = <span class="hljs-keyword">new</span> <span class="hljs-title class_">EventEmitter</span>();
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">fn</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'event 事件触发!'</span>);
+};
+
+<span class="hljs-comment">//为指定事件注册一个监听器</span>
+event.<span class="hljs-title function_">addListener</span>(<span class="hljs-string">'event'</span>, fn);
+
+<span class="hljs-comment">//触发监听器</span>
+event.<span class="hljs-title function_">emit</span>(<span class="hljs-string">'event'</span>);
+
+<span class="hljs-comment">//移除监听器</span>
+event.<span class="hljs-title function_">removeListener</span>(<span class="hljs-string">'event'</span>, fn);
+</code></pre>
+<p>其中, 当我们添加新的监听器时, <code>newListener</code> 事件会触发, <code>当监听器被移除时，removeListener</code> 事件被触发.</p>
+<h3 id="实现的-api-介绍"><a aria-hidden="true" tabindex="-1" href="#实现的-api-介绍"><span class="icon icon-link"></span></a>实现的 Api 介绍</h3>
+<ol>
+<li>
+<p><code>emitter.addListener(eventName, listener)</code> 为指定事件注册一个监听器，接受一个 <code>string</code> (或 <code>symbol</code>) 类型的 <code>eventName</code> 和一个回调函数. 返回值为 <code>EventEmit</code> 的实例, 以便链式调用.</p>
+<ul>
+<li><code>eventName</code> <code>&#x3C;string></code> | <code>&#x3C;symbol></code></li>
+<li><code>listener</code> <code>&#x3C;Function></code></li>
+<li><code>Returns</code> <code>&#x3C;EventEmit></code></li>
+</ul>
+</li>
+<li>
+<p><code>emitter.emit(eventName, [...args])</code> 同步调用为名为 <code>eventName</code> 的事件注册的每个监听器, 按照它们注册的顺序, 将提供的参数传递给每个侦听器, 如果存在该监听器, 则返回 <code>True</code>, 否则返回 <code>False</code></p>
+<ul>
+<li><code>eventName</code> <code>&#x3C;string></code> | <code>&#x3C;symbol></code></li>
+<li><code>...args</code> <code>&#x3C;any></code></li>
+<li><code>Returns</code> <code>&#x3C;boolean></code></li>
+</ul>
+</li>
+<li>
+<p><code>emitter.once(eventName, listener)</code> 和 <code>addListener</code> 类似, 但只触发一次, 随后便解除事件监听.</p>
+</li>
+<li>
+<p><code>emitter.removeListener(eventName, listener)</code> 移除指定事件的某个监听回调.</p>
+<ul>
+<li><code>eventName</code> <code>&#x3C;string></code> | <code>&#x3C;symbol></code></li>
+<li><code>listener</code> <code>&#x3C;Function></code></li>
+<li><code>Returns</code> <code>&#x3C;EventEmit></code></li>
+</ul>
+</li>
+<li>
+<p><code>emitter.removeAllListeners([eventName])</code> 删除所有监听器, 或删除指定 <code>eventName</code> 的监听器.</p>
+<ul>
+<li><code>eventName</code> <code>&#x3C;string></code> | <code>&#x3C;symbol></code></li>
+<li><code>Returns</code> <code>&#x3C;EventEmitter></code></li>
+</ul>
+</li>
+<li>
+<p><code>emitter.setMaxListeners(n)</code> 用于修改监听器的默认限制的数量. (默认大于 10 个监听回调时会产生警告)</p>
+<ul>
+<li><code>n</code> <code>&#x3C;integer></code></li>
+<li><code>Returns</code> <code>&#x3C;EventEmitter></code></li>
+</ul>
+</li>
+<li>
+<p><code>emitter.getMaxListeners()</code> 获取限制监听器的数量</p>
+</li>
+<li>
+<p><code>emitter.listeners(eventName)</code> 返回名为 <code>eventName</code> 的事件的监听器数组的副本.</p>
+<ul>
+<li><code>eventName</code> <code>&#x3C;string></code> | <code>&#x3C;symbol></code></li>
+<li><code>Returns</code> <code>&#x3C;Function></code></li>
+</ul>
+</li>
+<li>
+<p><code>emitter.listenerCount(eventName)</code> 返回监听名为 <code>eventName</code> 的事件的监听器数量</p>
+</li>
+<li>
+<p><code>emitter.on</code> <code>emitter.addListener</code>的别名函数</p>
+</li>
+<li>
+<p><code>emitter.off</code> <code>emitter.removeListener</code>的别名函数</p>
+</li>
+</ol>
+<h3 id="构造函数"><a aria-hidden="true" tabindex="-1" href="#构造函数"><span class="icon icon-link"></span></a>构造函数</h3>
+<pre><code class="hljs language-javascript">  #maxListeners = <span class="hljs-number">10</span>;
+  <span class="hljs-title function_">constructor</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span> = <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">create</span>(<span class="hljs-literal">null</span>);
+    <span class="hljs-variable language_">this</span>.#maxListeners = <span class="hljs-number">10</span>;
+  }
+</code></pre>
+<p>其中 <code>listeners</code> 的结构如下:</p>
+<pre><code class="hljs language-JSON"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"event1"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>f1<span class="hljs-punctuation">,</span>f2<span class="hljs-punctuation">,</span>f3<span class="hljs-punctuation">]</span>，
+  <span class="hljs-attr">"event2"</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span>f4<span class="hljs-punctuation">,</span>f5<span class="hljs-punctuation">]</span>，
+  ...
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3 id="addlistener-方法"><a aria-hidden="true" tabindex="-1" href="#addlistener-方法"><span class="icon icon-link"></span></a>addListener 方法</h3>
+<ol>
+<li>
+<p>判断该事件监听器数组是否初始化，若未初始化，则将 <code>listeners[event]</code> 初始化为数组，并加入监听器 <code>cb</code>, 并触发 <code>newListener</code> 事件.</p>
+</li>
+<li>
+<p>判断该事件的监听器数量是否已超限，超限则报警告.</p>
+</li>
+<li>
+<p>判断数组中是否已存在 <code>cb</code>, 不存在则添加，已存在则不做操作.</p>
+</li>
+<li>
+<p>指定 <code>on</code> 等于 <code>addListener</code> 方法</p>
+</li>
+</ol>
+<pre><code class="hljs language-javascript">  <span class="hljs-title function_">addListener</span>(<span class="hljs-params">eventName, cb</span>) {
+    <span class="hljs-keyword">if</span> (
+      !<span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName || !<span class="hljs-title class_">Array</span>.<span class="hljs-title function_">isArray</span>(<span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName])]
+    ) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName] = [cb];
+      <span class="hljs-keyword">if</span> (eventName !== <span class="hljs-string">"newListener"</span>) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">emit</span>(<span class="hljs-string">"newListener"</span>);
+      }
+      <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
+    }
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName].<span class="hljs-property">length</span> >= <span class="hljs-variable language_">this</span>.#maxListeners) {
+      <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">error</span>(
+        <span class="hljs-string">"MaxListenersExceededWarning: Possible EventEmitter memory leak detected. %d event6 listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit"</span>,
+        <span class="hljs-variable language_">this</span>.#maxListeners
+      );
+    }
+
+    <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName].<span class="hljs-title function_">push</span>(cb);
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
+  }
+
+</code></pre>
+<h3 id="emit-方法"><a aria-hidden="true" tabindex="-1" href="#emit-方法"><span class="icon icon-link"></span></a>emit 方法</h3>
+<p>遍历监听器,通过 <code>apply</code> 方法把上面得到的 <code>args</code> 参数传进去, 需要注意的是不要漏了返回值.</p>
+<pre><code class="hljs language-javascript">  <span class="hljs-title function_">emit</span>(<span class="hljs-params">eventName, ...args</span>) {
+    <span class="hljs-keyword">const</span> isExistEvent =
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName] &#x26;&#x26; <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName].<span class="hljs-property">length</span> > <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">if</span> (isExistEvent) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName].<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">cb</span>) =></span> {
+        cb.<span class="hljs-title function_">apply</span>(<span class="hljs-literal">null</span>, args);
+      });
+    }
+    <span class="hljs-keyword">return</span> isExistEvent;
+  }
+</code></pre>
+<h3 id="removelistener-方法"><a aria-hidden="true" tabindex="-1" href="#removelistener-方法"><span class="icon icon-link"></span></a>removeListener 方法</h3>
+<pre><code class="hljs language-javascript">  <span class="hljs-title function_">removeListener</span>(<span class="hljs-params">eventName, listener</span>) {
+    <span class="hljs-keyword">const</span> index = (<span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName] || []).<span class="hljs-title function_">indexOf</span>(listener);
+    <span class="hljs-keyword">if</span> (index !== -<span class="hljs-number">1</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName].<span class="hljs-title function_">splice</span>(index, <span class="hljs-number">1</span>);
+      <span class="hljs-keyword">if</span> (eventName !== <span class="hljs-string">"removeListener"</span>) {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">emit</span>(<span class="hljs-string">"removeListener"</span>);
+      }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
+  }
+</code></pre>
+<h3 id="once-方法"><a aria-hidden="true" tabindex="-1" href="#once-方法"><span class="icon icon-link"></span></a>once 方法</h3>
+<p><code>once</code> 方法是 <code>on</code> 方法和 <code>removeListener</code> 方法的结合：用 <code>on</code> 方法监听，在回调结束的最后位置，通过<code>removeListener</code> 删掉监听函数自身</p>
+<pre><code class="hljs language-javascript">  <span class="hljs-title function_">once</span>(<span class="hljs-params">eventName, listener</span>) {
+    <span class="hljs-keyword">const</span> <span class="hljs-title function_">fn</span> = (<span class="hljs-params">...args</span>) => {
+      listener.<span class="hljs-title function_">apply</span>(<span class="hljs-literal">null</span>, args);
+      <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">removeListener</span>(eventName, fn);
+    };
+    <span class="hljs-variable language_">this</span>.<span class="hljs-title function_">on</span>(eventName, fn);
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
+  }
+</code></pre>
+<h3 id="removealllisteners-方法"><a aria-hidden="true" tabindex="-1" href="#removealllisteners-方法"><span class="icon icon-link"></span></a>removeAllListeners 方法</h3>
+<pre><code class="hljs language-javascript">  <span class="hljs-title function_">removeAllListeners</span>(<span class="hljs-params">eventNames = []</span>) {
+    <span class="hljs-keyword">if</span> (eventNames.<span class="hljs-property">length</span> === <span class="hljs-number">0</span>) {
+      <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span> = <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">create</span>(<span class="hljs-literal">null</span>);
+    } <span class="hljs-keyword">else</span> {
+      eventNames.<span class="hljs-title function_">forEach</span>(<span class="hljs-function">(<span class="hljs-params">v</span>) =></span> {
+        <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[v] = <span class="hljs-literal">null</span>;
+      });
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>;
+  }
+</code></pre>
+<h3 id="setmaxlistenersgetmaxlistenerslistenercountonoff-方法"><a aria-hidden="true" tabindex="-1" href="#setmaxlistenersgetmaxlistenerslistenercountonoff-方法"><span class="icon icon-link"></span></a>setMaxListeners、getMaxListeners、listenerCount、on、off 方法</h3>
+<pre><code class="hljs language-javascript">  <span class="hljs-title function_">setMaxListeners</span>(<span class="hljs-params">maxListeners</span>) {
+    <span class="hljs-variable language_">this</span>.#maxListeners = maxListeners;
+  }
+  <span class="hljs-title function_">getMaxListeners</span>(<span class="hljs-params"></span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.#maxListeners;
+  }
+  <span class="hljs-title function_">listenerCount</span>(<span class="hljs-params">eventName</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-variable language_">this</span>.<span class="hljs-property">listeners</span>[eventName]?.<span class="hljs-property">length</span> ?? <span class="hljs-number">0</span>;
+  }
+
+  <span class="hljs-title class_">EventEmitter</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">on</span> = <span class="hljs-title class_">EventEmitter</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">addListener</span>;
+  <span class="hljs-title class_">EventEmitter</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">off</span> = <span class="hljs-title class_">EventEmitter</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">removeListener</span>;
+</code></pre>
+<h4 id="完整代码地址-httpsgithubcomlzs911eventemit"><a aria-hidden="true" tabindex="-1" href="#完整代码地址-httpsgithubcomlzs911eventemit"><span class="icon icon-link"></span></a>完整代码地址: <a href="https://github.com/LZS911/EventEmit">https://github.com/LZS911/EventEmit</a></h4>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"如何实现一个EventEmit?"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2022-09-07","className":"text-center block my-4 text-sm opacity-60","children":"September\t7, 2022"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L17","node",{"href":"/tags/node","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"node"}],["$","$L17","javascript",{"href":"/tags/javascript","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"javascript"}],["$","$L17","EventEmit",{"href":"/tags/EventEmit","className":"inline-block rounded transition-colors px-2 py-0.5 text-xs bg-blue-100 text-blue-800 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800","children":"EventEmit"}]]}]]}],[null,["$","$L18",null,{"theme":"orange"}],["$","section",null,{"className":"markdown-body-orange max-w-3xl","dangerouslySetInnerHTML":{"__html":"$19"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}

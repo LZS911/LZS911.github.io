@@ -1,0 +1,604 @@
+1:"$Sreact.fragment"
+2:I[7555,[],""]
+3:I[1901,["874","static/chunks/874-90f68e0a3827b559.js","39","static/chunks/app/error-d036ecfd03716e30.js"],"default"]
+4:I[1295,[],""]
+5:I[9543,["874","static/chunks/874-90f68e0a3827b559.js","345","static/chunks/app/not-found-2113bbd7a2f55e8f.js"],"default"]
+8:I[9665,[],"MetadataBoundary"]
+a:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[8460,["209","static/chunks/app/loading-b73dd9bd22c3caa2.js"],"default"]
+10:I[9665,[],"ViewportBoundary"]
+12:I[6614,[],""]
+:HL["/_next/static/media/569ce4b8f30dc480-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/93f479601ee12b01-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/60adccb42f39203c.css","style"]
+:HL["/_next/static/css/c7f6e508dc13ee25.css","style"]
+0:{"P":null,"b":"fPyRDf3jU8EaKreMEXeMB","p":"","c":["","posts","5aac1d34228a117f3c8d4617"],"i":false,"f":[[["",{"children":["(article)",{"children":["posts",{"children":[["slug","5aac1d34228a117f3c8d4617","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/60adccb42f39203c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$3","errorStyles":[],"errorScripts":[],"template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L5",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(article)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c7f6e508dc13ee25.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L6"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","5aac1d34228a117f3c8d4617","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L7",["$","$L8",null,{"children":"$L9"}],null,["$","$La",null,{"children":["$Lb","$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},[["$","$Lf","l",{}],[],[]],false],["$","$1","h",{"children":[null,["$","$1","snzqjUmceRoGvuoHcafE1",{"children":[["$","$L10",null,{"children":"$L11"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$12","$undefined"],"s":false,"S":true}
+13:I[2034,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","846","static/chunks/846-5073d6248f7e4d01.js","651","static/chunks/app/(article)/layout-0113e097a12c4d28.js"],"default"]
+14:"$Sreact.suspense"
+15:I[4911,[],"AsyncMetadata"]
+6:["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__variable_5cfdac __variable_9a8899 antialiased","children":[["$","div",null,{"className":"min-h-screen","children":[["$","$L13",null,{}],["$","main",null,{"className":"p-6 flex justify-center","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-neutral-50 border-t border-neutral-200 text-center text-xs opacity-50 py-4","children":["© 2022 - ",2025,["$","a",null,{"rel":"noopener noreferrer","className":"hover:underline hover:bg-indigo","href":"https://github.com/LZS911","target":"_blank","children":", LZS_911"}],", build with"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://nextjs.org/","target":"_blank","children":"Next.js"}]," ","and"," ",["$","a",null,{"rel":"noopener noreferrer","className":"underline hover:bg-indigo","href":"https://vercel.com/","target":"_blank","children":"Vercel"}]]}]]}],false]}]}]
+9:["$","$14",null,{"fallback":null,"children":["$","$L15",null,{"promise":"$@16"}]}]
+c:null
+17:I[5099,["874","static/chunks/874-90f68e0a3827b559.js","296","static/chunks/296-93bf38127a29d878.js","766","static/chunks/766-3404ce8492c1c2aa.js","520","static/chunks/app/(article)/posts/%5Bslug%5D/page-15870e626cfa21a8.js"],"ThemeLoader"]
+18:Tb271,<h2 id="react-中的实时重载技术对比"><a aria-hidden="true" tabindex="-1" href="#react-中的实时重载技术对比"><span class="icon icon-link"></span></a>React 中的实时重载技术对比</h2>
+<p>Live Reloading、Hot Reloading 和 Fast Refresh 三种技术的主要区别：</p>
+<h3 id="技术概览"><a aria-hidden="true" tabindex="-1" href="#技术概览"><span class="icon icon-link"></span></a>技术概览</h3>
+<h3 id="live-reloading实时重载"><a aria-hidden="true" tabindex="-1" href="#live-reloading实时重载"><span class="icon icon-link"></span></a>#Live Reloading（实时重载）</h3>
+<ul>
+<li><strong>工作原理</strong>：当代码发生变化时，整个应用会完全重新加载</li>
+<li><strong>状态保留</strong>：不保留应用状态，每次都是全新的应用实例</li>
+<li><strong>用户体验</strong>：每次修改代码后页面会刷新，用户需要重新操作才能回到之前的状态</li>
+</ul>
+<h4 id="hot-reloading热重载"><a aria-hidden="true" tabindex="-1" href="#hot-reloading热重载"><span class="icon icon-link"></span></a>Hot Reloading（热重载）</h4>
+<ul>
+<li><strong>工作原理</strong>：只替换修改的模块，不刷新整个页面</li>
+<li><strong>状态保留</strong>：尝试保留应用状态，但在组件有状态变更时可能会失败</li>
+<li><strong>局限性</strong>：在处理类组件和复杂状态时经常出现问题</li>
+</ul>
+<h4 id="fast-refresh快速刷新"><a aria-hidden="true" tabindex="-1" href="#fast-refresh快速刷新"><span class="icon icon-link"></span></a>Fast Refresh（快速刷新）</h4>
+<ul>
+<li><strong>工作原理</strong>：React 官方开发的改进版热重载技术</li>
+<li><strong>状态保留</strong>：能够可靠地保留 React 组件状态，即使在编辑嵌套组件时</li>
+<li><strong>错误处理</strong>：提供更好的错误边界，在修复错误后能恢复正常渲染</li>
+</ul>
+<p>在 Vite 中，Vite 与 React 结合时默认使用 Fast Refresh，<code>@vitejs/plugin-react</code> 已集成此功能。</p>
+<h2 id="项目中关于快速刷新的异常现象"><a aria-hidden="true" tabindex="-1" href="#项目中关于快速刷新的异常现象"><span class="icon icon-link"></span></a>项目中关于快速刷新的异常现象</h2>
+<p><strong>测试环境版本：</strong></p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"react"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"18.3.20"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"vite"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"5.2.6"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"@vitejs/plugin-react"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4.3.4"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"eslint-plugin-react-refresh"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^0.4.20"</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h3 id="现象描述"><a aria-hidden="true" tabindex="-1" href="#现象描述"><span class="icon icon-link"></span></a>现象描述</h3>
+<ol>
+<li>
+<p><strong>两个大写字母开头的非React组件函数</strong>：当在 <code>.tsx</code> 文件中定义两个以大写字母开头的非React组件函数，并且同时使用非默认导出时，快速刷新失效，但未触发 <a href="https://github.com/ArnaudBarre/eslint-plugin-react-refresh">eslint-plugin-react-refresh</a> 规则。但是将两个函数调整为一个大写一个小写开头时，触发 eslint 规则，但快速刷新功能正常工作。</p>
+</li>
+<li>
+<p><strong>大写函数与小写变量混合导出</strong>：当在 <code>.tsx</code> 文件中定义一个以大写字母开头的非React组件函数以及一个小写字母开头的常规变量（例如数组），并且同时使用非默认导出时，触发 eslint 规则，并且 <code>vite-plugin-react</code> 抛出警告，但快速刷新功能正常工作。</p>
+</li>
+</ol>
+<pre><code>Plugin: vite-plugin-eslint
+File: /Users/liyu/work/actionsky/dms-ui/dms-ui/packages/base/src/page/DataSource/components/List/columns.tsx
+14:57:45 [vite] hmr invalidate /src/page/DataSource/components/List/columns.tsx Could not Fast Refresh (new export)
+</code></pre>
+<p>为了排除特定依赖版本的影响，创建了一个最小复现仓库：<a href="https://github.com/LZS911/react-fast-refresh-demo">react-fast-refresh-demo</a></p>
+<p><strong>最新测试环境版本：</strong></p>
+<pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
+  <span class="hljs-attr">"react"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"19.1.6"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"vite"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"6.3.5"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"@vitejs/plugin-react"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"4.5.0"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"eslint-plugin-react-refresh"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"^0.4.20"</span>
+<span class="hljs-punctuation">}</span>
+</code></pre>
+<h2 id="快速刷新技术"><a aria-hidden="true" tabindex="-1" href="#快速刷新技术"><span class="icon icon-link"></span></a>快速刷新技术</h2>
+<h3 id="什么是快速刷新"><a aria-hidden="true" tabindex="-1" href="#什么是快速刷新"><span class="icon icon-link"></span></a>什么是快速刷新</h3>
+<p>Fast Refresh 是"热重载"的重新实现，并得到了 React 的全面支持。它最初是为 <a href="https://x.com/dan_abramov/status/1169687758849400832">React Native</a> 开发的，但大部分实现与平台无关。我们计划将其全面推广——作为纯用户态解决方案（例如 <code>react-hot-loader</code>）的替代品。</p>
+<h4 id="技术组成"><a aria-hidden="true" tabindex="-1" href="#技术组成"><span class="icon icon-link"></span></a>技术组成</h4>
+<p>快速刷新依赖于几个部分的协同工作：</p>
+<ul>
+<li><strong>模块系统中的"热模块替换"机制</strong>：这通常由打包器提供。例如在 webpack 中，<code>module.hot</code> API 允许执行此操作。</li>
+<li><strong>React 渲染器 16.9.0+</strong>：例如 <code>React DOM 16.9</code> 或 <code>react-reconciler@0.21.0</code> 更高版本（对于自定义渲染器）</li>
+<li><strong>react-refresh/runtime 入口点</strong></li>
+<li><strong>react-refresh/babel Babel 插件</strong></li>
+</ul>
+<blockquote>
+<p>引用来源：<a href="https://github.com/facebook/react/issues/16604#issuecomment-528663101">React Fast Refresh 官方介绍</a></p>
+</blockquote>
+<h4 id="与-vite-的集成方式"><a aria-hidden="true" tabindex="-1" href="#与-vite-的集成方式"><span class="icon icon-link"></span></a>与 Vite 的集成方式</h4>
+<p>集成功能主要由 Vite 插件 <code>@vitejs/plugin-react</code> 实现。</p>
+<p>详细介绍可参考：<a href="https://juejin.cn/post/7145036892784820254">@vitejs/plugin-react 实现详细介绍</a></p>
+<h3 id="刷新策略"><a aria-hidden="true" tabindex="-1" href="#刷新策略"><span class="icon icon-link"></span></a>刷新策略</h3>
+<ul>
+<li>
+<p><strong>仅导出 React 组件的模块</strong>：Fast Refresh 只会更新该模块的代码，并重新渲染组件。你可以编辑文件里面的任何内容，包括样式、渲染逻辑、事件处理或者 effects。</p>
+</li>
+<li>
+<p><strong>不导出 React 组件的模块</strong>：Fast Refresh 将会重新运行该模块，以及其他引入该模块的模块文件。例如，<code>Button.js</code> 和 <code>Modal.js</code> 同时引入了 <code>Theme.js</code>，编辑 <code>theme.js</code> 时，<code>Button.js</code> 和 <code>Modal.js</code> 都会更新。</p>
+</li>
+<li>
+<p><strong>被 React 渲染树之外的模块引入</strong>：Fast Refresh 将会回退到完全刷新。你可能有一个文件，该文件渲染了一个 React 组件，同时又导出了一个被其他非 React 组件引入的值。在这种情况下，考虑将常量迁移到一个单独的文件并将其导入到两个文件中，这样 Fast Refresh 才能重新生效。</p>
+</li>
+</ul>
+<h2 id="场景复现现象解释"><a aria-hidden="true" tabindex="-1" href="#场景复现现象解释"><span class="icon icon-link"></span></a>场景复现现象解释</h2>
+<h3 id="场景1-react树外部的文件"><a aria-hidden="true" tabindex="-1" href="#场景1-react树外部的文件"><span class="icon icon-link"></span></a>场景1: React树外部的文件</h3>
+<p><strong>文件</strong>: <code>scenario1-non-react-file.ts</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>纯TypeScript文件，不包含React组件</li>
+<li>导出普通函数和配置对象</li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> nonReactFunction = (): <span class="hljs-function"><span class="hljs-params">string</span> =></span> {
+  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">'这是一个非React文件中的函数'</span>);
+  <span class="hljs-keyword">return</span> <span class="hljs-string">'Hello from non-React file'</span>;
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> someConfig = {
+  <span class="hljs-attr">apiUrl</span>: <span class="hljs-string">'https://api.example.com'</span>,
+  <span class="hljs-attr">timeout</span>: <span class="hljs-number">5000</span>
+};
+</code></pre>
+<p><strong>结果</strong>: ✅ <strong>触发浏览器完全刷新 (reload)</strong></p>
+<p><strong>现象</strong>: 修改文件内容后，浏览器会完全重新加载页面</p>
+<hr>
+<h3 id="场景2-正常的react组件"><a aria-hidden="true" tabindex="-1" href="#场景2-正常的react组件"><span class="icon icon-link"></span></a>场景2: 正常的React组件</h3>
+<p><strong>文件</strong>: <code>scenario2-normal-react-component.tsx</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>标准的React组件定义</li>
+<li>使用JSX语法在App中引用: <code>&#x3C;NormalReactComponent /></code></li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">NormalReactComponent</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">const</span> [count, setCount] = <span class="hljs-title function_">useState</span>(<span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h2</span>></span>正常的React组件<span class="hljs-tag">&#x3C;/<span class="hljs-name">h2</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">p</span>></span>计数: {count}<span class="hljs-tag">&#x3C;/<span class="hljs-name">p</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =></span> setCount(count + 1)}>
+        增加计数
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">button</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+  );
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">NormalReactComponent</span>;
+</code></pre>
+<p><strong>使用方式</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// 在App中使用</span>
+&#x3C;<span class="hljs-title class_">NormalReactComponent</span> />
+</code></pre>
+<p><strong>结果</strong>: ✅ <strong>触发React Fast Refresh</strong></p>
+<p><strong>现象</strong>: 修改组件内容后，组件会立即更新，状态保持不变</p>
+<hr>
+<h3 id="场景3-react组件采用函数调用形式"><a aria-hidden="true" tabindex="-1" href="#场景3-react组件采用函数调用形式"><span class="icon icon-link"></span></a>场景3: React组件采用函数调用形式</h3>
+<p><strong>文件</strong>: <code>scenario3-react-component-function-call.tsx</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>定义了React组件</li>
+<li>在App中采用函数调用形式: <code>{ReactComponentAsFunction()}</code></li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">ReactComponentAsFunction</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">const</span> [value, setValue] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">'初始值'</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h3</span>></span>作为函数调用的React组件<span class="hljs-tag">&#x3C;/<span class="hljs-name">h3</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">p</span>></span>当前值: {value}<span class="hljs-tag">&#x3C;/<span class="hljs-name">p</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">input</span> 
+        <span class="hljs-attr">value</span>=<span class="hljs-string">{value}</span> 
+        <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =></span> setValue(e.target.value)} 
+      />
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+  );
+};
+
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">ReactComponentAsFunction</span> };
+</code></pre>
+<p><strong>使用方式</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// 在App中使用</span>
+{<span class="hljs-title class_">ReactComponentAsFunction</span>()}
+</code></pre>
+<p><strong>结果</strong>: ❌ <strong>无法触发任何热更新功能</strong></p>
+<p><strong>现象</strong>: 修改文件内容后，页面没有任何变化</p>
+<hr>
+<h3 id="场景4-大写字母开头的普通函数"><a aria-hidden="true" tabindex="-1" href="#场景4-大写字母开头的普通函数"><span class="icon icon-link"></span></a>场景4: 大写字母开头的普通函数</h3>
+<p><strong>文件</strong>: <code>scenario4-uppercase-function-call.tsx</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>大写字母开头的函数（非真正的React组件）</li>
+<li>在App中采用函数调用形式</li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">UppercaseFunction</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">return</span> [<span class="hljs-string">'大写字母开头的普通函数'</span>, <span class="hljs-string">'修改这里的内容不会触发热更新'</span>].<span class="hljs-title function_">join</span>(<span class="hljs-string">'\n'</span>);
+};
+
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">UppercaseFunction</span> };
+</code></pre>
+<p><strong>结果</strong>: ❌ <strong>无法触发任何热更新功能</strong></p>
+<p><strong>现象</strong>: 修改文件内容后，页面没有任何变化</p>
+<hr>
+<h3 id="场景5-react组件--数组定义"><a aria-hidden="true" tabindex="-1" href="#场景5-react组件--数组定义"><span class="icon icon-link"></span></a>场景5: React组件 + 数组定义</h3>
+<p><strong>文件</strong>: <code>scenario5-react-component-with-array.tsx</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>定义了React组件和数组</li>
+<li>在App中采用函数调用形式</li>
+<li>数组未导出</li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">ReactComponentWithArray</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">const</span> [selectedItem, setSelectedItem] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">''</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h3</span>></span>带有数组的React组件<span class="hljs-tag">&#x3C;/<span class="hljs-name">h3</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">select</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{selectedItem}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =></span> setSelectedItem(e.target.value)}>
+        {items.map(item => (
+          <span class="hljs-tag">&#x3C;<span class="hljs-name">option</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{item}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{item}</span>></span>{item}<span class="hljs-tag">&#x3C;/<span class="hljs-name">option</span>></span>
+        ))}
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">select</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> items = [<span class="hljs-string">'项目1'</span>, <span class="hljs-string">'项目2'</span>, <span class="hljs-string">'项目3'</span>, <span class="hljs-string">'项目4'</span>]; <span class="hljs-comment">// 未导出</span>
+
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">ReactComponentWithArray</span> };
+</code></pre>
+<p><strong>结果</strong>: ❌ <strong>无法触发任何热更新功能</strong></p>
+<p><strong>现象</strong>: 修改文件内容后，页面没有任何变化</p>
+<hr>
+<h3 id="场景6-react组件--导出数组"><a aria-hidden="true" tabindex="-1" href="#场景6-react组件--导出数组"><span class="icon icon-link"></span></a>场景6: React组件 + 导出数组</h3>
+<p><strong>文件</strong>: <code>scenario6-react-component-exported-array.tsx</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>定义了React组件和数组</li>
+<li>在App中采用函数调用形式</li>
+<li>数组被导出</li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">import</span> { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">const</span> <span class="hljs-title function_">ReactComponentWithExportedArray</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">const</span> [theme, setTheme] = <span class="hljs-title function_">useState</span>(<span class="hljs-string">'light'</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> 
+      <span class="hljs-attr">background:</span> <span class="hljs-attr">theme</span> === <span class="hljs-string">'light'</span> ? '#<span class="hljs-attr">fff</span>' <span class="hljs-attr">:</span> '#<span class="hljs-attr">333</span>',
+      <span class="hljs-attr">color:</span> <span class="hljs-attr">theme</span> === <span class="hljs-string">'light'</span> ? '#<span class="hljs-attr">333</span>' <span class="hljs-attr">:</span> '#<span class="hljs-attr">fff</span>'
+    }}></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h3</span>></span>带有导出数组的React组件<span class="hljs-tag">&#x3C;/<span class="hljs-name">h3</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">select</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{theme}</span> <span class="hljs-attr">onChange</span>=<span class="hljs-string">{(e)</span> =></span> setTheme(e.target.value)}>
+        {themes.map(t => (
+          <span class="hljs-tag">&#x3C;<span class="hljs-name">option</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{t.value}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{t.value}</span>></span>{t.label}<span class="hljs-tag">&#x3C;/<span class="hljs-name">option</span>></span>
+        ))}
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">select</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> themes = [
+  { <span class="hljs-attr">value</span>: <span class="hljs-string">'light'</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">'浅色主题'</span> },
+  { <span class="hljs-attr">value</span>: <span class="hljs-string">'dark'</span>, <span class="hljs-attr">label</span>: <span class="hljs-string">'深色主题'</span> }
+];
+
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">ReactComponentWithExportedArray</span>, themes }; <span class="hljs-comment">// 导出了数组</span>
+</code></pre>
+<p><strong>结果</strong>: ⚠️ <strong>快速刷新功能降级为热更新</strong></p>
+<p><strong>现象</strong>:</p>
+<ul>
+<li>修改文件内容后会触发ESLint警告</li>
+<li>控制台显示 "TestApp组件 hmr update"</li>
+</ul>
+<hr>
+<h3 id="场景7-大写函数--导出数组"><a aria-hidden="true" tabindex="-1" href="#场景7-大写函数--导出数组"><span class="icon icon-link"></span></a>场景7: 大写函数 + 导出数组</h3>
+<p><strong>文件</strong>: <code>scenario7-uppercase-function-exported-array.tsx</code></p>
+<p><strong>特点</strong>:</p>
+<ul>
+<li>大写字母开头的函数</li>
+<li>定义并导出了数组</li>
+<li>在App中采用函数调用形式</li>
+</ul>
+<p><strong>测试代码</strong>:</p>
+<pre><code class="hljs language-tsx"><span class="hljs-keyword">const</span> <span class="hljs-title function_">UppercaseFunctionWithExportedArray</span> = (<span class="hljs-params"></span>) => {
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&#x3C;<span class="hljs-name">div</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">h3</span>></span>大写字母开头的函数（带导出数组）<span class="hljs-tag">&#x3C;/<span class="hljs-name">h3</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">ul</span>></span>
+        {colors.map(color => (
+          <span class="hljs-tag">&#x3C;<span class="hljs-name">li</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{color.name}</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">color:</span> <span class="hljs-attr">color.hex</span> }}></span>
+            {color.name}: {color.hex}
+          <span class="hljs-tag">&#x3C;/<span class="hljs-name">li</span>></span>
+        ))}
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">ul</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">div</span>></span></span>
+  );
+};
+
+<span class="hljs-keyword">const</span> colors = [
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'红色'</span>, <span class="hljs-attr">hex</span>: <span class="hljs-string">'#FF0000'</span> },
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'绿色'</span>, <span class="hljs-attr">hex</span>: <span class="hljs-string">'#00FF00'</span> }
+];
+
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">UppercaseFunctionWithExportedArray</span>, colors };
+</code></pre>
+<p><strong>结果</strong>: ⚠️ <strong>效果同场景6，快速刷新降级为热更新</strong></p>
+<p><strong>现象</strong>: 与场景6相同的行为</p>
+<h2 id="react-fast-refresh-工作原理深度解析"><a aria-hidden="true" tabindex="-1" href="#react-fast-refresh-工作原理深度解析"><span class="icon icon-link"></span></a>React Fast Refresh 工作原理深度解析</h2>
+<h3 id="react-fast-refresh-的检测机制"><a aria-hidden="true" tabindex="-1" href="#react-fast-refresh-的检测机制"><span class="icon icon-link"></span></a>React Fast Refresh 的检测机制</h3>
+<p>React Fast Refresh 的核心检测机制主要通过以下几个关键函数实现：</p>
+<h4 id="1-islikelycomponenttype---组件类型检测"><a aria-hidden="true" tabindex="-1" href="#1-islikelycomponenttype---组件类型检测"><span class="icon icon-link"></span></a>1. <code>isLikelyComponentType</code> - 组件类型检测</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">isLikelyComponentType</span>(<span class="hljs-params">type</span>) {
+  <span class="hljs-keyword">switch</span> (<span class="hljs-keyword">typeof</span> type) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'function'</span>: {
+      <span class="hljs-comment">// 处理类组件</span>
+      <span class="hljs-keyword">if</span> (type.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span> != <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">if</span> (type.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">isReactComponent</span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// React 类组件</span>
+        }
+        <span class="hljs-comment">// 检查是否为普通类</span>
+        <span class="hljs-keyword">const</span> ownNames = <span class="hljs-title class_">Object</span>.<span class="hljs-title function_">getOwnPropertyNames</span>(type.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>)
+        <span class="hljs-keyword">if</span> (ownNames.<span class="hljs-property">length</span> > <span class="hljs-number">1</span> || ownNames[<span class="hljs-number">0</span>] !== <span class="hljs-string">'constructor'</span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 普通类，不是组件</span>
+        }
+        <span class="hljs-keyword">if</span> (type.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>.<span class="hljs-property">__proto__</span> !== <span class="hljs-title class_">Object</span>.<span class="hljs-property"><span class="hljs-keyword">prototype</span></span>) {
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>; <span class="hljs-comment">// 有父类，不是组件</span>
+        }
+      }
+      <span class="hljs-comment">// 对于普通函数和箭头函数，使用名称作为启发式判断</span>
+      <span class="hljs-keyword">const</span> name = type.<span class="hljs-property">name</span> || type.<span class="hljs-property">displayName</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">typeof</span> name === <span class="hljs-string">'string'</span> &#x26;&#x26; <span class="hljs-regexp">/^[A-Z]/</span>.<span class="hljs-title function_">test</span>(name)
+    }
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'object'</span>: {
+      <span class="hljs-keyword">if</span> (type != <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">switch</span> (<span class="hljs-title function_">getProperty</span>(type, <span class="hljs-string">'$$typeof'</span>)) {
+          <span class="hljs-keyword">case</span> <span class="hljs-attr">REACT_FORWARD_REF_TYPE</span>:
+          <span class="hljs-keyword">case</span> <span class="hljs-attr">REACT_MEMO_TYPE</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// 明确的 React 组件</span>
+          <span class="hljs-attr">default</span>:
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+      }
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+    <span class="hljs-attr">default</span>: {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+  }
+}
+</code></pre>
+<p><strong>关键点</strong>：</p>
+<ul>
+<li>对于函数类型，主要通过<strong>函数名是否以大写字母开头</strong>来判断是否为 React 组件</li>
+<li>这就解释了为什么大写字母开头的普通函数会被误判为组件</li>
+<li>React 官方组件（如 forwardRef、memo）通过 <code>$$typeof</code> 属性明确识别</li>
+</ul>
+<h4 id="2-registerexportsforreactrefresh---导出注册机制"><a aria-hidden="true" tabindex="-1" href="#2-registerexportsforreactrefresh---导出注册机制"><span class="icon icon-link"></span></a>2. <code>registerExportsForReactRefresh</code> - 导出注册机制</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">registerExportsForReactRefresh</span>(<span class="hljs-params">filename, moduleExports</span>) {
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> moduleExports) {
+    <span class="hljs-keyword">if</span> (key === <span class="hljs-string">'__esModule'</span>) <span class="hljs-keyword">continue</span>
+    <span class="hljs-keyword">const</span> exportValue = moduleExports[key]
+    <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isLikelyComponentType</span>(exportValue)) {
+      <span class="hljs-title function_">register</span>(exportValue, filename + <span class="hljs-string">' export '</span> + key)
+    }
+  }
+}
+</code></pre>
+<p><strong>工作原理</strong>：</p>
+<ul>
+<li>遍历模块的所有导出</li>
+<li>对每个导出值调用 <code>isLikelyComponentType</code> 进行检测</li>
+<li>只有被识别为组件的导出才会被注册到快速刷新系统中</li>
+</ul>
+<h4 id="3-register---组件注册与家族管理"><a aria-hidden="true" tabindex="-1" href="#3-register---组件注册与家族管理"><span class="icon icon-link"></span></a>3. <code>register</code> - 组件注册与家族管理</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">register</span>(<span class="hljs-params">type, id</span>) {
+  <span class="hljs-keyword">if</span> (type === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> type !== <span class="hljs-string">'function'</span> &#x26;&#x26; <span class="hljs-keyword">typeof</span> type !== <span class="hljs-string">'object'</span>) <span class="hljs-keyword">return</span>
+
+  <span class="hljs-keyword">if</span> (allFamiliesByType.<span class="hljs-title function_">has</span>(type)) <span class="hljs-keyword">return</span> <span class="hljs-comment">// 避免重复注册</span>
+
+  <span class="hljs-keyword">let</span> family = allFamiliesByID.<span class="hljs-title function_">get</span>(id)
+  <span class="hljs-keyword">if</span> (family === <span class="hljs-literal">undefined</span>) {
+    family = { <span class="hljs-attr">current</span>: type }
+    allFamiliesByID.<span class="hljs-title function_">set</span>(id, family)
+  } <span class="hljs-keyword">else</span> {
+    pendingUpdates.<span class="hljs-title function_">push</span>([family, type]) <span class="hljs-comment">// 记录更新</span>
+  }
+  allFamiliesByType.<span class="hljs-title function_">set</span>(type, family)
+}
+</code></pre>
+<p><strong>核心概念 - 组件家族 (Family)</strong>：</p>
+<ul>
+<li>每个组件都属于一个"家族"，用于跟踪组件的不同版本</li>
+<li>当组件更新时，新版本会加入同一个家族</li>
+<li>这是实现状态保持的关键机制</li>
+</ul>
+<h4 id="4-validaterefreshboundaryandenqueueupdate---刷新边界验证"><a aria-hidden="true" tabindex="-1" href="#4-validaterefreshboundaryandenqueueupdate---刷新边界验证"><span class="icon icon-link"></span></a>4. <code>validateRefreshBoundaryAndEnqueueUpdate</code> - 刷新边界验证</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">function</span> <span class="hljs-title function_">validateRefreshBoundaryAndEnqueueUpdate</span>(<span class="hljs-params">id, prevExports, nextExports</span>) {
+  <span class="hljs-keyword">const</span> ignoredExports = <span class="hljs-variable language_">window</span>.<span class="hljs-property">__getReactRefreshIgnoredExports</span>?.({ id }) ?? []
+  
+  <span class="hljs-comment">// 检查是否有导出被移除</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-title function_">predicateOnExport</span>(ignoredExports, prevExports, <span class="hljs-function">(<span class="hljs-params">key</span>) =></span> key <span class="hljs-keyword">in</span> nextExports) !== <span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Could not Fast Refresh (export removed)'</span>
+  }
+  
+  <span class="hljs-comment">// 检查是否有新的导出</span>
+  <span class="hljs-keyword">if</span> (<span class="hljs-title function_">predicateOnExport</span>(ignoredExports, nextExports, <span class="hljs-function">(<span class="hljs-params">key</span>) =></span> key <span class="hljs-keyword">in</span> prevExports) !== <span class="hljs-literal">true</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">'Could not Fast Refresh (new export)'</span>
+  }
+
+  <span class="hljs-keyword">let</span> hasExports = <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">const</span> allExportsAreComponentsOrUnchanged = <span class="hljs-title function_">predicateOnExport</span>(
+    ignoredExports,
+    nextExports,
+    <span class="hljs-function">(<span class="hljs-params">key, value</span>) =></span> {
+      hasExports = <span class="hljs-literal">true</span>
+      <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isLikelyComponentType</span>(value)) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+      <span class="hljs-keyword">return</span> prevExports[key] === nextExports[key] <span class="hljs-comment">// 非组件导出必须保持不变</span>
+    },
+  )
+  
+  <span class="hljs-keyword">if</span> (hasExports &#x26;&#x26; allExportsAreComponentsOrUnchanged === <span class="hljs-literal">true</span>) {
+    <span class="hljs-title function_">enqueueUpdate</span>() <span class="hljs-comment">// 触发快速刷新</span>
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`Could not Fast Refresh ("<span class="hljs-subst">${allExportsAreComponentsOrUnchanged}</span>" export is incompatible)`</span>
+  }
+}
+</code></pre>
+<p><strong>验证逻辑</strong>：</p>
+<ul>
+<li><strong>导出一致性检查</strong>：确保导出的项目在更新前后保持一致</li>
+<li><strong>组件兼容性检查</strong>：所有导出要么是组件，要么保持不变</li>
+<li><strong>边界安全验证</strong>：确保刷新操作不会破坏应用结构</li>
+</ul>
+<h4 id="5-enqueueupdate---更新队列机制"><a aria-hidden="true" tabindex="-1" href="#5-enqueueupdate---更新队列机制"><span class="icon icon-link"></span></a>5. <code>enqueueUpdate</code> - 更新队列机制</h4>
+<pre><code class="hljs language-javascript"><span class="hljs-keyword">const</span> enqueueUpdate = <span class="hljs-title function_">debounce</span>(<span class="hljs-title function_">async</span> () => {
+  <span class="hljs-keyword">if</span> (hooks.<span class="hljs-property">length</span>) <span class="hljs-keyword">await</span> <span class="hljs-title class_">Promise</span>.<span class="hljs-title function_">all</span>(hooks.<span class="hljs-title function_">map</span>(<span class="hljs-function">(<span class="hljs-params">cb</span>) =></span> <span class="hljs-title function_">cb</span>()))
+  <span class="hljs-title function_">performReactRefresh</span>()
+}, <span class="hljs-number">16</span>)
+</code></pre>
+<p><strong>防抖机制</strong>：</p>
+<ul>
+<li>使用 16ms 的防抖延迟，优化性能</li>
+<li>批量处理多个快速连续的更新</li>
+<li>支持插件钩子，允许其他插件参与更新过程</li>
+</ul>
+<h3 id="为什么函数调用形式无法触发热更新"><a aria-hidden="true" tabindex="-1" href="#为什么函数调用形式无法触发热更新"><span class="icon icon-link"></span></a>为什么函数调用形式无法触发热更新</h3>
+<p><strong>根本原因</strong>：React Fast Refresh 基于 <strong>React 的协调算法 (Reconciliation)</strong> 工作，需要通过 React 的组件树来跟踪和更新组件。</p>
+<h4 id="技术层面的解释"><a aria-hidden="true" tabindex="-1" href="#技术层面的解释"><span class="icon icon-link"></span></a>技术层面的解释：</h4>
+<ol>
+<li>
+<p><strong>JSX 语法 vs 函数调用</strong>：</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// ✅ JSX 语法 - 创建 React 元素</span>
+&#x3C;<span class="hljs-title class_">MyComponent</span> />
+<span class="hljs-comment">// 等价于：React.createElement(MyComponent, null)</span>
+
+<span class="hljs-comment">// ❌ 函数调用 - 直接执行函数</span>
+{<span class="hljs-title class_">MyComponent</span>()}
+</code></pre>
+</li>
+<li>
+<p><strong>React 协调过程</strong>：</p>
+<ul>
+<li>使用 JSX 语法时，React 会为每个组件创建 Fiber 节点</li>
+<li>Fiber 节点包含组件的类型信息，Fast Refresh 可以通过这些信息找到需要更新的组件</li>
+<li>函数调用绕过了 React 的组件系统，直接返回 JSX 结果</li>
+</ul>
+</li>
+<li>
+<p><strong>组件实例跟踪</strong>：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// Fast Refresh 的工作流程</span>
+<span class="hljs-number">1.</span> 注册组件类型 → <span class="hljs-title function_">register</span>(<span class="hljs-title class_">ComponentType</span>, id)
+<span class="hljs-number">2.</span> <span class="hljs-title class_">React</span> 渲染时创建组件实例
+<span class="hljs-number">3.</span> 建立组件类型与实例的关联
+<span class="hljs-number">4.</span> 更新时通过类型找到对应实例进行热替换
+
+<span class="hljs-comment">// 函数调用时的问题</span>
+<span class="hljs-number">1.</span> 组件被注册 ✅
+<span class="hljs-number">2.</span> 但 <span class="hljs-title class_">React</span> 看到的不是组件类型，而是函数执行结果 ❌
+<span class="hljs-number">3.</span> 无法建立正确的关联关系 ❌
+<span class="hljs-number">4.</span> 更新时找不到目标实例 ❌
+</code></pre>
+</li>
+</ol>
+<h3 id="导出非组件内容的影响机制"><a aria-hidden="true" tabindex="-1" href="#导出非组件内容的影响机制"><span class="icon icon-link"></span></a>导出非组件内容的影响机制</h3>
+<h4 id="快速刷新降级的触发条件"><a aria-hidden="true" tabindex="-1" href="#快速刷新降级的触发条件"><span class="icon icon-link"></span></a>快速刷新降级的触发条件</h4>
+<p>当模块同时导出 React 组件和其他内容时，<code>validateRefreshBoundaryAndEnqueueUpdate</code> 函数会进行严格检查：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 检查所有导出是否为组件或保持不变</span>
+<span class="hljs-keyword">const</span> allExportsAreComponentsOrUnchanged = <span class="hljs-title function_">predicateOnExport</span>(
+  ignoredExports,
+  nextExports,
+  <span class="hljs-function">(<span class="hljs-params">key, value</span>) =></span> {
+    <span class="hljs-keyword">if</span> (<span class="hljs-title function_">isLikelyComponentType</span>(value)) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">return</span> prevExports[key] === nextExports[key] <span class="hljs-comment">// 非组件导出必须完全相同</span>
+  },
+)
+</code></pre>
+<h4 id="降级原因分析"><a aria-hidden="true" tabindex="-1" href="#降级原因分析"><span class="icon icon-link"></span></a>降级原因分析</h4>
+<ol>
+<li>
+<p><strong>安全性考虑</strong>：</p>
+<ul>
+<li>非组件导出可能被其他模块引用</li>
+<li>这些引用可能不在 React 组件树中</li>
+<li>直接替换可能导致应用状态不一致</li>
+</ul>
+</li>
+<li>
+<p><strong>边界完整性</strong>：</p>
+<ul>
+<li>Fast Refresh 需要确保"刷新边界"的完整性</li>
+<li>混合导出破坏了这种边界的清晰度</li>
+<li>系统选择降级到更安全的热更新模式</li>
+</ul>
+</li>
+<li>
+<p><strong>实际降级行为</strong>：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 场景6和场景7中，当检测到混合导出时：</span>
+<span class="hljs-comment">// 1. validateRefreshBoundaryAndEnqueueUpdate 返回错误信息</span>
+<span class="hljs-comment">// 2. Vite 接收到错误，回退到 HMR 模式</span>
+<span class="hljs-comment">// 3. 触发父级组件的重新渲染，而不是精确的组件替换</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="完全无热更新的深层原因"><a aria-hidden="true" tabindex="-1" href="#完全无热更新的深层原因"><span class="icon icon-link"></span></a>完全无热更新的深层原因</h3>
+<h4 id="场景345-无法更新的技术原因"><a aria-hidden="true" tabindex="-1" href="#场景345-无法更新的技术原因"><span class="icon icon-link"></span></a>场景3、4、5 无法更新的技术原因</h4>
+<ol>
+<li>
+<p><strong>模块加载与执行分离</strong>：</p>
+<pre><code class="hljs language-javascript"><span class="hljs-comment">// 当模块更新时，Vite 会：</span>
+<span class="hljs-number">1.</span> 重新加载模块代码 ✅
+<span class="hljs-number">2.</span> 执行 registerExportsForReactRefresh ✅
+<span class="hljs-number">3.</span> 调用 validateRefreshBoundaryAndEnqueueUpdate ✅
+<span class="hljs-number">4.</span> 但由于使用函数调用形式，<span class="hljs-title class_">React</span> 无法感知到组件的变化 ❌
+</code></pre>
+</li>
+<li>
+<p><strong>React 渲染上下文缺失</strong>：</p>
+<ul>
+<li>函数调用形式绕过了 React 的组件生命周期</li>
+<li>React DevTools 无法追踪到这些"组件"</li>
+<li>Fast Refresh 系统无法建立正确的更新路径</li>
+</ul>
+</li>
+<li>
+<p><strong>状态管理问题</strong>：</p>
+<ul>
+<li>即使强制触发更新，由于没有正确的组件实例</li>
+<li>React 的状态管理机制无法正确保持和恢复状态</li>
+<li>这违背了 Fast Refresh 的核心价值</li>
+</ul>
+</li>
+</ol>
+<h3 id="最佳实践建议"><a aria-hidden="true" tabindex="-1" href="#最佳实践建议"><span class="icon icon-link"></span></a>最佳实践建议</h3>
+<p>基于以上技术分析，建议：</p>
+<ol>
+<li>
+<p><strong>始终使用 JSX 语法渲染组件</strong>：</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// ✅ 正确</span>
+&#x3C;<span class="hljs-title class_">MyComponent</span> />
+
+<span class="hljs-comment">// ❌ 错误  </span>
+{<span class="hljs-title class_">MyComponent</span>()}
+</code></pre>
+</li>
+<li>
+<p><strong>保持模块导出的纯净性</strong>：</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// ✅ 仅导出组件</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">MyComponent</span>
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">AnotherComponent</span> }
+
+<span class="hljs-comment">// ❌ 混合导出</span>
+<span class="hljs-keyword">export</span> { <span class="hljs-title class_">MyComponent</span>, someData }
+</code></pre>
+</li>
+<li>
+<p><strong>分离关注点</strong>：</p>
+<pre><code class="hljs language-tsx"><span class="hljs-comment">// ✅ 将常量和配置分离到独立文件</span>
+<span class="hljs-comment">// constants.ts</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> themes = [...]
+
+<span class="hljs-comment">// MyComponent.tsx</span>
+<span class="hljs-keyword">import</span> { themes } <span class="hljs-keyword">from</span> <span class="hljs-string">'./constants'</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">MyComponent</span>
+</code></pre>
+</li>
+</ol>7:["$","article",null,{"children":[["$","div",null,{"className":"flex justify-center font-[Arial] max-w-[864px] text-center","children":["$","h1",null,{"className":"text-[2.5rem] font-bold bg-lime-300 px-5 py-2 rounded-sm text-shadow-lg leading-[1.1]","children":"vite-react-fast-refresh 机制探究"}]}],["$","div",null,{"className":"flex flex-wrap items-center gap-4 mb-6","children":[["$","time",null,{"dateTime":"2025-06-09","className":"text-center block my-4 text-sm opacity-60","children":"June\t9, 2025"}],["$","span",null,{"className":"px-3 py-1 text-sm rounded bg-gray-100 dark:bg-gray-800","children":"blog"}],"$undefined"]}],[null,["$","$L17",null,{"theme":"fancy"}],["$","section",null,{"className":"markdown-body-fancy max-w-3xl","dangerouslySetInnerHTML":{"__html":"$18"}}]],null]}]
+11:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+16:{"metadata":[["$","title","0",{"children":"Ai.Haibara codes"}],["$","meta","1",{"name":"description","content":"LZS Blog"}],["$","link","2",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"96x96"}]],"error":null,"digest":"$undefined"}
+e:{"metadata":"$16:metadata","error":null,"digest":"$undefined"}
